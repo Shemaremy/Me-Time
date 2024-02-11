@@ -1,7 +1,7 @@
 body
 {
     width: 100%;
-    overflow-x: hidden;
+    
 
 }
 
@@ -16,6 +16,8 @@ body
     display: flex; /* Enable flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
+
+    
     
 
 }
@@ -31,9 +33,8 @@ body
     background-repeat: no-repeat; /* Do not repeat the image */
     width: 100%; /* Set the width to 100% */
     height: 100%; 
-  
     border-radius: 10px;
-    border-color: aliceblue;
+    
 
 }
 
