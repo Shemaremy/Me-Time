@@ -1,4 +1,4 @@
-// HEADING TRANSITIONS  
+// HEADING (h1, h2) TRANSITIONS  
 
 document.addEventListener("DOMContentLoaded", function() {
     const headings = document.querySelectorAll('.heading');
@@ -12,7 +12,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// IMPLEMENTING THE LAZY METHOD
+
+
+
+
+
+
+
+
+// THE PARAGRAPH TRANSITIONS
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the paragraph element
+    var paragraph = document.getElementById("animated-paragraph");
+    
+    // Get the text content of the paragraph
+    var text = paragraph.textContent;
+    
+    // Clear the paragraph content
+    paragraph.textContent = "";
+    
+    // Iterate through each character of the text
+    for (var i = 0; i < text.length; i++) {
+        // Create a span element for each character
+        var span = document.createElement("span");
+        span.textContent = text[i];
+        
+        // Set the animation delay for each span element
+        span.style.animationDelay = (i * 0.05) + "s"; // Adjust the delay as needed
+        
+        // Append the span element to the paragraph
+        paragraph.appendChild(span);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
 
 document.addEventListener("DOMContentLoaded", function() {
     let lazyImages = document.querySelectorAll('.back');
