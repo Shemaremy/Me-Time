@@ -110,7 +110,10 @@
         opacity: 0;
     }
 
+    
+ 
     .mobile-nav {
+
         position: fixed;
         top: 0;
         left: 100%;
