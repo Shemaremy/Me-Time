@@ -4,7 +4,7 @@
 body
 {
     width: 100%;
-    
+    height: 100%;
 
 }
 
@@ -14,7 +14,7 @@ body
     position: relative;
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Do not repeat the image */
-    height: 98vh;
+    height: 105vh;
     border-radius: 20px;
     display: flex; /* Enable flexbox for centering */
     justify-content: center; /* Center horizontally */
@@ -65,8 +65,8 @@ body
 .First_headings
 {
     font-size: 30px;
-    padding-top: 110px;
-    padding-left: 80px;
+    padding-top: 10%;
+    padding-left: 6.8%;
 }
 
 .First_headings h2 {
@@ -77,7 +77,8 @@ body
 
 .First_headings h1 {
 
-    margin-top: 5px; /* Adjust the value as needed */
+    margin-bottom: 2%;   
+    margin-top: 1%; /* Adjust the value as needed */
     font-family: 'Orbitron', sans-serif;
     font-size: 50px;
     
@@ -87,7 +88,7 @@ body
 {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    padding-top: 1.5%;
 
  
 
@@ -99,7 +100,7 @@ body
     text-decoration: none; /* Remove underline */
     color: black; /* Change color to black */
     margin: 0 10px; /* Increase spacing between links horizontally */
-    padding: 5px 10px; /* Add padding to increase spacing vertically and horizontally */
+    padding: 0.5% 1%; /* Add padding to increase spacing vertically and horizontally */
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     transition: color 0.3s;
@@ -109,6 +110,15 @@ body
     
 }
 
+.mobile-nav
+{
+    display: none;
+}
+.hamburger
+{
+    display: none;
+}
+
 
 
 
@@ -116,10 +126,10 @@ body
 
 .small_paragraph
 {
-    padding-left: 90px;
+    padding-left: 8%;
     font-family: 'Caveat', cursive;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 2%;
 }
 
 
@@ -128,10 +138,10 @@ body
     background-color: #448bb4d7; /* 3D color */
     color: #000000c7;
     border-radius: 20px; /* Rounded corners */
-    padding: 10px 20px; /* Padding for button */
+    padding: 1.1%; /* Padding for button */
     border: none; /* Remove default button border */
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 20px; /* Font size */
+    font-size: 100%; /* Font size */
     font-weight: 70px;
     cursor: pointer; /* Show pointer cursor on hover */
     transition: background-color 0.2s ease; /* Smooth transition for background color */
@@ -154,8 +164,8 @@ body
 
 .Buy_me_coffee
 {
-    padding-left: 140px;
-    padding-top: 5px;
+    padding-left: 12%;
+    padding-top: 0.3%;
     
 }
 
@@ -165,8 +175,8 @@ body
 .social_media
 {
 
-    padding-top: 40px;
-    padding-left: 80px;
+    padding-top: 3%;
+    padding-left: 6.5%;
     
 }
 
@@ -186,7 +196,7 @@ body
     position: relative;
     background: #fff;
     border-radius: 50%;
-    padding: 15px;
+    padding: 10%;
     margin: 10px;
     width: 6px;
     height: 6px;
@@ -206,11 +216,11 @@ body
 .wrapper .tooltip{
     position: absolute;
     top: 0;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     background: #fff;
     color: #fff;
     padding: 5px 8px;
-    border-radius: 5px;
+    border-radius: 6%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     opacity: 0;
     pointer-events: none;
