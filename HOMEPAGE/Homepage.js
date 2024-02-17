@@ -248,16 +248,17 @@ window.addEventListener('load', function() {
         wrapper.style.transition = 'opacity 1s ease, visibility 1s';
         wrapper.style.opacity = '1';
         wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 1000);
+    }, 2000);
 });
 
 
 
-// SMOOTH TRANSITION FOR THE SMALL PARAGRAPH
+
+// SMOOTH TRANSITION FOR THE MIDDLE TRANSPARENT PAGE
 
 window.addEventListener('load', function() {
     // Select the wrapper element
-    const wrapper = document.querySelector('.small_paragraph');
+    const wrapper = document.querySelector('.center_img');
     // Initially set opacity to 0 and visibility to hidden
     wrapper.style.opacity = '0';
     wrapper.style.visibility = 'hidden';
@@ -267,6 +268,26 @@ window.addEventListener('load', function() {
         wrapper.style.transition = 'opacity 1s ease, visibility 1s';
         wrapper.style.opacity = '1';
         wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 2500);
+    }, 1000);
 });
 
+
+
+
+
+// SMOOTH TRANSITION FOR THE BACK IMAGE
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.back_img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 200);
+});
