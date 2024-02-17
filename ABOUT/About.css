@@ -1,15 +1,8 @@
- 
-
-
-body
+@media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
 {
-    width: 100%;
-    height: 100%;
 
-}
-
+    
 .back_img{
-
     
     position: relative;
     background-size: cover; /* Cover the entire container */
@@ -60,6 +53,16 @@ body
     border-radius: 50px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 1);
  
+}
+
+.My_Photo
+{
+    display: none;
+}
+
+.nav_icon
+{
+    display: none;
 }
 
 .First_headings
@@ -175,13 +178,13 @@ body
 .social_media
 {
 
-    padding-top: 3%;
+    padding-top: 7%;
     padding-left: 6.5%;
     
 }
 
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 
 
 .wrapper
@@ -276,17 +279,6 @@ body
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* THIS IS THE RIGHT SIDE IMAGE*/
 
 .image-container {
@@ -311,20 +303,6 @@ body
     border-radius: 5%;  
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  
@@ -378,20 +356,6 @@ body
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
 
  
@@ -405,9 +369,4 @@ body
 
 
 
-
-
-
-
-
-
+}

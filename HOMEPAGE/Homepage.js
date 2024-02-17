@@ -110,24 +110,63 @@ window.onload = function () {
 
     const menu_btn = document.querySelector('.hamburger');
     const mobile_menu = document.querySelector('.mobile-nav');
+    const home_link = document.querySelector('.mobile-nav a[href="#"]'); // Selecting the Home link
+    const center_img_elements = document.querySelectorAll('.center_img'); // Select all elements with class 'center_img'
 
-    menu_btn.addEventListener('click', 
+
+
+
+    menu_btn.addEventListener('click',                    // EVENT LISTENER 1 For the burger button
     
     function () 
     {
         menu_btn.classList.toggle('is-active');
         mobile_menu.classList.toggle('is-active');
 
-        if (menu_btn.classList.contains('is-active')) {    // If the nav window is open, then...
-            menu_btn.style.display = "block";
- 
-        } else {
-            // Show the hamburger button when menu is closed
-            menu_btn.style.display = "block";
-        }
+
+        center_img_elements.forEach(function(element)
+         {  element.classList.toggle('blur'); });
+
+
+        if (menu_btn.classList.contains('is-active')) {   } // If the nav window is open, then...
+           
+        
     }
     
                               );
+
+
+   
+                              
+
+
+  home_link.addEventListener('click',               // EVENT LISTENER 1 For the close navigation window by clicking home
+  
+  
+  function (e)
+  {              
+  e.preventDefault(); // Prevent the default link behavior
+  mobile_menu.classList.remove('is-active'); // Close the mobile menu
+  menu_btn.classList.remove('is-active'); // Reset hamburger button state
+
+  // Remove blur effect when navigation window is closed
+    center_img_elements.forEach(function(element)
+    {
+    element.classList.remove('blur');
+    });
+
+  }
+
+  
+                            );      
+    
+    
+
+
+
+
+
+                        
 }
 
 
