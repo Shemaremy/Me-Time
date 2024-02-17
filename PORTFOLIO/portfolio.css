@@ -1,20 +1,23 @@
 @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
 {
 
+.mobile-nav
+{
+    display: none;
+}
+
    
 .back_img{
     
     position: relative;
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Do not repeat the image */
-    height: 150vh;
+    height: 500vh;
     border-radius: 20px;
     display: flex; /* Enable flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 
-    
-    
 
 }
 
@@ -52,41 +55,11 @@
     background-color: rgba(255, 255, 255, 0.089); /* White background */
     border-radius: 50px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 1);
+
  
 }
 
-.My_Photo
-{
-    display: none;
-}
 
-.nav_icon
-{
-    display: none;
-}
-
-.First_headings
-{
-    font-size: 30px;
-    padding-top: 10%;
-    padding-left: 6.8%;
-}
-
-.First_headings h2 {
-    margin-bottom: 5px; /* Adjust the value as needed */
-    font-family: Arial, sans-serif;
-    font-weight: 500;
-}
-
-
-.First_headings h1 {
-
-    margin-bottom: 2%;   
-    margin-top: 1%; /* Adjust the value as needed */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
-    
-}
 
 .navigation_links
 {
@@ -106,265 +79,144 @@
     margin: 0 10px; /* Increase spacing between links horizontally */
     padding: 0.5% 1%; /* Add padding to increase spacing vertically and horizontally */
     font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     transition: color 0.3s;
-
-  
-
-    
-}
-
-.mobile-nav
-{
-    display: none;
-}
-.hamburger
-{
-    display: none;
-}
-
-
-
-
-
-
-.small_paragraph
-{
-    padding-left: 8%;
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-    margin-bottom: 2%;
-}
-
-
-
-.coffee-button {
-    background-color: #448bb4d7; /* 3D color */
-    color: #000000c7;
-    border-radius: 20px; /* Rounded corners */
-    padding: 1.1%; /* Padding for button */
-    border: none; /* Remove default button border */
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%; /* Font size */
-    font-weight: 70px;
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.2s ease; /* Smooth transition for background color */
-    width: 120px;
-    display: inline-block;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.479);
-    
-}
-
-.coffee-button:hover {
-    background-color: rgba(74, 165, 210, 1);
-}
-
-.coffee-button:active {
-    background-color: rgba(106, 200, 255, 0.65); /* Lighter shade on click */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
-    transition: box-shadow 0.5s ease-out;
-}
-
-
-.Buy_me_coffee
-{
-    padding-left: 12%;
-    padding-top: 0.3%;
-    
-}
-
-
-
-
-.social_media
-{
-
-    padding-top: 7%;
-    padding-left: 6.5%;
-    
-}
-
-
-
-
-
-.wrapper
-{
-    display: inline-flex;
-    list-style: none;
-    
-    
-}
-
-.wrapper .icon{
     position: relative;
-    background: #fff;
-    border-radius: 50%;
-    padding: 10%;
-    margin: 10px;
-    width: 6px;
-    height: 6px;
-    font-size: 1.1rem;
-    font-family: Arial, sans-serif;
+    
+}
+
+
+
+.navigation_links a:hover {
+    color: rgba(9, 255, 0, 0.637);
+}
+
+
+.navigation_links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this value to control the distance of the line from the text */
+    width: 100%;
+    height: 2px; /* Line thickness */
+    background-color: #333; /* Line color */
+    transform: scaleX(0); /* Initially hide the line */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color */
+}
+
+.navigation_links a:hover::after {
+    transform: scaleX(1); /* Expand the line on hover */
+    background-color: rgba(9, 255, 0, 0.637);
+    box-shadow: rgba(9, 255, 0, 0.637);
+}
+
+
+
+
+
+.First_header
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 280px;
+  font-size: 200%;
+  color: rgba(253, 255, 157, 0.486);
+
+  font-family: "Archivo", sans-serif;
+  font-optical-sizing: auto;
+  
+  
+  
+} 
+
+.heading-text 
+{
+    margin: 0; /* Remove default margin */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing effect */
+    text-shadow: 0 0 10px rgba(58, 255, 179, 0.301); /* Shadow effect */
+}
+
+
+
+
+.Second_header
+{
+    display: flex;
+    justify-content: center;
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    margin-top: 30px;
+}
+
+.white-text {
+    color: #fff0d1ad; /* White color */
+}
+
+.yellow-text {
+    color: rgba(119, 255, 164, 0.432)/* Yellow color */
+}
+
+
+
+
+.First
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    
+    width: 90%;
+    height: 500px;
+    background-color: none;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(245, 245, 220, 0.582);
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-top: 200px;
+
+
 }
 
-.wrapper .tooltip{
-    position: absolute;
-    top: 0;
-    font-size: 0.7rem;
-    background: #fff;
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 6%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
+.Second
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 500px;
+    background-color: none;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(245, 245, 220, 0.582);
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-top: 200px;
+
+
 }
 
-.wrapper .icon:active {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
-    background-color: rgba(0, 0, 0, 0.1); /* Change background color on click */
-}
-
-.wrapper .icon:hover .tooltip{
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip{
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before{
-    background: linear-gradient(to bottom, #1769FF, #0E3A7F);
-    color: #fff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background: linear-gradient(to bottom, #1DA1F2, #0F5B7F);
-    color: #fff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-    background: linear-gradient(to bottom, #ff781e, #e62639);
-    color: #fff;
-}
-
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-    background: linear-gradient(to bottom, #0077B5, #004D7F);
-    color: #fff;
-}
+.Third
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 500px;
+    background-color: none;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(245, 245, 220, 0.582);
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-top: 200px;
 
 
-
-
-/* THIS IS THE RIGHT SIDE IMAGE*/
-
-.image-container {
-    position: absolute;
-    top: 0;
-    right: 0;  
-    width: 30%;  
-    height: 70%;  
-    padding-right: 10%;
-    padding-top: 9.4%;
-    opacity: 0.18;
-    
-    pointer-events: none;
-
-    
-}
-
-.image-container img {
-    width: 100%;  
-    height: 100%;  
-    object-fit: cover; 
-    border-radius: 5%;  
-    
-}
-
-
- 
-/* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
-
-.heading {
-    opacity: 0; /* Start with the headings invisible */
-    transform: translateY(20px); /* Shift the headings downwards initially */
-    transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
-    transition-delay: 1s;
-}
-
-/* Define the animation when the first heading becomes visible */
-.heading.show-heading:first-child {
-    transition-delay: 1.5s; /* Delay the animation for the first heading */
-}
-
-/* Define the animation when the headings become visible */
-.heading.show-heading {
-    opacity: 1; /* Make the heading visible */
-    transform: translateY(0); /* Reset the transformation to its original position */
-}
-
-
-
-
-
-
-/* PARAGRAPH TRANSITION */
-
-
-/* Apply initial styles to hide the paragraph text */
-.small_paragraph .paragraph span {
-    opacity: 0;
-    animation: revealLetter 1s ease forwards;
-}
-
-/* Define animation for revealing each letter */
-@keyframes revealLetter {
-    0% {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-
-
-
-/* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
-
- 
- 
-
-/* Define styles for when the cursor hovers over the links */
-.navigation_links a:hover {
-    color: rgb(9, 255, 0); /* Change the color to red when hovered */
 }
 
 

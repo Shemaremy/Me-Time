@@ -82,3 +82,4 @@ window.addEventListener('load', function() {
         wrapper.style.visibility = 'visible'; // Make the content visible
     }, 200);
 });
+
