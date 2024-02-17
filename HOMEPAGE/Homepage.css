@@ -137,28 +137,30 @@
 
 
 .coffee-button {
-    background-color: #448bb4d7; /* 3D color */
-    color: #000000c7;
+    background-color: rgba(63, 247, 216, 0.24);
+    color:rgba(0, 0, 0, 0.719);;
     border-radius: 20px; /* Rounded corners */
     padding: 1.1%; /* Padding for button */
-    border: none; /* Remove default button border */
+    border-color:rgba(95, 255, 228, 0.247);
+    border-style: solid;
+    border-width: 1px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 100%; /* Font size */
     font-weight: 70px;
     cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.2s ease; /* Smooth transition for background color */
     width: 120px;
     display: inline-block;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.479);
+    box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.349);
+     
     
 }
 
 .coffee-button:hover {
-    background-color: rgba(74, 165, 210, 1);
+    background-color: rgba(63, 247, 216, 0.377);
 }
 
 .coffee-button:active {
-    background-color: rgba(106, 200, 255, 0.65); /* Lighter shade on click */
+    background-color: rgba(63, 247, 216, 0.719);
     box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
     transition: box-shadow 0.5s ease-out;
 }
@@ -166,7 +168,7 @@
 
 .Buy_me_coffee
 {
-    padding-left: 12%;
+    padding-left: 15%;
     padding-top: 0.3%;
     
 }
@@ -176,9 +178,9 @@
 
 .social_media
 {
-
-    padding-top: 7%;
-    padding-left: 6.5%;
+    padding-top: 3%;
+    padding-left: 8.5%;
+  
     
 }
 
@@ -189,15 +191,22 @@
 .wrapper
 {
     display: inline-flex;
-    list-style: none;
-    
+    list-style: none; 
     
 }
 
+.wrapper .icon span i {
+    color: rgb(95, 255, 228);
+}
+
+
 .wrapper .icon{
     position: relative;
-    background: #fff;
+    background: none;
     border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(39, 192, 167);
     padding: 10%;
     margin: 10px;
     width: 6px;
@@ -208,10 +217,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.644);
     
 }
 
@@ -227,8 +236,10 @@
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    visibility: hidden;
     
 }
+
 
 .wrapper .icon:active {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
@@ -238,7 +249,7 @@
 .wrapper .icon:hover .tooltip{
     top: -45px;
     opacity: 1;
-    visibility: visible;
+    visibility: hidden;
     pointer-events: auto;
 }
 
@@ -247,31 +258,31 @@
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
-.wrapper .facebook:hover,
+.wrapper .facebook:hover,                             /* LINKEDIN */
 .wrapper .facebook:hover .tooltip,
 .wrapper .facebook:hover .tooltip::before{
-    background: linear-gradient(to bottom, #1769FF, #0E3A7F);
+    background: linear-gradient(to bottom, #1768ff79, #0e397f86);
     color: #fff;
 }
 
-.wrapper .twitter:hover,
+.wrapper .twitter:hover,                             
 .wrapper .twitter:hover .tooltip,
 .wrapper .twitter:hover .tooltip::before {
-    background: linear-gradient(to bottom, #1DA1F2, #0F5B7F);
+    background: linear-gradient(to bottom, #1da0f294, #0f5c7f88);
     color: #fff;
 }
 
-.wrapper .instagram:hover,
+.wrapper .instagram:hover,                      
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-    background: linear-gradient(to bottom, #ff781e, #e62639);
+    background: linear-gradient(to bottom, #ff781e96, #e626399d);
     color: #fff;
 }
 
-.wrapper .youtube:hover,
+.wrapper .youtube:hover,                                /* BEHANCE */
 .wrapper .youtube:hover .tooltip,
 .wrapper .youtube:hover .tooltip::before {
-    background: linear-gradient(to bottom, #0077B5, #004D7F);
+    background: linear-gradient(to bottom, #0076b598, #004c7f9a);
     color: #fff;
 }
 
@@ -291,6 +302,7 @@
     opacity: 0.18;
     
     pointer-events: none;
+    
 
     
 }
@@ -300,6 +312,10 @@
     height: 100%;  
     object-fit: cover; 
     border-radius: 5%;  
+    border-color:rgba(95, 255, 228, 0.445);
+    border-style: solid;
+    box-shadow: 0px 0px 8px rgb(39, 192, 167);
+   
     
 }
 

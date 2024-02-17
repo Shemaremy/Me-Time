@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// THE PARAGRAPH TRANSITIONS
+// THE PARAGRAPH TRANSITIONS (but from left to right)
 
 document.addEventListener("DOMContentLoaded", function() {
     // Get the paragraph element
@@ -39,13 +39,12 @@ document.addEventListener("DOMContentLoaded", function() {
         span.textContent = text[i];
         
         // Set the animation delay for each span element
-        span.style.animationDelay = (i * 0.05) + "s"; // Adjust the delay as needed
+        span.style.animationDelay = (i * 0.1) + "s"; // Adjust the delay as needed
         
         // Append the span element to the paragraph
         paragraph.appendChild(span);
     }
 });
-
 
 
 
@@ -174,7 +173,100 @@ window.onload = function () {
 
 
 
+// THE SOCIAL MEDIA SMOOTH TRANSITIONS
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.wrapper');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 3000);
+});
+
+
+
+
+
+
+// SMOOTH TRANSITION FOR THE BUTTON
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.coffee-button');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 3500);
+});
+
+
+
+
+// SMOOTH TRANSITION FOR THE RIGHT ME PHOTO
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.image-container img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 3500);
+});
 
 
  
+// SMOOTH TRANSITION FOR THE NAVIGATION LINKS
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.navigation_links');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 1000);
+});
+
+
+
+// SMOOTH TRANSITION FOR THE SMALL PARAGRAPH
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.small_paragraph');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 2500);
+});
 
