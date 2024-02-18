@@ -83,3 +83,27 @@ window.addEventListener('load', function() {
     }, 200);
 });
 
+
+
+// SMOOTH TRANSITION FOR THE DIV FIRST
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.First');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 1000);
+});
+
+
+
+
+
+

@@ -7,39 +7,21 @@
 }
 
    
-.back_img{
+.back_img
+{
     
     position: relative;
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Do not repeat the image */
-    height: 500vh;
+    height: 800vh;
     border-radius: 20px;
-    display: flex; /* Enable flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-
-
+    width: 100%;
 }
 
-
-
-
-.back
+.back_img img
 {
- 
-    position:relative;         
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    width: 100%; /* Set the width to 100% */
-    height: 100%; 
-    border-radius: 10px;
-    
-
+    filter: blur(50px);
 }
-
-
-
-
 
 
 
@@ -50,13 +32,11 @@
     top: 50%; /* Position at the vertical center of the viewport */
     left: 50%; /* Position at the horizontal center of the viewport */
     transform: translate(-50%, -50%); /* Center the white section */
-    width: 90%; /* Adjust the width as needed */
-    height: 95%;
+    width: 95%; /* Adjust the width as needed */
+    height: 96%;
     background-color: rgba(255, 255, 255, 0.089); /* White background */
-    border-radius: 50px;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 1);
-
- 
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.432);
+    
 }
 
 
@@ -66,8 +46,6 @@
     display: flex;
     justify-content: center;
     padding-top: 1.5%;
-
- 
 
 }
 
@@ -88,7 +66,7 @@
 
 
 .navigation_links a:hover {
-    color: rgba(9, 255, 0, 0.637);
+    color: rgb(6, 168, 0);
 }
 
 
@@ -106,7 +84,7 @@
 
 .navigation_links a:hover::after {
     transform: scaleX(1); /* Expand the line on hover */
-    background-color: rgba(9, 255, 0, 0.637);
+    background-color: rgba(5, 153, 0, 0.973);
     box-shadow: rgba(9, 255, 0, 0.637);
 }
 
@@ -118,7 +96,7 @@
 {
   display: flex;
   justify-content: center;
-  margin-top: 280px;
+  margin-top: 220px;
   font-size: 200%;
   color: rgba(253, 255, 157, 0.486);
 
@@ -149,11 +127,11 @@
 }
 
 .white-text {
-    color: #fff0d1ad; /* White color */
+    color: #000000c2; /* White color */
 }
 
 .yellow-text {
-    color: rgba(119, 255, 164, 0.432)/* Yellow color */
+    color: rgb(0, 151, 50)/* Yellow color */
 }
 
 
@@ -164,48 +142,112 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 500px;
+    width: 80%;
+    height: 400px;
     background-color: none;
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(245, 245, 220, 0.582);
+    border-color: rgba(0, 0, 0, 0.075);
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 120px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
+
 
 
 }
+
+
 
 .Second
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     width: 90%;
     height: 500px;
     background-color: none;
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(245, 245, 220, 0.582);
+    border-color: rgba(245, 245, 220, 0);
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 100px;
+    margin-bottom: 400px;
+
+}
+
+.Heading_and_paragraph
+{
+    margin-top: 0;
+}
+
+.Heading_and_paragraph h4
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 40px;
+    margin-bottom: 100px;
+
+}
+
+.Heading_and_paragraph p
+{
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.Sliding_images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
 
 
 }
+
+.Sliding_images img {
+    filter: none;
+    height: auto;
+    width: 250px;
+    height: 350px;
+    padding-top: 200px;
+}
+
+.all2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+}
+
+
+.My_projects
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    color: rgb(48, 48, 48);
+    margin-top: 200px;
+    margin-bottom: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 
 .Third
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: 500px;
+
+    width: 1000px;
+    height: 700px;
     background-color: none;
     border-radius: 10px;
     border-style: solid;
@@ -214,11 +256,97 @@
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 200px;
-
+    margin-top: 100px;
+    justify-content: space-between; 
+    flex-wrap: wrap;
 
 }
 
+
+.Divide
+{
+    border-style: solid;
+    box-shadow: 0 0 30px rgb(25, 51, 0);
+    border-color: rgb(173, 173, 173);
+    border-width: 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 200px
+}
+
+.all3 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+   
+}
+
+.one, .two, .three, .four 
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 10px;
+    height: 250px;
+    width: 48%;
+ 
+}
+
+.one, .two
+{
+    margin-bottom: 20px;
+}
+
+.one h5, h6
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.one h5
+{
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-right: 30px;
+}
+
+.one h6
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.one, .Whats_my
+{
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.one, .vision
+{
+    font-size: 30px;
+    
+}
+
+.vision
+{
+    color: rgb(13, 110, 0);
+}
+
+.one, p
+{
+    font-size: 20px;
+    margin-left: 10px;
+}
 
 
 
