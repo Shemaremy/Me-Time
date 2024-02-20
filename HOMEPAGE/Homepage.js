@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // If the user confirms, proceed with downloading
         if (CV) {
             // Fetch the file content
-            fetch('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg')
+            fetch('https://i.imgur.com/it7BCwG.png')
                 .then(response => response.blob())
                 .then(blob => {
                     // Create a Blob URL for the file content
