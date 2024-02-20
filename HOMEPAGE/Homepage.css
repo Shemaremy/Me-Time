@@ -2,6 +2,11 @@
  @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
 {
 
+body
+{
+    overflow-y: hidden;
+}
+
 .back_img{
     
     position: relative;
@@ -24,13 +29,12 @@
 .back
 {
  
-    position:relative;         
+           
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Do not repeat the image */
     width: 100%; /* Set the width to 100% */
     height: 100%; 
-    border-radius: 10px;
-    
+    filter: blur(25px);
 
 }
 
@@ -43,13 +47,13 @@
 {
     
     position: absolute;
-    top: 50%; /* Position at the vertical center of the viewport */
+    top: 46%; /* Position at the vertical center of the viewport */
     left: 50%; /* Position at the horizontal center of the viewport */
     transform: translate(-50%, -50%); /* Center the white section */
-    width: 90%; /* Adjust the width as needed */
-    height: 95%;
+    width: 95%; /* Adjust the width as needed */
+    height: 92%;
     background-color: rgba(255, 255, 255, 0.24); /* White background */
-    border-radius: 50px;
+    border-radius: 15px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 1);
  
 }
@@ -67,7 +71,7 @@
 .First_headings
 {
     font-size: 30px;
-    padding-top: 10%;
+    padding-top: 9%;
     padding-left: 6.8%;
 }
 
@@ -110,8 +114,9 @@
     
 }
 
-.navigation_links a:hover {
-    color: rgba(9, 255, 0, 0.637);
+.navigation_links a:hover
+{
+    color: rgb(6, 168, 0);
 }
 
 
@@ -122,14 +127,14 @@
     bottom: -5px; /* Adjust this value to control the distance of the line from the text */
     width: 100%;
     height: 2px; /* Line thickness */
-    background-color: #333; /* Line color */
+    background-color: rgb(6, 168, 0); /* Line color */
     transform: scaleX(0); /* Initially hide the line */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color */
 }
 
 .navigation_links a:hover::after {
     transform: scaleX(1); /* Expand the line on hover */
-    background-color: rgba(9, 255, 0, 0.637);
+    color: rgb(6, 168, 0);
     box-shadow: rgba(9, 255, 0, 0.637);
 }
 
@@ -158,12 +163,13 @@
 
 
 
-.coffee-button {
-    background-color: rgba(63, 247, 216, 0.24);
+.coffee-button 
+{
+    background-color: rgba(100, 247, 63, 0.534);
     color:rgba(0, 0, 0, 0.719);;
     border-radius: 20px; /* Rounded corners */
     padding: 1.1%; /* Padding for button */
-    border-color:rgba(95, 255, 228, 0.247);
+    border-color:rgba(100, 247, 63, 0.534);
     border-style: solid;
     border-width: 1px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -173,16 +179,17 @@
     width: 120px;
     display: inline-block;
     box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.349);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
      
     
 }
 
 .coffee-button:hover {
-    background-color: rgba(63, 247, 216, 0.377);
+    background-color: rgba(81, 255, 0, 0.74);
 }
 
-.coffee-button:active {
-    background-color: rgba(63, 247, 216, 0.719);
+.coffee-button:active /* When clicked man */
+{
     box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
     transition: box-shadow 0.5s ease-out;
 }
@@ -218,7 +225,7 @@
 }
 
 .wrapper .icon span i {
-    color: rgb(95, 255, 228);
+    color: rgb(0, 0, 0);
 }
 
 
@@ -228,7 +235,7 @@
     border-radius: 50%;
     border-style: solid;
     border-width: 1px;
-    border-color: rgb(39, 192, 167);
+    border-color: rgb(0, 0, 0);
     padding: 10%;
     margin: 10px;
     width: 6px;
@@ -242,7 +249,7 @@
 
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.644);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
     
 }
 
@@ -265,7 +272,6 @@
 
 .wrapper .icon:active {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
-    background-color: rgba(0, 0, 0, 0.1); /* Change background color on click */
 }
 
 .wrapper .icon:hover .tooltip{
@@ -318,7 +324,7 @@
     top: 0;
     right: 0;  
     width: 30%;  
-    height: 70%;  
+    height: 60%;  
     padding-right: 10%;
     padding-top: 9.4%;
     opacity: 0.18;

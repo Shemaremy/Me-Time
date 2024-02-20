@@ -291,3 +291,42 @@ window.addEventListener('load', function() {
         wrapper.style.visibility = 'visible'; // Make the content visible
     }, 200);
 });
+
+
+
+// DOWNLOADING THE CV
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        // Notify the user before downloading
+        var CV = confirm("Are you sure you want to download this CV ?");
+        
+        // If the user confirms, proceed with downloading
+        if (CV) {
+            // Fetch the file content
+            fetch('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg')
+                .then(response => response.blob())
+                .then(blob => {
+                    // Create a Blob URL for the file content
+                    var url = URL.createObjectURL(blob);
+                    
+                    // Create an anchor element
+                    var link = document.createElement('a');
+                    link.setAttribute('href', url);
+                    link.setAttribute('download', 'CV_Remy.jpg');
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    
+                    // Simulate a click on the anchor element
+                    link.click();
+                    
+                    // Clean up by revoking the Blob URL
+                    URL.revokeObjectURL(url);
+                });
+        }
+    });
+});
+
+
+
+
