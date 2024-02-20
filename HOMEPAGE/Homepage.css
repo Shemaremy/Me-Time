@@ -120,7 +120,8 @@ body
 }
 
 
-.navigation_links a::after {
+.navigation_links a::after 
+{
     content: '';
     position: absolute;
     left: 0;
@@ -131,6 +132,8 @@ body
     transform: scaleX(0); /* Initially hide the line */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color */
 }
+
+
 
 .navigation_links a:hover::after {
     transform: scaleX(1); /* Expand the line on hover */
