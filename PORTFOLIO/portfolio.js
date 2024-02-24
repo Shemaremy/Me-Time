@@ -105,25 +105,36 @@ window.addEventListener('load', function() {
 
 
 
+// GLOWING LINES ON H2 AS YOU SCROLL DOWN THE PAGE (CERTIFICATES CLASS)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", function() {
+    const certificateHeading = document.querySelector(".certificates");
+    const lineBelow = document.querySelector(".line_below");
+    let lineShown = false; // Flag to track if the line has been shown
+  
+    let timeoutId;
+  
+    function showLine() {
+      lineBelow.classList.add("visible"); // Add the visible class when heading is in view
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(hideLine, 1000); // Hide the line after 1 second
+      lineShown = true; // Set the flag to true once the line is shown
+    }
+  
+    function hideLine() {
+      lineBelow.classList.remove("visible"); // Remove the visible class when heading is out of view
+    }
+  
+    window.addEventListener("scroll", function() {
+      if (!lineShown) { // Show the line only if it hasn't been shown before
+        const bounding = certificateHeading.getBoundingClientRect();
+        if (bounding.top >= 0 && bounding.bottom <= window.innerHeight) {
+          showLine();
+        }
+      }
+    });
+  });
+  
+  
+  
+  

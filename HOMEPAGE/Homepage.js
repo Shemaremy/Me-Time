@@ -297,7 +297,8 @@ window.addEventListener('load', function() {
 // DOWNLOADING THE CV
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('downloadButton').addEventListener('click', function() {
+    var downloadButton = document.getElementById('downloadButton');
+    downloadButton.addEventListener('click', function() {
         // Notify the user before downloading
         var CV = confirm("Are you sure you want to download this CV ?");
         
@@ -322,10 +323,30 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Clean up by revoking the Blob URL
                     URL.revokeObjectURL(url);
+
+                    // Disable the download button after the download is complete
+                    downloadButton.disabled = true;
+
+                    // Change the text of the button
+                    downloadButton.textContent = "Downloaded successfully!";
+                    
+                    // Add the completed class to the button
+                    downloadButton.classList.add('completed');
+                    
+                    // Increase the width of .coffee_button
+                    var coffeeButton = document.querySelector('.coffee-button');
+                    coffeeButton.style.width = '180px';
+                    
+                    var buymecoffee = document.querySelector('.Buy_me_coffee');
+                    buymecoffee.style.paddingLeft = '13%';
+                })
+                .catch(error => {
+                    console.error('Error occurred while downloading:', error);
                 });
         }
     });
 });
+
 
 
 

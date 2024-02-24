@@ -16,10 +16,7 @@ body
     border-radius: 20px;
     display: flex; /* Enable flexbox for centering */
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-
-    
-    
+    align-items: center; /* Center vertically */ 
 
 }
 
@@ -53,8 +50,8 @@ body
     width: 95%; /* Adjust the width as needed */
     height: 92%;
     background-color: rgba(255, 255, 255, 0.24); /* White background */
-    border-radius: 15px;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.2);
  
 }
 
@@ -73,6 +70,7 @@ body
     font-size: 30px;
     padding-top: 9%;
     padding-left: 6.8%;
+    color: #000000d3;
 }
 
 .First_headings h2 {
@@ -90,56 +88,65 @@ body
     
 }
 
-.navigation_links
+.shema
 {
+    color: green;
+}
+
+.navigation_links {
     display: flex;
     justify-content: center;
     padding-top: 1.5%;
-
- 
-
 }
-
- 
 
 .navigation_links a {
-    text-decoration: none; /* Remove underline */
-    color: black; /* Change color to black */
-    margin: 0 10px; /* Increase spacing between links horizontally */
-    padding: 0.5% 1%; /* Add padding to increase spacing vertically and horizontally */
+    text-decoration: none;
+    color: black; /* Set default color to black */
+    margin: 0 10px;
+    padding: 0.5% 1%;
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
-    transition: color 0.3s;
     position: relative;
-    
 }
 
-.navigation_links a:hover
-{
-    color: rgb(6, 168, 0);
+.navigation_links a.active {
+    color: rgb(6, 168, 0); /* Set active link color to green */
 }
 
-
-.navigation_links a::after 
-{
+.navigation_links a.active::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Adjust this value to control the distance of the line from the text */
+    bottom: -5px;
     width: 100%;
-    height: 2px; /* Line thickness */
-    background-color: rgb(6, 168, 0); /* Line color */
-    transform: scaleX(0); /* Initially hide the line */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color */
+    height: 2px;
+    background-color: rgb(6, 168, 0); /* Active link glowing line color */
+    transform: scaleX(1);
 }
 
-
+.navigation_links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: blue; /* Non-active link glowing line color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
 .navigation_links a:hover::after {
-    transform: scaleX(1); /* Expand the line on hover */
-    color: rgb(6, 168, 0);
-    box-shadow: rgba(9, 255, 0, 0.637);
+    background-color: blue; /* Change glowing line color to blue on hover */
+    transform: scaleX(0);
 }
+
+.navigation_links a:hover {
+    color: rgb(0, 175, 161); /* Change color to green on hover */
+}
+
+
+
 
 
 .mobile-nav
@@ -169,10 +176,11 @@ body
 .coffee-button 
 {
     background-color: rgba(100, 247, 63, 0.534);
+    background-color: rgba(0, 184, 0, 0.493);
     color:rgba(0, 0, 0, 0.719);;
     border-radius: 20px; /* Rounded corners */
     padding: 1.1%; /* Padding for button */
-    border-color:rgba(100, 247, 63, 0.534);
+    border-color:rgba(100, 247, 63, 0);
     border-style: solid;
     border-width: 1px;
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -194,8 +202,20 @@ body
 .coffee-button:active /* When clicked man */
 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
-    transition: box-shadow 0.5s ease-out;
+   
 }
+
+#downloadButton.completed {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: not-allowed;
+}
+
+#downloadButton:disabled {
+    cursor: not-allowed;
+    box-shadow: 1px;
+}
+
+
 
 
 .Buy_me_coffee

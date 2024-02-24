@@ -2,7 +2,8 @@
 {
 
    
-.back_img{
+.back_img
+{
     
     position: relative;
     background-size: cover; /* Cover the entire container */
@@ -13,9 +14,6 @@
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
 
-    
-    
-
 }
 
 
@@ -24,17 +22,19 @@
 .back
 {
  
-    position:relative;         
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Do not repeat the image */
     width: 100%; /* Set the width to 100% */
     height: 100%; 
-    border-radius: 10px;
+    filter: blur(25px);
     
 
 }
 
-
+body
+{
+    overflow-y: hidden;
+}
 
 
 
@@ -44,14 +44,14 @@
 {
     
     position: absolute;
-    top: 50%; /* Position at the vertical center of the viewport */
+    top: 46%; /* Position at the vertical center of the viewport */
     left: 50%; /* Position at the horizontal center of the viewport */
     transform: translate(-50%, -50%); /* Center the white section */
-    width: 90%; /* Adjust the width as needed */
-    height: 95%;
+    width: 95%; /* Adjust the width as needed */
+    height: 90%;
     background-color: rgba(255, 255, 255, 0.24); /* White background */
-    border-radius: 50px;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.2);
  
 }
 
@@ -88,51 +88,58 @@
     
 }
 
-.navigation_links
-{
+.navigation_links {
     display: flex;
     justify-content: center;
     padding-top: 1.5%;
-
- 
-
 }
 
- 
-
 .navigation_links a {
-    text-decoration: none; /* Remove underline */
-    color: black; /* Change color to black */
-    margin: 0 10px; /* Increase spacing between links horizontally */
-    padding: 0.5% 1%; /* Add padding to increase spacing vertically and horizontally */
+    text-decoration: none;
+    color: black; /* Set default color to black */
+    margin: 0 10px;
+    padding: 0.5% 1%;
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
-    transition: color 0.3s;
     position: relative;
 }
 
-.navigation_links a:hover {
-    color: rgba(9, 255, 0, 0.637);
+.navigation_links a.active {
+    color: rgb(6, 168, 0); /* Set active link color to green */
 }
 
+.navigation_links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(6, 168, 0); /* Active link glowing line color */
+    transform: scaleX(1);
+}
 
 .navigation_links a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Adjust this value to control the distance of the line from the text */
+    bottom: -5px;
     width: 100%;
-    height: 2px; /* Line thickness */
-    background-color: #333; /* Line color */
-    transform: scaleX(0); /* Initially hide the line */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for transform and background-color */
+    height: 2px;
+    background-color: blue; /* Non-active link glowing line color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .navigation_links a:hover::after {
-    transform: scaleX(1); /* Expand the line on hover */
-    background-color: rgba(9, 255, 0, 0.637);
-    box-shadow: rgba(9, 255, 0, 0.637);
+    background-color: blue; /* Change glowing line color to blue on hover */
+    transform: scaleX(0);
 }
+
+.navigation_links a:hover {
+    color: rgb(0, 175, 161); /* Change color to green on hover */
+}
+
 
 
 .mobile-nav
@@ -384,7 +391,6 @@
  
 
  
-
 
 
 
