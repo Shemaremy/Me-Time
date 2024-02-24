@@ -162,7 +162,6 @@ header
     border-color: rgba(0, 0, 0, 0.075);
     margin: auto;
     padding: 0;
-    margin: auto;
     margin-top: 150px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
 
@@ -400,6 +399,24 @@ header
     margin-left: 10px;
 }
 
+.three, p
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+.underline1
+{
+    border-width: 0.5px;
+    width: 100%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.397);
+    margin-top: 5px;
+}
 
 .certificates
 {
