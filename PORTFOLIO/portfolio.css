@@ -153,7 +153,7 @@ header
 .First
 {
     display: flex;
-    width: 85%;
+    width: 90%;
     height: 450px;
     background-color: none;
     border-radius: 10px;
@@ -187,15 +187,19 @@ header
 }
 
 .card-title {           /* CARD HEADING */
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
     margin-left: 15px;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 15px;
     margin-top: 20px;
 }
 
 .card-text {           /* PARAGRAPH IN CARD */
+
     font-size: 15px ;
-    margin-top: 12px;
+    margin-top: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,7 +213,7 @@ header
     justify-content: center;
     align-items: center;
     margin-top: 2px;
-    margin-bottom: 60px;
+    margin-bottom: 15px;
     border-style: solid;
     border-color: rgba(0, 0, 255, 0);
     border-radius: 5px;
@@ -229,7 +233,12 @@ header
     align-items: center;
     margin-left: 7%;
     background-color: rgb(97, 97, 255);
-    margin-top: 30px;
+    margin-top: 50px;
+}
+
+#add_padding
+{
+    margin-top: 70px;
 }
 
 .sec-button:hover {
@@ -284,13 +293,22 @@ header
 {
     margin-top: 0;
 }
+.Under-line
+{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 10px;
+    height: 1px;
+    margin-bottom: 70px;
+    margin-top: 40px;
+}
 
 .Heading_and_paragraph h4
 {
     font-family: "Archivo Narrow", sans-serif;
     font-optical-sizing: auto;
-    font-size: 40px;
-    margin-bottom: 100px;
+    font-size: 50px;
+    margin-bottom: 1px;
 
 }
 
@@ -308,9 +326,9 @@ header
     border-color: rgba(0, 0, 0, 0);
     border-width: 1px;
     border-radius: 10px;
-    width: 400px;
+    width: 300px;
     height: 500px;
-    margin-top: 180px;
+    margin-top: 200px;
     margin-left: 20px;
 
 }
