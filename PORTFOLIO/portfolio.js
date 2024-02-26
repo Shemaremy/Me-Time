@@ -138,3 +138,41 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+// THE AUTOSCROLL FOR MEET REMY WHEN A CARDBUTTON IS CLICKED  (CARD 1)
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".sec-button");
+    
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Get the target section based on the button's index
+            var targetIndex = Array.from(buttons).indexOf(button);
+            var targetSection = document.querySelectorAll(".scroll-to-section")[targetIndex];
+
+            // Calculate the distance to scroll
+            var scrollToY = targetSection.offsetTop;
+
+            // Smooth scroll to the element
+            window.scrollTo({
+                top: scrollToY,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
+
