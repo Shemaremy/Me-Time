@@ -1,6 +1,10 @@
 @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
 {
 
+body
+{
+    background-color: aliceblue;
+}
 .mobile-nav
 {
     display: none;
@@ -18,12 +22,94 @@
     width: 100%;
 }
 
-.background
-{
-    filter: blur(50px);
-}
+/*------------------------------------BELOW COMES THE BACKGROUND PAGE ANIMATIONS-----------------------------*/
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #FFA500;
+    animation: float 5s infinite alternate;
+  }
+
+  .circle1 {
+    width: 50px;
+    height: 50px;
+    top: 10%;
+    left: 10%;
+    background-color:  #aa7f2fa1;
+    
+  }
+
+  .circle2 {
+    width: 450px;
+    height: 450px;
+    bottom: 90%;
+    right: 5%;
+    animation-duration: 5s;
+    background-color:  #2f87aa27;
+  }
+
+  .circle3 {
+    width: 200px;
+    height: 200px;
+    top: 28.8%;
+    left: 78%;
+    transform: translateX(-50%);
+    animation-duration: 5s;
+    background-color:  #4caa2f;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .triangle2a {
+    position: absolute;
+    bottom: 46%;
+    left: 25%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 700px solid transparent;   /* Length of the left side */
+    border-right: 700px solid transparent;  /* Length of the right side */
+    border-bottom: 900px solid #a1ff8e57;      /* Length of the bottom side to reduce as px increase*/
+    border-radius: 50%;
+    animation: rotateTriangle 50s infinite linear;
+    filter: blur(5px);
+  }
+
+  .triangle3 {
+    position: absolute;
+    bottom: 90%;
+    left: 94%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;   /* Length of the left side*/
+    border-right: 20px solid transparent;  /* Length of the right side*/
+    border-bottom: 35px solid #c2670079;   /* Length of the bottom side to reduce as px increase*/
+    animation: rotateTriangle 5s infinite linear;
+  }
+
+  @keyframes rotateTriangle {
+    0% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
 
 
+/*------------------------------------ENDING OF THE BACKGROUND PAGE ANIMATIONS-------------------------------*/
 
 .center_img
 {
@@ -344,44 +430,73 @@ header
 {
 
     width: 90%;
-    height: 500px;
+    height: 1300px;
     background-color: none;
-    border-radius: 10px;
+    border-radius: 3px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(245, 245, 220, 0);
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 400px;
+    margin-top: 200px;
+    margin-bottom: 500px;
 
+}
+
+.MEET_REMY
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    color: rgb(48, 48, 48);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all2
+{
+    border-color: black;
+    border-radius: 75px 1px 75px 1px;
+    background-color: rgba(240, 248, 255, 0.575);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    margin-top: 100px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    
 }
 
 .Heading_and_paragraph
 {
-    margin-top: 0;
+
+    margin-top: 100px;
     margin-bottom: 100px;
-}
 
-.Only_paragraph
-{
-    overflow-y: auto;
-    height: 80vh;
-    width: 80%;
 }
-
 
 .Only_paragraph {
+    overflow-y: auto;
+    height: 40vh;
+    width: 90%;
+    padding-right: 50px; /* Adjust as needed for desired spacing */
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* For Firefox */
 }
+
 .Only_paragraph::-webkit-scrollbar { /* For WebKit */
     width: 5px;
 }
+
 .Only_paragraph::-webkit-scrollbar-thumb { /* For WebKit */
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .Only_paragraph::-webkit-scrollbar-track { /* For WebKit */
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -389,25 +504,24 @@ header
 
 .Under-line
 {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.534);
+    width: 30%;
+    background-color: rgba(18, 219, 0, 0.534);
     border-radius: 10px;
     height: 1px;
     margin-bottom: 70px;
-    margin-top: 40px;
     animation: stretch_1 30s linear infinite;
 }
 
 
 @keyframes stretch_1 {
     0% {
-        width: 0%;
+        width: 20%;
     }
     50% {
-        width: 100%;
+        width: 50%;
     }
     100% {
-        width: 0%;
+        width: 20%;
     }
 }
 
@@ -417,8 +531,8 @@ header
 {
     font-family: "Archivo Narrow", sans-serif;
     font-optical-sizing: auto;
-    font-size: 50px;
-    margin-bottom: 1px; 
+    font-size: 25px;
+    margin-bottom: 50px; 
 
 }
 
@@ -430,28 +544,39 @@ header
 }
 
 
-.Sliding_images1
+.Under-line2
 {
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0);
-    border-width: 1px;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.164);
     border-radius: 10px;
-    width: 450px;
-    height: 500px;
-    margin-top: 250px;
-    margin-left: 20px;
-
+    height: 1px;
+    margin-bottom: 70px;
 }
 
 
-
-
-
-.all2
+.About_me
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin-bottom: 200px;
+}
+
+.About_me h4
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 25px;
+    margin-bottom: 50px; 
+}
+
+.Heading_and_paragraph, .About_me
+{
+    margin-left: 100px;
+}
+
+.About_me p
+{
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
