@@ -176,3 +176,33 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+// THE AUTOSCROLL TO SERVICES SECTION WHEN NAV LINK SERVICES IS CLICKED
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".link3");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Get the element with class name "Sixth"
+            var targetSection = document.querySelector(".Sixth");
+
+            // Check if the target section exists
+            if (targetSection) {
+                // Calculate the distance to scroll
+                var scrollToY = targetSection.offsetTop;
+
+                // Smooth scroll to the element
+                window.scrollTo({
+                    top: scrollToY,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+

@@ -17,7 +17,7 @@ body
     position: relative;
     background-size: cover; /* Cover the entire container */
     background-repeat: no-repeat; /* Do not repeat the image */
-    height: 1000vh;
+    height: 1240vh;
     border-radius: 20px;
     width: 100%;
 }
@@ -43,7 +43,7 @@ body
   .circle2 {
     width: 450px;
     height: 450px;
-    bottom: 90%;
+    bottom: 93%;
     right: 5%;
     animation-duration: 5s;
     background-color:  #2f87aa27;
@@ -52,20 +52,34 @@ body
   .circle3 {
     width: 200px;
     height: 200px;
-    top: 28.8%;
+    top: 23.22%;
     left: 78%;
     transform: translateX(-50%);
     animation-duration: 5s;
-    background-color:  #4caa2f;
+    background-color:  #4caa2f94;
   }
 
-  .circle4 {
-    width: 20px;
-    height: 20px;
-    bottom: 87%;
-    right: 52%;
-    animation-duration: 5000s;
-    background-color:  #aa712f27;
+  
+
+  .circle4b {
+    width: 60px;
+    height: 60px;
+    bottom: 92%;
+    right: 76%;
+    animation-duration: 3s;
+    background-color:  rgba(29, 80, 0, 0.322);
+    transform: rotate(90deg);
+  }
+
+  .circle4a {
+    width: 200px;
+    height: 200px;
+    bottom: 62%;
+    right: 72.5%;
+    animation-duration: 5s;
+    background-color:  rgba(29, 80, 0, 0.308);
+    transform: rotate(90deg);
+
   }
 
   @keyframes float {
@@ -386,17 +400,17 @@ header
 
 .sec-button {               /* THE BUTTON */
     border-color: none;
-    border-radius: 3px;
+    border-radius: 5px;
     height: auto;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0);
+    border-color: rgb(97, 97, 255);
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 7%;
-    background-color: rgb(97, 97, 255);
+    background-color: rgba(97, 97, 255, 0.158);
     margin-top: 50px;
 }
 
@@ -408,7 +422,7 @@ header
 .sec-button:hover {
     cursor: pointer;
     border-color: none;
-    border-radius: 3px;
+    border-radius: 15px;
     height: auto;
     border-width: 1px;
     border-style: solid;
@@ -417,12 +431,12 @@ header
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(67, 53, 255);
+    background-color: rgba(117, 255, 53, 0.507);
 }
 
 .words_button {                         /* WORDS IN BUTTON */
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .vertical-line {
@@ -434,6 +448,16 @@ header
     background: linear-gradient(to bottom, rgba(49, 49, 49, 0.404) 0%, rgba(255, 255, 255, 0) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.486) 100%);
 }
 
+.say_hello
+{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 500px;
+    margin-top: 100px;
+    position: absolute;
+}
 
 .Second
 {
@@ -610,7 +634,7 @@ header
     border-radius: 10px;
     height: 2px;
     margin-bottom: 200px;
-    animation: stretch_2 15s linear infinite;
+    animation: stretch_2 10s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -816,6 +840,13 @@ header
 
 }
 
+
+.Fifth
+{
+    height: 80vh;
+}
+
+
 .Skills
 {
     font-family: "Archivo Narrow", sans-serif;
@@ -838,7 +869,7 @@ header
     border-radius: 10px;
     height: 2px;
     margin-bottom: 200px;
-    animation: stretch_2 15s linear infinite;
+    animation: stretch_2 10s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -857,6 +888,36 @@ header
     }
 }
 
+.Sixth
+{
+    height: 80vh;
+}
+
+.underline4
+{
+    width: 20%;
+    background-color: rgb(4, 129, 0);
+    border-radius: 10px;
+    height: 2px;
+    margin-bottom: 200px;
+    animation: stretch_3 5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@keyframes stretch_3 {
+    30% {
+        width: 10%;
+    }
+    50% {
+        width: 20%;
+    }
+    30% {
+        width: 0%;
+    }
+}
 
 
 }
