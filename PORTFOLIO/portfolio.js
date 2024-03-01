@@ -206,3 +206,67 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+
+// THIS HELPS THAT WHEN I SCROLL, I SEE THE SCROLL TOOL THAT ENABLES ME BACK AT THE TOP OF THE PAGE
+
+window.addEventListener('scroll', function() {
+    var returnToTop = document.getElementById('returnToTop');
+    var hisha = document.querySelector('.navigation_links');
+    var flacko = document.querySelector('.Main_class');
+
+    var hishaRect = hisha.getBoundingClientRect();
+    var flackoRect = flacko.getBoundingClientRect();
+
+    // If Flacko is in view, show the returnToTop button, otherwise hide it
+    if (flackoRect.top <= window.innerHeight && flackoRect.bottom >= 0) {
+      returnToTop.style.display = 'block';
+      setTimeout(function() {
+        returnToTop.style.opacity = 1;
+      }, 1000);
+    } else {
+      returnToTop.style.opacity = 0;
+      setTimeout(function() {
+        returnToTop.style.display = 'none';
+      }, 3);
+    }
+  });
+
+
+
+
+
+
+  // WHEN THE BUTTON IS CLICKED, WE GO BACK UP TO THE TOP PAGE
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var returnToTop = document.getElementById('returnToTop');
+    returnToTop.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Get the element with class name "Flacko"
+        var targetSection = document.querySelector(".Whole_Body");
+
+        // Check if the target section exists
+        if (targetSection) {
+            // Calculate the distance to scroll
+            var scrollToY = targetSection.offsetTop;
+
+            // Smooth scroll to the element
+            window.scrollTo({
+                top: scrollToY,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+
+
+
+
+
+
+

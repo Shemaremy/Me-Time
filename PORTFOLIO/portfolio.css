@@ -3,6 +3,7 @@
 
 body
 {
+    position: relative;
     background-color: aliceblue;
 }
 .mobile-nav
@@ -27,17 +28,16 @@ body
     position: absolute;
     border-radius: 50%;
     z-index: -1;
-    background-color: #FFA500;
     animation: float 5s infinite alternate;
   }
 
   .circle1 {
     width: 50px;
     height: 50px;
-    top: 10%;
-    left: 10%;
+    margin-top: 4%;
+    margin-left: 10%;
     background-color:  #aa7f2fa1;
-    
+    z-index: 999;
   }
 
   .circle2 {
@@ -47,6 +47,7 @@ body
     right: 5%;
     animation-duration: 5s;
     background-color:  #2f87aa27;
+    
   }
 
   .circle3 {
@@ -62,13 +63,14 @@ body
   
 
   .circle4b {
-    width: 60px;
-    height: 60px;
-    bottom: 92%;
+    width: 180px;
+    height: 180px;
+    bottom: 90.1%;
     right: 76%;
-    animation-duration: 3s;
+    animation-duration: 5s;
     background-color:  rgba(29, 80, 0, 0.322);
     transform: rotate(90deg);
+    
   }
 
   .circle4a {
@@ -111,7 +113,7 @@ body
 
   .triangle3 {
     position: absolute;
-    bottom: 90%;
+    bottom: 99.3%;
     left: 94%;
     transform: translateX(-50%);
     width: 0;
@@ -119,7 +121,8 @@ body
     border-left: 20px solid transparent;   /* Length of the left side*/
     border-right: 20px solid transparent;  /* Length of the right side*/
     border-bottom: 35px solid #c2670079;   /* Length of the bottom side to reduce as px increase*/
-    animation: rotateTriangle 5s infinite linear;
+    animation: rotateTriangle 15s infinite linear;
+    
   }
 
   @keyframes rotateTriangle {
@@ -130,6 +133,46 @@ body
       transform: translateX(-50%) rotate(360deg);
     }
   }
+
+
+
+.return_to_top
+{
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 1px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    left: 90%;
+    top: 85%;
+    transform: translateX(-50%);
+    animation-duration: 5000s;
+    position: fixed; 
+    z-index: 999; 
+    background-color: none;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    border: none;
+    
+}
+
+.icon
+{
+    font-size: 35px;
+    border-radius: 50%;
+    color: rgba(0, 179, 39, 0.514);
+
+}
+
+.icon:hover
+{
+    font-size: 35px;
+    border-radius: 50%;
+    color: rgb(0, 124, 27);
+
+}
 
 
 /*------------------------------------ENDING OF THE BACKGROUND PAGE ANIMATIONS-------------------------------*/
@@ -326,6 +369,19 @@ header
         width: 3%; /* Return to 3% width */
     }
 }
+/******************************** ENDING HEADER SECTION *******************************************/
+
+
+
+
+
+
+
+
+
+
+
+/******************************** STARTING CARDS SECTION *******************************************/
 
 
 .First
@@ -458,6 +514,18 @@ header
     margin-top: 100px;
     position: absolute;
 }
+/******************************** ENDING MY PROJECTS SECTION *******************************************/
+
+
+
+
+
+
+
+
+
+
+/******************************** STARTING MEET REMY SECTION *******************************************/
 
 .Second
 {
@@ -612,7 +680,20 @@ header
     font-style: normal;
 }
 
+/******************************** ENDING MEET REMY SECTION *******************************************/
 
+
+
+
+
+
+
+
+
+
+
+
+/******************************** STARTING MY PROJECTS SECTION *******************************************/
 .My_projects
 {
     font-family: "Archivo Narrow", sans-serif;
@@ -663,27 +744,42 @@ header
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(245, 245, 220, 0.582);
+    border-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 230px;
+    margin-top: 130px;
     justify-content: space-between; 
     flex-wrap: wrap;
+    background-color: rgba(223, 232, 255, 0.63);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
 
+    overflow-y: auto;
+    height: 80vh;
+    width: 85%;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
 }
 
 
-.Divide
-{
-    border-style: solid;
-    box-shadow: 0 0 30px rgb(25, 51, 0);
-    border-color: rgb(173, 173, 173);
-    border-width: 1px;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 200px
+/* For WebKit (Chrome, Safari) */
+.Third::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 2px;
 }
+
+/* Track */
+.Third::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Color of the track */
+}
+
+/* Handle */
+.Third::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Color of the handle */
+}
+
+
+
 
 .all3 {
     position: relative;
@@ -702,19 +798,16 @@ header
     border-radius: 10px;
     height: 250px;
     width: 48%;
+    margin-top: 10px;
  
 }
 
-.one, .two
-{
-    margin-bottom: 20px;
-}
 
 .one h5, h6
 {
     display: flex;
     justify-content: flex-end;
-    margin-top: 5px;
+
 }
 
 .one h5
@@ -723,8 +816,7 @@ header
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 25px;
-    margin-bottom: 5px;
-    margin-right: 30px;
+
 }
 
 .one h6
@@ -732,14 +824,12 @@ header
     font-family: "Archivo Narrow", sans-serif;
     font-optical-sizing: auto;
     font-size: 20px;
-    margin-top: 5px;
-    margin-right: 5px;
+
 }
 
 .one, .Whats_my
 {
-    margin-top: 5px;
-    margin-right: 10px;
+   margin-top: 0px;
 }
 
 .one, .vision
@@ -756,7 +846,6 @@ header
 .one, p
 {
     font-size: 20px;
-    margin-left: 10px;
 }
 
 .three, p
@@ -764,9 +853,34 @@ header
     font-family: "Archivo Narrow", sans-serif;
     font-optical-sizing: auto;
     font-size: 20px;
-    margin-top: 5px;
-    margin-right: 5px;
-    margin-bottom: 20px;
+
+}
+/******************************** ENDING MY PROJECTS SECTION *******************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************** STARTING MY CERTIFICATES SECTION *******************************************/
+
+.Divide
+{
+    border-style: solid;
+    box-shadow: 0 0 30px rgb(25, 51, 0);
+    border-color: rgb(173, 173, 173);
+    border-width: 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 200px
 }
 
 .underline1
@@ -839,7 +953,25 @@ header
     flex-wrap: wrap;
 
 }
+/******************************** ENDING MY CERTIFICATES SECTION *******************************************/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************** STARTING MY SKILLS SECTION *******************************************/
 
 .Fifth
 {
@@ -887,6 +1019,15 @@ header
         width: 0%;
     }
 }
+/******************************** ENDING SKILLS SECTION *******************************************/
+
+
+
+
+
+
+
+/******************************** STARTING MY SERVICES SECTION *******************************************/
 
 .Sixth
 {
@@ -918,6 +1059,7 @@ header
         width: 0%;
     }
 }
+/******************************** ENDING MY SERVICES SECTION *******************************************/
 
 
 }

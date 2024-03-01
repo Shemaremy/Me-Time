@@ -177,7 +177,7 @@ body
 {
     background-color: rgba(100, 247, 63, 0.534);
     background-color: rgba(0, 184, 0, 0.493);
-    color:rgba(0, 0, 0, 0.719);;
+    color:rgba(0, 0, 0, 0.534);;
     border-radius: 20px; /* Rounded corners */
     padding: 1.1%; /* Padding for button */
     border-color:rgba(100, 247, 63, 0);
@@ -191,6 +191,7 @@ body
     display: inline-block;
     box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.349);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
+    letter-spacing: 1.2px;
      
     
 }
