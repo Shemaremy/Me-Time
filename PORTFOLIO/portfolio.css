@@ -397,7 +397,7 @@ header
     border-radius: 5px;
     border-width: 1px;
 }
-
+ 
 .sec-button {               /* THE BUTTON */
     border-color: none;
     border-radius: 5px;
@@ -422,11 +422,11 @@ header
 .sec-button:hover {
     cursor: pointer;
     border-color: none;
-    border-radius: 15px;
+    border-radius: 5px;
     height: auto;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0);
+    border-color: rgba(97, 97, 255, 0.5);
     padding: 10px;
     display: flex;
     justify-content: center;

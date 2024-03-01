@@ -47,7 +47,7 @@ body
     top: 46%; /* Position at the vertical center of the viewport */
     left: 50%; /* Position at the horizontal center of the viewport */
     transform: translate(-50%, -50%); /* Center the white section */
-    width: 95%; /* Adjust the width as needed */
+    width: 85%; /* Adjust the width as needed */
     height: 90%;
     background-color: rgba(255, 255, 255, 0.24); /* White background */
     border-radius: 5px;
@@ -55,38 +55,13 @@ body
  
 }
 
-.My_Photo
-{
-    display: none;
-}
+
 
 .nav_icon
 {
     display: none;
 }
 
-.First_headings
-{
-    font-size: 30px;
-    padding-top: 10%;
-    padding-left: 6.8%;
-}
-
-.First_headings h2 {
-    margin-bottom: 5px; /* Adjust the value as needed */
-    font-family: Arial, sans-serif;
-    font-weight: 500;
-}
-
-
-.First_headings h1 {
-
-    margin-bottom: 2%;   
-    margin-top: 1%; /* Adjust the value as needed */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
-    
-}
 
 .navigation_links {
     display: flex;
@@ -100,7 +75,7 @@ body
     margin: 0 10px;
     padding: 0.5% 1%;
     font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     position: relative;
 }
 
@@ -152,246 +127,169 @@ body
 }
 
 
-
-
-
-
-.small_paragraph
+.Everything
 {
-    padding-left: 8%;
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-    margin-bottom: 2%;
-}
-
-
-
-.coffee-button {
-    background-color: #448bb4d7; /* 3D color */
-    color: #000000c7;
-    border-radius: 20px; /* Rounded corners */
-    padding: 1.1%; /* Padding for button */
-    border: none; /* Remove default button border */
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%; /* Font size */
-    font-weight: 70px;
-    cursor: pointer; /* Show pointer cursor on hover */
-    transition: background-color 0.2s ease; /* Smooth transition for background color */
-    width: 120px;
-    display: inline-block;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.479);
-    
-}
-
-.coffee-button:hover {
-    background-color: rgba(74, 165, 210, 1);
-}
-
-.coffee-button:active {
-    background-color: rgba(106, 200, 255, 0.65); /* Lighter shade on click */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
-    transition: box-shadow 0.5s ease-out;
-}
-
-
-.Buy_me_coffee
-{
-    padding-left: 12%;
-    padding-top: 0.3%;
-    
-}
-
-
-
-
-.social_media
-{
-
-    padding-top: 7%;
-    padding-left: 6.5%;
-    
-}
-
-
-
-
-
-.wrapper
-{
-    display: inline-flex;
-    list-style: none;
-    
-    
-}
-
-.wrapper .icon{
-    position: relative;
-    background: #fff;
-    border-radius: 50%;
-    padding: 10%;
-    margin: 10px;
-    width: 6px;
-    height: 6px;
-    font-size: 1.1rem;
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+
+.Left_Section
+{
+   margin-top: 0;
+}
+
+.Right_section
+{
+   margin-right: 0px;
+   margin-top: 40px;
+}
+
+.heading_text
+{
+    margin-bottom: 0px;
+}
+
+.p1
+{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.p2
+{
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.p3
+{
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+.icon 
+{
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.658);  
+}
+
+.words
+{
+   margin-bottom: 70px;
+}
+
+.Send
+{
+    margin-top: 5px;
+}
+
+.Name_Email
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.Email
+{
+    margin-left: 15px;
+}
+
+
+h1
+{  
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 370%;
+}
+
+h2
+{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+p
+{
+    font-family: sans-serif;
+}
+
+
+button
+{
+    margin-top: 10px;
+    border-style: solid;
+    border-color: rgb(6, 168, 0);;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 120px;
+    padding: 9px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    
+    font-size: 14px;
 }
 
-.wrapper .tooltip{
-    position: absolute;
-    top: 0;
-    font-size: 0.7rem;
-    background: #fff;
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 6%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
-}
-
-.wrapper .icon:active {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
-    background-color: rgba(0, 0, 0, 0.1); /* Change background color on click */
-}
-
-.wrapper .icon:hover .tooltip{
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip{
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before{
-    background: linear-gradient(to bottom, #1769FF, #0E3A7F);
-    color: #fff;
-}
-
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background: linear-gradient(to bottom, #1DA1F2, #0F5B7F);
-    color: #fff;
-}
-
-.wrapper .instagram:hover,
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-    background: linear-gradient(to bottom, #ff781e, #e62639);
-    color: #fff;
-}
-
-.wrapper .youtube:hover,
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-    background: linear-gradient(to bottom, #0077B5, #004D7F);
-    color: #fff;
+button:hover
+{
+    border-color: rgb(0, 255, 98);
 }
 
 
+input
+{
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(4, 122, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 70%;
+    transition: width 0.3s ease;
 
-
-/* THIS IS THE RIGHT SIDE IMAGE*/
-
-.image-container {
-    position: absolute;
-    top: 0;
-    right: 0;  
-    width: 30%;  
-    height: 70%;  
-    padding-right: 10%;
-    padding-top: 9.4%;
-    opacity: 0.18;
-    
-    pointer-events: none;
-
-    
 }
 
-.image-container img {
-    width: 100%;  
-    height: 100%;  
-    object-fit: cover; 
-    border-radius: 5%;  
-    
+input:hover
+{   
+    border-color: rgb(7, 209, 0);
+    width: 90%;
 }
 
-
- 
-/* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
-
-.heading {
-    opacity: 0; /* Start with the headings invisible */
-    transform: translateY(20px); /* Shift the headings downwards initially */
-    transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
-    transition-delay: 1s;
-}
-
-/* Define the animation when the first heading becomes visible */
-.heading.show-heading:first-child {
-    transition-delay: 1.5s; /* Delay the animation for the first heading */
-}
-
-/* Define the animation when the headings become visible */
-.heading.show-heading {
-    opacity: 1; /* Make the heading visible */
-    transform: translateY(0); /* Reset the transformation to its original position */
+input:focus
+{
+    outline: none;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(7, 209, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 90%;
 }
 
 
-
-
-
-
-/* PARAGRAPH TRANSITION */
-
-
-/* Apply initial styles to hide the paragraph text */
-.small_paragraph .paragraph span {
-    opacity: 0;
-    animation: revealLetter 1s ease forwards;
+.text_area
+{
+    width: 86%;
 }
 
-/* Define animation for revealing each letter */
-@keyframes revealLetter {
-    0% {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.text_area:hover
+{
+    width: 96%;
 }
-
-
-
-
-
-/* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
-
- 
- 
-
- 
-
 
 
 }
