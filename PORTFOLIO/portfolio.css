@@ -212,6 +212,7 @@ body
     position: absolute;
     bottom: 0;
     right: 0;
+    z-index: 999;
 }
 
   .green-line {
@@ -710,7 +711,7 @@ header
 
 .underline2
 {
-    width: 40%;
+    width: 20%;
     background-color: rgb(4, 129, 0);
     border-radius: 10px;
     height: 2px;
@@ -724,13 +725,13 @@ header
 
 @keyframes stretch_2 {
     30% {
-        width: 10%;
+        width: 30%;
     }
-    50% {
-        width: 40%;
+    20% {
+        width: 20%;
     }
-    30% {
-        width: 0%;
+    5% {
+        width: 5%;
     }
 }
 
@@ -741,7 +742,7 @@ header
     width: 1000px;
     height: 700px;
     background-color: none;
-    border-radius: 10px;
+    border-radius: 30px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
@@ -751,7 +752,7 @@ header
     margin-top: 130px;
     justify-content: space-between; 
     flex-wrap: wrap;
-    background-color: rgba(223, 232, 255, 0.63);
+    background-color: rgba(223, 232, 255, 0.089);
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
 
     overflow-y: auto;
@@ -759,7 +760,9 @@ header
     width: 85%;
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+
 }
+
 
 
 /* For WebKit (Chrome, Safari) */
@@ -780,81 +783,41 @@ header
 
 
 
-
 .all3 {
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
-   
-}
-
-.one, .two, .three, .four 
-{
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 10px;
-    height: 250px;
-    width: 48%;
-    margin-top: 10px;
- 
-}
-
-
-.one h5, h6
-{
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-.one h5
-{
-    font-family: "Archivo", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 25px;
-
-}
-
-.one h6
-{
-    font-family: "Archivo Narrow", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 20px;
-
-}
-
-.one, .Whats_my
-{
-   margin-top: 0px;
-}
-
-.one, .vision
-{
-    font-size: 30px;
     
 }
 
-.vision
+.one, .two, .three, .four, .five, .six 
 {
-    color: rgb(13, 110, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    height: 250px;
+    width: 48%;
+    margin-top: 10px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
 }
 
-.one, p
+
+.circle5
 {
-    font-size: 20px;
+    width: 500px;
+    height: 500px;
+    bottom: 43%;
+    right: 3%;
+    animation-duration: 5s;
+    background-color:  rgba(0, 60, 255, 0.158);
+    transform: rotate(90deg);
+    filter: blur(20px);
+    
+
 }
 
-.three, p
-{
-    font-family: "Archivo Narrow", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 20px;
-
-}
 /******************************** ENDING MY PROJECTS SECTION *******************************************/
 
 
@@ -910,19 +873,15 @@ header
     border-style: solid;
     border-color: rgb(0, 95, 40);
     border-width: 1px;
-    width: 50%;
+    width: 30%;
     margin: 0 auto;
     margin-top: 2px;
-    margin-bottom: 130px;
+    margin-bottom: 60px;
     transform: scaleX(0.2); /* Initially hide the line */
     transition: transform 0.3s ease, background-color 0.3s ease;
 
 }
 
-.visible 
-{
-  transform: scaleX(1); /* Expand the line on hover */
-}
 
 
 .certificates_paragraph
@@ -938,21 +897,57 @@ header
 
 .certificates_library
 {
-    width: 1100px;
-    height: 400px;
+    
+    width: 1000px;
+    height: 700px;
     background-color: none;
-    border-radius: 10px;
+    border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(245, 245, 220, 0.582);
+    border-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 130px;
     justify-content: space-between; 
     flex-wrap: wrap;
+    background-color: rgba(223, 232, 255, 0.089);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
+
+    overflow-y: auto;
+    height: 80vh;
+    width: 85%;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+    
 
 }
+
+
+.all4 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin-bottom: 1%;
+    background: linear-gradient(135deg, #ffffff00, #bfffc446);
+    perspective: 1000px;
+
+}
+
+.one1, .two1, .three1, .four1, .five1, .six1 
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    height: 300px;
+    width: 28%;
+    margin-top: 10px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    padding: 20px;
+}
+
 /******************************** ENDING MY CERTIFICATES SECTION *******************************************/
 
 
@@ -971,11 +966,11 @@ header
 
 
 
-/******************************** STARTING MY SKILLS SECTION *******************************************/
+/******************************** STARTING SKILLS AND EXPERIENCE SECTION *******************************************/
 
 .Fifth
 {
-    height: 80vh;
+    height: 110vh;
 }
 
 
@@ -1001,14 +996,14 @@ header
     border-radius: 10px;
     height: 2px;
     margin-bottom: 200px;
-    animation: stretch_2 10s linear infinite;
+    animation: stretch_3 10s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
-@keyframes stretch_2 {
+@keyframes stretch_3 {
     30% {
         width: 10%;
     }
@@ -1019,6 +1014,92 @@ header
         width: 0%;
     }
 }
+
+
+.all5
+{
+   border-style: solid;
+   border-color:  #00000033;
+   border-width: 1px;
+   height: 100%;
+   width: 95%;
+   overflow-y: auto;
+   scrollbar-width: thin; 
+   
+   border-radius: 20px;
+   background: linear-gradient(135deg, #925f002c, #bfe9ff88);
+   perspective: 1000px;
+   align-items: center;
+   box-shadow:  0 0 30px #0051ff3a;
+   margin: 0 auto;
+   margin-top: 5%;
+   border-left: none;
+   border-top: none;
+
+
+}
+
+
+.all5a, .all5b
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   justify-content: space-around;
+   margin: 0 auto;
+   border-style: solid;
+   border-width: 1px;
+
+
+
+   background-color: none;
+   border-radius: 5px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: rgba(0, 0, 0, 0);
+   margin: 0;
+   padding: 0;
+   margin: auto;
+   margin-top: 150px;
+   justify-content: space-between; 
+   flex-wrap: wrap;
+   background-color: rgba(223, 232, 255, 0.089);
+   box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
+
+   height: 60vh;
+   width: 85%;
+   margin-bottom: 80px;
+   margin-top: 0px;
+   
+
+   
+}
+
+
+.all5a
+{
+    border-radius: 10px 80px 10px 80px;
+}
+
+.Mini_headers
+{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 30px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.63);
+
+}
+
+
 /******************************** ENDING SKILLS SECTION *******************************************/
 
 
@@ -1059,7 +1140,89 @@ header
         width: 0%;
     }
 }
+
+.hire_me
+{
+   height: 70%;
+   width: 80%;
+   border-style: solid;
+   border-color: rgba(0, 0, 0, 0);
+   border-radius: 10px;
+   border-width: 1px;
+   margin: 0 auto;
+   margin-top: 2%;
+   box-shadow:  0 0 30px rgba(0, 0, 0, 0.267);
+   
+}
+
+
 /******************************** ENDING MY SERVICES SECTION *******************************************/
+
+
+footer 
+{
+    position: absolute;  /*prevent affecting the default size of the page*/ 
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.212));
+    margin: 0 auto;
+    height: 320px; /* Adjust height as needed */
+    width: 100%; /* Adjust width as needed */
+}
+
+.fab
+{
+    color: black;
+    font-size: 25px;
+}
+
+.fab:hover
+{
+    color: black;
+    font-size: 25px;
+}
+
+.decs
+{
+    text-decoration: none;
+}
+
+.all6
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+
+.footer_logo
+{
+    margin: 0 auto;
+    margin-right: 600px;
+    opacity: 0.7;
+}
+
+.footer_icons
+{
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+
+}
+
+
+.contain_me
+{
+   margin-left: 15px;
+}
+
+.contains_footer_icons
+{
+    margin-right: 10%;
+    margin-top: 4%;
+}
 
 
 }
