@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Page</title>
+
+    <link rel="icon" href="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%207.png">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+
+<!-------------------------------------------CSS START------------------------------------------------------------>
+<style>
+    @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
+{
+
+   
+.back_img
+{
+    
+    position: relative;
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 105vh;
+    border-radius: 20px;
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+}
+
+
+
+
+.back
+{
+ 
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    width: 100%; /* Set the width to 100% */
+    height: 100%; 
+    filter: blur(25px);
+    
+
+}
+
+body
+{
+    overflow-y: hidden;
+}
+
+
+
+
+
+.center_img
+{
+    
+    position: absolute;
+    top: 46%; /* Position at the vertical center of the viewport */
+    left: 50%; /* Position at the horizontal center of the viewport */
+    transform: translate(-50%, -50%); /* Center the white section */
+    width: 85%; /* Adjust the width as needed */
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.24); /* White background */
+    border-radius: 5px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.2);
+ 
+}
+
+
+
+.nav_icon
+{
+    display: none;
+}
+
+
+.navigation_links {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5%;
+}
+
+.navigation_links a {
+    text-decoration: none;
+    color: black; /* Set default color to black */
+    margin: 0 10px;
+    padding: 0.5% 1%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    position: relative;
+}
+
+.navigation_links a.active {
+    color: rgb(6, 168, 0); /* Set active link color to green */
+}
+
+.navigation_links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(6, 168, 0); /* Active link glowing line color */
+    transform: scaleX(1);
+}
+
+.navigation_links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: blue; /* Non-active link glowing line color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation_links a:hover::after {
+    background-color: blue; /* Change glowing line color to blue on hover */
+    transform: scaleX(0);
+}
+
+.navigation_links a:hover {
+    color: rgb(0, 175, 161); /* Change color to green on hover */
+}
+
+
+
+.mobile-nav
+{
+    display: none;
+}
+.hamburger
+{
+    display: none;
+}
+
+
+.Everything
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 120px;
+}
+
+.Left_Section
+{
+   margin-top: 0;
+}
+
+.Right_section
+{
+   margin-right: 0px;
+   margin-top: 40px;
+}
+
+.heading_text
+{
+    margin-bottom: 0px;
+}
+
+.p1
+{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.p2
+{
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.p3
+{
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+.icon 
+{
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.658);  
+}
+
+.words
+{
+   margin-bottom: 70px;
+}
+
+.Send
+{
+    margin-top: 5px;
+}
+
+.Name_Email
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.Email
+{
+    margin-left: 15px;
+}
+
+
+h1
+{  
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 370%;
+}
+
+h2
+{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+p
+{
+    font-family: sans-serif;
+}
+
+
+button
+{
+    margin-top: 10px;
+    border-style: solid;
+    border-color: rgb(6, 168, 0);;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 120px;
+    padding: 9px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover
+{
+    border-color: rgb(0, 255, 98);
+}
+
+
+input
+{
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(4, 122, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 70%;
+    transition: width 0.3s ease;
+
+}
+
+input:hover
+{   
+    border-color: rgb(7, 209, 0);
+    width: 90%;
+}
+
+input:focus
+{
+    outline: none;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(7, 209, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 90%;
+}
+
+
+.text_area
+{
+    width: 86%;
+}
+
+.text_area:hover
+{
+    width: 96%;
+}
+
+
+}
+
+
+</style>
+
+<!-------------------------------------------CSS END------------------------------------------------------------>
+
+
+
+
+
+
+<!-------------------------------------------JS START------------------------------------------------------------>
+<script>
+    // IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
+
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyImages = document.querySelectorAll('.back');
+
+    let options = {
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    let observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                let img = entry.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
+        });
+    }, options);
+
+    lazyImages.forEach(function(img) {
+        observer.observe(img);
+    });
+});
+
+
+
+// SMOOTH TRANSITION FOR THE NAVIGATION LINKS
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.navigation_links');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 2000);
+});
+
+
+
+
+// SMOOTH TRANSITION FOR THE MIDDLE TRANSPARENT PAGE
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.center_img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 1000);
+});
+
+
+
+
+
+// SMOOTH TRANSITION FOR THE BACK IMAGE
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.back_img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 200);
+});
+</script>
+<!-------------------------------------------JS END------------------------------------------------------------>
+
+</head>
+<body>
+
+    <div class="Whole_Body">
+    
+    
+        <div class="back_img">
+        
+           <img class="back" data-src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/h.jpg" alt=""> 
+         
+           <script src="contact.js"></script>
+
+           <div class="mobile-nav">
+            <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/HOMEPAGE/Homepage.html">Home</a>
+            <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html">Portfolio</a>
+            <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/SERVICES/services.html">Services</a>
+            <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact/a> 
+
+            </div>
+    
+             
+            <div class="center_img">
+    
+                <div class="navigation_links">
+       
+                    <a class="link1" href="http://remyshema.42web.io/?i=1">Home</a>
+                    <a class="link2" href="portfolio.html">Portfolio</a>
+                    <a class="link3" href="portfolio.html#services">Services</a>
+                    <a class="link4 active" href="contact.html">Contact</a> 
+        
+                </div>
+              
+                <div class="Everything">
+                    <div class="Left_Section">
+                        <div class="words">
+                            <h1 class="heading_text">Let's talk</h1>
+                            <p class="p1">Ask me anything or just say hi ...</p>
+                        </div>
+
+                        <div class="Tel">
+                            <p class="p2"><i class="icon fas fa-phone-alt"></i> &nbsp; +250 783 674 289</p>
+                            <p class="p3"><i class="icon fas fa-envelope"></i> &nbsp; remyshema20@gmail.com</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="Right_section">
+                       
+                        <form action="">
+
+                            <div class="row">
+
+                                <div class="Name_Email">
+                                        <div class="Name">
+                                            <h2>Name</h2>
+                                            <input type="text" placeholder="Your name">
+                                        </div>
+                                        <div class="Email">
+                                            <h2>Email</h2>
+                                            <input type="text" placeholder="Email adress">
+                                        </div>
+                                </div>
+                                
+                                <div class="Message">
+                                    <h2>Message</h2>
+                                    <input class="text_area" type="text" placeholder="Message">
+                                </div>
+
+                                <div class="Send">
+                                    <button>Send<i class="icon fa fa-paper-plane" style="margin-left: 12px;"></i></button>
+                                </div>
+
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+       
+       
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
+

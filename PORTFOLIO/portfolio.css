@@ -438,7 +438,7 @@ header
 .card {                     /* CARD ITSELF */
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
+    border-color: rgba(3, 255, 100, 0.658);
     border-radius: 5px;
     flex-grow: 0.4;
     margin-right: px;

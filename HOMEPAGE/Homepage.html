@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me-Time Website</title>
+    
+    <link rel="icon" href="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%207.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Script&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+
+<!--------------------------------------MY CSS STARTS RIGHT HERE !!!!--------------------------------------->
+
+<style>
+
+     
+ @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
+{
+
+body
+{
+    overflow-y: hidden;
+}
+
+.back_img{
+    
+    position: relative;
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    height: 105vh;
+    border-radius: 20px;
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */ 
+
+}
+
+
+
+
+.back
+{
+ 
+           
+    background-size: cover; /* Cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    width: 100%; /* Set the width to 100% */
+    height: 100%; 
+    filter: blur(25px);
+
+}
+
+
+
+
+
+
+.center_img
+{
+    
+    position: absolute;
+    top: 46%; /* Position at the vertical center of the viewport */
+    left: 50%; /* Position at the horizontal center of the viewport */
+    transform: translate(-50%, -50%); /* Center the white section */
+    width: 95%; /* Adjust the width as needed */
+    height: 92%;
+    background-color: rgba(255, 255, 255, 0.24); /* White background */
+    border-radius: 5px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.2);
+ 
+}
+
+.My_Photo
+{
+    display: none;
+}
+
+.nav_icon
+{
+    display: none;
+}
+
+.First_headings
+{
+    font-size: 30px;
+    padding-top: 9%;
+    padding-left: 6.8%;
+    color: #000000d3;
+}
+
+.First_headings h2 {
+    margin-bottom: 5px; /* Adjust the value as needed */
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+}
+
+.First_headings h1 {
+
+    margin-bottom: 2%;   
+    margin-top: 1%; /* Adjust the value as needed */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    
+}
+
+.shema
+{
+    color: green;
+}
+
+.navigation_links {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5%;
+}
+
+.navigation_links a {
+    text-decoration: none;
+    color: black; /* Set default color to black */
+    margin: 0 10px;
+    padding: 0.5% 1%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    position: relative;
+}
+
+.navigation_links a.active {
+    color: rgb(6, 168, 0); /* Set active link color to green */
+}
+
+.navigation_links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(6, 168, 0); /* Active link glowing line color */
+    transform: scaleX(1);
+}
+
+.navigation_links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: blue; /* Non-active link glowing line color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation_links a:hover::after {
+    background-color: blue; /* Change glowing line color to blue on hover */
+    transform: scaleX(0);
+}
+
+.navigation_links a:hover {
+    color: rgb(0, 175, 161); /* Change color to green on hover */
+}
+
+
+
+
+
+.mobile-nav
+{
+    display: none;
+}
+.hamburger
+{
+    display: none;
+}
+
+
+
+
+
+
+.small_paragraph
+{
+    padding-left: 8%;
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    margin-bottom: 2%;
+}
+
+
+
+.coffee-button 
+{
+    background-color: rgba(100, 247, 63, 0.534);
+    background-color: rgba(0, 184, 0, 0.493);
+    color:rgba(0, 0, 0, 0.534);;
+    border-radius: 20px; /* Rounded corners */
+    padding: 1.1%; /* Padding for button */
+    border-color:rgba(100, 247, 63, 0);
+    border-style: solid;
+    border-width: 1px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 100%; /* Font size */
+    font-weight: 70px;
+    cursor: pointer; /* Show pointer cursor on hover */
+    width: 120px;
+    display: inline-block;
+    box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.349);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
+    letter-spacing: 1.2px;
+     
+    
+}
+
+.coffee-button:hover {
+    background-color: rgba(81, 255, 0, 0.74);
+}
+
+.coffee-button:active /* When clicked man */
+{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
+   
+}
+
+#downloadButton.completed {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: not-allowed;
+}
+
+#downloadButton:disabled {
+    cursor: not-allowed;
+    box-shadow: 1px;
+}
+
+
+
+
+.Buy_me_coffee
+{
+    padding-left: 15%;
+    padding-top: 0.3%;
+    
+}
+
+
+
+
+.social_media
+{
+    padding-top: 3%;
+    padding-left: 8.5%;
+  
+    
+}
+
+
+
+
+
+.wrapper
+{
+    display: inline-flex;
+    list-style: none; 
+    
+}
+
+.wrapper .icon span i {
+    color: rgb(0, 0, 0);
+}
+
+
+.wrapper .icon{
+    position: relative;
+    background: none;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    padding: 10%;
+    margin: 10px;
+    width: 6px;
+    height: 6px;
+    font-size: 1.1rem;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
+    
+}
+
+.wrapper .tooltip{
+    position: absolute;
+    top: 0;
+    font-size: 0.7rem;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 6%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    visibility: hidden;
+    
+}
+
+
+.wrapper .icon:active {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
+}
+
+.wrapper .icon:hover .tooltip{
+    top: -45px;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,                             /* LINKEDIN */
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before{
+    background: linear-gradient(to bottom, #1768ff79, #0e397f86);
+    color: #fff;
+}
+
+.wrapper .twitter:hover,                             
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: linear-gradient(to bottom, #1da0f294, #0f5c7f88);
+    color: #fff;
+}
+
+.wrapper .instagram:hover,                      
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: linear-gradient(to bottom, #ff781e96, #e626399d);
+    color: #fff;
+}
+
+.wrapper .youtube:hover,                                /* BEHANCE */
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: linear-gradient(to bottom, #0076b598, #004c7f9a);
+    color: #fff;
+}
+
+
+
+
+/* THIS IS THE RIGHT SIDE IMAGE*/
+
+.image-container {
+    position: absolute;
+    top: 0;
+    right: 0;  
+    width: 30%;  
+    height: 60%;  
+    padding-right: 10%;
+    padding-top: 9.4%;
+    opacity: 0.18;
+    
+    pointer-events: none;
+    
+
+    
+}
+
+.image-container img {
+    width: 100%;  
+    height: 100%;  
+    object-fit: cover; 
+    border-radius: 5%;  
+    border-color:rgba(95, 255, 228, 0.445);
+    border-style: solid;
+    box-shadow: 0px 0px 8px rgb(39, 192, 167);
+   
+    
+}
+
+
+ 
+/* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
+
+.heading {
+    opacity: 0; /* Start with the headings invisible */
+    transform: translateY(20px); /* Shift the headings downwards initially */
+    transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
+    transition-delay: 1s;
+}
+
+/* Define the animation when the first heading becomes visible */
+.heading.show-heading:first-child {
+    transition-delay: 1.5s; /* Delay the animation for the first heading */
+}
+
+/* Define the animation when the headings become visible */
+.heading.show-heading {
+    opacity: 1; /* Make the heading visible */
+    transform: translateY(0); /* Reset the transformation to its original position */
+}
+
+
+
+
+
+
+/* PARAGRAPH TRANSITION */
+
+
+/* Apply initial styles to hide the paragraph text */
+.small_paragraph .paragraph span {
+    opacity: 0;
+    animation: revealLetter 1s ease forwards;
+}
+
+/* Define animation for revealing each letter */
+@keyframes revealLetter {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+/* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
+
+ 
+ 
+
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------RESPONSIVENESS ON SMALL PHONE SCREENS STARTS HERE---------------------------------  */
+
+
+
+
+
+
+
+@media only screen and (max-width: 1023px)
+{
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------RESPONSIVENESS ON SMALL PHONE SCREENS STARTS HERE---------------------------------  */
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px)   /* IPHONE 8 PLUS SCREENS**/
+{
+    .back_img{
+    
+        position: relative;
+        background-size: cover; /* Cover the entire container */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        height: 200vh;
+        border-radius: 20px;
+        display: flex; /* Enable flexbox for centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+    
+        
+        
+    
+    }
+    
+    
+    
+    
+    .back
+    {
+     
+        position:relative;         
+        background-size: cover; /* Cover the entire container */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        width: 100%; /* Set the width to 100% */
+        height: 100%; 
+        border-radius: 10px;
+        
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    .center_img
+    {
+        
+        position: absolute;
+        top: 50%; /* Position at the vertical center of the viewport */
+        left: 50%; /* Position at the horizontal center of the viewport */
+        transform: translate(-50%, -50%); /* Center the white section */
+        width: 90%; /* Adjust the width as needed */
+        height: 95%;
+        background-color: rgba(255, 255, 255, 0.24); /* White background */
+        border-radius: 50px;
+        box-shadow:  0 0 30px rgba(0, 0, 0, 1);
+     
+    }
+
+
+    .nav_icon
+    {
+        padding-top: 13px;
+        padding-left: 25px;
+        display: flex;
+        flex-direction: row;
+        opacity: 0.7;
+
+    }
+
+    .nav_icon img
+    {
+        
+        width: 80px;
+       
+
+    }
+    
+
+    .My_Photo
+    {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+        border-radius: 20px;
+        opacity: 0.18;
+
+    }
+
+    .My_Photo img
+    {  
+        object-fit: cover; 
+        border-radius: 30%;
+
+    }
+    
+    .First_headings
+    {
+        font-size: 40px;
+        padding-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+         
+    }
+    
+    .First_headings h1, h2
+    {
+        font-size: 40px;
+    }
+    
+    .First_headings h2 {
+        margin-bottom: 5px; /* Adjust the value as needed */
+        font-family: Arial, sans-serif;
+        font-weight: 500;
+
+        
+        
+    }
+    
+    .First_headings h1 {
+    
+        margin-bottom: 2%;   
+        margin-top: 1%; /* Adjust the value as needed */
+        font-family: 'Orbitron', sans-serif;
+        font-size: 40px;
+ 
+ 
+        
+    }
+    
+    .navigation_links
+    {
+        
+        display: none;
+        justify-content: center;
+        padding-top: 1.5%;
+    
+     
+    
+    }
+    
+     
+    
+    .navigation_links a {
+        text-decoration: none; /* Remove underline */
+        color: black; /* Change color to black */
+        margin: 0 10px; /* Increase spacing between links horizontally */
+        padding: 0.5% 1%; /* Add padding to increase spacing vertically and horizontally */
+        font-family: 'Orbitron', sans-serif;
+        font-size: 15px;
+        transition: color 0.3s;
+    
+        font-size: 10px;
+    
+        
+    }
+    
+    .mobile-nav
+    {
+        display: none;
+    }
+    .hamburger
+    {
+        display: none;
+    }
+    
+    
+    
+    
+    
+    
+    .small_paragraph
+    {
+        font-family: 'Caveat', cursive;
+        font-size: 15px;
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: center;
+
+    }
+    
+    
+    
+    .coffee-button {
+       
+        color: #000000c7;
+        border-radius: 20px; /* Rounded corners */
+        padding: 1.1%; /* Padding for button */
+        border: none; /* Remove default button border */
+        font-family: 'Arial', sans-serif;
+        cursor: pointer; /* Show pointer cursor on hover */
+        transition: background-color 0.2s ease; /* Smooth transition for background color */
+        width: 120px;
+        display: inline-block;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.479);
+
+        display: flex;
+        padding-left: 8px;
+        padding-top: 9px;
+        font-size: 20px;
+        font: normal;
+        height: 60px;
+        background: rgba(39, 135, 179, 0.308);
+        
+    }
+    
+    .coffee-button:hover {
+        background-color: rgba(74, 165, 210, 1);
+    }
+    
+    .coffee-button:active {
+        background-color: rgba(106, 200, 255, 0.65); /* Lighter shade on click */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
+        transition: box-shadow 0.5s ease-out;
+    }
+    
+    
+    .Buy_me_coffee
+    {
+        padding-top: 0.3%;
+        display: flex;
+        justify-content: center;
+        display: none;
+        
+    }
+    
+    
+    
+    
+    .social_media
+    {
+    
+        padding-top: 3%;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        padding-left: 28%;
+        display: none;
+
+    }
+    
+    
+    
+    
+    
+    .wrapper
+    {
+        display: inline-flex;
+        list-style: none;
+        
+        
+    }
+    
+    .wrapper .icon{
+        position: relative;
+        background: #ffffff7e;
+        border-radius: 50%;
+        padding: 15%;
+        margin: 10px;
+        width: 1px;
+        height: 1px;
+        font-size: 1.1rem;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        
+    }
+    
+    .wrapper .tooltip{
+        position: absolute;
+        top: 0;
+        font-size: 0.7rem;
+        background: #fff;
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 6%;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        
+    }
+    
+    .wrapper .icon:active {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
+        background-color: rgba(0, 0, 0, 0.1); /* Change background color on click */
+    }
+    
+    .wrapper .icon:hover .tooltip{
+        top: -45px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip{
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+    
+    .wrapper .facebook:hover,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before{
+        background: linear-gradient(to bottom, #1769FF, #0E3A7F);
+        color: #fff;
+    }
+    
+    .wrapper .twitter:hover,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip::before {
+        background: linear-gradient(to bottom, #1DA1F2, #0F5B7F);
+        color: #fff;
+    }
+    
+    .wrapper .instagram:hover,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip::before {
+        background: linear-gradient(to bottom, #ff781e, #e62639);
+        color: #fff;
+    }
+    
+    .wrapper .youtube:hover,
+    .wrapper .youtube:hover .tooltip,
+    .wrapper .youtube:hover .tooltip::before {
+        background: linear-gradient(to bottom, #0077B5, #004D7F);
+        color: #fff;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* THIS IS THE RIGHT SIDE IMAGE*/
+    
+    .image-container {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;  
+        width: 30%;  
+        height: 70%;  
+        padding-right: 10%;
+        padding-top: 9.4%;
+        opacity: 0.18;
+        
+        pointer-events: none;
+    
+        
+    }
+    
+    .image-container img {
+        width: 100%;  
+        height: 100%;  
+        object-fit: cover; 
+        border-radius: 5%;  
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     
+    /* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
+    
+    .heading {
+        opacity: 0; /* Start with the headings invisible */
+        transform: translateY(20px); /* Shift the headings downwards initially */
+        transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
+        transition-delay: 1s;
+    }
+    
+    /* Define the animation when the first heading becomes visible */
+    .heading.show-heading:first-child {
+        transition-delay: 1.5s; /* Delay the animation for the first heading */
+    }
+    
+    /* Define the animation when the headings become visible */
+    .heading.show-heading {
+        opacity: 1; /* Make the heading visible */
+        transform: translateY(0); /* Reset the transformation to its original position */
+    }
+    
+    
+    
+    
+    
+    
+    /* PARAGRAPH TRANSITION */
+    
+    
+    /* Apply initial styles to hide the paragraph text */
+    .small_paragraph .paragraph span {
+        opacity: 0;
+        animation: revealLetter 1s ease forwards;
+    }
+    
+    /* Define animation for revealing each letter */
+    @keyframes revealLetter {
+        0% {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    
+    
+    
+    
+    
+    /* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
+    
+     
+     
+    
+    /* Define styles for when the cursor hovers over the links */
+    .navigation_links a:hover {
+        color: rgb(9, 255, 0); /* Change the color to red when hovered */
+    }
+
+
+    .hamburger {
+        
+        position: absolute;
+        z-index: 2;
+
+
+        top: 15px;
+        right: 30px;
+        display: block;
+        width: 50px;
+        height: 35px;
+        cursor: pointer;
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+
+
+    .hamburger .bar,
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: rgb(165, 165, 165);
+        margin: 6px 0px;
+        transition: 0.4s;
+    }
+
+    
+    .hamburger.is-active:before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+    
+    .hamburger.is-active:after {
+        transform: rotate(45deg) translate(-9px, -8px);
+    }
+    
+    .hamburger.is-active .bar {
+        opacity: 0;
+    }
+
+    
+ 
+    .mobile-nav {
+
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        min-height: 100vh;
+        display: block;
+        z-index: 98;
+        background-color: #20034e62;
+        padding-top: 120px;
+        transition: 0.4s;
+    }
+    
+    .mobile-nav.is-active {
+        left: 0;
+    }
+    
+    .mobile-nav a {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 16px;
+        text-align: center;
+        padding: 12px 16px;
+        background-color: #1f103F;
+    
+        color: #FFF;
+        text-decoration: none;
+    }
+    
+    .mobile-nav a:hover {
+        
+        background-color: #24104f;
+    }
+
+
+
+    .blur {
+        filter: blur(50px); /* Adjust the blur radius as needed */
+    }
+
+
+
+
+
+    
+
+
+ 
+
+}
+
+
+</style>
+
+<!--------------------------------------MY CSS ENDS RIGHT HERE !!!!--------------------------------------->
+
+
+<!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
+<script>
+
+    // HEADING (h1, h2) TRANSITIONS  
+
+document.addEventListener("DOMContentLoaded", function() {
+    const headings = document.querySelectorAll('.heading');
+    headings.forEach((heading, index) => {
+        setTimeout(() => {
+            heading.classList.add('show-heading');
+        }, index * 1300); // Adjust the delay here (multiplied by index)
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// THE PARAGRAPH TRANSITIONS (but from left to right)
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the paragraph element
+    var paragraph = document.getElementById("animated-paragraph");
+    
+    // Get the text content of the paragraph
+    var text = paragraph.textContent;
+    
+    // Clear the paragraph content
+    paragraph.textContent = "";
+    
+    // Iterate through each character of the text
+    for (var i = 0; i < text.length; i++) {
+        // Create a span element for each character
+        var span = document.createElement("span");
+        span.textContent = text[i];
+        
+        // Set the animation delay for each span element
+        span.style.animationDelay = (i * 0.1) + "s"; // Adjust the delay as needed
+        
+        // Append the span element to the paragraph
+        paragraph.appendChild(span);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+// IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
+
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyImages = document.querySelectorAll('.back');
+
+    let options = {
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    let observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                let img = entry.target;
+                img.src = img.dataset.src;
+                observer.unobserve(img);
+            }
+        });
+    }, options);
+
+    lazyImages.forEach(function(img) {
+        observer.observe(img);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+// HAMBURGER MENU SETTINGS
+
+// When the window loads, execute this function
+window.onload = function () {
+    // Add an event listener to the window scroll event
+    window.addEventListener('scroll', function (e) {
+        // Check if the vertical scroll position is greater than 100 pixels
+        if (window.pageYOffset > 100) {
+            // Add the 'is-scrolling' class to the header element if the condition is met
+            document.querySelector("header").classList.add('is-scrolling');
+        } else {
+            // Remove the 'is-scrolling' class from the header element if the condition is not met
+            document.querySelector("header").classList.remove('is-scrolling');
+        }
+    });
+    
+
+    const menu_btn = document.querySelector('.hamburger');
+    const mobile_menu = document.querySelector('.mobile-nav');
+    const home_link = document.querySelector('.mobile-nav a[href="#"]'); // Selecting the Home link
+    const center_img_elements = document.querySelectorAll('.center_img'); // Select all elements with class 'center_img'
+
+
+
+
+    menu_btn.addEventListener('click',                    // EVENT LISTENER 1 For the burger button
+    
+    function () 
+    {
+        menu_btn.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active');
+
+
+        center_img_elements.forEach(function(element)
+         {  element.classList.toggle('blur'); });
+
+
+        if (menu_btn.classList.contains('is-active')) {   } // If the nav window is open, then...
+           
+        
+    }
+    
+                              );
+
+
+   
+                              
+
+
+  home_link.addEventListener('click',               // EVENT LISTENER 1 For the close navigation window by clicking home
+  
+  
+  function (e)
+  {              
+  e.preventDefault(); // Prevent the default link behavior
+  mobile_menu.classList.remove('is-active'); // Close the mobile menu
+  menu_btn.classList.remove('is-active'); // Reset hamburger button state
+
+  // Remove blur effect when navigation window is closed
+    center_img_elements.forEach(function(element)
+    {
+    element.classList.remove('blur');
+    });
+
+  }
+
+  
+                            );      
+    
+    
+
+
+
+
+
+                        
+}
+
+
+
+
+
+
+// THE SOCIAL MEDIA SMOOTH TRANSITIONS
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.wrapper');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 3000);
+});
+
+
+
+
+
+
+// SMOOTH TRANSITION FOR THE BUTTON
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.coffee-button');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 3500);
+});
+
+
+
+
+// SMOOTH TRANSITION FOR THE RIGHT ME PHOTO
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.image-container img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 3500);
+});
+
+
+ 
+// SMOOTH TRANSITION FOR THE NAVIGATION LINKS
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.navigation_links');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 2000);
+});
+
+
+
+
+// SMOOTH TRANSITION FOR THE MIDDLE TRANSPARENT PAGE
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.center_img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 1000);
+});
+
+
+
+
+
+// SMOOTH TRANSITION FOR THE BACK IMAGE
+
+window.addEventListener('load', function() {
+    // Select the wrapper element
+    const wrapper = document.querySelector('.back_img');
+    // Initially set opacity to 0 and visibility to hidden
+    wrapper.style.opacity = '0';
+    wrapper.style.visibility = 'hidden';
+    // Show the wrapper after a delay 
+    setTimeout(function() {
+        // Change opacity from 0 to 1 gradually over 1 second
+        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+        wrapper.style.opacity = '1';
+        wrapper.style.visibility = 'visible'; // Make the content visible
+    }, 200);
+});
+
+
+
+// DOWNLOADING THE CV
+
+document.addEventListener('DOMContentLoaded', function() {
+    var downloadButton = document.getElementById('downloadButton');
+    downloadButton.addEventListener('click', function() {
+        // Notify the user before downloading
+        var CV = confirm("Are you sure you want to download this CV ?");
+        
+        // If the user confirms, proceed with downloading
+        if (CV) {
+            // Fetch the file content
+            fetch('https://i.imgur.com/it7BCwG.png')
+                .then(response => response.blob())
+                .then(blob => {
+                    // Create a Blob URL for the file content
+                    var url = URL.createObjectURL(blob);
+                    
+                    // Create an anchor element
+                    var link = document.createElement('a');
+                    link.setAttribute('href', url);
+                    link.setAttribute('download', 'CV_Remy.jpg');
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    
+                    // Simulate a click on the anchor element
+                    link.click();
+                    
+                    // Clean up by revoking the Blob URL
+                    URL.revokeObjectURL(url);
+
+                    // Disable the download button after the download is complete
+                    downloadButton.disabled = true;
+
+                    // Change the text of the button
+                    downloadButton.textContent = "Downloaded successfully!";
+                    
+                    // Add the completed class to the button
+                    downloadButton.classList.add('completed');
+                    
+                    // Increase the width of .coffee_button
+                    var coffeeButton = document.querySelector('.coffee-button');
+                    coffeeButton.style.width = '180px';
+                    
+                    var buymecoffee = document.querySelector('.Buy_me_coffee');
+                    buymecoffee.style.paddingLeft = '13%';
+                })
+                .catch(error => {
+                    console.error('Error occurred while downloading:', error);
+                });
+        }
+    });
+});
+
+
+</script>
+<!--------------------------------------MY JS ENDS RIGHT HERE !!!!--------------------------------------->
+
+
+</head>
+
+
+
+<body>
+
+    <div class="Whole_Body">
+    
+    
+ <div class="back_img">
+ 
+    <img class="back" data-src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/h.jpg" alt=""> 
+    <script src="Homepage.js"></script>
+
+    <div class="mobile-nav">
+        <a class="link1" href="#">Home</a>
+        <a class="link2" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html">Portfolio</a>
+        <a class="link3" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/SERVICES/services.html">Services</a>
+        <a class="link4" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact</a> 
+     </div>
+
+    
+    <div class="center_img">
+
+        <div class="navigation_links">
+
+            <a class="link1 active" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/HOMEPAGE/Homepage.html">Home</a>
+            <a class="link2" href="http://remyshema.42web.io/#portfolio.html">Portfolio</a>
+            <a class="link3" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html#services">Services</a>
+            <a class="link4" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact</a> 
+    
+        </div>
+
+
+         <button class="hamburger">
+                <div class="bar">
+
+                </div>
+         </button>
+
+         
+
+         <div class="nav_icon">
+            <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="meLogo">
+          
+        </div>
+
+        <div class="My_Photo">
+            <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/white.jpg" alt="Me">
+        </div>
+
+
+
+
+        <div class="First_headings">
+            <h2 class="heading">Hello, I'm</h2>
+            <h1 class="heading">REMY <span class="shema">SHEMA</span></h1>
+        </div>
+        
+        
+
+   
+        <div class="small_paragraph">
+            <p id="animated-paragraph" class="paragraph">Software engineer, visual artist & a creative thinker. </p>
+        </div>
+        
+    
+        <div class="Buy_me_coffee">
+            <button class="coffee-button"  id="downloadButton">Download my cv</button>
+        </div>
+
+
+
+        <div class="social_media">
+            
+        <ul class="wrapper">
+            <li class="icon facebook">
+                <span class="tooltip">Linkedin</span>
+                <span><i class="fab fa-linkedin"></i></span>
+            </li>
+    
+            <li class="icon twitter">
+                <span class="tooltip">Twitter</span>
+                <span><i class="fab fa-twitter"></i></span>
+            </li>
+    
+            <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <span><i class="fab fa-instagram"></i></span>
+            </li>
+    
+            <li class="icon youtube">
+                <span class="tooltip">Behance</span>
+                <span><i class="fab fa-behance"></i></span>
+            </li>
+        </ul>
+        </div>
+    
+    
+    </div>
+
+        
+
+    
+
+ <div class="image-container">
+    <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/white.jpg" alt="Your Image">
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</body>
+</html>
+
