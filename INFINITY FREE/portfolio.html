@@ -450,7 +450,7 @@ header
     position: relative;
 
     
-    background: linear-gradient(45deg, #ff63477e, #4169e181, #32cd327e, #ff8c007a);
+    background: linear-gradient(45deg, #ff63474b, #4169e14d, #32cd3244, #ff8c003f);
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite alternate;
 
@@ -479,12 +479,12 @@ header
 .card {                     /* CARD ITSELF */
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(3, 255, 100, 0.658);
+    border-color: rgba(255, 255, 255, 0.658);
     border-radius: 5px;
     flex-grow: 0.4;
     margin-right: px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.705);
+    background-color: rgba(255, 255, 255, 0.342);
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.192);
 }
 
@@ -614,7 +614,7 @@ header
 }
 
 
-/******************************** ENDING MY PROJECTS SECTION *******************************************/
+/******************************** ENDING FIRST CARDS SECTION *******************************************/
 
 
 
@@ -837,11 +837,11 @@ header
 
 .Third
 {
+    height: 90vh;
+    width: 85%;
 
-    width: 1000px;
-    height: 700px;
     background-color: none;
-    border-radius: 30px;
+    border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
@@ -855,10 +855,13 @@ header
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
 
     overflow-y: auto;
-    height: 80vh;
-    width: 85%;
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+
+    
+    border-left: none;
+    border-right: none;
+
 
 }
 
@@ -889,17 +892,25 @@ header
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     
+    padding: 5px;
 }
 
 .one, .two, .three, .four, .five, .six 
 {
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
+    border-color: rgba(255, 255, 255, 0.692);
     height: 250px;
     width: 48%;
     margin-top: 10px;
+    margin-bottom: 5px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    
+}
+
+.proj_imgs
+{
+    display: none;
 }
 
 
@@ -997,29 +1008,31 @@ header
 .certificates_library
 {
     
-    width: 1000px;
+    width: 100%;
     height: 700px;
     background-color: none;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
+    border-left: none;
+    border-right: none;
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 20px;
     justify-content: space-between; 
     flex-wrap: wrap;
     background-color: rgba(223, 232, 255, 0.089);
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
-
+   
     overflow-y: auto;
     height: 80vh;
     width: 85%;
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
     
-    background: linear-gradient(45deg, #ff634715, #4169e117, #32cd3215, #ff8c0017);
+    background: linear-gradient(45deg, #ff63472a, #4169e133, #32cd323a, #ff8c002a);
     background-size: 400% 400%;
     animation: gradientShift2 3s ease infinite alternate;
   }
@@ -1052,13 +1065,88 @@ header
 {
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    height: 300px;
-    width: 28%;
+    border-color: rgba(255, 255, 255, 0.479);
+    height: 350px;
+    width: 32%;
     margin-top: 10px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
-    padding: 20px;
+    padding-left: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+.docs
+{
+    height: 100%;
+    width: 97%;
+    border-style: solid;
+    border-color: rgb(0, 81, 255);
+    border-width: 1px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+
+.cert_words
+{
+    background-color: none;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+}
+
+
+.Name_of_certificate
+{
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.inner_cert_par
+{
+  font-family: sans-serif;
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+.D_Button
+{
+    background-color: rgba(47, 113, 255, 0.13);
+    border-style: solid;
+    border-color: green;
+    border-radius: 10px;
+    border-width: 0.5px;
+    padding: 7px;
+    margin-top: 0px;
+    width: 80px;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+
+.D_Button:hover
+{
+    background-color: rgba(47, 113, 255, 0.329);
+    border-style: solid;
+    border-color: green;
+    border-radius: 10px;
+    border-width: 0.5px;
+    
+    margin-top: 0px;
+    width: 80px;
+    position: relative;
+    z-index: 999;
+
+}
+
 
 /******************************** ENDING MY CERTIFICATES SECTION *******************************************/
 
@@ -1131,14 +1219,14 @@ header
 .all5
 {
    border-style: solid;
-   border-color:  #a8cbff5d;
-   border-width: 0.1px;
+   border-color:  #00000000; 
+   border-width: 10px;
    height: 100%;
    width: 95%;
    overflow-y: auto;
    scrollbar-width: thin; 
    
-   border-radius: 20px;
+   border-radius: 15px;
    perspective: 1000px;
    align-items: center;
    box-shadow:  0 0 30px #0051ff3a;
@@ -1149,6 +1237,10 @@ header
    background: linear-gradient(45deg, #ff634757, #0a0d1652, #32cd3215, #ff8c0017);
    background-size: 400% 400%;
    animation: gradientShift3 15s ease infinite alternate;
+
+   border-right: none;
+   border-left: none;
+
  }
 
  @keyframes gradientShift3 {
@@ -1178,7 +1270,7 @@ header
    border-radius: 5px;
    border-style: solid;
    border-width: 1px;
-   border-color: rgba(0, 0, 0, 0);
+   border-color: rgb(150, 150, 150);
    margin: 0;
    padding: 0;
    margin: auto;
@@ -1740,7 +1832,7 @@ window.addEventListener('scroll', function() {
                     </div>
 
                     <div class="Say_H">
-                        <p class="say_hello">You can say hello by clicking &nbsp;<a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html" style="color: green;">here</a></p>
+                        <p class="say_hello">You can say hello by clicking &nbsp;<a href="contact.html" style="color: green;">here</a></p>
                     </div>
                     
                     <div class="circle circle3"></div>
@@ -1839,27 +1931,27 @@ window.addEventListener('scroll', function() {
                         <div class="all3">
 
                             <div class="one">
-                                
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" style="width: 50px;">                                
                             </div>
 
                             <div class="two">
-                                
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">                   
                             </div>
 
                             <div class="three">
-                            
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
                             </div>
                             
                             <div class="four">
-                             
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">    
                             </div>
 
                             <div class="five">
-                             
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
                             </div>
 
                             <div class="six">
-                             
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
                             </div>
                         
                         </div>
@@ -1877,26 +1969,74 @@ window.addEventListener('scroll', function() {
                             <div class="all4">
 
                                 <div class="one1">
-                                    
+                                    <div class="docs">
+                                        
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Essential Docs</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+   
                                 </div>
 
                                 <div class="two1">
+                                    <div class="docs">
+                                        
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Alx SE Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
                                     
                                 </div>
 
                                 <div class="three1">
+                                    <div class="docs">
+                                        
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Udemy Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
                                 
                                 </div>
                                 
                                 <div class="four1">
+                                    <div class="docs">
+                                        
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">FreecodeCamp Certificate/h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
                                 
                                 </div>
 
                                 <div class="five1">
+                                    <div class="docs">
+                                        
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Andela SE Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
                                 
                                 </div>
 
                                 <div class="six1">
+                                    <div class="docs">
+                                        
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Edx SE Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
                                 
                                 </div>
                     
