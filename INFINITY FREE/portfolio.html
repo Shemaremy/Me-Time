@@ -640,7 +640,7 @@ header
     margin: 0;
     padding: 0;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 80px;
     margin-bottom: 500px;
 
 }
@@ -651,11 +651,24 @@ header
     font-optical-sizing: auto;
     font-size: 50px;
     color: rgb(48, 48, 48);
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 7%;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glowing effect */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.301); /* Shadow effect */
+}
+
+.Remy_underline
+{
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.363);
+    width: 20%;
+    border-radius: 50%;
+    border-width: 1px;
+    margin: 0 auto;
 }
 
 .all2
@@ -670,6 +683,8 @@ header
     flex-direction: column;
     margin-top: 100px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    height: 170vh;
+    position: relative;
     
 }
 
@@ -703,39 +718,46 @@ header
 }
 
 
-.Under-line
-{
-    width: 30%;
-    background-color: rgba(18, 219, 0, 0.534);
-    border-radius: 10px;
-    height: 1px;
-    margin-bottom: 70px;
-    animation: stretch_1 30s linear infinite;
-}
-
-
-@keyframes stretch_1 {
-    0% {
-        width: 20%;
-    }
-    50% {
-        width: 50%;
-    }
-    100% {
-        width: 20%;
-    }
-}
-
-
 
 .Heading_and_paragraph h4
 {
     font-family: "Archivo Narrow", sans-serif;
     font-optical-sizing: auto;
     font-size: 25px;
-    margin-bottom: 50px; 
+    margin-bottom: 3%; 
 
 }
+
+.Biography_text
+{
+    margin-top: 10%;
+    margin-bottom: 100px;
+}
+
+.Under-line0
+{
+    width: 30%;
+    background-color: rgba(18, 219, 0, 0.534);
+    border-radius: 10px;
+    height: 1px;
+    margin-bottom: 5%;
+    margin-top: 0px;
+    animation: stretch_0 20s linear infinite;
+}
+
+
+@keyframes stretch_0 {
+    0% {
+        width: 2%;
+    }
+    50% {
+        width: 20%;
+    }
+    100% {
+        width: 2%;
+    }
+}
+
 
 .Heading_and_paragraph p
 {
@@ -745,19 +767,21 @@ header
 }
 
 
-.Under-line2
+.Separate_Bio_and_About_me
 {
     width: 70%;
-    background-color: rgba(0, 0, 0, 0.164);
+    border-color: rgba(0, 0, 0, 0.123);
     border-radius: 10px;
-    height: 1px;
-    margin-bottom: 70px;
+    border-style: solid;
+    border-width: 0.1px;
+    margin-bottom: 6%;
 }
 
 
 .About_me
 {
     margin-bottom: 200px;
+    margin-top: 0px;
 }
 
 .About_me h4
@@ -765,7 +789,31 @@ header
     font-family: "Archivo Narrow", sans-serif;
     font-optical-sizing: auto;
     font-size: 25px;
-    margin-bottom: 50px; 
+    margin-bottom: 3%; 
+}
+
+.Under-line1
+{
+    width: 30%;
+    background-color: rgba(18, 219, 0, 0.534);
+    border-radius: 10px;
+    height: 1px;
+    margin-bottom: 3%;
+    margin-top: 0px;
+    animation: stretch_1 20s linear infinite;
+}
+
+
+@keyframes stretch_1 {
+    0% {
+        width: 2%;
+    }
+    50% {
+        width: 20%;
+    }
+    100% {
+        width: 2%;
+    }
 }
 
 .Heading_and_paragraph, .About_me
@@ -1878,12 +1926,12 @@ window.addEventListener('scroll', function() {
 
                     <div class="Second" id="Second">
                         <h3 class="MEET_REMY">MEET REMY</h3>
-
+                        <div class="Remy_underline"></div>
                         <div class="all2">
                             
                             <div class="Heading_and_paragraph scroll-to-section">
-                                <h4>BIOGRAPHY</h4>
-                                <div class="Under-line"></div>
+                                <h4 class="Biography_text">BIOGRAPHY</h4>
+                                <div class="Under-line0"></div>
                                 <div class="Only_paragraph">
                                     <p>
                                         Greetings, I'm Shema Remy, a Rwandan native with a passion for technology and innovation. 
@@ -1926,11 +1974,11 @@ window.addEventListener('scroll', function() {
                                 </div>
                             </div>   
 
-                            <div class="Under-line2"></div>
+                            <div class="Separate_Bio_and_About_me"></div>
 
                             <div class="About_me"> 
                                 <h4> ABOUT ME</h4> 
-                                <div class="Under-line"></div>
+                                <div class="Under-line1"></div>
                                 <div class="Only_paragraph">
                                     <p>
                                         In essence, my journey thus far has been characterized by a determined pursuit of knowledge
