@@ -1066,7 +1066,7 @@ header
     border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.479);
-    height: 350px;
+    height: 349px;
     width: 32%;
     margin-top: 10px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
@@ -1074,7 +1074,27 @@ header
     left: 0;
     display: flex;
     flex-direction: column;
+    transition: background-color 0.5s;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
 }
+
+.one1:hover, .two1:hover
+{
+    background-color: rgba(0, 68, 255, 0.164);
+    cursor: pointer;
+    transform: translateY(-15px);
+    opacity: 1;
+    height: 351px;
+    width: 32%;
+}
+
+.three1:hover, .four1:hover, .five1:hover, .six1:hover
+{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 
 .docs
 {
@@ -1089,8 +1109,15 @@ header
     align-items: center;
     margin: 0 auto;
     margin-top: 3%;
+    overflow: hidden;
 }
 
+
+.doc_img      /* Crop Images corresponding to 1024 X 637 */
+{
+    max-width: 100%; /* Ensure image fits within container */
+    max-height: 100%;
+}
 
 .cert_words
 {
@@ -1970,7 +1997,7 @@ window.addEventListener('scroll', function() {
 
                                 <div class="one1">
                                     <div class="docs">
-                                        
+                                        <img class="doc_img" src="file:///C:/Users/User/Pictures/ME%20LIB/asticaDesign_1_a-zipped-folder-with-a-cv-resume-diploma-and-many-more-zippe.2.jpg" alt="1">
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Essential Docs</h4>
@@ -1982,7 +2009,7 @@ window.addEventListener('scroll', function() {
 
                                 <div class="two1">
                                     <div class="docs">
-                                        
+                                        <img class="doc_img" src="file:///C:/Users/User/Pictures/ME%20LIB/Alx%20Photo.jpg" alt="1">
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Alx SE Certificate</h4>
@@ -1994,7 +2021,7 @@ window.addEventListener('scroll', function() {
 
                                 <div class="three1">
                                     <div class="docs">
-                                        
+                                        <img class="doc_img" src="file:///C:/Users/User/Downloads/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1">
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Udemy Certificate</h4>
@@ -2006,7 +2033,7 @@ window.addEventListener('scroll', function() {
                                 
                                 <div class="four1">
                                     <div class="docs">
-                                        
+                                        <img class="doc_img" src="file:///C:/Users/User/Downloads/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1">
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">FreecodeCamp Certificate/h4>
@@ -2018,7 +2045,7 @@ window.addEventListener('scroll', function() {
 
                                 <div class="five1">
                                     <div class="docs">
-                                        
+                                        <img class="doc_img" src="file:///C:/Users/User/Downloads/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1">
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Andela SE Certificate</h4>
@@ -2030,7 +2057,7 @@ window.addEventListener('scroll', function() {
 
                                 <div class="six1">
                                     <div class="docs">
-                                        
+                                        <img class="doc_img" src="file:///C:/Users/User/Downloads/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1">
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Edx SE Certificate</h4>
