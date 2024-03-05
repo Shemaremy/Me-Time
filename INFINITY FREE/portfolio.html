@@ -236,6 +236,8 @@ body
     z-index: 1;
     display: block;
 
+    overflow: hidden;
+
 }
 
 
@@ -363,6 +365,7 @@ body
 header
 {
     margin-bottom: 200px;
+    overflow: hidden;
 }
 
 
@@ -452,6 +455,8 @@ header
     background: linear-gradient(45deg, #ff63474b, #4169e14d, #32cd3244, #ff8c003f);
     background-size: 400% 400%;
     animation: gradientShift 10s ease infinite alternate;
+
+    overflow: hidden;
 
 }
 
@@ -909,6 +914,8 @@ header
     border-left: none;
     border-right: none;
 
+    overflow: hidden;
+
 
 }
 
@@ -1001,6 +1008,11 @@ header
     width: 90%;
     margin: 0 auto;
     margin-top: 200px
+}
+
+.Fourth
+{
+  background-color: none;   
 }
 
 .underline1
@@ -1487,6 +1499,12 @@ header
 
 /********************* ***** STARTING OF LAST SECTION SECTION *******************************************/
 
+
+.Seventh
+{
+    height: 3vh;
+}
+
 .all7
 {
     display: flex;
@@ -1498,21 +1516,20 @@ header
     bottom: 0;
 }
 
-.Seventh
-{
-    height: 3vh;
-}
 
 .fab
 {
     color: black;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .fab:hover
 {
-    color: black;
-    font-size: 25px;
+    color: rgb(40, 107, 34);
+    font-size: 18px;
+    z-index: 999;
+    position: relative;
+    overflow: hidden;
 }
 
 .decs
@@ -2074,7 +2091,7 @@ window.addEventListener('scroll', function() {
             </div>
 
             <div class="Divide"></div>
-            <div class="Fouth">
+            <div class="Fourth">
                 <h2 class="certificates scroll-to-section">CERTIFICATIONS</h2>
                 <div class="line_below"></div>
                 <p class="certificates_paragraph">
@@ -2131,7 +2148,7 @@ window.addEventListener('scroll', function() {
                                 </div>   
                             </div>
                             <div class="cert_words">
-                                <h4 class="Name_of_certificate">FreecodeCamp Certificate/h4>
+                                <h4 class="Name_of_certificate">FreecodeCamp Certificate</h4>
                                 <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
                                 <button class="D_Button">Download</button>
                             </div>
@@ -2237,7 +2254,7 @@ window.addEventListener('scroll', function() {
 
                         
                         </div>
-                        <p style="font-family: sans-serif; font-size: 12px;">Copyright © 2024. All Rights Reserved</p>
+                        <p style="font-family: sans-serif; font-size: 10px; position: fixed; z-index: -999;">Copyright © 2024. All Rights Reserved</p>
                     </div>
 
                 </div>
