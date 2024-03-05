@@ -39,14 +39,13 @@
 
 <!-------------------------------------------CSS------------------------------------------------------------>
 <Style>
-    @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
-{
+
 
 body
 {
     position: relative;
     background-color: aliceblue;
-    height: 1240vh;
+    height: 1170vh;
 }
 .mobile-nav
 {
@@ -641,7 +640,7 @@ header
     padding: 0;
     margin: auto;
     margin-top: 80px;
-    margin-bottom: 500px;
+    margin-bottom: 0px;
 
 }
 
@@ -692,7 +691,7 @@ header
 {
 
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 
 }
 
@@ -849,7 +848,7 @@ header
     font-size: 50px;
     color: rgb(48, 48, 48);
     margin-top: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -872,10 +871,10 @@ header
 
 @keyframes stretch_2 {
     30% {
-        width: 30%;
+        width: 20%;
     }
     20% {
-        width: 20%;
+        width: 5%;
     }
     5% {
         width: 5%;
@@ -1019,7 +1018,7 @@ header
     font-optical-sizing: auto;
     font-size: 50px;
     color: rgb(48, 48, 48);
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -1264,7 +1263,7 @@ header
     font-optical-sizing: auto;
     font-size: 45px;
     color: rgb(48, 48, 48);
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -1279,20 +1278,20 @@ header
     background-color: rgb(4, 129, 0);
     border-radius: 10px;
     height: 2px;
-    margin-bottom: 200px;
-    animation: stretch_3 10s linear infinite;
+    margin-bottom: 0px;
+    animation: stretch_6 30s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
-@keyframes stretch_3 {
+@keyframes stretch_6 {
     30% {
         width: 10%;
     }
     50% {
-        width: 40%;
+        width: 30%;
     }
     30% {
         width: 0%;
@@ -1310,20 +1309,21 @@ header
    overflow-y: auto;
    scrollbar-width: thin; 
    
-   border-radius: 15px;
+   border-radius: 5px;
    perspective: 1000px;
    align-items: center;
-   box-shadow:  0 0 30px #0051ff3a;
    margin: 0 auto;
-   margin-top: 5%;
+   margin-top: 10%;
    margin-right: none;
 
-   background: linear-gradient(45deg, #ff634757, #0a0d1652, #32cd3215, #ff8c0017);
+   background: linear-gradient(45deg, #4787ff57, #3bff3b15, #e4c09517);
    background-size: 400% 400%;
    animation: gradientShift3 15s ease infinite alternate;
 
    border-right: none;
    border-left: none;
+
+   box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
 
  }
 
@@ -1397,6 +1397,17 @@ header
 }
 
 
+.Divide6
+{
+    border-style: solid;
+    box-shadow: 0 0 30px rgb(25, 51, 0);
+    border-color: rgb(173, 173, 173);
+    border-width: 1px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 350px
+}
+
 /******************************** ENDING SKILLS SECTION *******************************************/
 
 
@@ -1409,36 +1420,51 @@ header
 
 .Sixth
 {
-    height: 80vh;
+    height: 110vh;
 }
 
 .underline4
 {
-    width: 20%;
+    width: 13%;
     background-color: rgb(4, 129, 0);
     border-radius: 10px;
     height: 2px;
-    margin-bottom: 200px;
-    animation: stretch_3 5s linear infinite;
+    margin-bottom: 0px;
+    animation: stretch_6a 5s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 
-@keyframes stretch_3 {
+@keyframes stretch_6a {
     30% {
         width: 10%;
     }
     50% {
-        width: 20%;
+        width: 10%;
     }
     30% {
         width: 0%;
     }
 }
 
-.hire_me
+
+.Services_header
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 45px;
+    color: rgb(48, 48, 48);
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.all6
 {
    height: 70%;
    width: 80%;
@@ -1447,8 +1473,8 @@ header
    border-radius: 10px;
    border-width: 1px;
    margin: 0 auto;
-   margin-top: 2%;
-   box-shadow:  0 0 30px rgba(0, 0, 0, 0.267);
+   margin-top: 5%;
+   box-shadow:  0 0 30px rgba(0, 0, 0, 0.226);
    
 }
 
@@ -1456,6 +1482,26 @@ header
 /******************************** ENDING MY SERVICES SECTION *******************************************/
 
 
+
+
+
+/********************* ***** STARTING OF LAST SECTION SECTION *******************************************/
+
+.all7
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 3%;
+    height: 0vh;
+    bottom: 0;
+}
+
+.Seventh
+{
+    height: 3vh;
+}
 
 .fab
 {
@@ -1472,16 +1518,6 @@ header
 .decs
 {
     text-decoration: none;
-}
-
-.all6
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 10%;
-    height: 40vh;
 }
 
 
@@ -1515,7 +1551,7 @@ header
 }
 
 
-}
+
 
 
 </Style>
@@ -1773,7 +1809,7 @@ window.addEventListener('scroll', function() {
         event.preventDefault(); // Prevent the default link behavior
 
         // Get the element with class name "Flacko"
-        var targetSection = document.querySelector(".Whole_Body");
+        var targetSection = document.querySelector(".The_Body");
 
         // Check if the target section exists
         if (targetSection) {
@@ -1793,430 +1829,426 @@ window.addEventListener('scroll', function() {
 <!-------------------------------------------JS END------------------------------------------------------------>
     
 </head>
-<body>
-    <div class="circle circle1"></div>
+<body class="The_Body">
+       
+    <div class="circle return_to_top" id="returnToTop"><a class="top" href="#"><i class="icon fa fa-arrow-circle-up"></i></a></i></div>
     
-    <div class="triangle3"></div>
-
-    <div class="Whole_Body">
-        <div class="back_img">
-            <div class="triangle2a"></div>
-            <div class="circle circle2"></div>
-
-            <div class="circle return_to_top" id="returnToTop"><a class="top" href="#"><i class="icon fa fa-arrow-circle-up"></i></a></i></div>
-            
-            <div class="circle circle4a"></div>
-            <div class="circle circle4b"></div>
-
-    
-            <div class="mobile-nav">
-                <a href="#">Home</a>
-                <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html">Portfolio</a>
-                <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/SERVICES/services.html">Services</a>
-                <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact</a> 
-            </div>
-            <div class="center_img" id="returnToTop">
-                
-                <div class="triangle1"></div>
-                <div class="green-line"></div>
-                <div class="green-line"></div>
-                <div class="green-line"></div>
-                <header class="header_part">
-                    <div class="navigation_links"> 
-                        <a class="link1" href="http://remyshema.42web.io/?i=1">Home</a>
-                        <a class="link2 active" href="portfolio.html">Portfolio</a>
-                        <a class="link3" href="portfolio.html#services">Services</a>
-                        <a class="link4" href="contact.html">Contact</a> 
-                    </div>
-                    <div class="First_header">
-                        <h1 class="heading-text">
-                            <span class="white-text">Discover &nbsp;</span> 
-                            <span class="yellow-text">My &nbsp; Portfolio</span>
-                        </h1>
-                    </div>
-                    <div class="Second_header">
-                        <h2 class="heading-text">
-                            <span class="yellow-text">One &nbsp; </span>
-                            <span class="white-text">I'm not afraid To share</span>
-                        </h2>
-                    </div>
-                    <div class="underline_0"></div>
-                </header>
-                
-                
-                
-                <main class="Main_class">
-                    
-                    <div class="First" id="styledDiv">
-                        <div class="container">
-                            <div class="card" style="width:200px">
-                                <div class="card-body">
-                                    <h4 class="card-title">Meet Remy</h4>
-                                    <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
-                                    <p class="card-text">
-                                        Explore my background and passions discovering & 
-                                        learning more about what drives me and how I excel in the tech world.
-                                    </p>
-                                    
-                                    <div class="bmw">
-                                        <button class="sec-button"><a href="#" class="words_button">See more</a></button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="vertical-line"></div> 
-                            <div class="card" style="width:200px">
-                                <div class="card-body">
-                                    <h4 class="card-title">My Projects</h4>
-                                    <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
-                                    <p class="card-text">
-                                        Below are my projects about what I've been working on,
-                                        and my passion for innovation
-                                        and how I'm making a difference
-                                    </p>
-                                    
-                                    <div class="bmw">
-                                        <button class="sec-button"><a href="#" class="words_button">See more</a></button>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="vertical-line"></div> 
-                            <div class="card" style="width:200px">
-                                <div class="card-body">
-                                    <h4 class="card-title">Certifications</h4>
-                                    <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
-                                    <p class="card-text">
-                                        Discover my certifications, showing my skills and ongoing learning in various areas. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .
-                                    </p>
-                                    
-                                    <div class="bmw">
-                                        <button class="sec-button"><a href="#" class="words_button">See more</a></button>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="vertical-line"></div> 
-                            <div class="card" style="width:200px">
-                                <div class="card-body">
-                                    <h4 class="card-title">Experience & Skills</h4>
-                                    <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
-                                    <p class="card-text">
-                                        Learn about my skills and past experiences, showcasing my capabilities and what I have accomplished.
-                                    </p>
-                                    
-                                    <div class="bmw">
-                                        <button class="sec-button"><a href="#" class="words_button">See more</a></button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>  
-                        
-                    </div>
-
-                    <div class="Say_H">
-                        <p class="say_hello">You can say hello by clicking &nbsp;<a href="contact.html" style="color: green;">here</a></p>
-                    </div>
-                    
-                    <div class="circle circle3"></div>
-        
-                    <div class="Divide"></div>
-
-
-                    <div class="Second" id="Second">
-                        <h3 class="MEET_REMY">MEET REMY</h3>
-                        <div class="Remy_underline"></div>
-                        <div class="all2">
-                            
-                            <div class="Heading_and_paragraph scroll-to-section">
-                                <h4 class="Biography_text">BIOGRAPHY</h4>
-                                <div class="Under-line0"></div>
-                                <div class="Only_paragraph">
-                                    <p>
-                                        Greetings, I'm Shema Remy, a Rwandan native with a passion for technology and innovation. 
-                                        Born in 2003, my journey into the world of software engineering took an unexpected turn 
-                                        from my childhood dream of becoming a doctor. It was during my young age, 
-                                        spent obsessed in the realm of video games, that I discovered a curiosity for game development. 
-                                        A simple YouTube search at the age of 10 about how to make video games somehow awakened my 
-                                        interest, planting the seeds of my future in technology.
-                                    </p>
-                                    <p> 
-                                        My academic journey led me through a comprehensive high school curriculum, 
-                                        where I studied subjects like Biology, Mathematics, Physics, and many more. However, 
-                                        it was the allure/charm of computer science that captivated me the most. From Grade 10 to 12,
-                                        I found myself drawn to the complexities of coding and problem-solving, viewing it as 
-                                        more than just a subject but as a gateway to endless possibilities. Concepts like 
-                                        conditional statements and loops were my favourites, as I used to apply them 
-                                        in real-world scenarios.
-                                    </p>
-                                    <p>
-                                        As I approached Grade 12, my enthusiasm for computer science continued to grow. Eager to 
-                                        expand my skill set beyond the limitations of what we learnt the classroom, I embarked on self-directed 
-                                        learning during holidays, teaching languages like JavaScript. Upon completing 
-                                        high school, I reflected on my journey and aspirations, Considering the next steps in my academic and 
-                                        professional career.
-                                    </p>
-                                    <p>
-                                        While my university journey awaits, I seized the opportunity to further my knowledge 
-                                        through ALX, where I undertook courses in software engineering. Here, I deepened my 
-                                        understanding of web development and developed my proficiency in languages such as JavaScript,
-                                        Python, SQL, and others. Additionally, I've also been an Irembo service agent in 2020 which provided
-                                        valuable practical experience related to hands-on work, further driving my commitment to personal growth 
-                                        and development.
-                                    </p>
-                                    <p>
-                                        In essence, my journey thus far has been characterized by a determined pursuit of knowledge
-                                        and an enthusiasm for technology. As I continue to chart my path forward, I remain dedicated to 
-                                        leveraging my skills and experiences to make meaningful contributions to the ever-evolving 
-                                        landscape of software engineering.
-                                    </p>             
-                                </div>
-                            </div>   
-
-                            <div class="Separate_Bio_and_About_me"></div>
-
-                            <div class="About_me"> 
-                                <h4> ABOUT ME</h4> 
-                                <div class="Under-line1"></div>
-                                <div class="Only_paragraph">
-                                    <p>
-                                        In essence, my journey thus far has been characterized by a determined pursuit of knowledge
-                                        and an enthusiasm for technology. As I continue to chart my path forward, I remain dedicated to 
-                                        leveraging my skills and experiences to make meaningful contributions to the ever-evolving 
-                                        landscape of software engineering.
-                                    </p> 
-
-                                    <p>
-                                        While my university journey awaits, I seized the opportunity to further my knowledge 
-                                        through ALX, where I undertook courses in software engineering. Here, I deepened my 
-                                        understanding of web development and developed my proficiency in languages such as JavaScript,
-                                        Python, SQL, and others. Additionally, I've also been an Irembo service agent in 2020 which provided
-                                        valuable practical experience related to hands-on work, further driving my commitment to personal growth 
-                                        and development.
-                                    </p>
-
-                                </div>  
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="Divide"></div>
-                    <h2 class="My_projects scroll-to-section">MY PROJECTS</h2>
-                    <div class="underline2"></div>
-
-
-                    <div class="Third">
-                        <div class="circle circle5"></div>
-                        
-                        <div class="all3">
-
-                            <div class="one">
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" style="width: 50px;">                                
-                            </div>
-
-                            <div class="two">
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">                   
-                            </div>
-
-                            <div class="three">
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
-                            </div>
-                            
-                            <div class="four">
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">    
-                            </div>
-
-                            <div class="five">
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
-                            </div>
-
-                            <div class="six">
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
-                            </div>
-                        
-                        </div>
-                    </div>
-
-                    <div class="Divide"></div>
-                    <div class="Fouth">
-                        <h2 class="certificates scroll-to-section">CERTIFICATIONS</h2>
-                        <div class="line_below"></div>
-                        <p class="certificates_paragraph">
-                            Below, find my Resume, CV, certifications and Diplomas I've got to show my skills.
-                        </p>
-                        
-                        <div class="certificates_library">
-                            <div class="all4">
-
-                                <div class="one1">
-                                    <div class="docs">
-                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/asticaDesign_1_a-zipped-folder-with-a-cv-resume-diploma-and-many-more-zippe.2.jpg" alt="1">                                 
-                                    </div>
-                                    <div class="cert_words">
-                                        <h4 class="Name_of_certificate">Essential Docs</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
-                                    </div>
-   
-                                </div>
-
-                                <div class="two1">
-                                    <div class="docs">
-                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Alx%20Photo.jpg" alt="1">
-                                    </div>
-                                    <div class="cert_words">
-                                        <h4 class="Name_of_certificate">Alx SE Certificate</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="three1">
-                                    <div class="docs">
-                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
-                                        <div class="overlay">
-                                            <h2>Hello</h2>
-                                        </div>   
-                                    </div>
-                                    <div class="cert_words">
-                                        <h4 class="Name_of_certificate">Udemy Certificate</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
-                                    </div>
-                                
-                                </div>
-                                
-                                <div class="four1">
-                                    <div class="docs">
-                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
-                                        <div class="overlay">
-                                            <h2>Hello</h2>
-                                        </div>   
-                                    </div>
-                                    <div class="cert_words">
-                                        <h4 class="Name_of_certificate">FreecodeCamp Certificate/h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
-                                    </div>
-                                
-                                </div>
-
-                                <div class="five1">
-                                    <div class="docs">
-                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
-                                        <div class="overlay">
-                                            <h2>Hello</h2>
-                                        </div>   
-                                    </div>
-                                    <div class="cert_words">
-                                        <h4 class="Name_of_certificate">Andela SE Certificate</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
-                                    </div>
-                                
-                                </div>
-
-                                <div class="six1">
-                                    <div class="docs">
-                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
-                                        <div class="overlay">
-                                            <h2>Hello</h2>
-                                        </div>   
-                                    </div>
-                                    <div class="cert_words">
-                                        <h4 class="Name_of_certificate">Edx SE Certificate</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
-                                    </div>
-                                
-                                </div>
-                    
-                            </div>
-                        </div>
-                           
-                        
-                    
-                    </div>
-                    <div class="Divide"></div>
-                    <div class="Fifth scroll-to-section">
-                        <h2 class="Skills">SKILLS AND EXPERIENCES</h2>
-                        <div class="underline3"></div>
-
-                        <div class="all5">
-                            <h4 class="Mini_headers">SKILLS</h4>
-                            <div class="all5a">
-
-                            </div>
-
-    
-                            <h4 class="Mini_headers">Experience</h4>
-                            <div class="all5b">
-
-                            </div>
-                                
-                        </div>
-
-                    </div>
-                    
-                    <div class="Divide"></div>
-
-                    <div class="Sixth scroll-to-section" id="services">
-                        <h2 class="Skills">SERVICES</h2>
-                        <div class="underline4"></div>
-                        <div class="hire_me">
-
-                        </div>
-                    </div>
-
-                   
-                    <div class="Divide" style="margin: 0 auto;"></div>
-
-                
-
-                    <div class="Seventh">
-                        <div class="all6">
-                            <div class="footer_logo">
-                                <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="" width="150px">
-                            </div>
-
-                            <div class="contains_footer_icons">
-                                <div class="footer_icons">
-                                
-                                    <div class="contain_me">
-                                        <a class="decs" href=""> <i class="fab fa-instagram icon"></i> </a>
-                                    </div>
-
-                                    <div class="contain_me">
-                                        <a class="decs" href=""> <i class="fab fa-behance icon"></i> </a>
-                                    </div>
-
-                                    <div class="contain_me">
-                                        <a class="decs" href=""> <i class="fab fa-twitter icon"></i> </a>
-                                    </div>
-
-                                    <div class="contain_me">
-                                        <a class="decs" href=""> <i class="fab fa-linkedin icon"></i> </a>
-                                    </div>
-
-                                
-                                </div>
-                                <p style="font-family: sans-serif; font-size: 12px;">Copyright © 2024. All Rights Reserved</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="triangle2"></div>
-
-                </main>
- 
-            </div>
-        </div>
+    <div class="mobile-nav">
+        <a href="#">Home</a>
+        <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html">Portfolio</a>
+        <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/SERVICES/services.html">Services</a>
+        <a href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact</a> 
     </div>
+
+    <div class="center_img" id="returnToTop">
+        
+        <div class="triangle1"></div>
+        <div class="green-line"></div>
+        <div class="green-line"></div>
+        <div class="green-line"></div>
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="triangle2a"></div>
+        <div class="triangle3"></div>
+        <div class="circle circle4a"></div>
+        <div class="circle circle4b"></div>
+
+        <header class="header_part">
+            <div class="navigation_links"> 
+                <a class="link1" href="http://remyshema.42web.io/?i=1">Home</a>
+                <a class="link2 active" href="portfolio.html">Portfolio</a>
+                <a class="link3" href="portfolio.html#services">Services</a>
+                <a class="link4" href="contact.html">Contact</a> 
+            </div>
+            <div class="First_header">
+                <h1 class="heading-text">
+                    <span class="white-text">Discover &nbsp;</span> 
+                    <span class="yellow-text">My &nbsp; Portfolio</span>
+                </h1>
+            </div>
+            <div class="Second_header">
+                <h2 class="heading-text">
+                    <span class="yellow-text">One &nbsp; </span>
+                    <span class="white-text">I'm not afraid To share</span>
+                </h2>
+            </div>
+            <div class="underline_0"></div>
+        </header>
+        
+        
+        
+        <main class="Main_class">
+            
+            <div class="First" id="styledDiv">
+                <div class="container">
+                    <div class="card" style="width:200px">
+                        <div class="card-body">
+                            <h4 class="card-title">Meet Remy</h4>
+                            <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
+                            <p class="card-text">
+                                Explore my background and passions discovering & 
+                                learning more about what drives me and how I excel in the tech world.
+                            </p>
+                            
+                            <div class="bmw">
+                                <button class="sec-button"><a href="#" class="words_button">See more</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div> 
+                    <div class="card" style="width:200px">
+                        <div class="card-body">
+                            <h4 class="card-title">My Projects</h4>
+                            <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
+                            <p class="card-text">
+                                Below are my projects about what I've been working on,
+                                and my passion for innovation
+                                and how I'm making a difference
+                            </p>
+                            
+                            <div class="bmw">
+                                <button class="sec-button"><a href="#" class="words_button">See more</a></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div> 
+                    <div class="card" style="width:200px">
+                        <div class="card-body">
+                            <h4 class="card-title">Certifications</h4>
+                            <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
+                            <p class="card-text">
+                                Discover my certifications, showing my skills and ongoing learning in various areas. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .
+                            </p>
+                            
+                            <div class="bmw">
+                                <button class="sec-button"><a href="#" class="words_button">See more</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div> 
+                    <div class="card" style="width:200px">
+                        <div class="card-body">
+                            <h4 class="card-title">Experience & Skills</h4>
+                            <img class="card-img-top" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/e.jpg" alt="">
+                            <p class="card-text">
+                                Learn about my skills and past experiences, showcasing my capabilities and what I have accomplished.
+                            </p>
+                            
+                            <div class="bmw">
+                                <button class="sec-button"><a href="#" class="words_button">See more</a></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>  
+                
+            </div>
+
+            <div class="Say_H">
+                <p class="say_hello">You can say hello by clicking &nbsp;<a href="contact.html" style="color: green;">here</a></p>
+            </div>
+            
+            <div class="circle circle3"></div>
+
+            <div class="Divide"></div>
+
+
+            <div class="Second" id="Second">
+                <h3 class="MEET_REMY">MEET REMY</h3>
+                <div class="Remy_underline"></div>
+                <div class="all2">
+                    
+                    <div class="Heading_and_paragraph scroll-to-section">
+                        <h4 class="Biography_text">BIOGRAPHY</h4>
+                        <div class="Under-line0"></div>
+                        <div class="Only_paragraph">
+                            <p>
+                                Greetings, I'm Shema Remy, a Rwandan native with a passion for technology and innovation. 
+                                Born in 2003, my journey into the world of software engineering took an unexpected turn 
+                                from my childhood dream of becoming a doctor. It was during my young age, 
+                                spent obsessed in the realm of video games, that I discovered a curiosity for game development. 
+                                A simple YouTube search at the age of 10 about how to make video games somehow awakened my 
+                                interest, planting the seeds of my future in technology.
+                            </p>
+                            <p> 
+                                My academic journey led me through a comprehensive high school curriculum, 
+                                where I studied subjects like Biology, Mathematics, Physics, and many more. However, 
+                                it was the allure/charm of computer science that captivated me the most. From Grade 10 to 12,
+                                I found myself drawn to the complexities of coding and problem-solving, viewing it as 
+                                more than just a subject but as a gateway to endless possibilities. Concepts like 
+                                conditional statements and loops were my favourites, as I used to apply them 
+                                in real-world scenarios.
+                            </p>
+                            <p>
+                                As I approached Grade 12, my enthusiasm for computer science continued to grow. Eager to 
+                                expand my skill set beyond the limitations of what we learnt the classroom, I embarked on self-directed 
+                                learning during holidays, teaching languages like JavaScript. Upon completing 
+                                high school, I reflected on my journey and aspirations, Considering the next steps in my academic and 
+                                professional career.
+                            </p>
+                            <p>
+                                While my university journey awaits, I seized the opportunity to further my knowledge 
+                                through ALX, where I undertook courses in software engineering. Here, I deepened my 
+                                understanding of web development and developed my proficiency in languages such as JavaScript,
+                                Python, SQL, and others. Additionally, I've also been an Irembo service agent in 2020 which provided
+                                valuable practical experience related to hands-on work, further driving my commitment to personal growth 
+                                and development.
+                            </p>
+                            <p>
+                                In essence, my journey thus far has been characterized by a determined pursuit of knowledge
+                                and an enthusiasm for technology. As I continue to chart my path forward, I remain dedicated to 
+                                leveraging my skills and experiences to make meaningful contributions to the ever-evolving 
+                                landscape of software engineering.
+                            </p>             
+                        </div>
+                    </div>   
+
+                    <div class="Separate_Bio_and_About_me"></div>
+
+                    <div class="About_me"> 
+                        <h4> ABOUT ME</h4> 
+                        <div class="Under-line1"></div>
+                        <div class="Only_paragraph">
+                            <p>
+                                In essence, my journey thus far has been characterized by a determined pursuit of knowledge
+                                and an enthusiasm for technology. As I continue to chart my path forward, I remain dedicated to 
+                                leveraging my skills and experiences to make meaningful contributions to the ever-evolving 
+                                landscape of software engineering.
+                            </p> 
+
+                            <p>
+                                While my university journey awaits, I seized the opportunity to further my knowledge 
+                                through ALX, where I undertook courses in software engineering. Here, I deepened my 
+                                understanding of web development and developed my proficiency in languages such as JavaScript,
+                                Python, SQL, and others. Additionally, I've also been an Irembo service agent in 2020 which provided
+                                valuable practical experience related to hands-on work, further driving my commitment to personal growth 
+                                and development.
+                            </p>
+
+                        </div>  
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="Divide"></div>
+            <h2 class="My_projects scroll-to-section">MY PROJECTS</h2>
+            <div class="underline2"></div>
+
+
+            <div class="Third">
+                <div class="circle circle5"></div>
+                
+                <div class="all3">
+
+                    <div class="one">
+                        <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" style="width: 50px;">                                
+                    </div>
+
+                    <div class="two">
+                        <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">                   
+                    </div>
+
+                    <div class="three">
+                        <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
+                    </div>
+                    
+                    <div class="four">
+                        <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">    
+                    </div>
+
+                    <div class="five">
+                        <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
+                    </div>
+
+                    <div class="six">
+                        <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
+                    </div>
+                
+                </div>
+            </div>
+
+            <div class="Divide"></div>
+            <div class="Fouth">
+                <h2 class="certificates scroll-to-section">CERTIFICATIONS</h2>
+                <div class="line_below"></div>
+                <p class="certificates_paragraph">
+                    Below, find my Resume, CV, certifications and Diplomas I've got to show my skills.
+                </p>
+                
+                <div class="certificates_library">
+                    <div class="all4">
+
+                        <div class="one1">
+                            <div class="docs">
+                                <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/asticaDesign_1_a-zipped-folder-with-a-cv-resume-diploma-and-many-more-zippe.2.jpg" alt="1">                                 
+                            </div>
+                            <div class="cert_words">
+                                <h4 class="Name_of_certificate">Essential Docs</h4>
+                                <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                <button class="D_Button">Download</button>
+                            </div>
+
+                        </div>
+
+                        <div class="two1">
+                            <div class="docs">
+                                <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Alx%20Photo.jpg" alt="1">
+                            </div>
+                            <div class="cert_words">
+                                <h4 class="Name_of_certificate">Alx SE Certificate</h4>
+                                <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                <button class="D_Button">Download</button>
+                            </div>
+                            
+                        </div>
+
+                        <div class="three1">
+                            <div class="docs">
+                                <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                <div class="overlay">
+                                    <h2>Hello</h2>
+                                </div>   
+                            </div>
+                            <div class="cert_words">
+                                <h4 class="Name_of_certificate">Udemy Certificate</h4>
+                                <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                <button class="D_Button">Download</button>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="four1">
+                            <div class="docs">
+                                <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                <div class="overlay">
+                                    <h2>Hello</h2>
+                                </div>   
+                            </div>
+                            <div class="cert_words">
+                                <h4 class="Name_of_certificate">FreecodeCamp Certificate/h4>
+                                <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                <button class="D_Button">Download</button>
+                            </div>
+                        
+                        </div>
+
+                        <div class="five1">
+                            <div class="docs">
+                                <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                <div class="overlay">
+                                    <h2>Hello</h2>
+                                </div>   
+                            </div>
+                            <div class="cert_words">
+                                <h4 class="Name_of_certificate">Andela SE Certificate</h4>
+                                <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                <button class="D_Button">Download</button>
+                            </div>
+                        
+                        </div>
+
+                        <div class="six1">
+                            <div class="docs">
+                                <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                <div class="overlay">
+                                    <h2>Hello</h2>
+                                </div>   
+                            </div>
+                            <div class="cert_words">
+                                <h4 class="Name_of_certificate">Edx SE Certificate</h4>
+                                <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                <button class="D_Button">Download</button>
+                            </div>
+                        
+                        </div>
+            
+                    </div>
+                </div>
+                
+                
+            
+            </div>
+            <div class="Divide"></div>
+            <div class="Fifth scroll-to-section">
+                <h2 class="Skills">SKILLS AND EXPERIENCES</h2>
+                <div class="underline3"></div>
+
+                <div class="all5">
+                    <h4 class="Mini_headers">SKILLS</h4>
+                    <div class="all5a">
+
+                    </div>
+
+
+                    <h4 class="Mini_headers">Experience</h4>
+                    <div class="all5b">
+
+                    </div>
+                        
+                </div>
+
+            </div>
+            
+            <div class="Divide6"></div>
+
+            <div class="Sixth scroll-to-section" id="services">
+                <h2 class="Services_header">SERVICES</h2>
+                <div class="underline4"></div>
+                <div class="all6">
+
+                </div>
+            </div>
+
+        
+            <div class="Divide" style="margin: 0 auto;"></div>
+
+        
+
+            <div class="Seventh">
+                <div class="all7">
+                    <div class="footer_logo">
+                        <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="R logo" width="120px">
+                    </div>
+
+                    <div class="contains_footer_icons">
+                        <div class="footer_icons">
+                        
+                            <div class="contain_me">
+                                <a class="decs" href=""> <i class="fab fa-instagram icon"></i> </a>
+                            </div>
+
+                            <div class="contain_me">
+                                <a class="decs" href=""> <i class="fab fa-behance icon"></i> </a>
+                            </div>
+
+                            <div class="contain_me">
+                                <a class="decs" href=""> <i class="fab fa-twitter icon"></i> </a>
+                            </div>
+
+                            <div class="contain_me">
+                                <a class="decs" href=""> <i class="fab fa-linkedin icon"></i> </a>
+                            </div>
+
+                        
+                        </div>
+                        <p style="font-family: sans-serif; font-size: 12px;">Copyright © 2024. All Rights Reserved</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="triangle2"></div>
+
+        </main>
+
+    </div>
+        
+    
 </body>
 </html>
