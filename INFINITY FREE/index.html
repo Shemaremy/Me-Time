@@ -36,82 +36,91 @@
 
 <style>
 
-     
- @media only screen and (min-width: 1024px)         /*     LARGE SCREENS  BUT NOT TABLETS     */
-{
-
 body
 {
-    overflow-y: hidden;
-}
-
-.back_img{
-    
     position: relative;
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    height: 105vh;
-    border-radius: 20px;
-    display: flex; /* Enable flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */ 
-
+    height: 100vh;
+    background-color: aliceblue;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
 }
-
-
-
-
-.back
-{
- 
-           
-    background-size: cover; /* Cover the entire container */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    width: 100%; /* Set the width to 100% */
-    height: 100%; 
-    filter: blur(25px);
-
-}
-
-
-
-
 
 
 .center_img
 {
-    
-    position: absolute;
-    top: 46%; /* Position at the vertical center of the viewport */
-    left: 50%; /* Position at the horizontal center of the viewport */
-    transform: translate(-50%, -50%); /* Center the white section */
-    width: 95%; /* Adjust the width as needed */
-    height: 92%;
-    background-color: rgba(255, 255, 255, 0.24); /* White background */
+    width: 92%; /* Adjust the width as needed */
+    height: 95%;
+    background-color: rgba(240, 248, 255, 0);
     border-radius: 5px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.2);
- 
+
 }
 
-.My_Photo
+.Two_Parts
 {
-    display: none;
+   display: flex;
+   flex-direction: row;
+   height: 90%;
+   overflow: hidden;
 }
 
-.nav_icon
+.Left_part
 {
-    display: none;
+    background-color: rgba(0, 0, 255, 0);
+    height: 100%;
+    width: 50%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15%;
+    overflow: hidden;
+    
 }
+
+.Right_part
+{
+    background-color: #ff000000;
+    height: 98%;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(240, 248, 255, 0);
+}
+
+.My_photo
+{
+    height: 80%;
+    width: 70%;
+    background-color: aquamarine;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(240, 248, 255, 0);
+}
+
 
 .First_headings
 {
+    margin-top: 10%;
+    margin-left: 6.8%;
     font-size: 30px;
-    padding-top: 9%;
-    padding-left: 6.8%;
     color: #000000d3;
 }
 
-.First_headings h2 {
+.First_headings h2
+{
     margin-bottom: 5px; /* Adjust the value as needed */
     font-family: Arial, sans-serif;
     font-weight: 500;
@@ -129,6 +138,73 @@ body
 .shema
 {
     color: green;
+}
+
+
+.small_paragraph
+{
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    margin-bottom: 2%;
+    background-color: rgba(255, 255, 0, 0);
+    width: 80%;
+    margin-left: 16%;
+}
+
+.Buy_me_coffee
+{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(100, 148, 237, 0);
+    
+    margin-right: 12%;
+}
+
+.coffee-button 
+{
+    background-color: rgba(0, 184, 0, 0.493);
+    font-weight: 550;
+    color:rgba(0, 0, 0, 0.562);;
+    border-radius: 20px; /* Rounded corners */
+    padding: 13px; /* Padding for button */
+    border-color:rgb(208, 255, 196);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer; /* Show pointer cursor on hover */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.267);
+
+    transition: background-color 0.7s ease;
+    
+}
+
+.coffee-button:hover {
+    background-color: rgba(0, 184, 0, 0.397);
+}
+
+.coffee-button:active /* When clicked man */
+{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
+   
+}
+
+#downloadButton.completed {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: not-allowed;
+}
+
+#downloadButton:disabled {
+    cursor: not-allowed;
+    box-shadow: 1px;
+}
+
+
+
+.nav_icon
+{
+    display: none;
 }
 
 .navigation_links {
@@ -184,9 +260,6 @@ body
 }
 
 
-
-
-
 .mobile-nav
 {
     display: none;
@@ -198,216 +271,45 @@ body
 
 
 
-
-
-
-.small_paragraph
-{
-    padding-left: 8%;
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-    margin-bottom: 2%;
-}
-
-
-
-.coffee-button 
-{
-    background-color: rgba(100, 247, 63, 0.534);
-    background-color: rgba(0, 184, 0, 0.493);
-    color:rgba(0, 0, 0, 0.534);;
-    border-radius: 20px; /* Rounded corners */
-    padding: 1.1%; /* Padding for button */
-    border-color:rgba(100, 247, 63, 0);
-    border-style: solid;
-    border-width: 1px;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 100%; /* Font size */
-    font-weight: 70px;
-    cursor: pointer; /* Show pointer cursor on hover */
-    width: 120px;
-    display: inline-block;
-    box-shadow: 0px 0px 8px rgba(39, 192, 167, 0.349);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
-    letter-spacing: 1.2px;
-     
-    
-}
-
-.coffee-button:hover {
-    background-color: rgba(81, 255, 0, 0.74);
-}
-
-.coffee-button:active /* When clicked man */
-{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
-   
-}
-
-#downloadButton.completed {
-    background-color: rgba(255, 255, 255, 0);
-    cursor: not-allowed;
-}
-
-#downloadButton:disabled {
-    cursor: not-allowed;
-    box-shadow: 1px;
-}
-
-
-
-
-.Buy_me_coffee
-{
-    padding-left: 15%;
-    padding-top: 0.3%;
-    
-}
-
-
-
-
 .social_media
 {
-    padding-top: 3%;
-    padding-left: 8.5%;
-  
-    
+  background-color: rgba(203, 3, 243, 0);
+  width: 100%;   
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2%;
+  padding-top: 5%;
 }
 
 
-
-
-
-.wrapper
+.all_icons
 {
-    display: inline-flex;
-    list-style: none; 
-    
-}
-
-.wrapper .icon span i {
-    color: rgb(0, 0, 0);
-}
-
-
-.wrapper .icon{
-    position: relative;
-    background: none;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(0, 0, 0);
-    padding: 10%;
-    margin: 10px;
-    width: 6px;
-    height: 6px;
-    font-size: 1.1rem;
-    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.644);
-    
+    flex-direction: row;
+    margin-right: 15%;
 }
 
-.wrapper .tooltip{
-    position: absolute;
-    top: 0;
-    font-size: 0.7rem;
-    background: #fff;
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 6%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    visibility: hidden;
-    
-}
-
-
-.wrapper .icon:active {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
-}
-
-.wrapper .icon:hover .tooltip{
-    top: -45px;
-    opacity: 1;
-    visibility: hidden;
-    pointer-events: auto;
-}
-
-.wrapper .icon:hover span,
-.wrapper .icon:hover .tooltip{
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.wrapper .facebook:hover,                             /* LINKEDIN */
-.wrapper .facebook:hover .tooltip,
-.wrapper .facebook:hover .tooltip::before{
-    background: linear-gradient(to bottom, #1768ff79, #0e397f86);
-    color: #fff;
-}
-
-.wrapper .twitter:hover,                             
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-    background: linear-gradient(to bottom, #1da0f294, #0f5c7f88);
-    color: #fff;
-}
-
-.wrapper .instagram:hover,                      
-.wrapper .instagram:hover .tooltip,
-.wrapper .instagram:hover .tooltip::before {
-    background: linear-gradient(to bottom, #ff781e96, #e626399d);
-    color: #fff;
-}
-
-.wrapper .youtube:hover,                                /* BEHANCE */
-.wrapper .youtube:hover .tooltip,
-.wrapper .youtube:hover .tooltip::before {
-    background: linear-gradient(to bottom, #0076b598, #004c7f9a);
-    color: #fff;
-}
-
-
-
-
-/* THIS IS THE RIGHT SIDE IMAGE*/
-
-.image-container {
-    position: absolute;
-    top: 0;
-    right: 0;  
-    width: 30%;  
-    height: 60%;  
-    padding-right: 10%;
-    padding-top: 9.4%;
-    opacity: 0.18;
-    
-    pointer-events: none;
-    
-
-    
-}
-
-.image-container img {
-    width: 100%;  
-    height: 100%;  
-    object-fit: cover; 
-    border-radius: 5%;  
-    border-color:rgba(95, 255, 228, 0.445);
+.Linkedin, .Twitter, .Instagram, .Behance
+{
+    border-color: rgb(0, 0, 0);
     border-style: solid;
-    box-shadow: 0px 0px 8px rgb(39, 192, 167);
-   
-    
+    border-radius: 50%;
+    border-width: 1px;
+    margin-right: 20px;
+    padding: 3px;
+    width: 20px;
 }
+
+.fab
+{
+    font-size: 16px;
+}
+
+
+
+
 
 
  
@@ -458,714 +360,21 @@ body
 }
 
 
-
-
-
-/* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
-
- 
- 
-
- 
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----------------------RESPONSIVENESS ON SMALL PHONE SCREENS STARTS HERE---------------------------------  */
-
-
-
-
-
-
-
-@media only screen and (max-width: 1023px)
-{
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----------------------RESPONSIVENESS ON SMALL PHONE SCREENS STARTS HERE---------------------------------  */
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 767px)   /* IPHONE 8 PLUS SCREENS**/
-{
-    .back_img{
     
-        position: relative;
-        background-size: cover; /* Cover the entire container */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        height: 200vh;
-        border-radius: 20px;
-        display: flex; /* Enable flexbox for centering */
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
-    
-        
-        
-    
-    }
-    
-    
-    
-    
-    .back
-    {
-     
-        position:relative;         
-        background-size: cover; /* Cover the entire container */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        width: 100%; /* Set the width to 100% */
-        height: 100%; 
-        border-radius: 10px;
-        
-    
-    }
-    
-    
-    
-    
-    
-    
-    
-    .center_img
-    {
-        
-        position: absolute;
-        top: 50%; /* Position at the vertical center of the viewport */
-        left: 50%; /* Position at the horizontal center of the viewport */
-        transform: translate(-50%, -50%); /* Center the white section */
-        width: 90%; /* Adjust the width as needed */
-        height: 95%;
-        background-color: rgba(255, 255, 255, 0.24); /* White background */
-        border-radius: 50px;
-        box-shadow:  0 0 30px rgba(0, 0, 0, 1);
-     
-    }
-
-
-    .nav_icon
-    {
-        padding-top: 13px;
-        padding-left: 25px;
-        display: flex;
-        flex-direction: row;
-        opacity: 0.7;
-
-    }
-
-    .nav_icon img
-    {
-        
-        width: 80px;
-       
-
-    }
-    
-
-    .My_Photo
-    {
-        position: relative;
-        z-index: 1;
-
-        display: flex;
-        justify-content: center;
-        padding-top: 10%;
-        border-radius: 20px;
-        opacity: 0.18;
-
-    }
-
-    .My_Photo img
-    {  
-        object-fit: cover; 
-        border-radius: 30%;
-
-    }
-    
-    .First_headings
-    {
-        font-size: 40px;
-        padding-top: 20px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-         
-    }
-    
-    .First_headings h1, h2
-    {
-        font-size: 40px;
-    }
-    
-    .First_headings h2 {
-        margin-bottom: 5px; /* Adjust the value as needed */
-        font-family: Arial, sans-serif;
-        font-weight: 500;
-
-        
-        
-    }
-    
-    .First_headings h1 {
-    
-        margin-bottom: 2%;   
-        margin-top: 1%; /* Adjust the value as needed */
-        font-family: 'Orbitron', sans-serif;
-        font-size: 40px;
- 
- 
-        
-    }
-    
-    .navigation_links
-    {
-        
-        display: none;
-        justify-content: center;
-        padding-top: 1.5%;
-    
-     
-    
-    }
-    
-     
-    
-    .navigation_links a {
-        text-decoration: none; /* Remove underline */
-        color: black; /* Change color to black */
-        margin: 0 10px; /* Increase spacing between links horizontally */
-        padding: 0.5% 1%; /* Add padding to increase spacing vertically and horizontally */
-        font-family: 'Orbitron', sans-serif;
-        font-size: 15px;
-        transition: color 0.3s;
-    
-        font-size: 10px;
-    
-        
-    }
-    
-    .mobile-nav
-    {
-        display: none;
-    }
-    .hamburger
-    {
-        display: none;
-    }
-    
-    
-    
-    
-    
-    
-    .small_paragraph
-    {
-        font-family: 'Caveat', cursive;
-        font-size: 15px;
-        margin-bottom: 2%;
-        display: flex;
-        justify-content: center;
-
-    }
-    
-    
-    
-    .coffee-button {
-       
-        color: #000000c7;
-        border-radius: 20px; /* Rounded corners */
-        padding: 1.1%; /* Padding for button */
-        border: none; /* Remove default button border */
-        font-family: 'Arial', sans-serif;
-        cursor: pointer; /* Show pointer cursor on hover */
-        transition: background-color 0.2s ease; /* Smooth transition for background color */
-        width: 120px;
-        display: inline-block;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.479);
-
-        display: flex;
-        padding-left: 8px;
-        padding-top: 9px;
-        font-size: 20px;
-        font: normal;
-        height: 60px;
-        background: rgba(39, 135, 179, 0.308);
-        
-    }
-    
-    .coffee-button:hover {
-        background-color: rgba(74, 165, 210, 1);
-    }
-    
-    .coffee-button:active {
-        background-color: rgba(106, 200, 255, 0.65); /* Lighter shade on click */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
-        transition: box-shadow 0.5s ease-out;
-    }
-    
-    
-    .Buy_me_coffee
-    {
-        padding-top: 0.3%;
-        display: flex;
-        justify-content: center;
-        display: none;
-        
-    }
-    
-    
-    
-    
-    .social_media
-    {
-    
-        padding-top: 3%;
-
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        padding-left: 28%;
-        display: none;
-
-    }
-    
-    
-    
-    
-    
-    .wrapper
-    {
-        display: inline-flex;
-        list-style: none;
-        
-        
-    }
-    
-    .wrapper .icon{
-        position: relative;
-        background: #ffffff7e;
-        border-radius: 50%;
-        padding: 15%;
-        margin: 10px;
-        width: 1px;
-        height: 1px;
-        font-size: 1.1rem;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-        
-    }
-    
-    .wrapper .tooltip{
-        position: absolute;
-        top: 0;
-        font-size: 0.7rem;
-        background: #fff;
-        color: #fff;
-        padding: 5px 8px;
-        border-radius: 6%;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        pointer-events: none;
-        transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        
-    }
-    
-    .wrapper .icon:active {
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Add box shadow on click */
-        background-color: rgba(0, 0, 0, 0.1); /* Change background color on click */
-    }
-    
-    .wrapper .icon:hover .tooltip{
-        top: -45px;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
-    
-    .wrapper .icon:hover span,
-    .wrapper .icon:hover .tooltip{
-        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-    }
-    
-    .wrapper .facebook:hover,
-    .wrapper .facebook:hover .tooltip,
-    .wrapper .facebook:hover .tooltip::before{
-        background: linear-gradient(to bottom, #1769FF, #0E3A7F);
-        color: #fff;
-    }
-    
-    .wrapper .twitter:hover,
-    .wrapper .twitter:hover .tooltip,
-    .wrapper .twitter:hover .tooltip::before {
-        background: linear-gradient(to bottom, #1DA1F2, #0F5B7F);
-        color: #fff;
-    }
-    
-    .wrapper .instagram:hover,
-    .wrapper .instagram:hover .tooltip,
-    .wrapper .instagram:hover .tooltip::before {
-        background: linear-gradient(to bottom, #ff781e, #e62639);
-        color: #fff;
-    }
-    
-    .wrapper .youtube:hover,
-    .wrapper .youtube:hover .tooltip,
-    .wrapper .youtube:hover .tooltip::before {
-        background: linear-gradient(to bottom, #0077B5, #004D7F);
-        color: #fff;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /* THIS IS THE RIGHT SIDE IMAGE*/
-    
-    .image-container {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 0;  
-        width: 30%;  
-        height: 70%;  
-        padding-right: 10%;
-        padding-top: 9.4%;
-        opacity: 0.18;
-        
-        pointer-events: none;
-    
-        
-    }
-    
-    .image-container img {
-        width: 100%;  
-        height: 100%;  
-        object-fit: cover; 
-        border-radius: 5%;  
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     
-    /* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
-    
-    .heading {
-        opacity: 0; /* Start with the headings invisible */
-        transform: translateY(20px); /* Shift the headings downwards initially */
-        transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
-        transition-delay: 1s;
-    }
-    
-    /* Define the animation when the first heading becomes visible */
-    .heading.show-heading:first-child {
-        transition-delay: 1.5s; /* Delay the animation for the first heading */
-    }
-    
-    /* Define the animation when the headings become visible */
-    .heading.show-heading {
-        opacity: 1; /* Make the heading visible */
-        transform: translateY(0); /* Reset the transformation to its original position */
-    }
-    
-    
-    
-    
-    
-    
-    /* PARAGRAPH TRANSITION */
-    
-    
-    /* Apply initial styles to hide the paragraph text */
-    .small_paragraph .paragraph span {
-        opacity: 0;
-        animation: revealLetter 1s ease forwards;
-    }
-    
-    /* Define animation for revealing each letter */
-    @keyframes revealLetter {
-        0% {
-            opacity: 0;
-            transform: translateX(-10px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    
-    
-    
-    
-    
-    
-    /* AND THIS IS FOR THE NAVIGATION LINKS HOVERING */
-    
-     
-     
-    
-    /* Define styles for when the cursor hovers over the links */
-    .navigation_links a:hover {
-        color: rgb(9, 255, 0); /* Change the color to red when hovered */
-    }
-
-
-    .hamburger {
-        
-        position: absolute;
-        z-index: 2;
-
-
-        top: 15px;
-        right: 30px;
-        display: block;
-        width: 50px;
-        height: 35px;
-        cursor: pointer;
-        appearance: none;
-        background: none;
-        outline: none;
-        border: none;
-    }
-
-
-    .hamburger .bar,
-    .hamburger::before,
-    .hamburger::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 5px;
-        background-color: rgb(165, 165, 165);
-        margin: 6px 0px;
-        transition: 0.4s;
-    }
-
-    
-    .hamburger.is-active:before {
-        transform: rotate(-45deg) translate(-8px, 6px);
-    }
-    
-    .hamburger.is-active:after {
-        transform: rotate(45deg) translate(-9px, -8px);
-    }
-    
-    .hamburger.is-active .bar {
-        opacity: 0;
-    }
-
-    
- 
-    .mobile-nav {
-
-        position: fixed;
-        top: 0;
-        left: 100%;
-        width: 100%;
-        min-height: 100vh;
-        display: block;
-        z-index: 98;
-        background-color: #20034e62;
-        padding-top: 120px;
-        transition: 0.4s;
-    }
-    
-    .mobile-nav.is-active {
-        left: 0;
-    }
-    
-    .mobile-nav a {
-        display: block;
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto 16px;
-        text-align: center;
-        padding: 12px 16px;
-        background-color: #1f103F;
-    
-        color: #FFF;
-        text-decoration: none;
-    }
-    
-    .mobile-nav a:hover {
-        
-        background-color: #24104f;
-    }
-
-
-
-    .blur {
-        filter: blur(50px); /* Adjust the blur radius as needed */
-    }
-
-
-
-
-
-    
-
-
- 
-
-}
-
-
 </style>
 
 <!--------------------------------------MY CSS ENDS RIGHT HERE !!!!--------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
@@ -1530,25 +739,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <body>
-
-    <div class="Whole_Body">
     
-    
- <div class="back_img">
- 
-    <img class="back" data-src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/h.jpg" alt=""> 
-    <script src="Homepage.js"></script>
-
     <div class="mobile-nav">
         <a class="link1" href="#">Home</a>
         <a class="link2" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html">Portfolio</a>
         <a class="link3" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/SERVICES/services.html">Services</a>
         <a class="link4" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact</a> 
-     </div>
+    </div>
 
     
     <div class="center_img">
-
+        
+        
         <div class="navigation_links">
 
             <a class="link1 active" href="http://remyshema.42web.io/?i=1">Home</a>
@@ -1556,91 +758,73 @@ document.addEventListener('DOMContentLoaded', function() {
             <a class="link3" href="portfolio.html#services">Services</a>
             <a class="link4" href="contact.html">Contact</a> 
     
-        </div>
+        </div>    
 
+        <button class="hamburger">
+            <div class="bar">  </div>
+        </button>
+    
 
-         <button class="hamburger">
-                <div class="bar">
-
-                </div>
-         </button>
-
-         
-
-         <div class="nav_icon">
+        <div class="nav_icon">
             <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="meLogo">
-          
-        </div>
-
-        <div class="My_Photo">
-            <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/white.jpg" alt="Me">
-        </div>
-
-
-
-
-        <div class="First_headings">
-            <h2 class="heading">Hello, I'm</h2>
-            <h1 class="heading">REMY <span class="shema">SHEMA</span></h1>
         </div>
         
+
+        <div class="Two_Parts">
+
+            <div class="Left_part">
         
-
-   
-        <div class="small_paragraph">
-            <p id="animated-paragraph" class="paragraph">Software engineer, visual artist & a creative thinker. </p>
-        </div>
+                <div class="First_headings">
+                    <h2 class="heading">Hello, I'm</h2>
+                    <h1 class="heading">REMY <span class="shema">SHEMA</span></h1>
+                </div>
+                
+                
         
-    
-        <div class="Buy_me_coffee">
-            <button class="coffee-button"  id="downloadButton">Download my cv</button>
-        </div>
-
-
-
-        <div class="social_media">
+        
+                <div class="small_paragraph">
+                    <p id="animated-paragraph" class="paragraph">Software engineer, visual artist & a creative thinker. </p>
+                </div>
+                
             
-        <ul class="wrapper">
-            <li class="icon facebook">
-                <span class="tooltip">Linkedin</span>
-                <span><i class="fab fa-linkedin"></i></span>
-            </li>
-    
-            <li class="icon twitter">
-                <span class="tooltip">Twitter</span>
-                <span><i class="fab fa-twitter"></i></span>
-            </li>
-    
-            <li class="icon instagram">
-                <span class="tooltip">Instagram</span>
-                <span><i class="fab fa-instagram"></i></span>
-            </li>
-    
-            <li class="icon youtube">
-                <span class="tooltip">Behance</span>
-                <span><i class="fab fa-behance"></i></span>
-            </li>
-        </ul>
+                <div class="Buy_me_coffee">
+                    <button class="coffee-button"  id="downloadButton">Download my cv</button>
+                </div>
+        
+        
+        
+                <div class="social_media">
+                    <ul class="all_icons">
+                        <p class="icon Linkedin">                            
+                            <span><i class="fab fa-linkedin" style="margin-left: 3px;"></i></span>
+                        </p>
+                
+                        <p class="icon Twitter">                            
+                            <span><i class="fab fa-twitter" style="margin-left: 2px;"></i></span>
+                        </p>
+                
+                        <p class="icon Instagram">                            
+                            <span><i class="fab fa-instagram" style="margin-left: 3px;"></i></span>
+                        </p>
+                
+                        <p class="icon Behance">
+                            <span><i class="fab fa-behance" style="margin-left: 2px;"></i></span>
+                        </p>
+                    </ul>
+                </div>
+            
+            
+            </div>
+
+            <div class="Right_part">
+                <div class="My_photo"></div>
+            </div>
+            
         </div>
-    
-    
+
     </div>
 
         
-
-    
-
- <div class="image-container">
-    <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/white.jpg" alt="Your Image">
-</div>
-
-</div>
-
-
-
-</div>
-
-
 </body>
 </html>
 
