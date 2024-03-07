@@ -141,6 +141,7 @@ body
   }
 
   .triangle2a {
+    
     position: absolute;
     bottom: 46%;
     left: 25%;
@@ -153,7 +154,10 @@ body
     border-radius: 50%;
     animation: rotateTriangle 50s infinite linear;
     filter: blur(5px);
+    z-index: 999;
   }
+
+
 
   .triangle3 {
     position: absolute;
@@ -166,6 +170,7 @@ body
     border-right: 20px solid transparent;  /* Length of the right side*/
     border-bottom: 35px solid #c2670079;   /* Length of the bottom side to reduce as px increase*/
     animation: rotateTriangle 15s infinite linear;
+    z-index: 999;
     
   }
 
@@ -1091,9 +1096,10 @@ header
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
     
-    background: linear-gradient(45deg, #ff63472a, #4169e133, #32cd323a, #ff8c002a);
+    background: linear-gradient(45deg, #ff63472a, #4169e133, #32cd3200, #ff8c002a);
     background-size: 400% 400%;
-    animation: gradientShift2 3s ease infinite alternate;
+    animation: gradientShift2 2s ease infinite alternate;
+    
   }
 
   @keyframes gradientShift2 {
@@ -1108,15 +1114,15 @@ header
 
 
 
-.all4 {
+.all4 
+{
     position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     margin-bottom: 1%;
-    background: linear-gradient(135deg, #ffffff00, #bfffc446);
-    perspective: 1000px;
+
 
 }
 
@@ -1135,17 +1141,19 @@ header
     flex-direction: column;
     transition: background-color 0.5s;
     transition: all 0.3s ease-in-out;
-    opacity: 0.8;
+    opacity: 1;
+}
+
+.three1, .four1, .five1, .six1 
+{
+    opacity: 0.5;
 }
 
 .one1:hover, .two1:hover
 {
-    background-color: rgba(0, 68, 255, 0.164);
     cursor: pointer;
     transform: translateY(-15px);
-    opacity: 1;
-    height: 351px;
-    width: 32%;
+
 }
 
 .three1:hover, .four1:hover, .five1:hover, .six1:hover
@@ -1160,10 +1168,10 @@ header
     height: 100%;
     width: 97%;
     border-style: solid;
-    border-color: rgb(0, 255, 21);
+    border-color: rgb(0, 131, 22);
     border-width: 0.3px;
     border-radius: 3px;
-    background-color: green;
+    background-color: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1191,7 +1199,7 @@ header
 {
     background-color: none;
     height: 35%;
-    display: flex;
+   
     flex-direction: column;
     padding: 4%;
 }
@@ -1224,7 +1232,6 @@ header
     width: 80px;
     cursor: pointer;
     position: relative;
-    z-index: 999;
 }
 
 .D_Button:hover
@@ -1578,32 +1585,6 @@ header
 
 <!---------------------------------------------JS------------------------------------------------------------>
 <script>
-    // IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
-
-document.addEventListener("DOMContentLoaded", function() {
-    let lazyImages = document.querySelectorAll('.back');
-
-    let options = {
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    let observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                let img = entry.target;
-                img.src = img.dataset.src;
-                observer.unobserve(img);
-            }
-        });
-    }, options);
-
-    lazyImages.forEach(function(img) {
-        observer.observe(img);
-    });
-});
-
-
 
 // SMOOTH TRANSITION FOR THE NAVIGATION LINKS
 
@@ -1644,24 +1625,6 @@ window.addEventListener('load', function() {
 
 
 
-
-
-// SMOOTH TRANSITION FOR THE BACK IMAGE
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.back_img');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 200);
-});
 
 
 
@@ -1873,7 +1836,7 @@ window.addEventListener('scroll', function() {
         <header class="header_part">
             <div class="navigation_links"> 
                 <a class="link1" href="http://remyshema.42web.io/?i=1">Home</a>
-                <a class="link2 active" href="portfolio.html">Portfolio</a>
+                <a class="link2 active" href="">Portfolio</a>
                 <a class="link3" href="portfolio.html#services">Services</a>
                 <a class="link4" href="contact.html">Contact</a> 
             </div>

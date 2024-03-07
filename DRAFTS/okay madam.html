@@ -1,44 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Linear 3D Background</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px; /* Adjust the perspective to change the depth perception */
-    background-color: #f0f0f0; /* Fallback background color */
-  }
-
-  .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #ff6347, #4169e1, #32cd32, #ff8c00);
-    background-size: 400% 400%;
-    animation: gradientShift 3s ease infinite alternate;
-  }
-
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 50%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
     }
-    100% {
-      background-position: 100% 50%;
+
+    /* Basic styles for the header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
     }
-  }
 
+    header h1 {
+      margin-left: 20px;
+    }
 
-</style>
+    nav ul {
+      list-style-type: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hero section */
+    #hero {
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    /* Container */
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .flacko
+    {
+        background-size: cover; /* Cover the entire container */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        width: 100%; /* Set the width to 100% */
+        height: 1;
+        opacity: 0.3;
+    }
+  </style>
 </head>
 <body>
-<div class="background"></div>
+    <img class="flacko" src="file:///C:/Users/User/Downloads/pawel-czerwinski-6ooil14ZcQQ-unsplash.jpg" alt="" width="10px">
+
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Welcome to my portfolio!</h2>
+      <p>Check out my latest projects below.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <!-- Add your projects here -->
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 My Portfolio</p>
+    </div>
+  </footer>
 
 </body>
 </html>

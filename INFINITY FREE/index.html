@@ -39,38 +39,62 @@
 body
 {
     position: relative;
-    height: 100vh;
+    height: 99vh;
     background-color: aliceblue;
+    background-image: url('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/h.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    border-style: solid;
+    border-radius: 0px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        overflow: auto;
+    }
     
 }
 
 
 .center_img
 {
-    width: 92%; /* Adjust the width as needed */
-    height: 95%;
-    background-color: rgba(0, 136, 255, 0);
+    width: 95%; /* Adjust the width as needed */
+    height: 98%;
     border-radius: 5px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.514);
+    background-color: rgba(240, 248, 255, 0.212);
 
 }
 
 .Two_Parts
 {
-   display: flex;
-   flex-direction: row;
-   height: 90%;
-   overflow: hidden;
+    @media (min-width: 1025px)    /* Desktops and larger laptops */
+    {
+        display: flex;
+        flex-direction: row;
+        height: 90%;
+        overflow: hidden;
+        background-color: yellow;
+
+    }
+   @media (max-width: 767px)     /* Mobile devices */
+   {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+        background-color: rgba(255, 255, 0, 0);
+   }
 }
 
 .Left_part
 {
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgb(0, 0, 255);
     height: 100%;
     width: 50%;
     overflow: auto;
@@ -81,12 +105,19 @@ body
     align-items: center;
     padding-right: 15%;
     overflow: hidden;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        height: 50%;
+        margin-top: 5%;
+    }
     
 }
 
 .Right_part
 {
-    background-color: #ff000000;
+    background-color: #ff0000;
     height: 98%;
     width: 50%;
     overflow: hidden;
@@ -97,7 +128,14 @@ body
     border-radius: 5px;
     border-width: 1px;
     border-color: rgba(240, 248, 255, 0);
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        height: 30%;
+    }
 }
+
 
 .My_photo
 {
@@ -118,6 +156,16 @@ body
     margin-left: 6.8%;
     font-size: 30px;
     color: #000000d3;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 10%;
+    }
 }
 
 .First_headings h2
@@ -125,6 +173,11 @@ body
     margin-bottom: 5px; /* Adjust the value as needed */
     font-family: Arial, sans-serif;
     font-weight: 500;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 40px;
+    }
 }
 
 .First_headings h1 {
@@ -132,7 +185,23 @@ body
     margin-bottom: 2%;   
     margin-top: 1%; /* Adjust the value as needed */
     font-family: 'Orbitron', sans-serif;
-    font-size: 50px;
+ 
+    @media (min-width: 1025px)    /* Desktops and larger laptops */
+    { 
+        font-size: 50px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px)   /* Tablets and small laptops */
+    {
+        font-size: 45px;
+    }
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 40px;
+    }
+
+    
     
 }
 
@@ -150,6 +219,29 @@ body
     background-color: rgba(255, 255, 0, 0);
     width: 80%;
     margin-left: 16%;
+
+    @media (min-width: 1025px)    /* Desktops and larger laptops */
+    { 
+        font-size: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+        font-size: 18px;
+    }
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        font-size: 15px;
+        margin-left: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15px;
+        margin-top: 2%;
+    }
 }
 
 .Buy_me_coffee
@@ -160,29 +252,57 @@ body
     align-items: center;
     flex-direction: column;
     background-color: rgba(100, 148, 237, 0);
-    
     margin-right: 12%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 15%;
+    }
 }
 
 .coffee-button 
 {
     background-color: rgba(0, 184, 0, 0.493);
     font-weight: 550;
-    color:rgba(0, 0, 0, 0.562);;
+    color:rgba(0, 0, 0, 0.808);
     border-radius: 20px; /* Rounded corners */
     padding: 13px; /* Padding for button */
     border-color:rgb(208, 255, 196);
     border-style: solid;
     border-width: 1px;
     cursor: pointer; /* Show pointer cursor on hover */
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.267);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.438);
 
     transition: background-color 0.7s ease;
+
+    @media (min-width: 1025px)    /* Desktops and larger laptops */
+    { 
+        padding: 13px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px)   /* Tablets and small laptops */
+    {
+        padding: 7px;
+        border-color: rgba(0, 255, 55, 0);
+        color:rgba(0, 0, 0, 0.616);
+    }
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        padding: 10px;
+        font-size: 15px;
+        font-weight: 100;
+        border-color: rgba(0, 128, 0, 0);
+        box-shadow: none;
+    }
     
 }
 
-.coffee-button:hover {
-    background-color: rgba(0, 184, 0, 0.397);
+.coffee-button:hover 
+{
+    background-color: rgba(31, 219, 31, 0.774);
 }
 
 .coffee-button:active /* When clicked man */
@@ -282,6 +402,11 @@ body
   justify-content: center;
   padding-left: 2%;
   padding-top: 5%;
+
+  @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
 
