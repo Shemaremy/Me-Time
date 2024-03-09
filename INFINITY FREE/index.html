@@ -39,62 +39,957 @@
 body
 {
     position: relative;
-    height: 99vh;
+    height: 755vh;
     background-color: aliceblue;
-    background-image: url('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/h.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
-
     overflow: hidden;
     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     border-style: solid;
-    border-radius: 0px;
+    border-width: 0px;
+    overflow: auto;
+}
 
-    @media (max-width: 767px)     /* Mobile devices */
+@media (max-width: 767px)     /* Mobile devices */
+    {  body
     {
-        overflow: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 100%;
     }
-    
+    }
+
+
+
+.Everything_is_here
+{
+    border-style: solid;
+    border-width: 0px;
+    border-color: black;
+    border-radius: 5px;
+    position: relative;
+    height: 750vh;
+    background-color: aliceblue;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 750vh;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.432);
 }
 
 
 .center_img
 {
-    width: 95%; /* Adjust the width as needed */
-    height: 98%;
-    border-radius: 5px;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.514);
-    background-color: rgba(240, 248, 255, 0.212);
+    width: 100%; /* Adjust the width as needed */
+    height: 13%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    background-color: rgba(138, 138, 138, 0.199);
+}
+
+/*---------------------PART 2-------------------*/
+.Part2
+{
+    width: 98%;
+    height: 10%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    position: relative;
+    background-color: rgba(0, 139, 252, 0)
+}
+.Two_Parts2
+{
+    display: flex;
+    flex-direction: row;
+    
+}
+.Left_part2
+{
+    overflow: hidden;
+    height: 70vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgba(43, 255, 0, 0);
+    margin-top: 0;
+}
+
+.About_Photo
+{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(189, 189, 189);
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 50%;
+}
+
+.Download_cv
+{
+    margin-top: 10%;
+}
+.Right_part2
+{
+    overflow: hidden;
+    height: 70vh;
+    width: 60%;
+    background-color: rgba(251, 255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.About_me_header, .About_me_par
+{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.About_me_header
+{
+    font-size: 30px;
+    margin-bottom: 2%;
+    margin-top: 0%;
+    margin-right: 350px;
+}
+
+.About_me_container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 80%;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 30px 0px 30px 0px;
+    margin-bottom: 20px;
+    background-color: rgb(211, 211, 211);   
 
 }
 
+
+
+.About_me_par, p
+{
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+/*---------------------PART 3-------------------*/
+.Part3
+{
+    width: 98%; /* Adjust the width as needed */
+    height: 16%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    background-color: rgba(194, 201, 207, 0.993);
+}
+
+.Two_Parts3
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.Left_part3
+{
+    width: 80%;
+    height: 22vh;
+    background-color: rgba(76, 10, 138, 0);
+
+}
+
+.My_proj_header, .My_proj_Paragraph
+{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.My_proj_header
+{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.Right_part3
+{
+    width: 100%;
+    height: 90vh;
+    margin-top: 0;
+    background-color: rgba(0, 0, 255, 0);
+}
+
+.Third
+{
+    height: 75vh;
+    width: 85%;
+
+    background-color: none;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-top: 13px;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    background-color: rgba(223, 232, 255, 0.089);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
+
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+
+    
+    border-left: none;
+    border-right: none;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+
+}
+
+
+
+/* For WebKit (Chrome, Safari) */
+.Third::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 2px;
+}
+
+/* Track */
+.Third::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Color of the track */
+}
+
+/* Handle */
+.Third::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Color of the handle */
+}
+
+
+
+.all3 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    
+    padding: 5px;
+}
+
+.one, .two, .three, .four, .five, .six 
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.692);
+    height: 250px;
+    width: 48%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    
+}
+
+.proj_imgs
+{
+    display: none;
+}
+
+
+
+/*---------------------PART 4-------------------*/
+.Part4
+{
+    width: 98%; /* Adjust the width as needed */
+    height: 19%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    background-color: rgba(255, 0, 157, 0);
+}
+
+.Left_part4
+{
+    width: 60%;
+    height: 30vh;
+    background-color: rgba(198, 226, 43, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Two_Parts4
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Certifications_header, .Certifications_par
+{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.Certifications_header
+{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.Right_part4
+{
+    width: 100%;
+    height: 97vh;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+.Fourth
+{
+  background-color: none;   
+}
+
+.certificates
+{
+    font-family: "Archivo Narrow", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 50px;
+    color: rgb(48, 48, 48);
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.certificates_library
+{
+    
+    width: 100%;
+    height: 100px;
+    background-color: none;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    background-color: rgba(223, 232, 255, 0.089);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
+   
+    overflow-y: auto;
+    height: 80vh;
+    width: 85%;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+    
+    background: linear-gradient(45deg, #ff63472a, #4169e133, #32cd3200, #ff8c002a);
+    background-size: 400% 400%;
+    animation: gradientShift2 2s ease infinite alternate;
+    
+  }
+
+  @keyframes gradientShift2 {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+
+
+
+.all4 
+{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    margin-bottom: 1%;
+
+
+}
+
+.one1, .two1, .three1, .four1, .five1, .six1 
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.479);
+    height: 349px;
+    width: 32%;
+    margin-top: 10px;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    padding-left: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.5s;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.three1, .four1, .five1, .six1 
+{
+    opacity: 0.5;
+}
+
+.one1:hover, .two1:hover
+{
+    cursor: pointer;
+    transform: translateY(-15px);
+
+}
+
+.three1:hover, .four1:hover, .five1:hover, .six1:hover
+{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+.docs
+{
+    height: 100%;
+    width: 97%;
+    border-style: solid;
+    border-color: rgb(0, 131, 22);
+    border-width: 0.3px;
+    border-radius: 3px;
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 3%;
+    overflow: hidden;
+}
+
+
+.doc_img      /* Crop Images corresponding to 1024 X 637 */
+{
+    max-width: 100%; /* Ensure image fits within container */
+    max-height: 100%;
+}
+
+
+.overlay
+{
+    display: none;
+}
+
+
+
+.cert_words
+{
+    background-color: none;
+    height: 35%;
+   
+    flex-direction: column;
+    padding: 4%;
+}
+
+
+.Name_of_certificate
+{
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.inner_cert_par
+{
+  font-family: sans-serif;
+  font-size: 13px;
+  margin-top: 0px;
+}
+
+.D_Button
+{
+    background-color: rgba(47, 113, 255, 0.13);
+    border-style: solid;
+    border-color: green;
+    border-radius: 10px;
+    border-width: 0.5px;
+    padding: 7px;
+    margin-top: 0px;
+    width: 80px;
+    cursor: pointer;
+    position: relative;
+}
+
+.D_Button:hover
+{
+    background-color: rgba(47, 113, 255, 0.329);
+    border-style: solid;
+    border-color: green;
+    border-radius: 10px;
+    border-width: 0.5px;
+    
+    margin-top: 0px;
+    width: 80px;
+    position: relative;
+    z-index: 999;
+
+}
+
+
+/*---------------------PART 5-------------------*/
+.Part5
+{
+    width: 98%; /* Adjust the width as needed */
+    height: 13%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    background-color: rgba(187, 255, 0, 0.822);
+}
+
+.Two_Parts5
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Left_part5
+{
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(20, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Skills_Header, .Why_choose_me, .Skills_Par
+{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.Skills_Header
+{
+    font-size: 40px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.Why_choose_me
+{
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
+    letter-spacing: 5px;
+}
+
+.Skills_Par
+{
+    font-size: 14px;
+}
+
+
+
+.Right_part5
+{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(0, 255, 0);
+}
+
+/*----------------------------------------------PART 6-------------------------------------------------*/
+.Part6
+{
+    width: 98%; /* Adjust the width as needed */
+    height: 14%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    background-color: rgba(0, 78, 247, 0.267);
+}
+
+.Two_Parts6
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Left_part6
+{
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(255, 0, 234);
+}
+
+.Services_header,.What_I_do, .Services_par
+{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.Services_header
+{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.What_I_do
+{
+    font-size: 55px;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.Right_part6
+{
+    width: 100%;
+    height: 63vh;
+    background-color: rgb(0, 17, 255);
+}
+
+/*---------------------PART 7-------------------*/
+.Part7
+{
+    width: 98%; /* Adjust the width as needed */
+    height: 14%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    background-color: rgba(251, 255, 0, 0);
+}
+
+.Two_Parts7
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Left_part7
+{
+    width: 100%;
+    height: 20vh;
+    background-color: rgba(37, 37, 37, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact_header, .Get_in_touch, .Contact_par
+{
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.Contact_header
+{
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: 600;   
+}
+
+.Get_in_touch
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 55px;
+}
+
+.Contact_par
+{
+    margin-top: 0;
+}
+
+.Right_part7
+{
+    width: 90%;
+    height: 70vh;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 50px 0px 50px 0px;
+    background-color: rgb(224, 224, 224);
+}
+
+
+.Everything
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.Left_Section
+{
+   margin-top: 0;
+}
+
+.Right_section
+{
+   margin-right: 0px;
+   margin-top: 40px;
+}
+
+.heading_text7
+{
+    margin-bottom: 0px;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.p1
+{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.p2
+{
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.p3
+{
+    margin-top: 0px;
+    font-size: 13px;
+}
+
+.icon2
+{
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.658);  
+}
+
+.words
+{
+   margin-bottom: 70px;
+}
+
+.Send
+{
+    margin-top: 5px;
+}
+
+.Name_Email
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.Email
+{
+    margin-left: 15px;
+}
+
+
+.heading_text7
+{  
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 370%;
+}
+
+.heading_text7a
+{
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+p
+{
+    font-family: sans-serif;
+}
+
+
+.button_7
+{
+    margin-top: 10px;
+    border-style: solid;
+    border-color: rgb(6, 168, 0);;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 120px;
+    padding: 9px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button_7:hover
+{
+    border-color: rgb(0, 255, 98);
+}
+
+
+input
+{
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(4, 122, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 70%;
+    transition: width 0.3s ease;
+
+}
+
+input:hover
+{   
+    border-color: rgb(7, 209, 0);
+    width: 90%;
+}
+
+input:focus
+{
+    outline: none;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgb(7, 209, 0);
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    padding: 10px;
+    font-size: 15px;
+    width: 90%;
+}
+
+
+.text_area
+{
+    width: 86%;
+}
+
+.text_area:hover
+{
+    width: 96%;
+}
+
+/*--------------------------------------------ENDING PART 7---------------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------------------STARTING PART 8----------------------------------------*/
+.Part8
+{
+    width: 98%; /* Adjust the width as needed */
+    height: 1%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    margin-bottom: 5px;
+}
+
+.Two_Parts8
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Left_part8
+{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.Copyright
+{
+    font-weight: 100;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+.Right_part8
+{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+.Right_part8, a
+{
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+    margin-bottom: 0px;
+}
+
+
+
+/*---------------------End Of 8 Parts-------------------*/
 .Two_Parts
 {
-    @media (min-width: 1025px)    /* Desktops and larger laptops */
-    {
-        display: flex;
-        flex-direction: row;
-        height: 90%;
-        overflow: hidden;
-        background-color: yellow;
-
-    }
-   @media (max-width: 767px)     /* Mobile devices */
-   {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        overflow: hidden;
-        background-color: rgba(255, 255, 0, 0);
-   }
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    overflow: hidden;
 }
+
+@media (max-width: 767px)     /* Mobile devices */
+   {    .Two_Parts
+        {    width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(255, 255, 0, 0);
+        }
+   }
+
 
 .Left_part
 {
-    background-color: rgb(0, 0, 255);
+    background-color: rgba(0, 0, 255, 0);
     height: 100%;
     width: 50%;
     overflow: auto;
@@ -105,19 +1000,19 @@ body
     align-items: center;
     padding-right: 15%;
     overflow: hidden;
+}
 
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        width: 100%;
-        height: 50%;
-        margin-top: 5%;
+@media (max-width: 767px)     /* Mobile devices */
+{   .Left_part
+    {    width: 100%;
+            height: 50%;
+            margin-top: 5%;
     }
-    
 }
 
 .Right_part
 {
-    background-color: #ff0000;
+    background-color: #ff000000;
     height: 98%;
     width: 50%;
     overflow: hidden;
@@ -128,14 +1023,15 @@ body
     border-radius: 5px;
     border-width: 1px;
     border-color: rgba(240, 248, 255, 0);
+}
 
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        width: 100%;
+@media (max-width: 767px)     /* Mobile devices */
+{
+    .Right_part
+    {    width: 100%;
         height: 30%;
     }
 }
-
 
 .My_photo
 {
@@ -156,8 +1052,11 @@ body
     margin-left: 6.8%;
     font-size: 30px;
     color: #000000d3;
+}
 
-    @media (max-width: 767px)     /* Mobile devices */
+@media (max-width: 767px)     /* Mobile devices */
+{
+    .First_headings
     {
         display: flex;
         flex-direction: column;
@@ -173,36 +1072,23 @@ body
     margin-bottom: 5px; /* Adjust the value as needed */
     font-family: Arial, sans-serif;
     font-weight: 500;
+}
 
-    @media (max-width: 767px)     /* Mobile devices */
+@media (max-width: 767px)     /* Mobile devices */
+{
+    .First_headings h2
     {
         font-size: 40px;
     }
 }
+
 
 .First_headings h1 {
 
     margin-bottom: 2%;   
     margin-top: 1%; /* Adjust the value as needed */
     font-family: 'Orbitron', sans-serif;
- 
-    @media (min-width: 1025px)    /* Desktops and larger laptops */
-    { 
-        font-size: 50px;
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px)   /* Tablets and small laptops */
-    {
-        font-size: 45px;
-    }
-
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        font-size: 40px;
-    }
-
-    
-    
+    font-size: 50px;    
 }
 
 .shema
@@ -219,29 +1105,6 @@ body
     background-color: rgba(255, 255, 0, 0);
     width: 80%;
     margin-left: 16%;
-
-    @media (min-width: 1025px)    /* Desktops and larger laptops */
-    { 
-        font-size: 20px;
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px)
-    {
-        font-size: 18px;
-    }
-
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        width: 100%;
-        font-size: 15px;
-        margin-left: 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 15px;
-        margin-top: 2%;
-    }
 }
 
 .Buy_me_coffee
@@ -253,13 +1116,6 @@ body
     flex-direction: column;
     background-color: rgba(100, 148, 237, 0);
     margin-right: 12%;
-
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        width: 100%;
-        margin-right: 0;
-        margin-top: 15%;
-    }
 }
 
 .coffee-button 
@@ -276,28 +1132,7 @@ body
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.438);
 
     transition: background-color 0.7s ease;
-
-    @media (min-width: 1025px)    /* Desktops and larger laptops */
-    { 
-        padding: 13px;
-    }
-
-    @media (min-width: 768px) and (max-width: 1024px)   /* Tablets and small laptops */
-    {
-        padding: 7px;
-        border-color: rgba(0, 255, 55, 0);
-        color:rgba(0, 0, 0, 0.616);
-    }
-
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        padding: 10px;
-        font-size: 15px;
-        font-weight: 100;
-        border-color: rgba(0, 128, 0, 0);
-        box-shadow: none;
-    }
-    
+        
 }
 
 .coffee-button:hover 
@@ -490,8 +1325,6 @@ body
 </style>
 
 <!--------------------------------------MY CSS ENDS RIGHT HERE !!!!--------------------------------------->
-
-
 
 
 
@@ -865,91 +1698,346 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <body>
-    
-    <div class="mobile-nav">
-        <a class="link1" href="#">Home</a>
-        <a class="link2" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/PORTFOLIO/Portfolio.html">Portfolio</a>
-        <a class="link3" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/SERVICES/services.html">Services</a>
-        <a class="link4" href="file:///C:/REMYBOY2/ALX/GIT%20Files/Me-Time/CONTACT/contact.html">Contact</a> 
-    </div>
+    <div class="Everything_is_here">
 
-    
-    <div class="center_img">
-        
-        
-        <div class="navigation_links">
-
-            <a class="link1 active" href="http://remyshema.42web.io/?i=1">Home</a>
-            <a class="link2" href="portfolio.html">Portfolio</a>
-            <a class="link3" href="portfolio.html#services">Services</a>
-            <a class="link4" href="contact.html">Contact</a> 
-    
-        </div>    
-
-        <button class="hamburger">
-            <div class="bar">  </div>
-        </button>
-    
-
-        <div class="nav_icon">
-            <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="meLogo">
-        </div>
-        
-
-        <div class="Two_Parts">
-
-            <div class="Left_part">
-        
-                <div class="First_headings">
-                    <h2 class="heading">Hello, I'm</h2>
-                    <h1 class="heading">REMY <span class="shema">SHEMA</span></h1>
-                </div>
-                
-                
-        
-        
-                <div class="small_paragraph">
-                    <p id="animated-paragraph" class="paragraph">Software engineer, visual artist & a creative thinker. </p>
-                </div>
-                
-            
-                <div class="Buy_me_coffee">
-                    <button class="coffee-button"  id="downloadButton">Download my cv</button>
-                </div>
-        
-        
-        
-                <div class="social_media">
-                    <ul class="all_icons">
-                        <p class="icon Linkedin">                            
-                            <span><i class="fab fa-linkedin" style="margin-left: 3px;"></i></span>
-                        </p>
-                
-                        <p class="icon Twitter">                            
-                            <span><i class="fab fa-twitter" style="margin-left: 2px;"></i></span>
-                        </p>
-                
-                        <p class="icon Instagram">                            
-                            <span><i class="fab fa-instagram" style="margin-left: 3px;"></i></span>
-                        </p>
-                
-                        <p class="icon Behance">
-                            <span><i class="fab fa-behance" style="margin-left: 2px;"></i></span>
-                        </p>
-                    </ul>
-                </div>
+        <div class="center_img">
             
             
-            </div>
+            <div class="navigation_links">
 
-            <div class="Right_part">
-                <div class="My_photo"></div>
+                <a class="link1 active" href="http://remyshema.42web.io/?i=1">Home</a>
+                <a class="link2" href="portfolio.html">Portfolio</a>
+                <a class="link3" href="portfolio.html#services">Services</a>
+                <a class="link4" href="contact.html">Contact</a> 
+        
+            </div>    
+        
+
+            <div class="nav_icon">
+                <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="meLogo">
             </div>
             
+
+            <div class="Two_Parts">
+
+                <div class="Left_part">
+            
+                    <div class="First_headings">
+                        <h2 class="heading">Hello, I'm</h2>
+                        <h1 class="heading">REMY <span class="shema">SHEMA</span></h1>
+                    </div>
+                    
+                    
+            
+            
+                    <div class="small_paragraph">
+                        <p id="animated-paragraph" class="paragraph">Software engineer, visual artist & a creative thinker. </p>
+                    </div>
+                    
+                
+                    <div class="Buy_me_coffee">
+                        <button class="coffee-button"  id="downloadButton">Download my cv</button>
+                    </div>
+            
+            
+            
+                    <div class="social_media">
+                        <ul class="all_icons">
+                            <p class="icon Linkedin">                            
+                                <span><i class="fab fa-linkedin" style="margin-left: 3px;"></i></span>
+                            </p>
+                    
+                            <p class="icon Twitter">                            
+                                <span><i class="fab fa-twitter" style="margin-left: 2px;"></i></span>
+                            </p>
+                    
+                            <p class="icon Instagram">                            
+                                <span><i class="fab fa-instagram" style="margin-left: 3px;"></i></span>
+                            </p>
+                    
+                            <p class="icon Behance">
+                                <span><i class="fab fa-behance" style="margin-left: 2px;"></i></span>
+                            </p>
+                        </ul>
+                    </div>
+                
+                
+                </div>
+
+                <div class="Right_part">
+                    <div class="My_photo"></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="Part2">
+        <div class="Two_Parts2">
+
+                <div class="Left_part2">
+                    <div class="About_Photo"></div>
+                    <div class="Download_cv"><button>Download cv</button></div>
+                </div>
+                <div class="Right_part2">
+                    <h2 class="About_me_header">About me</h2>
+                    <div class="About_me_container"></div>
+                </div>
+
+        </div>
+        </div>
+
+        <div class="Part3">
+            <div class="Two_Parts3">
+                <div class="Left_part3">
+                    <h2 class="My_proj_header">My Projects</h2>
+                    <p class="My_proj_Paragraph">Explore my wonderful projects that I’ve been working on</p>
+                </div>
+                <div class="Right_part3">
+                    <div class="Third">
+                        <div class="circle circle5"></div>
+                        
+                        <div class="all3">
+        
+                            <div class="one">
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" style="width: 50px;">                                
+                            </div>
+        
+                            <div class="two">
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">                   
+                            </div>
+        
+                            <div class="three">
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
+                            </div>
+                            
+                            <div class="four">
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">    
+                            </div>
+        
+                            <div class="five">
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
+                            </div>
+        
+                            <div class="six">
+                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Part4">
+            <div class="Two_Parts4">
+                <div class="Left_part4">
+                    <h2 class="Certifications_header">Certifications</h2>
+                    <p class="Certifications_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                </div>
+                <div class="Right_part4">
+                    <div class="Fourth">                    
+                        <div class="certificates_library">
+                            <div class="all4">
+        
+                                <div class="one1">
+                                    <div class="docs">
+                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/asticaDesign_1_a-zipped-folder-with-a-cv-resume-diploma-and-many-more-zippe.2.jpg" alt="1">                                 
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Essential Docs</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+        
+                                </div>
+        
+                                <div class="two1">
+                                    <div class="docs">
+                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Alx%20Photo.jpg" alt="1">
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Alx SE Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+                                    
+                                </div>
+        
+                                <div class="three1">
+                                    <div class="docs">
+                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                        <div class="overlay">
+                                            <h2>Hello</h2>
+                                        </div>   
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Udemy Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="four1">
+                                    <div class="docs">
+                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                        <div class="overlay">
+                                            <h2>Hello</h2>
+                                        </div>   
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">FreecodeCamp Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+                                
+                                </div>
+        
+                                <div class="five1">
+                                    <div class="docs">
+                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                        <div class="overlay">
+                                            <h2>Hello</h2>
+                                        </div>   
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Andela SE Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+                                
+                                </div>
+        
+                                <div class="six1">
+                                    <div class="docs">
+                                        <img class="doc_img" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/gabriel-heinzer-g5jpH62pwes-unsplash.jpg" alt="1" style="filter: blur(1px);">
+                                        <div class="overlay">
+                                            <h2>Hello</h2>
+                                        </div>   
+                                    </div>
+                                    <div class="cert_words">
+                                        <h4 class="Name_of_certificate">Edx SE Certificate</h4>
+                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <button class="D_Button">Download</button>
+                                    </div>
+                                
+                                </div>
+                    
+                            </div>
+                        </div>
+                        
+                        
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Part5">
+            <div class="Two_Parts5">
+                <div class="Left_part5">
+                    <h2 class="Skills_Header">Skills</h2>
+                    <h3 class="Why_choose_me">Why Choose Me?</h3>
+                    <p class="Skills_Par">uhduwdwnswunswjdjkdmkdmnjwdnjwjwnddnjwnjwnsjnwsnjwns</p>
+                </div>
+                <div class="Right_part5">
+            
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Part6">
+            <div class="Two_Parts6">
+                <div class="Left_part5">
+                    <h2 class="Services_header">Services</h2>
+                    <h3 class="What_I_do">What I do</h3>
+                    <p class="Services_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                </div>
+                <div class="Right_part6">
+            
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Part7">
+            <div class="Two_Parts7">
+                <div class="Left_part7">
+                    <h3 class="Get_in_touch">Get in touch</h3>
+                    <p class="Contact_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                </div>
+                <div class="Right_part7">
+                    <div class="Everything">
+                        <div class="Left_Section">
+                            <div class="words">
+                                <h1 class="heading_text7">Let's talk</h1>
+                                <p class="p1">Ask me anything or just say hi ...</p>
+                            </div>
+
+                            <div class="Tel">
+                                <p class="p2"><i class="icon2 fa fa-phone" aria-hidden="true"></i> &nbsp; +250 783 674 289</p>
+                                <p class="p3"><i class="icon2 fas fa-envelope"></i> &nbsp; remyshema20@gmail.com</p>
+                            </div>
+                            
+                        </div>
+
+                        <div class="Right_section">
+                        
+                            <form action="">
+
+                                <div class="row">
+
+                                    <div class="Name_Email">
+                                            <div class="Name">
+                                                <h2 class="heading_text7a">Name</h2>
+                                                <input type="text" placeholder="Your name">
+                                            </div>
+                                            <div class="Email">
+                                                <h2 class="heading_text7a">Email</h2>
+                                                <input type="text" placeholder="Email adress">
+                                            </div>
+                                    </div>
+                                    
+                                    <div class="Message">
+                                        <h2 class="heading_text7a">Message</h2>
+                                        <input class="text_area" type="text" placeholder="Message">
+                                    </div>
+
+                                    <div class="Send">
+                                        <button class="button_7">Send<i class="icon2 fa fa-paper-plane" style="margin-left: 12px;"></i></button>
+                                    </div>
+
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="Part8">
+            <div class="Two_Parts8">
+                <div class="Left_part8">
+                    <p class="Copyright">Copyright © 2024. All Rights Reserved</p>
+                </div>
+                <div class="Right_part8">
+                <a href="#"><i class="fab fa-linkedin" style="margin-left: 3px;"></i></a>
+                <a href="#"><i class="fab fa-twitter" style="margin-left: 2px;"></i></a>
+                <a href="#"><i class="fab fa-instagram" style="margin-left: 3px;"></i></a>
+                <a href="#"><i class="fab fa-behance" style="margin-left: 2px;"></i></a>
+                </div>
+
+            </div>
         </div>
 
     </div>
-
         
 </body>
 </html>
