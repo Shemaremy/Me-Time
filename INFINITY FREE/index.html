@@ -32,6 +32,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,309;1,309&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <!--------------------------------------MY CSS STARTS RIGHT HERE !!!!--------------------------------------->
 
 <style>
@@ -39,7 +50,7 @@
 body
 {
     position: relative;
-    height: 755vh;
+    height: 795vh;
     background-color: aliceblue;
     overflow: hidden;
     display: flex;
@@ -52,14 +63,6 @@ body
     overflow: auto;
 }
 
-@media (max-width: 767px)     /* Mobile devices */
-    {  body
-    {
-        overflow-x: hidden;
-        overflow-y: auto;
-        width: 100%;
-    }
-    }
 
 
 
@@ -70,7 +73,6 @@ body
     border-color: black;
     border-radius: 5px;
     position: relative;
-    height: 750vh;
     background-color: aliceblue;
     overflow: hidden;
     display: flex;
@@ -79,33 +81,410 @@ body
     align-items: center;
     justify-content: center;
     width: 95%;
-    height: 750vh;
+    height: 790vh;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.432);
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
+
+
+
+
+
+.return_to_top
+{
+    left: 95%;
+    top: 85%;
+    transform: translateX(-50%);
+    animation-duration: 5000s;
+    position: fixed; 
+    z-index: 999; 
+    background-color: none;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    border: none;
+    
+}
+
+.back_top
+{
+    font-size: 30px;
+    color: rgba(32, 32, 32, 0.603);
+    transition: color 0.1s ease;
+}
+
+.back_top:hover
+{
+    color: rgba(32, 32, 32, 0.911);
+    transition: color 0.1s ease;
+}
+
+
+.Divisor
+{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 40%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*-----------------------THIS CSS HAS 8 CONTAINERS. THEIR DEFINITION STARTS HERE--------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 1 ---------------------------------------------------------------*/
 
 .center_img
 {
     width: 100%; /* Adjust the width as needed */
-    height: 13%;
+    height: 14%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(138, 138, 138, 0.199);
+    margin-bottom: 5px;
 }
 
-/*---------------------PART 2-------------------*/
+
+
+.navigation_links {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5%;
+}
+
+.navigation_links a {
+    text-decoration: none;
+    color: black; /* Set default color to black */
+    margin: 0 10px;
+    padding: 0.5% 1%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    position: relative;
+}
+
+.navigation_links a.active {
+    color: rgb(6, 168, 0); /* Set active link color to green */
+}
+
+.navigation_links a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(6, 168, 0); /* Active link glowing line color */
+    transform: scaleX(1);
+}
+
+.navigation_links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: blue; /* Non-active link glowing line color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navigation_links a:hover::after {
+    background-color: blue; /* Change glowing line color to blue on hover */
+    transform: scaleX(0);
+}
+
+.navigation_links a:hover {
+    color: rgb(0, 175, 161); /* Change color to green on hover */
+}
+
+
+
+
+
+.Two_Parts
+{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    overflow: hidden;
+}
+
+
+.Left_part
+{
+    background-color: rgba(0, 0, 255, 0);
+    height: 100%;
+    width: 50%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15%;
+    overflow: hidden;
+}
+
+
+.First_headings
+{
+    margin-top: 10%;
+    margin-left: 6.8%;
+    font-size: 30px;
+    color: #000000d3;
+}
+
+
+.First_headings h2
+{
+    margin-bottom: 5px; /* Adjust the value as needed */
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+}
+
+
+.First_headings h1 {
+
+    margin-bottom: 2%;   
+    margin-top: 1%; /* Adjust the value as needed */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;    
+}
+
+.shema
+{
+    color: green;
+}
+
+
+/* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
+
+.heading {
+    opacity: 0; /* Start with the headings invisible */
+    transform: translateY(20px); /* Shift the headings downwards initially */
+    transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
+    transition-delay: 1s;
+}
+
+/* Define the animation when the first heading becomes visible */
+.heading.show-heading:first-child {
+    transition-delay: 1.5s; /* Delay the animation for the first heading */
+}
+
+/* Define the animation when the headings become visible */
+.heading.show-heading {
+    opacity: 1; /* Make the heading visible */
+    transform: translateY(0); /* Reset the transformation to its original position */
+}
+
+
+
+.small_paragraph
+{
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    margin-bottom: 2%;
+    background-color: rgba(255, 255, 0, 0);
+    width: 80%;
+    margin-left: 16%;
+}
+
+
+/* PARAGRAPH TRANSITION */
+
+
+/* Apply initial styles to hide the paragraph text */
+.small_paragraph .paragraph span {
+    opacity: 0;
+    animation: revealLetter 1s ease forwards;
+}
+
+/* Define animation for revealing each letter */
+@keyframes revealLetter {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+.Buy_me_coffee
+{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(100, 148, 237, 0);
+    margin-right: 12%;
+}
+
+.coffee-button 
+{
+    background-color: rgba(0, 184, 0, 0.493);
+    font-weight: 550;
+    color:rgba(0, 0, 0, 0.808);
+    border-radius: 20px; /* Rounded corners */
+    padding: 13px; /* Padding for button */
+    border-color:rgb(208, 255, 196);
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer; /* Show pointer cursor on hover */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.438);
+
+    transition: background-color 0.7s ease;
+        
+}
+
+.coffee-button:hover 
+{
+    background-color: rgba(31, 219, 31, 0.774);
+}
+
+.coffee-button:active /* When clicked man */
+{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
+   
+}
+
+#downloadButton.completed {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: not-allowed;
+}
+
+#downloadButton:disabled {
+    cursor: not-allowed;
+    box-shadow: 1px;
+}
+
+
+.social_media
+{
+  background-color: rgba(203, 3, 243, 0);
+  width: 100%;   
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2%;
+  padding-top: 5%;
+
+  @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
+}
+
+.all_icons
+{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15%;
+}
+
+.Linkedin, .Twitter, .Instagram, .Behance
+{
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    margin-right: 20px;
+    padding: 3px;
+    width: 20px;
+}
+
+.fab
+{
+    font-size: 16px;
+}
+
+
+
+
+.Right_part
+{
+    background-color: #ff000000;
+    height: 98%;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(240, 248, 255, 0);
+}
+
+
+.My_photo
+{
+    height: 80%;
+    width: 70%;
+    background-color: rgba(127, 255, 212, 0);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: rgba(240, 248, 255, 0);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.13);
+}
+
+
+/*-------------------------ENDING PART 1 -------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 2 ---------------------------------------------------------------*/
+
 .Part2
 {
     width: 98%;
     height: 10%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     position: relative;
-    background-color: rgba(0, 139, 252, 0)
+    background-color: rgba(0, 139, 252, 0);
+    margin-bottom: 0px;
 }
 .Two_Parts2
 {
     display: flex;
     flex-direction: row;
-    
 }
 .Left_part2
 {
@@ -127,14 +506,32 @@ body
     width: 200px;
     background-color: rgb(189, 189, 189);
     border-style: solid;
-    border-width: 0px;
+    border-width: 1px;
     border-radius: 50%;
+    border-color: white;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
 }
 
 .Download_cv
 {
     margin-top: 10%;
 }
+
+.Download_cv2
+{
+    padding: 9px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: white;
+    background-color: rgba(0, 185, 0, 0.425);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.37);
+    width: 130px;
+    height: 40px;
+    font-size: 13px;
+
+}
+
 .Right_part2
 {
     overflow: hidden;
@@ -153,6 +550,7 @@ body
     font-weight: 100;
 }
 
+
 .About_me_header
 {
     font-size: 30px;
@@ -170,29 +568,63 @@ body
     height: 70%;
     width: 80%;
     border-style: solid;
-    border-width: 0px;
+    border-width: 1px;
     border-radius: 30px 0px 30px 0px;
+    border-color: rgb(255, 255, 255);
     margin-bottom: 20px;
-    background-color: rgb(211, 211, 211);   
+    background-color: rgba(224, 224, 224, 0);  
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.151); 
 
 }
 
 
 
-.About_me_par, p
+.About_me_par
 {
-    font-family: sans-serif;
+    background-color: rgba(255, 0, 0, 0);
+    width: 85%;
+    height: 85%;
+}
+
+.The_par
+{
+    font-family: "Philosopher", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.849);
     font-size: 15px;
 }
 
-/*---------------------PART 3-------------------*/
-.Part3
-{
-    width: 98%; /* Adjust the width as needed */
+/*-------------------------ENDING PART 2 -------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 3 ---------------------------------------------------------------*/
+
+
+.Part3 {
+    width: 98%;
     height: 16%;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    background-color: rgba(194, 201, 207, 0.993);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.281); /* Adjust the values as needed */
+    background-color: rgba(215, 223, 230, 0.993);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(0, 128, 0, 0.192);
+    border-top: none;
+    margin-top: 0%;
 }
+
 
 .Two_Parts3
 {
@@ -219,8 +651,17 @@ body
 
 .My_proj_header
 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0;
+    margin-top: 6%;
+}
+
+.My_proj_Paragraph
+{
+    font-size: 13px;
+    font-family: "Laila", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 .Right_part3
@@ -313,20 +754,52 @@ body
 }
 
 
+/*-------------------------ENDING PART 4 -------------------------------------------------------------------*/
 
-/*---------------------PART 4-------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 4 ---------------------------------------------------------------*/
+
+
 .Part4
 {
     width: 98%; /* Adjust the width as needed */
-    height: 19%;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    background-color: rgba(255, 0, 157, 0);
+    height: 17%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.288);
+    background-color: rgb(226, 234, 241);
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: rgba(0, 128, 0, 0.192);
+
 }
 
 .Left_part4
 {
     width: 60%;
-    height: 30vh;
+    height: 20vh;
     background-color: rgba(198, 226, 43, 0);
     display: flex;
     flex-direction: column;
@@ -349,8 +822,18 @@ body
 
 .Certifications_header
 {
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 0;
+    margin-top: 10%;
+}
+
+.Certifications_par
+{
+    font-size: 13px;
+    font-family: "Laila", serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
 }
 
 .Right_part4
@@ -410,7 +893,9 @@ body
     background: linear-gradient(45deg, #ff63472a, #4169e133, #32cd3200, #ff8c002a);
     background-size: 400% 400%;
     animation: gradientShift2 2s ease infinite alternate;
-    
+    background: none;
+    box-shadow: none;
+    background-color: rgba(0, 126, 236, 0);
   }
 
   @keyframes gradientShift2 {
@@ -560,37 +1045,69 @@ body
 
 }
 
+/*-------------------------ENDING PART 4 -------------------------------------------------------------------*/
 
-/*---------------------PART 5-------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 5 ---------------------------------------------------------------*/
+
 .Part5
 {
     width: 98%; /* Adjust the width as needed */
-    height: 13%;
+    height: 12%;
+    margin-top: 0%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    background-color: rgba(187, 255, 0, 0.822);
+    background-color: rgba(187, 255, 0, 0);
 }
 
 .Two_Parts5
 {
     display: flex;
     flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
 }
 
 .Left_part5
 {
     width: 100%;
-    height: 30vh;
-    background-color: rgb(20, 255, 255);
+    height: 20vh;
+    background-color: rgba(20, 255, 255, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 3%;
 }
 
 .Skills_Header, .Why_choose_me, .Skills_Par
 {
     font-family: sans-serif;
     font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .Skills_Header
@@ -610,7 +1127,10 @@ body
 
 .Skills_Par
 {
-    font-size: 14px;
+    font-size: 16px;
+    font-family: "Laila", serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 
@@ -620,15 +1140,83 @@ body
     width: 100%;
     height: 60vh;
     background-color: rgb(0, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-/*----------------------------------------------PART 6-------------------------------------------------*/
+.Button5
+{
+   height: 20px;
+   width: 20px;
+   background-color: burlywood;
+}
+
+.Cards5
+{
+    height: 90%;
+    width: 90%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards5a
+{
+    height: 95%;
+    width: 24%;
+    background-color: white;
+    transition: transform 0.5s ease;
+
+}
+
+
+.hide 
+{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+
+
+/*-------------------------ENDING PART 5 -------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 6 ---------------------------------------------------------------*/
+
+
 .Part6
 {
     width: 98%; /* Adjust the width as needed */
-    height: 14%;
+    height: 13%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(0, 78, 247, 0.267);
+    margin-top: 0%;
 }
 
 .Two_Parts6
@@ -669,17 +1257,45 @@ body
 .Right_part6
 {
     width: 100%;
-    height: 63vh;
+    height: 68vh;
     background-color: rgb(0, 17, 255);
 }
+/*-------------------------ENDING PART 6 -------------------------------------------------------------------*/
 
-/*---------------------PART 7-------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 7 ---------------------------------------------------------------*/
+
+
 .Part7
 {
     width: 98%; /* Adjust the width as needed */
-    height: 14%;
+    height: 17%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(251, 255, 0, 0);
+    margin-top: 0%;
 }
 
 .Two_Parts7
@@ -730,10 +1346,12 @@ body
 {
     width: 90%;
     height: 70vh;
+    background-color: rgb(217, 225, 231);
     border-style: solid;
-    border-width: 0px;
+    border-width: 1px;
     border-radius: 50px 0px 50px 0px;
-    background-color: rgb(224, 224, 224);
+    border-color: rgba(82, 255, 47, 0.342);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.432);
 }
 
 
@@ -742,7 +1360,8 @@ body
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 5%;
+    margin-top: 7%;
+    height: 50vh;
 }
 
 .Left_Section
@@ -750,17 +1369,21 @@ body
    margin-top: 0;
 }
 
+.heading_text7
+{  
+    font-size: 370%;
+    margin-bottom: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 309;
+    font-style: normal;
+}
+
 .Right_section
 {
    margin-right: 0px;
    margin-top: 40px;
-}
-
-.heading_text7
-{
-    margin-bottom: 0px;
-    font-family: sans-serif;
-    font-weight: 100;
 }
 
 .p1
@@ -794,12 +1417,12 @@ body
 
 .words
 {
-   margin-bottom: 70px;
+   margin-bottom: 100px;
 }
 
 .Send
 {
-    margin-top: 5px;
+    margin-top: 30px;
 }
 
 .Name_Email
@@ -813,15 +1436,11 @@ body
     margin-left: 15px;
 }
 
-
-.heading_text7
-{  
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 370%;
+.Message
+{
+    margin-top: 30px;
 }
+
 
 .heading_text7a
 {
@@ -838,20 +1457,25 @@ p
 
 .button_7
 {
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-left: 10px;
     border-style: solid;
     border-color: rgb(6, 168, 0);;
     border-width: 1px;
     border-radius: 5px;
-    width: 120px;
+    width: 80px;
     padding: 9px;
     cursor: pointer;
     font-size: 14px;
+
+    transition: transform 0.3s ease;
 }
 
 .button_7:hover
 {
     border-color: rgb(0, 255, 98);
+    transform: scaleX(1.10);
+
 }
 
 
@@ -866,7 +1490,7 @@ input
     border-width: 1px;
     padding: 10px;
     font-size: 15px;
-    width: 70%;
+    width: 60%;
     transition: width 0.3s ease;
 
 }
@@ -895,34 +1519,56 @@ input:focus
 
 .text_area
 {
-    width: 86%;
+    width: 80%;
 }
 
 .text_area:hover
 {
-    width: 96%;
+    width: 85%;
 }
 
-/*--------------------------------------------ENDING PART 7---------------------------------------------*/
+/*-------------------------ENDING PART 7 -------------------------------------------------------------------*/
 
 
 
 
 
 
-/*------------------------------------------------STARTING PART 8----------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------STARTING OF PART 8 ---------------------------------------------------------------*/
+
+
 .Part8
 {
     width: 98%; /* Adjust the width as needed */
     height: 1%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 .Two_Parts8
 {
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 .Left_part8
@@ -959,366 +1605,39 @@ input:focus
 .Right_part8, a
 {
     text-decoration: none;
-    color: black;
-    margin-right: 15px;
+    color: rgba(0, 0, 0, 0.568);
+    margin-right: 10px;
     margin-bottom: 0px;
 }
+/*-------------------------ENDING PART 8 -------------------------------------------------------------------*/
 
 
 
-/*---------------------End Of 8 Parts-------------------*/
-.Two_Parts
-{
-    display: flex;
-    flex-direction: row;
-    height: 90%;
-    overflow: hidden;
-}
-
-@media (max-width: 767px)     /* Mobile devices */
-   {    .Two_Parts
-        {    width: 100%;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            overflow: hidden;
-            background-color: rgba(255, 255, 0, 0);
-        }
-   }
-
-
-.Left_part
-{
-    background-color: rgba(0, 0, 255, 0);
-    height: 100%;
-    width: 50%;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    padding-right: 15%;
-    overflow: hidden;
-}
-
-@media (max-width: 767px)     /* Mobile devices */
-{   .Left_part
-    {    width: 100%;
-            height: 50%;
-            margin-top: 5%;
-    }
-}
-
-.Right_part
-{
-    background-color: #ff000000;
-    height: 98%;
-    width: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: rgba(240, 248, 255, 0);
-}
-
-@media (max-width: 767px)     /* Mobile devices */
-{
-    .Right_part
-    {    width: 100%;
-        height: 30%;
-    }
-}
-
-.My_photo
-{
-    height: 80%;
-    width: 70%;
-    background-color: rgba(127, 255, 212, 0);
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: rgba(240, 248, 255, 0);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.13);
-}
-
-
-.First_headings
-{
-    margin-top: 10%;
-    margin-left: 6.8%;
-    font-size: 30px;
-    color: #000000d3;
-}
-
-@media (max-width: 767px)     /* Mobile devices */
-{
-    .First_headings
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        margin-top: 10%;
-    }
-}
-
-.First_headings h2
-{
-    margin-bottom: 5px; /* Adjust the value as needed */
-    font-family: Arial, sans-serif;
-    font-weight: 500;
-}
-
-@media (max-width: 767px)     /* Mobile devices */
-{
-    .First_headings h2
-    {
-        font-size: 40px;
-    }
-}
-
-
-.First_headings h1 {
-
-    margin-bottom: 2%;   
-    margin-top: 1%; /* Adjust the value as needed */
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px;    
-}
-
-.shema
-{
-    color: green;
-}
-
-
-.small_paragraph
-{
-    font-family: 'Caveat', cursive;
-    font-size: 20px;
-    margin-bottom: 2%;
-    background-color: rgba(255, 255, 0, 0);
-    width: 80%;
-    margin-left: 16%;
-}
-
-.Buy_me_coffee
-{
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(100, 148, 237, 0);
-    margin-right: 12%;
-}
-
-.coffee-button 
-{
-    background-color: rgba(0, 184, 0, 0.493);
-    font-weight: 550;
-    color:rgba(0, 0, 0, 0.808);
-    border-radius: 20px; /* Rounded corners */
-    padding: 13px; /* Padding for button */
-    border-color:rgb(208, 255, 196);
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer; /* Show pointer cursor on hover */
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.438);
-
-    transition: background-color 0.7s ease;
-        
-}
-
-.coffee-button:hover 
-{
-    background-color: rgba(31, 219, 31, 0.774);
-}
-
-.coffee-button:active /* When clicked man */
-{
-    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
-   
-}
-
-#downloadButton.completed {
-    background-color: rgba(255, 255, 255, 0);
-    cursor: not-allowed;
-}
-
-#downloadButton:disabled {
-    cursor: not-allowed;
-    box-shadow: 1px;
-}
-
-
-
-.nav_icon
-{
-    display: none;
-}
-
-.navigation_links {
-    display: flex;
-    justify-content: center;
-    padding-top: 1.5%;
-}
-
-.navigation_links a {
-    text-decoration: none;
-    color: black; /* Set default color to black */
-    margin: 0 10px;
-    padding: 0.5% 1%;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
-    position: relative;
-}
-
-.navigation_links a.active {
-    color: rgb(6, 168, 0); /* Set active link color to green */
-}
-
-.navigation_links a.active::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background-color: rgb(6, 168, 0); /* Active link glowing line color */
-    transform: scaleX(1);
-}
-
-.navigation_links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px;
-    background-color: blue; /* Non-active link glowing line color */
-    transform: scaleX(0);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.navigation_links a:hover::after {
-    background-color: blue; /* Change glowing line color to blue on hover */
-    transform: scaleX(0);
-}
-
-.navigation_links a:hover {
-    color: rgb(0, 175, 161); /* Change color to green on hover */
-}
-
-
-.mobile-nav
-{
-    display: none;
-}
-.hamburger
-{
-    display: none;
-}
-
-
-
-.social_media
-{
-  background-color: rgba(203, 3, 243, 0);
-  width: 100%;   
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 2%;
-  padding-top: 5%;
-
-  @media (max-width: 767px)     /* Mobile devices */
-    {
-        display: none;
-    }
-}
-
-
-.all_icons
-{
-    display: flex;
-    flex-direction: row;
-    margin-right: 15%;
-}
-
-.Linkedin, .Twitter, .Instagram, .Behance
-{
-    border-color: rgb(0, 0, 0);
-    border-style: solid;
-    border-radius: 50%;
-    border-width: 1px;
-    margin-right: 20px;
-    padding: 3px;
-    width: 20px;
-}
-
-.fab
-{
-    font-size: 16px;
-}
-
-
-
-
-
-
- 
-/* YOOO THIS IS FOR THE HEADING (h2, h1) ANIMATIONS MAN */
-
-.heading {
-    opacity: 0; /* Start with the headings invisible */
-    transform: translateY(20px); /* Shift the headings downwards initially */
-    transition: opacity 1s, transform 1s; /* Apply smooth transition for opacity and transform */
-    transition-delay: 1s;
-}
-
-/* Define the animation when the first heading becomes visible */
-.heading.show-heading:first-child {
-    transition-delay: 1.5s; /* Delay the animation for the first heading */
-}
-
-/* Define the animation when the headings become visible */
-.heading.show-heading {
-    opacity: 1; /* Make the heading visible */
-    transform: translateY(0); /* Reset the transformation to its original position */
-}
-
-
-
-
-
-
-/* PARAGRAPH TRANSITION */
-
-
-/* Apply initial styles to hide the paragraph text */
-.small_paragraph .paragraph span {
-    opacity: 0;
-    animation: revealLetter 1s ease forwards;
-}
-
-/* Define animation for revealing each letter */
-@keyframes revealLetter {
-    0% {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------*/
+/*----------------------------------- End of the 8 Parts ---------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
 
 
     
@@ -1338,6 +1657,221 @@ input:focus
 
 <!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
 <script>
+
+//THIS IS THE SLIDER ON THE SKILLS SECTION (PART 5)
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cardContainer = document.getElementById('cardContainer');
+    const cards = cardContainer.querySelectorAll('.cards5a');
+    const leftButton = document.getElementById('leftButton');
+    const rightButton = document.getElementById('rightButton');
+    const cardWidth = cards[0].offsetWidth; // Width of each card
+    const visibleCards = 4; // Number of cards visible at a time
+    let currentIndex = 0;
+
+    function updateSlider() {
+        cards.forEach((card, index) => {
+            const distance = (index - currentIndex) * cardWidth;
+            if (index >= currentIndex && index < currentIndex + visibleCards) {
+                card.style.transition = 'transform 0.5s ease';
+                card.style.transform = `translateX(${distance}px)`;
+                card.style.opacity = '1';
+            } else {
+                card.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+                card.style.transform = `translateX(${distance}px)`;
+                card.style.opacity = '0';
+            }
+        });
+    }
+
+    function slide(direction) {
+        const offset = direction === 'left' ? -1 : 1;
+        currentIndex += offset;
+
+        if (currentIndex < 0) {
+            currentIndex = 0;
+        } else if (currentIndex > cards.length - visibleCards) {
+            currentIndex = cards.length - visibleCards;
+        }
+
+        updateSlider(); // Update card positions and visibility
+    }
+
+    leftButton.addEventListener('click', function() {
+        slide('left');
+    });
+
+    rightButton.addEventListener('click', function() {
+        slide('right');
+    });
+
+    // Initially, display the first set of cards
+    updateSlider();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK PORTFOLIO IS CLICKED
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".link2");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Get the element with class name "Part3"
+            var targetSection = document.querySelector(".Part3");
+
+            // Check if the target section exists
+            if (targetSection) {
+                // Calculate the distance to scroll
+                var scrollToY = targetSection.offsetTop;
+
+                // Smooth scroll to the element
+                window.scrollTo({
+                    top: scrollToY,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK SERVICES IS CLICKED
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".link3");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Get the element with class name "Part6"
+            var targetSection = document.querySelector(".Part6");
+
+            // Check if the target section exists
+            if (targetSection) {
+                // Calculate the distance to scroll
+                var scrollToY = targetSection.offsetTop;
+
+                // Smooth scroll to the element
+                window.scrollTo({
+                    top: scrollToY,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+
+// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK CONTACT IS CLICKED
+
+document.addEventListener("DOMContentLoaded", function() {
+    var buttons = document.querySelectorAll(".link4");
+
+    buttons.forEach(function(button) {
+        button.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Get the element with class name "Part7"
+            var targetSection = document.querySelector(".Part7");
+
+            // Check if the target section exists
+            if (targetSection) {
+                // Calculate the distance to scroll
+                var scrollToY = targetSection.offsetTop;
+
+                // Smooth scroll to the element
+                window.scrollTo({
+                    top: scrollToY,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+
+
+// THIS HELPS THAT WHEN I SCROLL, I SEE THE SCROLL TOOL THAT ENABLES ME BACK AT THE TOP OF THE PAGE
+
+window.addEventListener('scroll', function() {
+    var returnToTop = document.getElementById('returnToTop');
+    var hisha = document.querySelector('.navigation_links');
+    var flacko = document.querySelector('.Everything_is_here');
+    var centerImg = document.querySelector('.center_img');
+
+    var hishaRect = hisha.getBoundingClientRect();
+    var flackoRect = flacko.getBoundingClientRect();
+    var centerImgRect = centerImg.getBoundingClientRect();
+
+    // If Flacko is in view and center_img is not in view, show the returnToTop button, otherwise hide it
+    if ((flackoRect.top <= window.innerHeight && flackoRect.bottom >= 0) && 
+        !(centerImgRect.top <= window.innerHeight && centerImgRect.bottom >= 0)) {
+      returnToTop.style.display = 'block';
+      setTimeout(function() {
+        returnToTop.style.opacity = 1;
+      }, 1000);
+    } else {
+      returnToTop.style.opacity = 0;
+      setTimeout(function() {
+        returnToTop.style.display = 'none';
+      }, 3);
+    }
+});
+
+
+
+
+
+
+
+  // WHEN THE BUTTON IS CLICKED, WE GO BACK UP TO THE TOP PAGE
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var returnToTop = document.getElementById('returnToTop');
+    returnToTop.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Get the element with class name "Flacko"
+        var targetSection = document.querySelector("body");
+
+        // Check if the target section exists
+        if (targetSection) {
+            // Calculate the distance to scroll
+            var scrollToY = targetSection.offsetTop;
+
+            // Smooth scroll to the element
+            window.scrollTo({
+                top: scrollToY,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+
+
 
     // HEADING (h1, h2) TRANSITIONS  
 
@@ -1700,22 +2234,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
     <div class="Everything_is_here">
 
+        <div class="circle return_to_top" id="returnToTop"><a class="top" href="#"><i class="back_top fa fa-arrow-circle-up"></i></a></i></div>
         <div class="center_img">
             
             
             <div class="navigation_links">
 
                 <a class="link1 active" href="http://remyshema.42web.io/?i=1">Home</a>
-                <a class="link2" href="portfolio.html">Portfolio</a>
-                <a class="link3" href="portfolio.html#services">Services</a>
-                <a class="link4" href="contact.html">Contact</a> 
+                <a class="link2" href="#">Portfolio</a>
+                <a class="link3" href="#">Services</a>
+                <a class="link4" href="#">Contact</a> 
         
             </div>    
-        
-
-            <div class="nav_icon">
-                <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%203%20(no%20blur).png" alt="meLogo">
-            </div>
+    
             
 
             <div class="Two_Parts">
@@ -1777,21 +2308,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="Left_part2">
                     <div class="About_Photo"></div>
-                    <div class="Download_cv"><button>Download cv</button></div>
+                    <div class="Download_cv"><button class="Download_cv2">Download cv</button></div>
                 </div>
                 <div class="Right_part2">
                     <h2 class="About_me_header">About me</h2>
-                    <div class="About_me_container"></div>
+                    <div class="About_me_container">
+                        <div class="About_me_par">
+                            <p class="The_par">
+                                Greetings, I'm Remy SHEMA, a passionate software engineer based in Rwanda.
+                            </p>
+                            <p class="The_par">
+                                As an independent thinker and self-directed innovator, I'm continually propelled
+                                to innovate without boundaries, constantly striving for improvement. With 
+                                a relentless pursuit of excellence, I thrive on pushing the limits of what's 
+                                possible.
+                                Despite my current employment status, my drive for innovation remains unwavering. 
+                                With a hunger for creative solutions, I actively seek opportunities to showcase
+                                my skills and contribute to meaningful projects
+                            </p>
+                            <p class="The_par">
+                                This webpage consists of everything you would need to know more about my 
+                                achievements and projects I've done, and feel free to provide a feedback. 
+                                <i>I would like to hear from you!</i>
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
         </div>
         </div>
+        <div class="Divisor"></div>
 
         <div class="Part3">
             <div class="Two_Parts3">
                 <div class="Left_part3">
                     <h2 class="My_proj_header">My Projects</h2>
-                    <p class="My_proj_Paragraph">Explore my wonderful projects that I’ve been working on</p>
+                    <p class="My_proj_Paragraph">Below, find my projects that I’ve been working on</p>
                 </div>
                 <div class="Right_part3">
                     <div class="Third">
@@ -1829,12 +2381,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             </div>
         </div>
+        <div class="Divisor"></div>
 
         <div class="Part4">
             <div class="Two_Parts4">
                 <div class="Left_part4">
                     <h2 class="Certifications_header">Certifications</h2>
-                    <p class="Certifications_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                    <p class="Certifications_par">This is my certifications library where you'll find certificates and other essential documents like Diplomas, English assessment results,...</p>
                 </div>
                 <div class="Right_part4">
                     <div class="Fourth">                    
@@ -1935,20 +2488,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
             </div>
         </div>
+        <div class="Divisor"></div>
 
         <div class="Part5">
             <div class="Two_Parts5">
                 <div class="Left_part5">
                     <h2 class="Skills_Header">Skills</h2>
                     <h3 class="Why_choose_me">Why Choose Me?</h3>
-                    <p class="Skills_Par">uhduwdwnswunswjdjkdmkdmnjwdnjwjwnddnjwnjwnsjnwsnjwns</p>
+                    <p class="Skills_Par">Below, find skills and experiences I acquire :</p>
                 </div>
+
                 <div class="Right_part5">
-            
+                    <div class="Button5" id="leftButton"><button>L</button></div>
+                    <div class="Cards5" id="cardContainer">
+                        <div class="cards5a">1</div>
+                        <div class="cards5a">2</div>
+                        <div class="cards5a">3</div>
+                        <div class="cards5a">4</div>
+                        <div class="cards5a">5</div>
+                        <div class="cards5a">6</div>
+                        <div class="cards5a">7</div>
+                    </div>
+                    <div class="Button5" id="rightButton"><button>R</button></div>
                 </div>
+
 
             </div>
         </div>
+        <div class="Divisor"></div>
 
         <div class="Part6">
             <div class="Two_Parts6">
@@ -1963,6 +2530,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             </div>
         </div>
+        <div class="Divisor"></div>
 
         <div class="Part7">
             <div class="Two_Parts7">
@@ -2022,21 +2590,23 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
 
-        <div class="Part8">
-            <div class="Two_Parts8">
-                <div class="Left_part8">
-                    <p class="Copyright">Copyright © 2024. All Rights Reserved</p>
-                </div>
-                <div class="Right_part8">
-                <a href="#"><i class="fab fa-linkedin" style="margin-left: 3px;"></i></a>
-                <a href="#"><i class="fab fa-twitter" style="margin-left: 2px;"></i></a>
-                <a href="#"><i class="fab fa-instagram" style="margin-left: 3px;"></i></a>
-                <a href="#"><i class="fab fa-behance" style="margin-left: 2px;"></i></a>
-                </div>
 
+
+    </div>
+
+    <div class="Part8">
+        <div class="Two_Parts8">
+            <div class="Left_part8">
+                <p class="Copyright">Copyright © 2024. All Rights Reserved</p>
             </div>
-        </div>
+            <div class="Right_part8">
+            <a href="#"><i class="fab fa-linkedin" style="margin-left: 3px;"></i></a>
+            <a href="#"><i class="fab fa-twitter" style="margin-left: 2px;"></i></a>
+            <a href="#"><i class="fab fa-instagram" style="margin-left: 3px;"></i></a>
+            <a href="#"><i class="fab fa-behance" style="margin-left: 2px;"></i></a>
+            </div>
 
+        </div>
     </div>
         
 </body>
