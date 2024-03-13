@@ -43,6 +43,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+
 <!--------------------------------------MY CSS STARTS RIGHT HERE !!!!--------------------------------------->
 
 <style>
@@ -621,7 +632,7 @@ body
     border-width: 1px;
     border-radius: 10px;
     border-color: rgba(0, 128, 0, 0.192);
-    border-top: none;
+    
     margin-top: 0%;
 }
 
@@ -1137,52 +1148,297 @@ body
 
 .Right_part5
 {
-    width: 100%;
-    height: 60vh;
-    background-color: rgb(0, 255, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.Button5
-{
-   height: 20px;
-   width: 20px;
-   background-color: burlywood;
-}
-
-.Cards5
-{
-    height: 90%;
     width: 90%;
-    background-color: black;
+    height: 60vh;
+    background-color: rgba(0, 255, 0, 0);
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
     justify-content: space-around;
+
+    overflow: hidden;
 }
 
-.cards5a
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------*/
+
+.Main_card5 
 {
-    height: 95%;
-    width: 24%;
-    background-color: white;
-    transition: transform 0.5s ease;
-
+    max-width: 1200px;
+    width: 95%;
 }
 
-
-.hide 
+.Left_part5a 
 {
-    transform: translateX(-100%);
-    opacity: 0;
+    position: relative;
+}
+
+.Slide_Button 
+{
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #00000049;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.chev_icon
+{
+    font-size: 15px;
 }
 
 
+
+.Slide_Button:hover 
+{
+    background: #404040;
+}
+
+.Slide_Button#prev-slide 
+{
+    left: -25px;
+    display: none;
+}
+
+.Slide_Button#next-slide 
+{
+    right: -25px;
+}
+
+.Left_part5a .Cards_library {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.Left_part5a .Cards_library::-webkit-scrollbar {
+    display: none;
+}
+
+.Left_part5a .Card5 {
+    width: 325px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.Main_card5 .Right_part5a {
+    height: 0px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.Right_part5a .Scrollbar_container {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+
+.Right_part5a:hover .Scrollbar_container {
+    height: 4px;
+}
+
+.Right_part5a .scrollbar_og {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.Right_part5a .scrollbar_og:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.Right_part5a .scrollbar_og::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.Card5
+{
+    background-color: rgba(0, 0, 255, 0);
+    height: 350px; 
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Card5_a
+{
+    height: 80%;
+    width: 90%;
+    background-color: #7fff4400;
+    border-style: solid;
+    border-color: rgba(172, 255, 47, 0.233);
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
+    transition: background-color 1s ease;
+}
+
+.Card5_a:hover
+{
+    transition: 2s ease;
+    background-color: #54ff1125;
+}
+
+
+.Card5_a_i
+{
+    height: 130px;
+    width: 130px;
+    background-color: #00000000;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.164);
+    border-width: 7px;
+    border-radius: 50%;
+    margin-top: 12px;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
+}
+
+
+
+
+
+.lang_heading_text5
+{
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.percentage_text5
+{
+    font-family: sans-serif;
+    font-size: 35px;
+    margin-top: 2%;
+    margin-bottom: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    color: #000000a2;
+}
+
+.Text_below5
+{
+    background-color: rgba(0, 0, 255, 0);
+    width: 80%;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.paragraph_5
+{
+    font-size: 11px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.See_more5
+{
+    border-style: solid;
+    background-color: rgba(172, 255, 47, 0.082);
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(92, 138, 23, 0.295);
+    padding: 3px;
+    cursor: pointer;
+    width: 90px;
+    transition: transform 0.3s ease;
+}
+
+.See_more5:hover
+{
+    transform: scaleX(1.10);
+    border-color: rgb(92, 138, 23);
+    background-color: rgba(47, 50, 255, 0.192);
+    padding: 3px;
+    cursor: pointer;
+
+}
+
+
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .Left_part5a .Slide_Button {
+        display: none !important;
+    }
+
+    .Left_part5a .Cards_library {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .Left_part5a .Card5 {
+        width: 280px;
+        height: 380px;
+    }
+
+    .Right_part5a .scrollbar_og {
+        width: 20%;
+    }
+}
+
+
+/*----------------------------------------------------------------------------*/
 
 /*-------------------------ENDING PART 5 -------------------------------------------------------------------*/
 
@@ -1660,58 +1916,76 @@ input:focus
 
 //THIS IS THE SLIDER ON THE SKILLS SECTION (PART 5)
 
-document.addEventListener("DOMContentLoaded", function() {
-    const cardContainer = document.getElementById('cardContainer');
-    const cards = cardContainer.querySelectorAll('.cards5a');
-    const leftButton = document.getElementById('leftButton');
-    const rightButton = document.getElementById('rightButton');
-    const cardWidth = cards[0].offsetWidth; // Width of each card
-    const visibleCards = 4; // Number of cards visible at a time
-    let currentIndex = 0;
+const initSlider = () => {
+    const imageList = document.querySelector(".Left_part5a .Cards_library");
+    const slideButtons = document.querySelectorAll(".Left_part5a .Slide_Button");
+    const sliderScrollbar = document.querySelector(".Main_card5 .Right_part5a");
+    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar_og");
+    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
 
-    function updateSlider() {
-        cards.forEach((card, index) => {
-            const distance = (index - currentIndex) * cardWidth;
-            if (index >= currentIndex && index < currentIndex + visibleCards) {
-                card.style.transition = 'transform 0.5s ease';
-                card.style.transform = `translateX(${distance}px)`;
-                card.style.opacity = '1';
-            } else {
-                card.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
-                card.style.transform = `translateX(${distance}px)`;
-                card.style.opacity = '0';
-            }
-        });
-    }
+    // Handle scrollbar thumb drag
+    scrollbarThumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = scrollbarThumb.offsetLeft;
+        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
 
-    function slide(direction) {
-        const offset = direction === 'left' ? -1 : 1;
-        currentIndex += offset;
+        // Update thumb position on mouse move
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
 
-        if (currentIndex < 0) {
-            currentIndex = 0;
-        } else if (currentIndex > cards.length - visibleCards) {
-            currentIndex = cards.length - visibleCards;
+            // Ensure the scrollbar thumb stays within bounds
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+            scrollbarThumb.style.left = `${boundedPosition}px`;
+            imageList.scrollLeft = scrollPosition;
         }
 
-        updateSlider(); // Update card positions and visibility
+        // Remove event listeners on mouse up
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        // Add event listeners for drag interaction
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide images according to the slide button clicks
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = imageList.clientWidth * direction;
+            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+    // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
 
-    leftButton.addEventListener('click', function() {
-        slide('left');
+    // Update scrollbar thumb position based on image scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = imageList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        scrollbarThumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call these two functions when image list scrolls
+    imageList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
     });
 
-    rightButton.addEventListener('click', function() {
-        slide('right');
-    });
+    
+}
 
-    // Initially, display the first set of cards
-    updateSlider();
-});
-
-
-
-
+window.addEventListener("resize", initSlider);
+window.addEventListener("load", initSlider);
 
 
 
@@ -2499,17 +2773,105 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
 
                 <div class="Right_part5">
-                    <div class="Button5" id="leftButton"><button>L</button></div>
-                    <div class="Cards5" id="cardContainer">
-                        <div class="cards5a">1</div>
-                        <div class="cards5a">2</div>
-                        <div class="cards5a">3</div>
-                        <div class="cards5a">4</div>
-                        <div class="cards5a">5</div>
-                        <div class="cards5a">6</div>
-                        <div class="cards5a">7</div>
+
+                    <div class="Main_card5">
+                        <div class="Left_part5a">
+                            <button id="prev-slide" class="Slide_Button" ><i class="chev_icon fa fa-angle-left" aria-hidden="true"></i></button>
+                            <ul class="Cards_library" style="margin-bottom: 0;">
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Card5">
+                                    <div class="Card5_a">
+                                        <div class="Card5_a_i">
+                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
+                                            <h2 class="percentage_text5">96%</h2>
+                                        </div>
+                                        <div class="Text_below5">
+                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                            <button id="next-slide" class="Slide_Button"><i class="chev_icon fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="Right_part5a" style="margin-top: 20px;">
+                            <div class="Scrollbar_container">
+                                <div class="scrollbar_og"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Button5" id="rightButton"><button>R</button></div>
+                    
                 </div>
 
 
