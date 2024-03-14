@@ -789,6 +789,26 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------STARTING OF PART 4 ---------------------------------------------------------------*/
 
 
@@ -1057,6 +1077,24 @@ body
 }
 
 /*-------------------------ENDING PART 4 -------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1463,6 +1501,33 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------STARTING OF PART 6 ---------------------------------------------------------------*/
 
 
@@ -1471,8 +1536,11 @@ body
     width: 98%; /* Adjust the width as needed */
     height: 13%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    background-color: rgba(0, 78, 247, 0.267);
+    background-color: rgba(0, 78, 247, 0);
     margin-top: 0%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
 }
 
 .Two_Parts6
@@ -1514,8 +1582,98 @@ body
 {
     width: 100%;
     height: 68vh;
-    background-color: rgb(0, 17, 255);
+    background-color: rgba(0, 17, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.Main_card6
+{
+    height: 90%;
+    width: 80%;
+    background-color: #00000000;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.301);
+    
+}
+
+
+
+
+
+
+
+.Main_card6
+{
+    height: 50vh;
+    width: 85%;
+    background-color: none;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: space-between; 
+    background-color: rgba(223, 232, 255, 0.089);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+
+    display: flex; /* Added */
+    flex-direction: column;
+}
+
+
+
+.Cards_library6 
+{
+    position: relative;
+    display: flex;
+    justify-content: flex-start; /* Start from the left */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    overflow-x: auto; /* Added */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
+    padding-left: 10px;
+}
+
+
+.one6, .two6, .three6 
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: blue;
+    height: 300px; /* Adjust as needed */
+    margin-right: 10px; /* Add margin between cards */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.233);
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    width: 48%; /* Adjust as needed */
+    margin-bottom: 5px;
+}
+
+.Main_card6::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 2px;
+}
+
+/* Track */
+.Main_card6::-webkit-scrollbar-track {
+    background-color: rgb(0, 255, 13); /* Color of the track */
+}
+
+/* Handle */
+.Main_card6::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color of the handle */
+}
+
 /*-------------------------ENDING PART 6 -------------------------------------------------------------------*/
 
 
@@ -1606,8 +1764,9 @@ body
     border-style: solid;
     border-width: 1px;
     border-radius: 50px 0px 50px 0px;
-    border-color: rgba(82, 255, 47, 0.342);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.432);
+    border-color: rgba(0, 0, 0, 0);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.459);
+    border-radius: 1px;
 }
 
 
@@ -1634,6 +1793,7 @@ body
     font-optical-sizing: auto;
     font-weight: 309;
     font-style: normal;
+    color: #000000d3;
 }
 
 .Right_section
@@ -1650,18 +1810,21 @@ body
     letter-spacing: 1.3px;
     margin-left: 10px;
     margin-top: 0px;
+    color: #0000009d;
 }
 
 .p2
 {
     margin-bottom: 0px;
-    font-size: 13px;
+    font-size: 12px;
+    color: #000000b9;
 }
 
 .p3
 {
     margin-top: 0px;
     font-size: 13px;
+    color: #000000b9;
 }
 
 .icon2
@@ -2887,7 +3050,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="Services_par">hudsjnwuwsnwisiwdiwmismiws</p>
                 </div>
                 <div class="Right_part6">
-            
+                    <div class="Main_card6">
+                        <div class="Cards_library6">
+                            <div class="one6">Web Dvt</div>
+                            <div class="two6">Mobile App dvt</div>
+                            <div class="three6">Database & API Systems Development</div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
