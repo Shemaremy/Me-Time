@@ -54,6 +54,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
 
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
 <!--------------------------------------MY CSS STARTS RIGHT HERE !!!!--------------------------------------->
 
 <style>
@@ -72,6 +75,14 @@ body
     border-style: solid;
     border-width: 0px;
     overflow: auto;
+
+    margin: 0;
+    padding: 0;
+    background-image: url(''); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 
@@ -84,7 +95,7 @@ body
     border-color: black;
     border-radius: 5px;
     position: relative;
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.212);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -93,10 +104,24 @@ body
     justify-content: center;
     width: 95%;
     height: 790vh;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.432);
+    box-shadow:  0 0 13px rgba(0, 0, 0, 0.432);
     margin-bottom: 20px;
     margin-top: 10px;
+
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 5px;
+        border-radius: 1px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: flex-start;
+    }
 }
+
 
 
 
@@ -135,12 +160,179 @@ body
 
 .Divisor
 {
-    margin-top: 4%;
+    margin-top: 2%;
     margin-bottom: 4%;
     width: 40%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 5s infinite alternate;
+  }
+
+  .circle1 {
+    width: 50px;
+    height: 50px;
+    margin-top: 4%;
+    margin-left: 10%;
+    background-color:  #aa7f2fa1;
+    z-index: 999;
+    display: none;
+  }
+
+  .circle2 {
+    width: 450px;
+    height: 450px;
+    bottom: 88%;
+    right: 60%;
+    animation-duration: 5s;
+    background-color:  #2f87aa27;
+    display: none;
+    
+  }
+
+.circle3 /*THE ONE ON ABOUT SECTION*/
+{
+    width: 200px;
+    height: 200px;
+    top: 18%;
+    left: 80%;
+    transform: translateX(-50%);
+    animation-duration: 5000s;
+    background-color:  #4caa2f2d;
+}
+
+  
+
+.circle4a 
+{
+    width: 600px;
+    height: 600px;
+    bottom: 77%;
+    right: 55%;
+    animation-duration: 5000s;
+    background-color:  rgba(29, 80, 0, 0.308);
+    transform: rotate(90deg);
+    display: none;
+  }
+
+.circle4b 
+{
+    width: 450px;
+    height: 450px;
+    bottom: 74%;
+    right: 50%;
+    animation-duration: 5000s;
+    background-color:  rgba(29, 80, 0, 0.068);
+    transform: rotate(90deg);
+    display: none;
+
+} 
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .triangle2a {
+    position: absolute;
+    bottom: 46%;
+    left: 25%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 700px solid transparent;   /* Length of the left side */
+    border-right: 700px solid transparent;  /* Length of the right side */
+    border-bottom: 1500px solid #a1ff8e31;      /* Length of the bottom side to reduce as px increase*/
+    border-radius: 50%;
+    animation: rotateTriangle 50s infinite linear;
+    filter: blur(5px);
+  }
+
+  .triangle3 {
+    position: absolute;
+    bottom: 99%;
+    left: 97%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;   /* Length of the left side*/
+    border-right: 20px solid transparent;  /* Length of the right side*/
+    border-bottom: 35px solid #c2670079;   /* Length of the bottom side to reduce as px increase*/
+    animation: rotateTriangle 15s infinite linear;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
+    
+  }
+
+  @keyframes rotateTriangle {
+    0% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-top: 100px solid rgb(0, 143, 24); /* Height of the triangle */
+    border-right: 80px solid transparent; /* Width of the triangle */
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
+  }
+
+.triangle2
+{
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid rgb(0, 143, 24); /* Height of the triangle */
+    border-left: 50px solid transparent; /* Width of the triangle */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+  .green-line {
+    width: 40px; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: green;
+    position: absolute;
+    top: 120px; /* Distance from the top */
+    left: 0;
+    transform: rotate(-53deg); /* Rotate the line */
+  }
+
+  .green-line:nth-child(2) {
+    top: 140px; /* Adjusted distance for the second line */
+  }
+
+  .green-line:nth-child(3) {
+    top: 160px; /* Adjusted distance for the third line */
+  }
+
 
 /*-----------------------THIS CSS HAS 8 CONTAINERS. THEIR DEFINITION STARTS HERE--------------------------*/
 /*--------------------------------------------------------------------------------------------------------*/
@@ -168,6 +360,12 @@ body
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(138, 138, 138, 0.199);
     margin-bottom: 5px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        border-radius: 0px;
+        height: 9%;
+    }
 }
 
 
@@ -176,6 +374,14 @@ body
     display: flex;
     justify-content: center;
     padding-top: 1.5%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        background-color: red;
+        height: 70px;
+        margin-bottom: 0;
+        padding-top: 0;
+    }
 }
 
 .navigation_links a {
@@ -186,6 +392,11 @@ body
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     position: relative;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
 .navigation_links a.active {
@@ -234,6 +445,16 @@ body
     flex-direction: row;
     height: 90%;
     overflow: hidden;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 
 
@@ -248,8 +469,23 @@ body
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    padding-right: 15%;
+    padding-right: 10%;
+    margin-left: 5%;
     overflow: hidden;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+        margin-top: 13%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 
@@ -257,8 +493,19 @@ body
 {
     margin-top: 10%;
     margin-left: 6.8%;
-    font-size: 30px;
     color: #000000d3;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-left: 0;
+        margin-top: 10%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 }
 
 
@@ -267,6 +514,12 @@ body
     margin-bottom: 5px; /* Adjust the value as needed */
     font-family: Arial, sans-serif;
     font-weight: 500;
+    font-size: 50px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 38px;
+    }
 }
 
 
@@ -275,7 +528,20 @@ body
     margin-bottom: 2%;   
     margin-top: 1%; /* Adjust the value as needed */
     font-family: 'Orbitron', sans-serif;
-    font-size: 50px;    
+    font-size: 60px;    
+    background-color: rgba(255, 0, 0, 0);
+    width: 100%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 45px;
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .shema
@@ -313,7 +579,20 @@ body
     margin-bottom: 2%;
     background-color: rgba(255, 255, 0, 0);
     width: 80%;
-    margin-left: 16%;
+    margin-left: 5%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 13px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 
@@ -323,7 +602,7 @@ body
 /* Apply initial styles to hide the paragraph text */
 .small_paragraph .paragraph span {
     opacity: 0;
-    animation: revealLetter 1s ease forwards;
+    animation: revealLetter 10ms ease forwards;
 }
 
 /* Define animation for revealing each letter */
@@ -350,7 +629,14 @@ body
     align-items: center;
     flex-direction: column;
     background-color: rgba(100, 148, 237, 0);
-    margin-right: 12%;
+    margin-right: 25%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 5%;
+    }
 }
 
 .coffee-button 
@@ -367,6 +653,12 @@ body
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.438);
 
     transition: background-color 0.7s ease;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        padding: 10px;
+        border-radius: 5px;
+    }
         
 }
 
@@ -413,23 +705,41 @@ body
 {
     display: flex;
     flex-direction: row;
-    margin-right: 15%;
+    margin-right: 35%;
 }
 
 .Linkedin, .Twitter, .Instagram, .Behance
 {
-    border-color: rgb(0, 0, 0);
+    border-color: rgba(27, 56, 0, 0.795);
     border-style: solid;
     border-radius: 50%;
     border-width: 1px;
     margin-right: 20px;
     padding: 3px;
     width: 20px;
+    background-color: rgba(0, 209, 0, 0);
 }
+
+.LinkedIn:hover,
+.Twitter:hover,
+.Instagram:hover,
+.Behance:hover 
+{
+    background-color: rgba(255, 255, 255, 0.068);
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.288);
+}
+
 
 .fab
 {
     font-size: 16px;
+    color: rgba(0, 0, 0, 0.863);
+}
+
+.fab:hover
+{
+    color: rgba(0, 0, 0, 0.863);
+    box-shadow:  0 0 50px rgb(0, 253, 63);
 }
 
 
@@ -448,6 +758,12 @@ body
     border-radius: 5px;
     border-width: 1px;
     border-color: rgba(240, 248, 255, 0);
+    margin-right: 2%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
 
@@ -491,11 +807,25 @@ body
     position: relative;
     background-color: rgba(0, 139, 252, 0);
     margin-bottom: 0px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 5%;
+    }
 }
 .Two_Parts2
 {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+
 }
 .Left_part2
 {
@@ -509,6 +839,13 @@ body
     margin: 0 auto;
     background-color: rgba(43, 255, 0, 0);
     margin-top: 0;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 40%;
+        height: 30vh;
+        margin-left: 3%;
+    }
 }
 
 .About_Photo
@@ -521,11 +858,23 @@ body
     border-radius: 50%;
     border-color: white;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 150px;
+        width: 140px;
+        box-shadow: none;
+    }
 }
 
 .Download_cv
 {
     margin-top: 10%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
 .Download_cv2
@@ -553,6 +902,13 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 30px;
+        height: 230px;
+        width: 60%;
+    }
 }
 
 .About_me_header, .About_me_par
@@ -568,6 +924,12 @@ body
     margin-bottom: 2%;
     margin-top: 0%;
     margin-right: 350px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-right: 15px;
+        font-size: 22px;
+    }
 }
 
 .About_me_container
@@ -581,10 +943,26 @@ body
     border-style: solid;
     border-width: 1px;
     border-radius: 30px 0px 30px 0px;
-    border-color: rgb(255, 255, 255);
+    border-color: rgba(56, 56, 56, 0.993);
     margin-bottom: 20px;
     background-color: rgba(224, 224, 224, 0);  
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.151); 
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.342); 
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 90%;
+        height: 70%;
+        border-radius: 0;
+        margin-top: 0px;
+        box-shadow: none;
+        overflow-y: auto;
+        border-left: none;
+        border-right: none;
+        border: none;
+        margin-right: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
 
 }
 
@@ -595,6 +973,14 @@ body
     background-color: rgba(255, 0, 0, 0);
     width: 85%;
     height: 85%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 90%;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 5%;
+    }
 }
 
 .The_par
@@ -604,6 +990,11 @@ body
     font-style: normal;
     color: rgba(0, 0, 0, 0.849);
     font-size: 15px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 13px;
+    }
 }
 
 /*-------------------------ENDING PART 2 -------------------------------------------------------------------*/
@@ -624,14 +1015,13 @@ body
 
 
 .Part3 {
-    width: 98%;
+    width: 100%;
     height: 16%;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.281); /* Adjust the values as needed */
-    background-color: rgba(215, 223, 230, 0.993);
+    background-color: rgba(215, 223, 230, 0.575);
     border-style: solid;
     border-width: 1px;
-    border-radius: 10px;
-    border-color: rgba(0, 128, 0, 0.192);
+    border-radius: 0px;
+    border-color: rgba(0, 128, 0, 0);
     
     margin-top: 0%;
 }
@@ -700,7 +1090,7 @@ body
     justify-content: space-between; 
     flex-wrap: wrap;
     background-color: rgba(223, 232, 255, 0.089);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
+    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.438);
 
     overflow-y: auto;
     scrollbar-width: thin; /* For Firefox */
@@ -712,7 +1102,6 @@ body
 
     overflow: hidden;
     overflow-y: scroll;
-
 
 }
 
@@ -756,6 +1145,11 @@ body
     margin-top: 10px;
     margin-bottom: 5px;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;    
+    }
     
 }
 
@@ -816,7 +1210,7 @@ body
 {
     width: 98%; /* Adjust the width as needed */
     height: 17%;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.288);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.288);
     background-color: rgb(226, 234, 241);
     margin-top: 0%;
     margin-bottom: 0%;
@@ -824,6 +1218,16 @@ body
     border-width: 1px;
     border-radius: 10px;
     border-color: rgba(0, 128, 0, 0.192);
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        border-radius: 0px;
+        width: 100%;
+        box-shadow: none;
+        border-color: rgba(245, 222, 179, 0);
+    }
+
 
 }
 
@@ -837,6 +1241,12 @@ body
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+    }
+
 }
 
 .Two_Parts4
@@ -865,6 +1275,18 @@ body
     font-weight: 300;
     font-style: normal;
     text-align: center;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        background-color: rgba(255, 0, 0, 0);
+        width: 95%;
+        margin-top: 5%;
+        margin-bottom: 0;
+        font-size: 11px;
+        font-family: sans-serif;
+    }
+
 }
 
 .Right_part4
@@ -891,6 +1313,13 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 0;
+    }
+
 }
 
 
@@ -927,6 +1356,17 @@ body
     background: none;
     box-shadow: none;
     background-color: rgba(0, 126, 236, 0);
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 15px;
+        width: 95%;
+        border-radius: 1px;
+        border-color: black;
+        box-shadow: none;
+    }
+
   }
 
   @keyframes gradientShift2 {
@@ -950,7 +1390,6 @@ body
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     margin-bottom: 1%;
 
-
 }
 
 .one1, .two1, .three1, .four1, .five1, .six1 
@@ -969,6 +1408,14 @@ body
     transition: background-color 0.5s;
     transition: all 0.3s ease-in-out;
     opacity: 1;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 90%;
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.233);
+    }
+
 }
 
 .three1, .four1, .five1, .six1 
@@ -1005,6 +1452,14 @@ body
     margin: 0 auto;
     margin-top: 3%;
     overflow: hidden;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        border-radius: 1px;
+        border-color: rgba(245, 222, 179, 0);
+    }
+
 }
 
 
@@ -1126,8 +1581,17 @@ body
     width: 98%; /* Adjust the width as needed */
     height: 12%;
     margin-top: 0%;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    background-color: rgba(187, 255, 0, 0);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.342);
+    background: linear-gradient(to bottom right, rgba(48, 119, 190, 0.103), rgba(48, 119, 190, 0));
+    border-radius: 30px 0px 30px 0px;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
 }
 
 .Two_Parts5
@@ -1135,20 +1599,35 @@ body
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-color: black;
+    border-color: rgba(0, 0, 0, 0);
     border-width: 1px;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 5%;
+    }
+
+    
 }
 
 .Left_part5
 {
     width: 100%;
     height: 20vh;
-    background-color: rgba(20, 255, 255, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 3%;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 15vh;
+    }
+
+
 }
 
 .Skills_Header, .Why_choose_me, .Skills_Par
@@ -1166,20 +1645,24 @@ body
     font-weight: 600;
 }
 
-.Why_choose_me
-{
-    font-size: 50px;
-    margin-bottom: 0;
-    margin-top: 0;
-    letter-spacing: 5px;
-}
-
 .Skills_Par
 {
-    font-size: 16px;
+    font-size: 13px;
     font-family: "Laila", serif;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
+    width: 50%;
+    text-align: center;
+    margin-top: 2%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 11px;
+        font-family: sans-serif;
+        margin-bottom: 0;
+        margin-top: 5%;
+        width: 90%;
+    }
 }
 
 
@@ -1188,21 +1671,21 @@ body
 {
     width: 90%;
     height: 60vh;
-    background-color: rgba(0, 255, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin: 0 auto;
     justify-content: space-around;
-
     overflow: hidden;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 0;
+    }
+
 }
-
-
-
-
-
 
 
 
@@ -1212,6 +1695,12 @@ body
 {
     max-width: 1200px;
     width: 95%;
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 0;
+    }
+
 }
 
 .Left_part5a 
@@ -1271,6 +1760,13 @@ body
     margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        padding-left: 20px;
+    }
+
 }
 
 .Left_part5a .Cards_library::-webkit-scrollbar {
@@ -1290,6 +1786,7 @@ body
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    
 }
 
 .Right_part5a .Scrollbar_container {
@@ -1334,12 +1831,12 @@ body
 
 .Card5
 {
-    background-color: rgba(0, 0, 255, 0);
+    background-color: rgba(0, 0, 255, 0); 
     height: 350px; 
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 300px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .Card5_a
@@ -1348,7 +1845,7 @@ body
     width: 90%;
     background-color: #7fff4400;
     border-style: solid;
-    border-color: rgba(172, 255, 47, 0.233);
+    border-color: rgba(0, 0, 0, 0.233);
     border-width: 1px;
     display: flex;
     flex-direction: column;
@@ -1356,6 +1853,7 @@ body
     align-items: center;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
     transition: background-color 1s ease;
+    cursor: pointer;
 }
 
 .Card5_a:hover
@@ -1385,23 +1883,73 @@ body
 
 
 
+.one_a, .one_b, .one_c, .one_d, .one_e, .one_f, .one_g
+{
+    border-radius: 50%;
+    border-style: solid;
+}
+
+.one_a
+{
+    border-color: rgba(155, 10, 0, 0.459);
+    background-color: rgba(155, 10, 0, 0.075);
+}
+
+.one_b 
+{
+    border-color: rgba(168, 180, 0, 0.411);
+    background-color: rgba(168, 180, 0, 0.158);
+}
+
+.one_c 
+{
+    border-color: rgba(63, 123, 158, 0.411);
+    background-color: rgba(63, 123, 158, 0.11);
+}
+
+.one_d 
+{
+    border-color: rgba(0, 26, 172, 0.438);
+    background-color: rgba(0, 26, 172, 0.151);
+}
+
+.one_e 
+{
+    border-color: rgba(46, 0, 172, 0.534);
+    background-color: rgba(46, 0, 172, 0.158);
+}
+
+.one_f 
+{
+    border-color: rgba(211, 14, 0, 0.521);
+    background-color: rgba(211, 14, 0, 0.144);
+}
+
+.one_g 
+{
+    border-color: rgba(221, 206, 0, 0.774);
+    background-color: rgba(221, 206, 0, 0.123);
+}
+
+
 
 
 .lang_heading_text5
 {
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 20px;
     margin-top: 0;
     margin-bottom: 0;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 600;
     font-style: normal;
+    color: #000000a6;
 }
 
-.percentage_text5
+.percentage_text5    /*-- ICONS --*/
 {
     font-family: sans-serif;
-    font-size: 35px;
+    font-size: 50px;
     margin-top: 2%;
     margin-bottom: 0;
     font-family: "Montserrat", sans-serif;
@@ -1535,18 +2083,24 @@ body
 {
     width: 98%; /* Adjust the width as needed */
     height: 13%;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
-    background-color: rgba(0, 78, 247, 0);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.253);
+    background-color: rgba(0, 0, 0, 0.021);
     margin-top: 0%;
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: rgba(0, 0, 0, 0);
 }
 
 .Two_Parts6
 {
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 15%;
+    }
+
 }
 
 .Left_part6
@@ -1588,91 +2142,190 @@ body
     align-items: center;
 }
 
-.Main_card6
-{
-    height: 90%;
-    width: 80%;
-    background-color: #00000000;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.301);
-    
+
+
+/*-------------------000000000000000000000000000000000000000000000000000000000000000000--------------------------*/
+
+.main-card {
+    max-width: 1200px;
+    width: 70%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 90%;
+        background-color: red;
+    }
+
 }
 
-
-
-
-
-
-
-.Main_card6
-{
-    height: 50vh;
-    width: 85%;
-    background-color: none;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    margin: 0;
-    padding: 0;
-    margin: auto;
-    margin-top: 30px;
-    justify-content: space-between; 
-    background-color: rgba(223, 232, 255, 0.089);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
-
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
-
-    display: flex; /* Added */
-    flex-direction: column;
-}
-
-
-
-.Cards_library6 
-{
+.left-part {
     position: relative;
+}
+
+.slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    z-index: 5;
+    color: #fff;
     display: flex;
-    justify-content: flex-start; /* Start from the left */
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #00000049;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
-    overflow-x: auto; /* Added */
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
-    padding-left: 10px;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.chev-icon {
+    font-size: 15px;
+}
+
+.slide-button:hover {
+    background: #404040;
+}
+
+#prev-slide {
+    left: -25px;
+    display: none;
+}
+
+#next-slide {
+    right: -25px;
+}
+
+.cards-library {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 0px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-left: 20px;
+    margin-right: 20px;
+}
+
+.cards-library::-webkit-scrollbar {
+    display: none;
 }
 
 
-.one6, .two6, .three6 
-{
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    background-color: blue;
-    height: 300px; /* Adjust as needed */
-    margin-right: 10px; /* Add margin between cards */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.233);
-    flex-shrink: 0; /* Prevent cards from shrinking */
-    width: 48%; /* Adjust as needed */
-    margin-bottom: 5px;
+
+.right-part {
+    height: 0px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.Main_card6::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
+.scrollbar-container {
+    background: #ccc;
+    width: 80%;
     height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    display: none;
 }
 
-/* Track */
-.Main_card6::-webkit-scrollbar-track {
-    background-color: rgb(0, 255, 13); /* Color of the track */
+.scrollbar-container:hover {
+    height: 4px;
 }
 
-/* Handle */
-.Main_card6::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5); /* Color of the handle */
+.scrollbar {
+    position: absolute;
+    background: #000000;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+    display: none;
 }
+
+.scrollbar:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.scrollbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.card {
+    height: 450px; 
+    width: 800px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+}
+
+.card-content {
+    height: 80%;
+    width: 90%;
+    background-color: #7fff4400;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.233);
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.144);
+    transition: background-color 1s ease;
+    cursor: pointer;
+}
+
+.card-content:hover {
+    transition: 2s ease;
+    background-color: #54ff1125;
+}
+
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slide-button {
+        display: none !important;
+    }
+
+    .cards-library {
+        gap: 10px;
+        margin-bottom: 15px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        width: 280px;
+        height: 380px;
+    }
+
+    .scrollbar {
+        width: 20%;
+    }
+}
+
+
+
+
+
+/*-------------------000000000000000000000000000000000000000000000000000000000000000000--------------------------*/
 
 /*-------------------------ENDING PART 6 -------------------------------------------------------------------*/
 
@@ -1765,7 +2418,7 @@ body
     border-width: 1px;
     border-radius: 50px 0px 50px 0px;
     border-color: rgba(0, 0, 0, 0);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.459);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.459);
     border-radius: 1px;
 }
 
@@ -2044,6 +2697,38 @@ input:focus
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------------------------------------------------*/
 /*----------------------------------- End of the 8 Parts ---------------------------------------------------*/
 
@@ -2076,6 +2761,81 @@ input:focus
 
 <!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
 <script>
+
+
+//THIS IS THE SLIDER ON THE SERVICES SECTION (PART 6)
+
+
+const initSlider2 = () => {
+    const cardsList = document.querySelector(".left-part .cards-library");
+    const slideButtons = document.querySelectorAll(".left-part .slide-button");
+    const scrollbar = document.querySelector(".main-card .right-part");
+    const thumb = scrollbar.querySelector(".scrollbar");
+    const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
+
+    // Handle scrollbar thumb drag
+    thumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = thumb.offsetLeft;
+        const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
+
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+            thumb.style.left = `${boundedPosition}px`;
+            cardsList.scrollLeft = scrollPosition;
+        }
+
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide cards on button click
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = cardsList.clientWidth * direction;
+            cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        });
+    });
+
+    // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    }
+
+    // Update scrollbar thumb position based on cards scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = cardsList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
+        thumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call functions when cards list scrolls
+    cardsList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+}
+
+window.addEventListener("resize", initSlider2);
+window.addEventListener("load", initSlider2);
+
+
+
+
+
+
+
 
 //THIS IS THE SLIDER ON THE SKILLS SECTION (PART 5)
 
@@ -2669,11 +3429,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <body>
+    
     <div class="Everything_is_here">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        <div class="circle circle4a"></div>
+        <div class="circle circle4b"></div>
+        <div class="triangle1"></div>
+        <div class="triangle2"></div>
+        <div class="triangle2a"></div>
+        <div class="triangle3"></div>
 
-        <div class="circle return_to_top" id="returnToTop"><a class="top" href="#"><i class="back_top fa fa-arrow-circle-up"></i></a></i></div>
-        <div class="center_img">
-            
+        <div class="circle_a return_to_top" id="returnToTop"><a class="top" href="#"><i class="back_top fa fa-arrow-circle-up"></i></a></i></div>
+        <div class="center_img">      
             
             <div class="navigation_links">
 
@@ -2712,19 +3481,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="social_media">
                         <ul class="all_icons">
                             <p class="icon Linkedin">                            
-                                <span><i class="fab fa-linkedin" style="margin-left: 3px;"></i></span>
+                                <a href="www.youtube.com"><span><i class="fab fa-linkedin" style="margin-left: 3px;"></i></span></a>
                             </p>
                     
                             <p class="icon Twitter">                            
-                                <span><i class="fab fa-twitter" style="margin-left: 2px;"></i></span>
+                                <a href="www.youtube.com"><span><i class="fab fa-twitter" style="margin-left: 2px;"></i></span></a>
                             </p>
                     
                             <p class="icon Instagram">                            
-                                <span><i class="fab fa-instagram" style="margin-left: 3px;"></i></span>
+                                <a href="www.youtube.com"><span><i class="fab fa-instagram" style="margin-left: 3px;"></i></span></a>
                             </p>
                     
                             <p class="icon Behance">
-                                <span><i class="fab fa-behance" style="margin-left: 2px;"></i></span>
+                                <a href="www.youtube.com"><span><i class="fab fa-behance" style="margin-left: 2px;"></i></span></a>
                             </p>
                         </ul>
                     </div>
@@ -2748,7 +3517,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="Download_cv"><button class="Download_cv2">Download cv</button></div>
                 </div>
                 <div class="Right_part2">
-                    <h2 class="About_me_header">About me</h2>
+                    <h2 class="About_me_header">Meet Remy</h2>
                     <div class="About_me_container">
                         <div class="About_me_par">
                             <p class="The_par">
@@ -2931,8 +3700,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="Two_Parts5">
                 <div class="Left_part5">
                     <h2 class="Skills_Header">Skills</h2>
-                    <h3 class="Why_choose_me">Why Choose Me?</h3>
-                    <p class="Skills_Par">Below, find skills and experiences I acquire :</p>
+                    <p class="Skills_Par">Below, find skills that I acquire, and I have rated them in percentage based to what I know and projects done on each :</p>
                 </div>
 
                 <div class="Right_part5">
@@ -2943,9 +3711,12 @@ document.addEventListener('DOMContentLoaded', function() {
                             <ul class="Cards_library" style="margin-bottom: 0;">
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_a">
+                                            <h3 class="lang_heading_text5" style="font-size: 20px;">HTML & CSS</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(180, 48, 0, 0.411); font-size: 40px;">
+                                                <i class="devicon-html5-plain colored"></i>
+                                                <i class="devicon-css3-plain colored"></i>
+                                            </h2>                                            
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -2955,9 +3726,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_b">
+                                            <h3 class="lang_heading_text5">Python</h3>
+                                            <h2 class="percentage_text5">
+                                                <i class="devicon-python-plain colored" style="color: rgb(202, 172, 0);"></i>
+                                            </h2>
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -2967,9 +3740,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_c">
+                                            <h3 class="lang_heading_text5">My SQL</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(63, 123, 158, 0.411);">
+                                                <i class="devicon-mysql-original colored"></i>
+                                            </h2>
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -2979,9 +3754,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_d">
+                                            <h3 class="lang_heading_text5">C Plus Plus</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(0, 26, 172, 0.438);">
+                                                <i class="devicon-cplusplus-plain colored"></i>
+                                            </h2>
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -2991,9 +3768,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_e">
+                                            <h3 class="lang_heading_text5">C Sharp</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(46, 0, 172, 0.534);">
+                                                <i class="devicon-csharp-plain colored"></i>
+                                            </h2>
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -3003,9 +3782,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_f">
+                                            <h3 class="lang_heading_text5">JAVA</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(211, 14, 0, 0.699);">
+                                                <i class="devicon-java-plain colored"></i>
+                                              </h2>
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -3015,9 +3796,11 @@ document.addEventListener('DOMContentLoaded', function() {
                                 </div>
                                 <div class="Card5">
                                     <div class="Card5_a">
-                                        <div class="Card5_a_i">
-                                            <h3 class="lang_heading_text5">HTML & CSS</h3>
-                                            <h2 class="percentage_text5">96%</h2>
+                                        <div class="Card5_a_i one_g">
+                                            <h3 class="lang_heading_text5">JAVASCRIPT</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(221, 206, 0, 0.774);">
+                                                <i class="devicon-javascript-plain colored"></i>
+                                              </h2>
                                         </div>
                                         <div class="Text_below5">
                                             <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
@@ -3050,13 +3833,34 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="Services_par">hudsjnwuwsnwisiwdiwmismiws</p>
                 </div>
                 <div class="Right_part6">
-                    <div class="Main_card6">
-                        <div class="Cards_library6">
-                            <div class="one6">Web Dvt</div>
-                            <div class="two6">Mobile App dvt</div>
-                            <div class="three6">Database & API Systems Development</div>
+                    <div class="main-card">
+                        <div class="left-part">
+                            <button id="prev-slide" class="slide-button"><i class="chev-icon fa fa-angle-left" aria-hidden="true"></i></button>
+                            <ul class="cards-library" style="margin-bottom: 0;">
+
+                                <div class="card">
+                                    <div class="card-content"></div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-content"></div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-content"></div>
+                                </div>
+
+                            </ul>
+                            <button id="next-slide" class="slide-button"><i class="chev-icon fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="right-part">
+                            <div class="scrollbar-container">
+                                <div class="scrollbar"></div>
+                            </div>
                         </div>
                     </div>
+                    
+                    
                 </div>
 
             </div>
