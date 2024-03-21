@@ -83,6 +83,12 @@ body
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 500vh;
+    }
+       
+
 }
 
 
@@ -112,6 +118,7 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
+        height: 500vh;
         margin-top: 0;
         margin-bottom: 5px;
         border-radius: 1px;
@@ -119,6 +126,7 @@ body
         flex-direction: column;
         margin: 0 auto;
         justify-content: flex-start;
+        box-shadow:  0 0 5px rgba(0, 0, 0, 0.432);
     }
 }
 
@@ -165,6 +173,24 @@ body
     width: 40%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
+}
+
+.Mobile_Divisor
+{
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 2%;
+        margin-bottom: 4%;
+        width: 40%;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 
@@ -258,6 +284,11 @@ body
     border-radius: 50%;
     animation: rotateTriangle 50s infinite linear;
     filter: blur(5px);
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        border-bottom: 1500px solid #8eacff10;
+    }
   }
 
   .triangle3 {
@@ -313,6 +344,11 @@ body
     bottom: 0;
     right: 0;
     z-index: 999;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
   .green-line {
@@ -351,6 +387,31 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------STARTING OF PART 1 ---------------------------------------------------------------*/
 
 .center_img
@@ -364,7 +425,7 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 0px;
-        height: 9%;
+        height: 11%;
     }
 }
 
@@ -377,7 +438,7 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        background-color: red;
+        background-color: none;
         height: 70px;
         margin-bottom: 0;
         padding-top: 0;
@@ -505,6 +566,7 @@ body
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        margin-bottom: 0;
     }
 }
 
@@ -538,9 +600,11 @@ body
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        font-size: 45px;
+        font-size: 50px;
         width: 80%;
         margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -589,7 +653,7 @@ body
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        font-size: 13px;
+        font-size: 11px;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -635,7 +699,7 @@ body
     {
         width: 100%;
         margin-right: 0;
-        margin-top: 5%;
+        margin-top: 1%;
     }
 }
 
@@ -656,8 +720,11 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        padding: 10px;
-        border-radius: 5px;
+        border-radius: 30px;
+        padding: 20px;
+        font-weight: 400;
+        box-shadow: none;
+        width: 40%;
     }
         
 }
@@ -797,6 +864,34 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------STARTING OF PART 2 ---------------------------------------------------------------*/
 
 .Part2
@@ -810,7 +905,7 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        height: 5%;
+        height: 8%;
     }
 }
 .Two_Parts2
@@ -863,7 +958,7 @@ body
     {
         height: 150px;
         width: 140px;
-        box-shadow: none;
+        box-shadow: 0 0 10px rgba(0, 0,0, 0.233);
     }
 }
 
@@ -1011,6 +1106,33 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------STARTING OF PART 3 ---------------------------------------------------------------*/
 
 
@@ -1024,6 +1146,11 @@ body
     border-color: rgba(0, 128, 0, 0);
     
     margin-top: 0%;
+
+    @media only screen and (max-width: 767px) 
+    {
+        height: 16%;
+    }
 }
 
 
@@ -1034,6 +1161,11 @@ body
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-top: 13%;
+}
 }
 
 .Left_part3
@@ -1042,12 +1174,24 @@ body
     height: 22vh;
     background-color: rgba(76, 10, 138, 0);
 
+    @media only screen and (max-width: 767px) 
+{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 110px;
+}
+
 }
 
 .My_proj_header, .My_proj_Paragraph
 {
     font-family: sans-serif;
     font-weight: 100;
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-bottom: 0;
+}
 }
 
 .My_proj_header
@@ -1063,6 +1207,14 @@ body
     font-family: "Laila", serif;
     font-weight: 300;
     font-style: normal;
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-bottom: 0;
+      margin-top: 0;
+}
+
+
 }
 
 .Right_part3
@@ -1102,6 +1254,21 @@ body
 
     overflow: hidden;
     overflow-y: scroll;
+
+
+ @media only screen and (max-width: 767px)
+{
+    box-shadow: none;
+    border-radius: 1px;
+    border-color: black;
+    margin-top: 0;
+    width: 95%;
+    height: 65vh;
+    border-right: solid;
+    border-left: solid;
+    border-width: 1px;
+
+}
 
 }
 
@@ -1223,7 +1390,9 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 0px;
+        background-color: rgb(245, 245, 245);
         width: 100%;
+        height: 15%;
         box-shadow: none;
         border-color: rgba(245, 222, 179, 0);
     }
@@ -1253,6 +1422,11 @@ body
 {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-top: 4%;
+}
 }
 
 .Certifications_header, .Certifications_par
@@ -1281,8 +1455,8 @@ body
     {
         background-color: rgba(255, 0, 0, 0);
         width: 95%;
-        margin-top: 5%;
-        margin-bottom: 0;
+        margin-top: 7%;
+        margin-bottom: 2%;
         font-size: 11px;
         font-family: sans-serif;
     }
@@ -1361,7 +1535,8 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-top: 15px;
-        width: 95%;
+        width: 85%;
+        height: 58vh;
         border-radius: 1px;
         border-color: black;
         box-shadow: none;
@@ -1590,6 +1765,8 @@ body
     {
         box-shadow: none;
         border-radius: 5px;
+        width: 100%;
+        height: 14%;
     }
 
 }
@@ -2089,6 +2266,13 @@ body
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
+
+    @media only screen and (max-width: 767px) 
+    {
+      box-shadow: none;
+      height: 13%;
+      background-color: rgba(245, 255, 216, 0.315);
+    }
 }
 
 .Two_Parts6
@@ -2108,12 +2292,24 @@ body
     width: 100%;
     height: 30vh;
     background-color: rgb(255, 0, 234);
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-bottom: 0;
+      background-color: blue;
+}
+
 }
 
 .Services_header,.What_I_do, .Services_par
 {
     font-family: sans-serif;
     font-weight: 100;
+}
+
+.Services_par
+{
+    display: none;
 }
 
 .Services_header
@@ -2130,6 +2326,12 @@ body
     margin-bottom: 0;
     letter-spacing: 5px;
     font-weight: 600;
+
+    @media only screen and (max-width: 767px) 
+{
+      font-weight: 100;
+      margin-bottom: 10%;
+}
 }
 
 .Right_part6
@@ -2140,6 +2342,14 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-top: 0;
+      padding: 0;
+      height: 35vh;
+}
+
 }
 
 
@@ -2152,8 +2362,7 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 90%;
-        background-color: red;
+        width: 100%;
     }
 
 }
@@ -2265,7 +2474,7 @@ body
     left: 0;
     right: 0;
     top: -10px;
-    bottom: -10px; 
+    bottom: -10px;
 }
 
 .card {
@@ -2274,6 +2483,12 @@ body
     display: flex; 
     justify-content: center; 
     align-items: center; 
+
+    @media only screen and (max-width: 767px) 
+{
+      width: 900px;
+}
+
 
 }
 
@@ -2306,14 +2521,18 @@ body
     }
 
     .cards-library {
-        gap: 10px;
+        gap: 0px;
         margin-bottom: 15px;
+        padding: 0;
         scroll-snap-type: x mandatory;
+        padding-left: 0;
     }
 
     .card {
-        width: 280px;
-        height: 380px;
+        width: 405px;
+        height: 300px;
+        margin-left: 0;
+        padding-left: 0;
     }
 
     .scrollbar {
@@ -2353,6 +2572,19 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------------------STARTING OF PART 7 ---------------------------------------------------------------*/
 
 
@@ -2363,6 +2595,12 @@ body
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(251, 255, 0, 0);
     margin-top: 0%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+       background-color: rgba(11, 14, 12, 0.815);
+       height: 20%;
+    }
 }
 
 .Two_Parts7
@@ -2388,6 +2626,11 @@ body
 {
     font-family: sans-serif;
     font-weight: 100;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        color: aliceblue;
+    }
 }
 
 .Contact_header
@@ -2416,10 +2659,17 @@ body
     background-color: rgb(217, 225, 231);
     border-style: solid;
     border-width: 1px;
-    border-radius: 50px 0px 50px 0px;
     border-color: rgba(0, 0, 0, 0);
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.459);
-    border-radius: 1px;
+    border-radius: 0px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        height: 50vh;
+        box-shadow: none;
+        background-color: rgba(15, 163, 64, 0.11);
+    }
 }
 
 
@@ -2430,11 +2680,24 @@ body
     justify-content: space-around;
     margin-top: 7%;
     height: 50vh;
+
+    @media only screen and (max-width: 767px) 
+    {
+        flex-direction: column;
+        margin-top: 0;
+    }
 }
 
 .Left_Section
 {
    margin-top: 0;
+
+   @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 80px;
+        display: none;
+    }
+
 }
 
 .heading_text7
@@ -2447,12 +2710,35 @@ body
     font-weight: 309;
     font-style: normal;
     color: #000000d3;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 250%;
+        margin-top: 0;
+        display: none;
+        
+    }
 }
 
 .Right_section
 {
    margin-right: 0px;
    margin-top: 40px;
+
+   @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.row
+{
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 70%;
+        margin-left: 20%;
+    }
 }
 
 .p1
@@ -2464,6 +2750,11 @@ body
     margin-left: 10px;
     margin-top: 0px;
     color: #0000009d;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
 .p2
@@ -2471,6 +2762,11 @@ body
     margin-bottom: 0px;
     font-size: 12px;
     color: #000000b9;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
 }
 
 .p3
@@ -2478,6 +2774,12 @@ body
     margin-top: 0px;
     font-size: 13px;
     color: #000000b9;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
+
 }
 
 .icon2
@@ -2501,11 +2803,23 @@ body
 {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        flex-direction: column;
+        margin-bottom: 14%;
+    }
 }
 
 .Email
 {
     margin-left: 15px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-left: 0;
+        margin-top: 20px;
+    }
 }
 
 .Message
@@ -2519,13 +2833,32 @@ body
     font-family: Arial, sans-serif;
     font-weight: 400;
     font-size: 15px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: rgba(240, 248, 255, 0.89);
+        font-weight: 100;
+    }
 }
 
-p
+
+
+
+.Name input::placeholder, .Email input::placeholder 
 {
-    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.596);
+    
 }
 
+@media (max-width: 767px)     /* Mobile devices */
+    {
+        .Name input::placeholder, .Email input::placeholder, .Message input::placeholder 
+        {
+            color: rgba(255, 255, 0, 0);
+        }
+    }
 
 .button_7
 {
@@ -2541,6 +2874,14 @@ p
     font-size: 14px;
 
     transition: transform 0.3s ease;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 4%;
+        margin-left: 0;
+        width: 100px;
+        padding: 6px;
+    }
 }
 
 .button_7:hover
@@ -2565,6 +2906,16 @@ input
     width: 60%;
     transition: width 0.3s ease;
 
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        padding: 5px;
+        width: 80%;
+        color: rgba(0, 0, 0, 0.425);
+        border-radius: 1px;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
 }
 
 input:hover
@@ -2586,12 +2937,26 @@ input:focus
     padding: 10px;
     font-size: 15px;
     width: 90%;
+    transition: padding 0.3s ease;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        transition: padding 0.3s ease;
+        padding: 5px;
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.616);
+    }
 }
 
 
 .text_area
 {
     width: 80%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 80%;
+    }
 }
 
 .text_area:hover
@@ -2600,6 +2965,8 @@ input:focus
 }
 
 /*-------------------------ENDING PART 7 -------------------------------------------------------------------*/
+
+
 
 
 
@@ -2634,6 +3001,11 @@ input:focus
     height: 1%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     margin-bottom: 0;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 1%;
+    }
 }
 
 .Two_Parts8
@@ -3544,6 +3916,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         </div>
         <div class="Divisor"></div>
+        <div class="Mobile_Divisor"></div>
 
         <div class="Part3">
             <div class="Two_Parts3">
@@ -3866,6 +4239,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <div class="Divisor"></div>
+        <div class="Mobile_Divisor"></div>
 
         <div class="Part7">
             <div class="Two_Parts7">
