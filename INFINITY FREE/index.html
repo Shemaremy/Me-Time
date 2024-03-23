@@ -54,6 +54,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
           
@@ -85,7 +88,9 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        height: 500vh;
+        height: 550vh;
+        padding-bottom: 0;
+        overflow-x: hidden;
     }
        
 
@@ -118,15 +123,18 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
-        height: 500vh;
+        height: 550vh;
         margin-top: 0;
-        margin-bottom: 5px;
+        margin-bottom: 0;
+        padding-bottom: 0;
         border-radius: 1px;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         justify-content: flex-start;
-        box-shadow:  0 0 5px rgba(0, 0, 0, 0.432);
+        box-shadow:  0 0 5px rgba(0, 0, 0, 0);
+        padding-bottom: 0;
+        overflow-x: hidden;
     }
 }
 
@@ -351,23 +359,41 @@ body
     }
 }
 
-  .green-line {
+  .green-line1 {
     width: 40px; /* Length of the line */
     height: 1px; /* Thickness of the line */
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.247);
     position: absolute;
-    top: 120px; /* Distance from the top */
-    left: 0;
+    top: 13%; /* Distance from the top */
+    left: 3%;
     transform: rotate(-53deg); /* Rotate the line */
   }
 
-  .green-line:nth-child(2) {
-    top: 140px; /* Adjusted distance for the second line */
+  .green-line2 {
+    width: 40px; /* Length of the line */
+    height: 1px; /* Thickness of the line */
+    background-color: rgba(0, 128, 0, 0.24);
+    position: absolute;
+    top: 16.5%; /* Distance from the top */
+    left: 33%;
+    transform: rotate(-53deg); /* Rotate the line */
   }
 
-  .green-line:nth-child(3) {
-    top: 160px; /* Adjusted distance for the third line */
-  }
+
+
+  .circle5 /*THE ONE ON ABOUT SECTION*/
+{
+    width: 200px;
+    height: 200px;
+    top: 41%;
+    left: 25%;
+    border-bottom: 200px;
+    transform: translateX(-50%);
+    animation-duration: 5000s;
+    background-color:  #00000034;
+    filter: blur(50px);
+    display: none;
+}
 
 
 /*-----------------------THIS CSS HAS 8 CONTAINERS. THEIR DEFINITION STARTS HERE--------------------------*/
@@ -425,7 +451,7 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 0px;
-        height: 11%;
+        height: 14%;
     }
 }
 
@@ -438,14 +464,149 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        background-color: none;
         height: 70px;
         margin-bottom: 0;
         padding-top: 0;
     }
 }
 
-.navigation_links a {
+
+
+
+
+.container 
+{
+
+
+	@media (max-width: 767px) 
+    {
+		padding-left: 32px;
+		padding-right: 32px;
+        height: 70px;
+        display: flex;
+        background-color: rgb(170, 170, 170);
+        overflow-x: hidden;
+    }
+}
+
+.hamburger 
+{
+	position: relative;
+	display: block;
+	width: 35px;
+	cursor: pointer;
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+    margin: 0;
+	padding: 0;
+}
+
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #FFF;
+	margin: 6px 0px;
+	transition: 0.4s;
+    z-index: 999;
+    overflow-x: hidden;
+}
+
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+
+.blur {
+    filter: blur(8px); /* Adjust the blur strength as needed */
+}
+
+.fixed {
+    position: fixed;
+    top: 0; /* Adjust this value according to your layout */
+    left: 0; /* Adjust this value according to your layout */
+    width: 100%; /* Adjust this value according to your layout */
+    z-index: 999; /* Adjust this value according to your layout */
+}
+
+
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color: #0000001c;
+	padding-top: 120px;
+	transition: 0.4s;
+    margin-top: 15%;
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	max-width: 150px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+    font-size: 15px;
+    font-family: sans-serif;
+
+	color: #ffffff;
+	text-decoration: none;
+    
+    border-style: solid;
+    border-color: white;
+    border-radius: 30px;
+    border-width: 1px;
+    background-color: #24104f21;
+}
+
+.mobile-nav a:hover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 30px;
+	background-color: #300f776c;
+}
+
+
+
+
+
+header 
+{
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	background-color: #12002f00;
+	}
+
+
+
+.desk_links a {
     text-decoration: none;
     color: black; /* Set default color to black */
     margin: 0 10px;
@@ -460,11 +621,11 @@ body
     }
 }
 
-.navigation_links a.active {
+.desk_links a.active {
     color: rgb(6, 168, 0); /* Set active link color to green */
 }
 
-.navigation_links a.active::after {
+.desk_links a.active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -475,7 +636,7 @@ body
     transform: scaleX(1);
 }
 
-.navigation_links a::after {
+.desk_links a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -487,12 +648,12 @@ body
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.navigation_links a:hover::after {
+.desk_links a:hover::after {
     background-color: blue; /* Change glowing line color to blue on hover */
     transform: scaleX(0);
 }
 
-.navigation_links a:hover {
+.desk_links a:hover {
     color: rgb(0, 175, 161); /* Change color to green on hover */
 }
 
@@ -515,6 +676,7 @@ body
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        margin-top: 30px;
     }
 }
 
@@ -653,7 +815,8 @@ body
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        font-size: 11px;
+        font-size: 18px;
+        font-weight: 100;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -905,7 +1068,7 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        height: 8%;
+        height: 7%;
     }
 }
 .Two_Parts2
@@ -1227,11 +1390,11 @@ body
 
 .Third
 {
-    height: 75vh;
+    height: 78vh;
     width: 85%;
 
     background-color: none;
-    border-radius: 5px;
+    border-radius: 1px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
@@ -1242,7 +1405,7 @@ body
     justify-content: space-between; 
     flex-wrap: wrap;
     background-color: rgba(223, 232, 255, 0.089);
-    box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.438);
+    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.438);
 
     overflow-y: auto;
     scrollbar-width: thin; /* For Firefox */
@@ -1258,15 +1421,24 @@ body
 
  @media only screen and (max-width: 767px)
 {
-    box-shadow: none;
-    border-radius: 1px;
-    border-color: black;
-    margin-top: 0;
-    width: 95%;
-    height: 65vh;
-    border-right: solid;
-    border-left: solid;
-    border-width: 1px;
+        margin: 0 auto 13px auto; /* Changed margin to shorthand format */
+        justify-content: flex-start; /* Changed justify-content to flex-start */
+        flex-wrap: nowrap; /* Prevent wrapping of items */
+        background-color: rgba(233, 239, 255, 0.089);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+        overflow-x: auto; /* Changed overflow-y to overflow-x for horizontal scrolling */
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: rgba(0, 156, 117, 0) rgba(0, 0, 0, 0);
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+        border-radius: 1px;
+        border-color: rgba(0, 0, 0, 0);
+        margin-top: 0;
+        width: 99.5%;
+        height: 50vh;
+        border-width: 1px;
+        overflow-y: hidden; 
 
 }
 
@@ -1278,16 +1450,18 @@ body
 .Third::-webkit-scrollbar {
     width: 5px; /* Width of the scrollbar */
     height: 2px;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 /* Track */
 .Third::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1); /* Color of the track */
+    background: rgba(0, 0, 0, 0); /* Color of the track */
 }
 
 /* Handle */
 .Third::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.5); /* Color of the handle */
+    background: rgba(0, 0, 0, 0); /* Color of the handle */
 }
 
 
@@ -1300,6 +1474,19 @@ body
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     
     padding: 5px;
+
+    @media only screen and (max-width: 767px)
+    {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        margin-left: 0;
+    }
 }
 
 .one, .two, .three, .four, .five, .six 
@@ -1315,15 +1502,44 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 100%;    
+        width: 95%; 
+        height: 330px;  
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(255, 255, 255, 0.692);
+        min-width: 48%; /* Changed width to min-width to allow flexibility */
+        margin-top: 10px;
+        margin-bottom: 5px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.233);
+        flex-shrink: 0; /* Prevent cards from shrinking */
+        margin-right: 40px; /* Add margin between cards */
+        margin-left: 0;
     }
     
+}
+
+
+.one:first-child,
+.two:first-child,
+.three:first-child,
+.four:first-child,
+.five:first-child,
+.six:first-child {
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-left: 10px; /* Add margin to the left of the first card */
+    }
 }
 
 .proj_imgs
 {
     display: none;
 }
+
+
+
+
 
 
 /*-------------------------ENDING PART 4 -------------------------------------------------------------------*/
@@ -1390,11 +1606,11 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 0px;
-        background-color: rgb(245, 245, 245);
+        border-color: rgba(230, 230, 230, 0);
         width: 100%;
         height: 15%;
         box-shadow: none;
-        border-color: rgba(245, 222, 179, 0);
+        background-color: rgba(255, 255, 255, 0);
     }
 
 
@@ -1414,6 +1630,8 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
+        margin-top: 0;
+        
     }
 
 }
@@ -1440,6 +1658,13 @@ body
     font-size: 40px;
     margin-bottom: 0;
     margin-top: 10%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 0;
+        margin-bottom: 2%;
+        color: rgb(0, 48, 0);
+    }
 }
 
 .Certifications_par
@@ -1454,10 +1679,10 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         background-color: rgba(255, 0, 0, 0);
-        width: 95%;
-        margin-top: 7%;
-        margin-bottom: 2%;
-        font-size: 11px;
+        width: 85%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 9px;
         font-family: sans-serif;
     }
 
@@ -1467,7 +1692,21 @@ body
 {
     width: 100%;
     height: 97vh;
-    background-color: rgba(0, 0, 0, 0);
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 50vh;
+    }
+}
+
+.Mobile_Divisor2
+{
+    width: 30%;
+    height: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgba(29, 102, 0, 0.445);
+    margin-left: 34%;
 }
 
 
@@ -1492,6 +1731,7 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-top: 0;
+        margin-bottom: 0;
     }
 
 }
@@ -1534,12 +1774,17 @@ body
     
     @media (max-width: 767px)     /* Mobile devices */
     {
-        margin-top: 15px;
+        margin-top: 0px;
         width: 85%;
         height: 58vh;
         border-radius: 1px;
-        border-color: black;
+        border-color: rgba(0, 0, 0, 0.377);
         box-shadow: none;
+        overflow-y: hidden;
+        border-bottom: none;
+        border-top: none;
+        scrollbar-width: thin; /* For Firefox */
+        scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.1);
     }
 
   }
@@ -1565,6 +1810,19 @@ body
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     margin-bottom: 1%;
 
+    @media only screen and (max-width: 767px)
+    {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        margin-right: 10px;
+    }
+
+
 }
 
 .one1, .two1, .three1, .four1, .five1, .six1 
@@ -1587,8 +1845,21 @@ body
     
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 90%;
-        box-shadow:  0 0 10px rgba(0, 0, 0, 0.233);
+        width: 85%; 
+        height: 350px;  
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(158, 158, 158, 0.692);
+        min-width: 48%; /* Changed width to min-width to allow flexibility */
+        margin-top: 0;
+        padding: 2%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.233);
+        flex-shrink: 0; /* Prevent cards from shrinking */
+        margin-right: 40px; /* Add margin between cards */
+        margin-left: 10px;
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
     }
 
 }
@@ -1632,7 +1903,12 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 1px;
+        width: 100%;
+        height: 100%;
         border-color: rgba(245, 222, 179, 0);
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 0;
     }
 
 }
@@ -1642,6 +1918,12 @@ body
 {
     max-width: 100%; /* Ensure image fits within container */
     max-height: 100%;
+     
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-bottom: 0;
+    }
+
 }
 
 
@@ -1659,6 +1941,14 @@ body
    
     flex-direction: column;
     padding: 4%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 30px;
+        padding: 0;
+        margin-bottom: 5%;
+        margin-top: 0;
+    }
 }
 
 
@@ -1668,6 +1958,11 @@ body
   font-size: 17px;
   margin-bottom: 5px;
   margin-top: 0px;
+
+  @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 15px;
+    }
 }
 
 .inner_cert_par
@@ -1675,6 +1970,13 @@ body
   font-family: sans-serif;
   font-size: 13px;
   margin-top: 0px;
+
+  @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 12px;
+        margin-bottom: 0;
+        width: 100%;
+    }
 }
 
 .D_Button
@@ -1689,6 +1991,12 @@ body
     width: 80px;
     cursor: pointer;
     position: relative;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        padding: 5px;
+        font-size: 9px;
+    }
 }
 
 .D_Button:hover
@@ -1766,7 +2074,7 @@ body
         box-shadow: none;
         border-radius: 5px;
         width: 100%;
-        height: 14%;
+        height: 15%;
     }
 
 }
@@ -2270,7 +2578,8 @@ body
     @media only screen and (max-width: 767px) 
     {
       box-shadow: none;
-      height: 13%;
+      height: 17%;
+      width: 100%;
       background-color: rgba(245, 255, 216, 0.315);
     }
 }
@@ -2347,7 +2656,7 @@ body
 {
       margin-top: 0;
       padding: 0;
-      height: 35vh;
+      height: 65vh;
 }
 
 }
@@ -2363,6 +2672,8 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
+        height: 100%;
+        
     }
 
 }
@@ -2485,9 +2796,13 @@ body
     align-items: center; 
 
     @media only screen and (max-width: 767px) 
-{
-      width: 900px;
-}
+    {
+        width: 405px;
+        height: 480px;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
 
 
 }
@@ -2506,6 +2821,19 @@ body
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.144);
     transition: background-color 1s ease;
     cursor: pointer;
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 95%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0, 0, 0, 0.507);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.418);
+        border-radius: 1px;
+        background-color: white;
+        
+    }
+
 }
 
 .card-content:hover {
@@ -2528,12 +2856,6 @@ body
         padding-left: 0;
     }
 
-    .card {
-        width: 405px;
-        height: 300px;
-        margin-left: 0;
-        padding-left: 0;
-    }
 
     .scrollbar {
         width: 20%;
@@ -2541,6 +2863,170 @@ body
 }
 
 
+
+
+/*11111111111111111111111111111111111111111111*/
+
+.Two_parts_card_content
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper_part
+{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.left_upper_logo
+{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop_ico
+{
+    font-size: 40px;
+    color: rgba(21, 73, 0, 0.342);
+}
+
+.right_upper_logo_name
+{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.Logo_name_6
+{
+    font-family: "Wix Madefor Text", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.On6
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    width: 40%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.On7
+{
+    margin-top: 0;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding: 0;
+    width: 90%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.158);
+}
+
+.lower_part
+{
+    width: 100%;
+    height: 45vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    scrollbar-width: thin; 
+    scrollbar-color: rgb(0, 156, 117) rgba(0, 0, 0, 0);
+    overflow-x: auto;
+    overflow-y: hidden;    
+
+  
+}
+
+ 
+
+
+.Child_1, .Child_2, .Child_3
+{
+    width: 100%; 
+    height: 37vh;  
+    min-width: 48%; /* Changed width to min-width to allow flexibility */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+.Profession_Tittle
+{
+    width: 100%;
+    font-size: 17px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    display: none;
+
+}
+
+
+.On8
+{
+    margin-top: 0;
+    margin: 0 auto;
+    margin-bottom: 0;
+    margin-top: 5px;
+    padding: 0;
+    width: 50%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+
+.Prof-image
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.Child_2
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.child_a
+{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+}
+
+.child_b
+{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*11111111111111111111111111111111111111111111*/
 
 
 
@@ -2599,7 +3085,8 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
        background-color: rgba(11, 14, 12, 0.815);
-       height: 20%;
+       height: 15%;
+       width: 100%;
     }
 }
 
@@ -2609,6 +3096,7 @@ body
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .Left_part7
@@ -2630,6 +3118,15 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         color: aliceblue;
+    }
+}
+
+.Contact_par
+{
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 12px;
+
     }
 }
 
@@ -2666,9 +3163,9 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
-        height: 50vh;
+        height: 59vh;
         box-shadow: none;
-        background-color: rgba(15, 163, 64, 0.11);
+        background-color: rgba(10, 12, 0, 0.445);
     }
 }
 
@@ -2737,7 +3234,8 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 70%;
-        margin-left: 20%;
+        margin-left: 13%;
+        margin-top: 8%;
     }
 }
 
@@ -2836,8 +3334,8 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        font-size: 18px;
-        margin-bottom: 10px;
+        font-size: 15px;
+        margin-bottom: 0px;
         color: rgba(240, 248, 255, 0.89);
         font-weight: 100;
     }
@@ -2865,7 +3363,7 @@ body
     margin-top: 0px;
     margin-left: 10px;
     border-style: solid;
-    border-color: rgb(6, 168, 0);;
+    border-color: rgb(6, 168, 0);
     border-width: 1px;
     border-radius: 5px;
     width: 80px;
@@ -2877,10 +3375,13 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        margin-top: 4%;
+        margin-bottom: 10%;
         margin-left: 0;
         width: 100px;
         padding: 6px;
+        color: rgb(175, 175, 175);
+        background-color: rgba(90, 90, 90, 0.144);
+        border-color: rgb(212, 255, 210);
     }
 }
 
@@ -2909,11 +3410,14 @@ input
     @media (max-width: 767px)     /* Mobile devices */
     {
         padding: 5px;
-        width: 80%;
-        color: rgba(0, 0, 0, 0.425);
-        border-radius: 1px;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.514);
+        border-radius: 0px;
         font-family: sans-serif;
+        font-size: 13px;
         font-weight: 100;
+        border-color: rgb(136, 156, 135);
+        transition: width 0.3s ease;
     }
 
 }
@@ -2943,8 +3447,12 @@ input:focus
     {
         transition: padding 0.3s ease;
         padding: 5px;
-        font-size: 16px;
-        color: rgba(0, 0, 0, 0.616);
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.685);
+        width: 95%;
+        transition: width 0.3s ease;
+        border-color: white;
+        shadow:  0 0 30px rgb(21, 255, 0);
     }
 }
 
@@ -2955,7 +3463,7 @@ input:focus
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -2963,6 +3471,9 @@ input:focus
 {
     width: 85%;
 }
+
+
+
 
 /*-------------------------ENDING PART 7 -------------------------------------------------------------------*/
 
@@ -3004,7 +3515,9 @@ input:focus
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        height: 1%;
+        width: 100%;
+        height: 3%;
+        background-color: rgba(11, 14, 12, 0.815);
     }
 }
 
@@ -3013,6 +3526,16 @@ input:focus
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 0;
+        margin-bottom: 10px;
+        height: 30px;
+        margin-top: 3%;
+    }
 }
 
 .Left_part8
@@ -3024,6 +3547,36 @@ input:focus
     justify-content: center;
     align-items: center;
     margin-bottom: 0;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        justify-content: flex-start;
+        padding: 0;
+        height: 13px;
+        margin-bottom: 0;
+    }
+}
+
+.Mobile_tel
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 22px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 3%;
+    width: 100%;
+}
+.Mob_p
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 8px;
+    color: rgba(240, 248, 255, 0.801);
+    font-family: "Laila", serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 .Copyright
@@ -3032,6 +3585,20 @@ input:focus
     font-family: sans-serif;
     font-size: 12px;
     margin-top: 25px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        margin-top: 55px;
+        width: 100%;
+        color: rgba(240, 248, 255, 0.63);
+       
+        font-size: 12px;
+        font-family: "Laila", serif;
+        font-weight: 100;
+        font-style: normal;
+        background-color: rgba(255, 255, 0, 0);
+        margin-left: 75%;
+    }
 }
 
 .Right_part8
@@ -3044,6 +3611,13 @@ input:focus
     align-items: center;
     margin: 0 auto;
     margin-bottom: 35px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 30%;
+        margin-bottom: 0;
+        margin-top: 3%;
+    }
 }
 
 .Right_part8, a
@@ -3052,6 +3626,15 @@ input:focus
     color: rgba(0, 0, 0, 0.568);
     margin-right: 10px;
     margin-bottom: 0px;
+}
+
+.ml
+{
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 1px;
+    padding: 7px;
+    font-size: 10px;
 }
 /*-------------------------ENDING PART 8 -------------------------------------------------------------------*/
 
@@ -3133,6 +3716,133 @@ input:focus
 
 <!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
 <script>
+
+
+
+
+// HAMBURGER MENU SETTINGS
+
+// When the window loads, execute this function
+window.onload = function () {
+    window.addEventListener('scroll', function (e) {
+        if (window.pageYOffset > 100) {
+            document.querySelector("header").classList.add('is-scrolling');
+        } else {
+            document.querySelector("header").classList.remove('is-scrolling');
+        }
+    });
+
+    const menu_btn = document.querySelector('.hamburger');
+    const mobile_menu = document.querySelector('.mobile-nav');
+    const everything_is_here = document.querySelector('body');
+
+    const ml_1_link = document.querySelector('.Ml_1'); // Selecting the hyperlink with class name Ml_2
+    const ml_2_link = document.querySelector('.Ml_2');
+    const ml_3_link = document.querySelector('.Ml_3');
+    const ml_4_link = document.querySelector('.Ml_4');
+
+    menu_btn.addEventListener('click', function () {
+        toggleMobileMenu();
+    });
+
+    // Function to toggle mobile menu and other effects
+    function toggleMobileMenu() {
+        menu_btn.classList.toggle('is-active');
+        mobile_menu.classList.toggle('is-active');
+
+        // Toggle fixed position for Everything_is_here div
+        everything_is_here.classList.toggle('fixed');
+        
+        // Define center_img_elements here to capture the elements after the page loads
+        const center_img_elements = document.querySelectorAll('.Two_Parts, .Part2');
+        
+        // Apply blur effect to center_img elements after click event
+        center_img_elements.forEach(function(element) {
+            element.classList.toggle('blur');
+        });
+    }
+
+
+    // Event listener for clicking on Ml_1 hyperlink
+    ml_1_link.addEventListener('click', function (event) {
+        // Prevent the default action of the hyperlink
+        event.preventDefault();
+        
+        // Toggle mobile menu and other effects
+        toggleMobileMenu();
+
+    });
+
+
+    // Event listener for clicking on Ml_2 hyperlink
+    ml_2_link.addEventListener('click', function (event) {
+        // Prevent the default action of the hyperlink
+        event.preventDefault();
+        
+        // Toggle mobile menu and other effects
+        toggleMobileMenu();
+
+        // Scroll to page section with class name Part3
+        const part3Section = document.querySelector('.Part3');
+        part3Section.scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+    // Event listener for clicking on Ml_3 hyperlink
+    ml_3_link.addEventListener('click', function (event) {
+        // Prevent the default action of the hyperlink
+        event.preventDefault();
+        
+        // Toggle mobile menu and other effects
+        toggleMobileMenu();
+
+        // Scroll to SERVICES page section 
+        const part6Section = document.querySelector('.Part6');
+        part6Section.scrollIntoView({ behavior: 'smooth' });
+    });
+
+
+    // Event listener for clicking on Ml_3 hyperlink
+    ml_4_link.addEventListener('click', function (event) {
+        // Prevent the default action of the hyperlink
+        event.preventDefault();
+        
+        // Toggle mobile menu and other effects
+        toggleMobileMenu();
+
+        // Scroll to SERVICES page section 
+        const part7Section = document.querySelector('.Starting_Part7');
+        part7Section.scrollIntoView({ behavior: 'smooth' });
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //THIS IS THE SLIDER ON THE SERVICES SECTION (PART 6)
@@ -3294,10 +4004,11 @@ window.addEventListener("load", initSlider);
 
 
 
-// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK PORTFOLIO IS CLICKED
+// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK PROJECTS IS CLICKED
 
 document.addEventListener("DOMContentLoaded", function() {
     var buttons = document.querySelectorAll(".link2");
+
 
     buttons.forEach(function(button) {
         button.addEventListener("click", function(event) {
@@ -3534,84 +4245,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-// HAMBURGER MENU SETTINGS
-
-// When the window loads, execute this function
-window.onload = function () {
-    // Add an event listener to the window scroll event
-    window.addEventListener('scroll', function (e) {
-        // Check if the vertical scroll position is greater than 100 pixels
-        if (window.pageYOffset > 100) {
-            // Add the 'is-scrolling' class to the header element if the condition is met
-            document.querySelector("header").classList.add('is-scrolling');
-        } else {
-            // Remove the 'is-scrolling' class from the header element if the condition is not met
-            document.querySelector("header").classList.remove('is-scrolling');
-        }
-    });
-    
-
-    const menu_btn = document.querySelector('.hamburger');
-    const mobile_menu = document.querySelector('.mobile-nav');
-    const home_link = document.querySelector('.mobile-nav a[href="#"]'); // Selecting the Home link
-    const center_img_elements = document.querySelectorAll('.center_img'); // Select all elements with class 'center_img'
-
-
-
-
-    menu_btn.addEventListener('click',                    // EVENT LISTENER 1 For the burger button
-    
-    function () 
-    {
-        menu_btn.classList.toggle('is-active');
-        mobile_menu.classList.toggle('is-active');
-
-
-        center_img_elements.forEach(function(element)
-         {  element.classList.toggle('blur'); });
-
-
-        if (menu_btn.classList.contains('is-active')) {   } // If the nav window is open, then...
-           
-        
-    }
-    
-                              );
-
-
-   
-                              
-
-
-  home_link.addEventListener('click',               // EVENT LISTENER 1 For the close navigation window by clicking home
-  
-  
-  function (e)
-  {              
-  e.preventDefault(); // Prevent the default link behavior
-  mobile_menu.classList.remove('is-active'); // Close the mobile menu
-  menu_btn.classList.remove('is-active'); // Reset hamburger button state
-
-  // Remove blur effect when navigation window is closed
-    center_img_elements.forEach(function(element)
-    {
-    element.classList.remove('blur');
-    });
-
-  }
-
-  
-                            );      
-    
-    
-
-
-
-
-
-                        
-}
-
 
 
 
@@ -3682,7 +4315,7 @@ window.addEventListener('load', function() {
 
 window.addEventListener('load', function() {
     // Select the wrapper element
-    const wrapper = document.querySelector('.navigation_links');
+    const wrapper = document.querySelector('.desk_links');
     // Initially set opacity to 0 and visibility to hidden
     wrapper.style.opacity = '0';
     wrapper.style.visibility = 'hidden';
@@ -3808,21 +4441,41 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="circle circle3"></div>
         <div class="circle circle4a"></div>
         <div class="circle circle4b"></div>
+        <div class="circle circle5"></div>
+        <div class="green-line1"></div>
+        <div class="green-line2"></div>
         <div class="triangle1"></div>
         <div class="triangle2"></div>
         <div class="triangle2a"></div>
         <div class="triangle3"></div>
+        <div class="circle right_angle1"></div>
 
         <div class="circle_a return_to_top" id="returnToTop"><a class="top" href="#"><i class="back_top fa fa-arrow-circle-up"></i></a></i></div>
         <div class="center_img">      
             
             <div class="navigation_links">
-
-                <a class="link1 active" href="http://remyshema.42web.io/?i=1">Home</a>
-                <a class="link2" href="#">Portfolio</a>
-                <a class="link3" href="#">Services</a>
-                <a class="link4" href="#">Contact</a> 
-        
+                <header>
+                    <div class="container">
+                        <button class="hamburger">
+                            <div class="bar"></div>
+                        </button>
+                    </div>
+                </header>
+            
+                <nav class="mobile-nav">
+                    <a class="Ml_1" href="#">Home</a>
+                    <a class="Ml_2" href="#">Projects</a>
+                    <a class="Ml_3" href="#">Services</a>
+                    <a class="Ml_4" href="#">Contact</a>
+                </nav>
+                
+                <div class="desk_links">
+                    <a class="link1 active" href="https://remyshema.42web.io/?i=1">Home</a>
+                    <a class="link2" href="#">Projects</a>
+                    <a class="link3" href="#">Services</a>
+                    <a class="link4" href="#">Contact</a> 
+    
+                </div>        
             </div>    
     
             
@@ -3930,27 +4583,27 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         <div class="all3">
         
-                            <div class="one">
+                            <div class="one">1
                                 <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" style="width: 50px;">                                
                             </div>
         
-                            <div class="two">
+                            <div class="two">2
                                 <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">                   
                             </div>
         
-                            <div class="three">
+                            <div class="three">3
                                 <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
                             </div>
                             
-                            <div class="four">
+                            <div class="four">4
                                 <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">    
                             </div>
         
-                            <div class="five">
+                            <div class="five">5
                                 <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
                             </div>
         
-                            <div class="six">
+                            <div class="six">6
                                 <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
                             </div>
                         
@@ -3968,6 +4621,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h2 class="Certifications_header">Certifications</h2>
                     <p class="Certifications_par">This is my certifications library where you'll find certificates and other essential documents like Diplomas, English assessment results,...</p>
                 </div>
+                <div class="Mobile_Divisor2"></div>
                 <div class="Right_part4">
                     <div class="Fourth">                    
                         <div class="certificates_library">
@@ -4068,6 +4722,137 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
         <div class="Divisor"></div>
+
+        
+        <div class="Part6">
+            <div class="Two_Parts6">
+                <div class="Left_part5">
+                    <h2 class="Services_header">Services</h2>
+                    <h3 class="What_I_do">What I do</h3>
+                    <p class="Services_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                </div>
+                <div class="Right_part6">
+                    <div class="main-card">
+                        <div class="left-part">
+                            <button id="prev-slide" class="slide-button"><i class="chev-icon fa fa-angle-left" aria-hidden="true"></i></button>
+                            <ul class="cards-library" style="margin-bottom: 0;">
+
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="Two_parts_card_content">
+                                            <div class="upper_part">
+                                                <div class="left_upper_logo">
+                                                    <i class="desktop_ico fa-solid fa-computer"></i>
+                                                </div>
+                                                <div class="right_upper_logo_name">
+                                                    <h6 class="Logo_name_6">Web Dvt</h6>
+                                                    <div class="On6"></div>
+                                                </div>
+                                            </div>
+                                            <div class="On7"></div>
+                                            <div class="lower_part">
+                                                <div class="Child_1">
+                                                    <p class="Profession_Tittle">Boost Your Business Online</p>
+                                                    <div class="On8"></div>
+                                                    <div class="proff_img">
+                                                        <img class="Prof-image" src="file:///C:/Users/User/Pictures/ME%20LIB/Bss%20Websites/Sandy_Ppl-24_Single-06.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="Child_2">
+                                                    <div class="child_a"></div>
+                                                    <div class="child_b">
+                                                        <img src="file:///C:/Users/User/Downloads/downloaded_image0.%20(2).jpg" alt="" style="max-width: 100%; max-height: 100%;">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="Two_parts_card_content">
+                                            <div class="upper_part">
+                                                <div class="left_upper_logo">
+                                                    <i class="desktop_ico fa-solid fa-computer"></i>
+                                                </div>
+                                                <div class="right_upper_logo_name">
+                                                    <h6 class="Logo_name_6">Web Dvt</h6>
+                                                    <div class="On6"></div>
+                                                </div>
+                                            </div>
+                                            <div class="On7"></div>
+                                            <div class="lower_part">
+                                                <div class="Child_1">
+                                                    <p class="Profession_Tittle">Boost Your Business Online</p>
+                                                    <div class="On8"></div>
+                                                    <div class="proff_img">
+                                                        <img class="Prof-image" src="file:///C:/Users/User/Pictures/ME%20LIB/Bss%20Websites/Sandy_Ppl-24_Single-06.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="Child_2">
+                                                    <div class="child_a"></div>
+                                                    <div class="child_b">
+                                                        <img src="file:///C:/Users/User/Downloads/downloaded_image0.%20(2).jpg" alt="" style="max-width: 100%; max-height: 100%;">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-content">
+                                        <div class="Two_parts_card_content">
+                                            <div class="upper_part">
+                                                <div class="left_upper_logo">
+                                                    <i class="desktop_ico fa-solid fa-computer"></i>
+                                                </div>
+                                                <div class="right_upper_logo_name">
+                                                    <h6 class="Logo_name_6">Web Dvt</h6>
+                                                    <div class="On6"></div>
+                                                </div>
+                                            </div>
+                                            <div class="On7"></div>
+                                            <div class="lower_part">
+                                                <div class="Child_1">
+                                                    <p class="Profession_Tittle">Boost Your Business Online</p>
+                                                    <div class="On8"></div>
+                                                    <div class="proff_img">
+                                                        <img class="Prof-image" src="file:///C:/Users/User/Pictures/ME%20LIB/Bss%20Websites/Sandy_Ppl-24_Single-06.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="Child_2">
+                                                    <div class="child_a"></div>
+                                                    <div class="child_b">
+                                                        <img src="file:///C:/Users/User/Downloads/downloaded_image0.%20(2).jpg" alt="" style="max-width: 100%; max-height: 100%;">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </ul>
+                            <button id="next-slide" class="slide-button"><i class="chev-icon fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="right-part">
+                            <div class="scrollbar-container">
+                                <div class="scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+            
+        </div>
 
         <div class="Part5">
             <div class="Two_Parts5">
@@ -4198,46 +4983,8 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="Divisor"></div>
 
-        <div class="Part6">
-            <div class="Two_Parts6">
-                <div class="Left_part5">
-                    <h2 class="Services_header">Services</h2>
-                    <h3 class="What_I_do">What I do</h3>
-                    <p class="Services_par">hudsjnwuwsnwisiwdiwmismiws</p>
-                </div>
-                <div class="Right_part6">
-                    <div class="main-card">
-                        <div class="left-part">
-                            <button id="prev-slide" class="slide-button"><i class="chev-icon fa fa-angle-left" aria-hidden="true"></i></button>
-                            <ul class="cards-library" style="margin-bottom: 0;">
-
-                                <div class="card">
-                                    <div class="card-content"></div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-content"></div>
-                                </div>
-
-                                <div class="card">
-                                    <div class="card-content"></div>
-                                </div>
-
-                            </ul>
-                            <button id="next-slide" class="slide-button"><i class="chev-icon fa fa-angle-right" aria-hidden="true"></i></button>
-                        </div>
-                        <div class="right-part">
-                            <div class="scrollbar-container">
-                                <div class="scrollbar"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-
-            </div>
-        </div>
+        
+        <div class="Starting_Part7"></div>
         <div class="Divisor"></div>
         <div class="Mobile_Divisor"></div>
 
@@ -4245,8 +4992,9 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="Two_Parts7">
                 <div class="Left_part7">
                     <h3 class="Get_in_touch">Get in touch</h3>
-                    <p class="Contact_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                    <p class="Contact_par">Ask me anything or just say hi</p>
                 </div>
+
                 <div class="Right_part7">
                     <div class="Everything">
                         <div class="Left_Section">
@@ -4296,6 +5044,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
 
+                
+
             </div>
         </div>
 
@@ -4306,13 +5056,18 @@ document.addEventListener('DOMContentLoaded', function() {
     <div class="Part8">
         <div class="Two_Parts8">
             <div class="Left_part8">
+                <div class="Mobile_tel">
+                    <p class="Mob_p" style="margin-bottom: 0;"><i class="icon2 fa fa-phone" aria-hidden="true" style="color: rgba(240, 248, 255, 0.534); font-size: 9px;"></i> &nbsp; +250 783 674 289</p>
+                    <p class="Mob_p" style="margin-top: 0;"><i class="icon2 fas fa-envelope" style="color: rgba(240, 248, 255, 0.514); font-size: 9px;"></i> &nbsp; remyshema20@gmail.com</p>
+                </div>
                 <p class="Copyright">Copyright © 2024. All Rights Reserved</p>
+                
             </div>
             <div class="Right_part8">
-            <a href="#"><i class="fab fa-linkedin" style="margin-left: 3px;"></i></a>
-            <a href="#"><i class="fab fa-twitter" style="margin-left: 2px;"></i></a>
-            <a href="#"><i class="fab fa-instagram" style="margin-left: 3px;"></i></a>
-            <a href="#"><i class="fab fa-behance" style="margin-left: 2px;"></i></a>
+            <a href="#"><i class="ml fab fa-linkedin" style="margin-left: 3px; color: rgba(255, 247, 231, 0.514);"></i></a>
+            <a href="#"><i class="ml fab fa-twitter" style="margin-left: 2px; color: rgba(255, 247, 231, 0.514);"></i></a>
+            <a href="#"><i class="ml fab fa-instagram" style="margin-left: 0px; color: rgba(255, 247, 231, 0.514);"></i></a>
+            <a href="#"><i class="ml fab fa-behance" style="margin-left: 2px; color: rgba(255, 247, 231, 0.514);"></i></a>
             </div>
 
         </div>
