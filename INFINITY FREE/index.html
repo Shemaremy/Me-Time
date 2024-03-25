@@ -359,7 +359,8 @@ body
     }
 }
 
-  .green-line1 {
+  .green-line1 
+  {
     width: 40px; /* Length of the line */
     height: 1px; /* Thickness of the line */
     background-color: rgba(0, 128, 0, 0.247);
@@ -367,9 +368,16 @@ body
     top: 13%; /* Distance from the top */
     left: 3%;
     transform: rotate(-53deg); /* Rotate the line */
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }
   }
 
-  .green-line2 {
+  .green-line2 
+  {
     width: 40px; /* Length of the line */
     height: 1px; /* Thickness of the line */
     background-color: rgba(0, 128, 0, 0.24);
@@ -377,6 +385,11 @@ body
     top: 16.5%; /* Distance from the top */
     left: 33%;
     transform: rotate(-53deg); /* Rotate the line */
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        display: none;
+    }    
   }
 
 
@@ -590,8 +603,14 @@ body
 }
 
 
+header, .mobile-nav, .container
+{
 
-
+    @media (min-width: 768px) and (max-width: 2000px)   /* Tablets and small laptops */
+    {
+        display: none;
+    }
+}
 
 header 
 {
@@ -602,8 +621,17 @@ header
 	width: 100%;
 	z-index: 99;
 	background-color: #12002f00;
-	}
+}
 
+.desk_links
+{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
 
 
 .desk_links a {
@@ -868,7 +896,6 @@ header
 
 .coffee-button 
 {
-    background-color: rgba(0, 184, 0, 0.493);
     font-weight: 550;
     color:rgba(0, 0, 0, 0.808);
     border-radius: 20px; /* Rounded corners */
@@ -877,16 +904,19 @@ header
     border-style: solid;
     border-width: 1px;
     cursor: pointer; /* Show pointer cursor on hover */
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.438);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 184, 0, 0.062);
+    border-color: rgba(0, 184, 0, 0.74);
 
     transition: background-color 0.7s ease;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
+        background-color: rgba(0, 184, 0, 0.116);
+        border-color: rgba(0, 184, 0, 0.74);
         border-radius: 30px;
         padding: 20px;
         font-weight: 400;
-        box-shadow: none;
         width: 40%;
     }
         
@@ -894,7 +924,7 @@ header
 
 .coffee-button:hover 
 {
-    background-color: rgba(31, 219, 31, 0.774);
+    background-color: rgba(0, 184, 0, 0.308);
 }
 
 .coffee-button:active /* When clicked man */
@@ -903,14 +933,29 @@ header
    
 }
 
-#downloadButton.completed {
+#downloadButton.completed 
+{
     background-color: rgba(255, 255, 255, 0);
     cursor: not-allowed;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        background-color: rgba(0, 184, 0, 0);
+        border-color: rgba(0, 126, 184, 0.74);
+        border-radius: 30px;
+        padding: 12px;
+        font-weight: 400;
+        width: 70%;
+        margin-right: 12%;
+        transition: width 0.5s ease;
+    }
+
 }
 
 #downloadButton:disabled {
     cursor: not-allowed;
-    box-shadow: 1px;
+    box-shadow: none;
+    color: rgba(0, 34, 0, 0.678);
 }
 
 
@@ -1860,6 +1905,7 @@ header
         padding-top: 0;
         justify-content: center;
         align-items: center;
+        background-color: rgba(220, 238, 255, 0.76);
     }
 
 }
@@ -2581,6 +2627,9 @@ header
       height: 17%;
       width: 100%;
       background-color: rgba(245, 255, 216, 0.315);
+      background-color: rgba(109, 128, 0, 0.151);
+     
+      background-color: rgba(138, 138, 138, 0.199);
     }
 }
 
@@ -2653,11 +2702,17 @@ header
     align-items: center;
 
     @media only screen and (max-width: 767px) 
-{
+    {
       margin-top: 0;
       padding: 0;
-      height: 65vh;
-}
+      height: 60vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
 
 }
 
@@ -2729,6 +2784,18 @@ header
     scrollbar-width: none;
     padding-left: 20px;
     margin-right: 20px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        background-color: rgba(109, 128, 0, 0.151);
+        height: 60vh;
+        overflow-y: hidden;
+        margin-right: 0;
+        display: grid;
+        align-items: center;
+        margin: 0 auto;
+        background-color: rgba(102, 102, 102, 0.096);
+    }
 }
 
 .cards-library::-webkit-scrollbar {
@@ -2797,8 +2864,8 @@ header
 
     @media only screen and (max-width: 767px) 
     {
-        width: 405px;
-        height: 480px;
+        width: 385px;
+        height: 380px;
         margin-left: 0;
         padding-left: 0;
         padding-top: 0;
@@ -2829,12 +2896,25 @@ header
         border-width: 1px;
         border-color: rgba(0, 0, 0, 0.507);
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.418);
-        border-radius: 1px;
-        background-color: white;
+        border-radius: 20px 0px 0px 0px;
+        background-color: rgba(138, 138, 138, 0.199);
         
     }
 
 }
+
+@media (max-width: 767px)     /* Mobile devices */
+    {
+        .C_C_2
+        {
+            border-radius: 20px 20px 0px 0px;
+        }  
+        .C_C_3
+        {
+            border-radius: 0px 20px 0px 0px;
+        }  
+    }
+
 
 .card-content:hover {
     transition: 2s ease;
@@ -2881,7 +2961,7 @@ header
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: rgba(146, 81, 35, 0.199);
+    background-color: rgba(146, 81, 35, 0.075);
 }
 
 .two6
@@ -2892,7 +2972,7 @@ header
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    height: 40%;
+    height: 30%;
 }
 
 
@@ -2914,7 +2994,7 @@ header
 
 .desktop_ico
 {
-    font-size: 40px;
+    font-size: 20px;
     color: rgba(21, 73, 0, 0.342);
 }
 
@@ -2935,7 +3015,7 @@ header
 {
     font-family: "Wix Madefor Text", sans-serif;
     font-optical-sizing: auto;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
     margin-top: 0;
 }
@@ -2972,10 +3052,12 @@ header
     scrollbar-width: thin; 
     scrollbar-color: rgb(0, 156, 117) rgba(0, 0, 0, 0);
     overflow-x: auto;
-    overflow-y: hidden;    
-
-  
+    overflow-y: hidden;
+    background-color: rgba(207, 207, 207, 0.562);
+    
 }
+
+
 
  
 
@@ -2988,45 +3070,54 @@ header
     flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
-.Profession_Tittle
+.Child_1
 {
-    width: 100%;
-    font-size: 17px;
-    margin: 0 auto;
-    margin-top: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
-    display: none;
-
-}
-
-
-.On8
-{
-    margin-top: 0;
     margin: 0 auto;
-    margin-bottom: 0;
-    margin-top: 5px;
-    padding: 0;
-    width: 50%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.329);
-}
-
-
-.Prof-image
-{
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .Child_2
 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
+
+
+
+.proff_img
+{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.Prof-image
+{
+    max-width: 100%;
+    max-height: 100%;
+    filter: brightness(80%);
+}
+
+
+.L_P_2
+{
+    background-color: rgba(193, 203, 214, 0.562);
+}
+
+.P_i_2
+{
+    max-width: 100%;
+    max-height: 104%;
+}
+
 
 .c_6
 {
@@ -3034,6 +3125,12 @@ header
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.sec_proff_imge
+{
+    opacity: 1;
+    filter: brightness(81%);
 }
 
 .child_a
@@ -3048,7 +3145,7 @@ header
 
 .Reasons
 {
-    font-size: 11px; 
+    font-size: 10px; 
     margin-left: 0; 
     padding: 0; 
     font-family: sans-serif; 
@@ -3060,7 +3157,7 @@ header
 {
     height: 100%;
     width: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(209, 210, 211, 0.575);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3087,6 +3184,53 @@ header
 {
     background-color: rgba(18, 0, 119, 0.11);
 }
+
+.r_u_l_n_3
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.L_n_6
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 17px;
+    margin-left: 3%;
+    text-align: right;
+}
+
+.C_2_3
+{
+    display: flex; 
+    flex-direction: column;
+}
+
+.C_b_3
+{
+    width: 100%; 
+    height: 80%;
+}
+
+.C_a_3
+{
+    width: 100%; 
+    height: 20%;
+}
+
+.P_C_3
+{
+    font-family: sans-serif; 
+    font-size: 9px; 
+    font-weight: 100; 
+    width: 85%; 
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 
 
 
@@ -3349,7 +3493,7 @@ header
 {
     margin-left: 5px;
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.658);  
+    color: rgba(255, 255, 255, 0.589);  
 }
 
 .words
@@ -3779,719 +3923,6 @@ input:focus
 
 
 
-<!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
-<script>
-
-
-
-
-// HAMBURGER MENU SETTINGS
-
-// When the window loads, execute this function
-window.onload = function () {
-    window.addEventListener('scroll', function (e) {
-        if (window.pageYOffset > 100) {
-            document.querySelector("header").classList.add('is-scrolling');
-        } else {
-            document.querySelector("header").classList.remove('is-scrolling');
-        }
-    });
-
-    const menu_btn = document.querySelector('.hamburger');
-    const mobile_menu = document.querySelector('.mobile-nav');
-    const everything_is_here = document.querySelector('body');
-
-    const ml_1_link = document.querySelector('.Ml_1'); // Selecting the hyperlink with class name Ml_2
-    const ml_2_link = document.querySelector('.Ml_2');
-    const ml_3_link = document.querySelector('.Ml_3');
-    const ml_4_link = document.querySelector('.Ml_4');
-
-    menu_btn.addEventListener('click', function () {
-        toggleMobileMenu();
-    });
-
-    // Function to toggle mobile menu and other effects
-    function toggleMobileMenu() {
-        menu_btn.classList.toggle('is-active');
-        mobile_menu.classList.toggle('is-active');
-
-        // Toggle fixed position for Everything_is_here div
-        everything_is_here.classList.toggle('fixed');
-        
-        // Define center_img_elements here to capture the elements after the page loads
-        const center_img_elements = document.querySelectorAll('.Two_Parts, .Part2');
-        
-        // Apply blur effect to center_img elements after click event
-        center_img_elements.forEach(function(element) {
-            element.classList.toggle('blur');
-        });
-    }
-
-
-    // Event listener for clicking on Ml_1 hyperlink
-    ml_1_link.addEventListener('click', function (event) {
-        // Prevent the default action of the hyperlink
-        event.preventDefault();
-        
-        // Toggle mobile menu and other effects
-        toggleMobileMenu();
-
-    });
-
-
-    // Event listener for clicking on Ml_2 hyperlink
-    ml_2_link.addEventListener('click', function (event) {
-        // Prevent the default action of the hyperlink
-        event.preventDefault();
-        
-        // Toggle mobile menu and other effects
-        toggleMobileMenu();
-
-        // Scroll to page section with class name Part3
-        const part3Section = document.querySelector('.Part3');
-        part3Section.scrollIntoView({ behavior: 'smooth' });
-    });
-
-
-    // Event listener for clicking on Ml_3 hyperlink
-    ml_3_link.addEventListener('click', function (event) {
-        // Prevent the default action of the hyperlink
-        event.preventDefault();
-        
-        // Toggle mobile menu and other effects
-        toggleMobileMenu();
-
-        // Scroll to SERVICES page section 
-        const part6Section = document.querySelector('.Part6');
-        part6Section.scrollIntoView({ behavior: 'smooth' });
-    });
-
-
-    // Event listener for clicking on Ml_3 hyperlink
-    ml_4_link.addEventListener('click', function (event) {
-        // Prevent the default action of the hyperlink
-        event.preventDefault();
-        
-        // Toggle mobile menu and other effects
-        toggleMobileMenu();
-
-        // Scroll to SERVICES page section 
-        const part7Section = document.querySelector('.Starting_Part7');
-        part7Section.scrollIntoView({ behavior: 'smooth' });
-    });
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//THIS IS THE SLIDER ON THE SERVICES SECTION (PART 6)
-
-
-const initSlider2 = () => {
-    const cardsList = document.querySelector(".left-part .cards-library");
-    const slideButtons = document.querySelectorAll(".left-part .slide-button");
-    const scrollbar = document.querySelector(".main-card .right-part");
-    const thumb = scrollbar.querySelector(".scrollbar");
-    const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
-
-    // Handle scrollbar thumb drag
-    thumb.addEventListener("mousedown", (e) => {
-        const startX = e.clientX;
-        const thumbPosition = thumb.offsetLeft;
-        const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
-
-        const handleMouseMove = (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-            thumb.style.left = `${boundedPosition}px`;
-            cardsList.scrollLeft = scrollPosition;
-        }
-
-        const handleMouseUp = () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseup", handleMouseUp);
-        }
-
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
-    });
-
-    // Slide cards on button click
-    slideButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const direction = button.id === "prev-slide" ? -1 : 1;
-            const scrollAmount = cardsList.clientWidth * direction;
-            cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        });
-    });
-
-    // Show or hide slide buttons based on scroll position
-    const handleSlideButtons = () => {
-        slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
-        slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-    }
-
-    // Update scrollbar thumb position based on cards scroll
-    const updateScrollThumbPosition = () => {
-        const scrollPosition = cardsList.scrollLeft;
-        const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
-        thumb.style.left = `${thumbPosition}px`;
-    }
-
-    // Call functions when cards list scrolls
-    cardsList.addEventListener("scroll", () => {
-        updateScrollThumbPosition();
-        handleSlideButtons();
-    });
-}
-
-window.addEventListener("resize", initSlider2);
-window.addEventListener("load", initSlider2);
-
-
-
-
-
-
-
-
-//THIS IS THE SLIDER ON THE SKILLS SECTION (PART 5)
-
-const initSlider = () => {
-    const imageList = document.querySelector(".Left_part5a .Cards_library");
-    const slideButtons = document.querySelectorAll(".Left_part5a .Slide_Button");
-    const sliderScrollbar = document.querySelector(".Main_card5 .Right_part5a");
-    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar_og");
-    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-    // Handle scrollbar thumb drag
-    scrollbarThumb.addEventListener("mousedown", (e) => {
-        const startX = e.clientX;
-        const thumbPosition = scrollbarThumb.offsetLeft;
-        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
-
-        // Update thumb position on mouse move
-        const handleMouseMove = (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
-
-            // Ensure the scrollbar thumb stays within bounds
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-
-            scrollbarThumb.style.left = `${boundedPosition}px`;
-            imageList.scrollLeft = scrollPosition;
-        }
-
-        // Remove event listeners on mouse up
-        const handleMouseUp = () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseup", handleMouseUp);
-        }
-
-        // Add event listeners for drag interaction
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
-    });
-
-    // Slide images according to the slide button clicks
-    slideButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const direction = button.id === "prev-slide" ? -1 : 1;
-            const scrollAmount = imageList.clientWidth * direction;
-            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        });
-    });
-
-    // Show or hide slide buttons based on scroll position
-    const handleSlideButtons = () => {
-        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-    }
-
-    // Update scrollbar thumb position based on image scroll
-    const updateScrollThumbPosition = () => {
-        const scrollPosition = imageList.scrollLeft;
-        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = `${thumbPosition}px`;
-    }
-
-    // Call these two functions when image list scrolls
-    imageList.addEventListener("scroll", () => {
-        updateScrollThumbPosition();
-        handleSlideButtons();
-    });
-
-    
-}
-
-window.addEventListener("resize", initSlider);
-window.addEventListener("load", initSlider);
-
-
-
-
-
-
-
-
-
-
-
-
-
-// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK PROJECTS IS CLICKED
-
-document.addEventListener("DOMContentLoaded", function() {
-    var buttons = document.querySelectorAll(".link2");
-
-
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            
-            // Get the element with class name "Part3"
-            var targetSection = document.querySelector(".Part3");
-
-            // Check if the target section exists
-            if (targetSection) {
-                // Calculate the distance to scroll
-                var scrollToY = targetSection.offsetTop;
-
-                // Smooth scroll to the element
-                window.scrollTo({
-                    top: scrollToY,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-
-// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK SERVICES IS CLICKED
-
-document.addEventListener("DOMContentLoaded", function() {
-    var buttons = document.querySelectorAll(".link3");
-
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            
-            // Get the element with class name "Part6"
-            var targetSection = document.querySelector(".Part6");
-
-            // Check if the target section exists
-            if (targetSection) {
-                // Calculate the distance to scroll
-                var scrollToY = targetSection.offsetTop;
-
-                // Smooth scroll to the element
-                window.scrollTo({
-                    top: scrollToY,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-
-
-// THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK CONTACT IS CLICKED
-
-document.addEventListener("DOMContentLoaded", function() {
-    var buttons = document.querySelectorAll(".link4");
-
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-            
-            // Get the element with class name "Part7"
-            var targetSection = document.querySelector(".Part7");
-
-            // Check if the target section exists
-            if (targetSection) {
-                // Calculate the distance to scroll
-                var scrollToY = targetSection.offsetTop;
-
-                // Smooth scroll to the element
-                window.scrollTo({
-                    top: scrollToY,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
-
-
-
-// THIS HELPS THAT WHEN I SCROLL, I SEE THE SCROLL TOOL THAT ENABLES ME BACK AT THE TOP OF THE PAGE
-
-window.addEventListener('scroll', function() {
-    var returnToTop = document.getElementById('returnToTop');
-    var hisha = document.querySelector('.navigation_links');
-    var flacko = document.querySelector('.Everything_is_here');
-    var centerImg = document.querySelector('.center_img');
-
-    var hishaRect = hisha.getBoundingClientRect();
-    var flackoRect = flacko.getBoundingClientRect();
-    var centerImgRect = centerImg.getBoundingClientRect();
-
-    // If Flacko is in view and center_img is not in view, show the returnToTop button, otherwise hide it
-    if ((flackoRect.top <= window.innerHeight && flackoRect.bottom >= 0) && 
-        !(centerImgRect.top <= window.innerHeight && centerImgRect.bottom >= 0)) {
-      returnToTop.style.display = 'block';
-      setTimeout(function() {
-        returnToTop.style.opacity = 1;
-      }, 1000);
-    } else {
-      returnToTop.style.opacity = 0;
-      setTimeout(function() {
-        returnToTop.style.display = 'none';
-      }, 3);
-    }
-});
-
-
-
-
-
-
-
-  // WHEN THE BUTTON IS CLICKED, WE GO BACK UP TO THE TOP PAGE
-
-  document.addEventListener("DOMContentLoaded", function() {
-    var returnToTop = document.getElementById('returnToTop');
-    returnToTop.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        // Get the element with class name "Flacko"
-        var targetSection = document.querySelector("body");
-
-        // Check if the target section exists
-        if (targetSection) {
-            // Calculate the distance to scroll
-            var scrollToY = targetSection.offsetTop;
-
-            // Smooth scroll to the element
-            window.scrollTo({
-                top: scrollToY,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-
-
-
-
-    // HEADING (h1, h2) TRANSITIONS  
-
-document.addEventListener("DOMContentLoaded", function() {
-    const headings = document.querySelectorAll('.heading');
-    headings.forEach((heading, index) => {
-        setTimeout(() => {
-            heading.classList.add('show-heading');
-        }, index * 1300); // Adjust the delay here (multiplied by index)
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-// THE PARAGRAPH TRANSITIONS (but from left to right)
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the paragraph element
-    var paragraph = document.getElementById("animated-paragraph");
-    
-    // Get the text content of the paragraph
-    var text = paragraph.textContent;
-    
-    // Clear the paragraph content
-    paragraph.textContent = "";
-    
-    // Iterate through each character of the text
-    for (var i = 0; i < text.length; i++) {
-        // Create a span element for each character
-        var span = document.createElement("span");
-        span.textContent = text[i];
-        
-        // Set the animation delay for each span element
-        span.style.animationDelay = (i * 0.1) + "s"; // Adjust the delay as needed
-        
-        // Append the span element to the paragraph
-        paragraph.appendChild(span);
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-// IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
-
-document.addEventListener("DOMContentLoaded", function() {
-    let lazyImages = document.querySelectorAll('.back');
-
-    let options = {
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    let observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                let img = entry.target;
-                img.src = img.dataset.src;
-                observer.unobserve(img);
-            }
-        });
-    }, options);
-
-    lazyImages.forEach(function(img) {
-        observer.observe(img);
-    });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// THE SOCIAL MEDIA SMOOTH TRANSITIONS
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.wrapper');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 3000);
-});
-
-
-
-
-
-
-// SMOOTH TRANSITION FOR THE BUTTON
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.coffee-button');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 3500);
-});
-
-
-
-
-// SMOOTH TRANSITION FOR THE RIGHT ME PHOTO
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.image-container img');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 3500);
-});
-
-
- 
-// SMOOTH TRANSITION FOR THE NAVIGATION LINKS
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.desk_links');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 2000);
-});
-
-
-
-
-// SMOOTH TRANSITION FOR THE MIDDLE TRANSPARENT PAGE
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.center_img');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 1000);
-});
-
-
-
-
-
-// SMOOTH TRANSITION FOR THE BACK IMAGE
-
-window.addEventListener('load', function() {
-    // Select the wrapper element
-    const wrapper = document.querySelector('.back_img');
-    // Initially set opacity to 0 and visibility to hidden
-    wrapper.style.opacity = '0';
-    wrapper.style.visibility = 'hidden';
-    // Show the wrapper after a delay 
-    setTimeout(function() {
-        // Change opacity from 0 to 1 gradually over 1 second
-        wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-        wrapper.style.opacity = '1';
-        wrapper.style.visibility = 'visible'; // Make the content visible
-    }, 200);
-});
-
-
-
-// DOWNLOADING THE CV
-
-document.addEventListener('DOMContentLoaded', function() {
-    var downloadButton = document.getElementById('downloadButton');
-    downloadButton.addEventListener('click', function() {
-        // Notify the user before downloading
-        var CV = confirm("Are you sure you want to download this CV ?");
-        
-        // If the user confirms, proceed with downloading
-        if (CV) {
-            // Fetch the file content
-            fetch('https://i.imgur.com/it7BCwG.png')
-                .then(response => response.blob())
-                .then(blob => {
-                    // Create a Blob URL for the file content
-                    var url = URL.createObjectURL(blob);
-                    
-                    // Create an anchor element
-                    var link = document.createElement('a');
-                    link.setAttribute('href', url);
-                    link.setAttribute('download', 'CV_Remy.jpg');
-                    link.style.display = 'none';
-                    document.body.appendChild(link);
-                    
-                    // Simulate a click on the anchor element
-                    link.click();
-                    
-                    // Clean up by revoking the Blob URL
-                    URL.revokeObjectURL(url);
-
-                    // Disable the download button after the download is complete
-                    downloadButton.disabled = true;
-
-                    // Change the text of the button
-                    downloadButton.textContent = "Downloaded successfully!";
-                    
-                    // Add the completed class to the button
-                    downloadButton.classList.add('completed');
-                    
-                    // Increase the width of .coffee_button
-                    var coffeeButton = document.querySelector('.coffee-button');
-                    coffeeButton.style.width = '180px';
-                    
-                    var buymecoffee = document.querySelector('.Buy_me_coffee');
-                    buymecoffee.style.paddingLeft = '13%';
-                })
-                .catch(error => {
-                    console.error('Error occurred while downloading:', error);
-                });
-        }
-    });
-});
-
-
-</script>
-<!--------------------------------------MY JS ENDS RIGHT HERE !!!!--------------------------------------->
 
 
 </head>
@@ -4810,17 +4241,17 @@ document.addEventListener('DOMContentLoaded', function() {
                                                     <i class="desktop_ico fa-solid fa-computer"></i>
                                                 </div>
                                                 <div class="right_upper_logo_name">
-                                                    <h6 class="Logo_name_6">Web Dvt</h6>
-                                                    <div class="On6"></div>
+                                                    <h6 class="Logo_name_6" style="margin-bottom: 0;">Web Dvt</h6>
+                                                    
                                                 </div>
                                             </div>
                                             <div class="On7"></div>
                                             <div class="lower_part">
                                                 <div class="Child_1">
                                                     <p class="Profession_Tittle">Boost Your Business Online</p>
-                                                    <div class="On8"></div>
+                                                    
                                                     <div class="proff_img">
-                                                        <img class="Prof-image" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Sandy_Ppl-24_Single-06.jpg" alt="">
+                                                        <img class="Prof-image P_i" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Sandy_Ppl-24_Single-06.jpg" alt="" style="max-width: 100%; max-height: 100%;">
                                                     </div>
                                                 </div>
                                                 <div class="Child_2">
@@ -4834,7 +4265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                                         </ul>
                                                     </div>
                                                     <div class="child_b">
-                                                        <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(2).jpg" alt="" style="max-width: 100%; max-height: 100%;">
+                                                        <img class="sec_proff_imge" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(2).jpg" alt="" style="max-width: 100%; max-height: 100%;">
                                                     </div>
                                                 </div>
                                                 
@@ -4845,23 +4276,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
                                 <div class="card">
-                                    <div class="card-content">
+                                    <div class="card-content C_C_2">
                                         <div class="Two_parts_card_content">
                                             <div class="upper_part two6">
-                                                <div class="left_upper_logo lul6">
-                                                    <i class="desktop_ico fa-solid fa-mobile-screen-button"></i>
+                                                <div class="left_upper_logo lul6" style="margin-top: 45px; margin-bottom: 0;">
+                                                    <i class="desktop_ico fa-solid fa-mobile-screen-button" style="font-size: 20px;"></i>
                                                 </div>
                                                 <div class="right_upper_logo_name">
-                                                    <h6 class="Logo_name_6">Mobile App Dvt</h6>
+                                                    <h6 class="Logo_name_6" style="font-size: 20px;">Mobile App Dvt</h6>
                                                     
                                                 </div>
                                             </div>
-                                            <div class="lower_part">
+                                            <div class="lower_part L_P_2">
                                                 <div class="Child_1">
-                                                    <p class="Profession_Tittle">Boost Your Business Online</p>
-                                                    <div class="On8"></div>
+                                                    
                                                     <div class="proff_img">
-                                                        <img class="Prof-image" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(3).jpg" alt="">
+                                                        <img class="Prof-image P_i_2" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(3).jpg" alt="">
                                                     </div>
                                                 </div>
                                                 <div class="Child_2 c_6">
@@ -4870,7 +4300,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                                         <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(4).jpg" alt="" style="max-width: 100%; max-height: 100%;">
                                                     </div>
                                                     <div class="child_a c_a6">
-                                                        <p style="font-size: 12px; font-weight: 100; font-family: sans-serif; width: 80%; text-align: center; margin-bottom: 40px;">                                                           
+                                                        <p style="font-size: 10px; font-weight: 100; font-family: sans-serif; width: 80%; text-align: center; margin-bottom: 40px;">                                                           
                                                             Engage your audience on-the-go with intuitive user experiences and seamless functionality. 
                                                             Let's turn your ideas into captivating mobile experiences.
                                                         </p>
@@ -4884,12 +4314,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
                                 <div class="card">
-                                    <div class="card-content">
+                                    <div class="card-content C_C_3">
                                         <div class="Two_parts_card_content">
                                             <div class="upper_part u_p_6">
                                                 
-                                                <div class="right_upper_logo_name" style="width: 70%;">
-                                                    <h6 class="Logo_name_6" style="font-size: 20px;  margin-top: 20%; padding-left: 7%;">Database & API Systems Development</h6>
+                                                <div class="right_upper_logo_name r_u_l_n_3" style="width: 70%;">
+                                                    <h6 class="Logo_name_6 L_n_6">Database & API Systems Development</h6>
                                                     
                                                 </div>
                                                 <div class="left_upper_logo" style="width: 30%;">
@@ -4902,16 +4332,16 @@ document.addEventListener('DOMContentLoaded', function() {
                                                     <p class="Profession_Tittle">Boost Your Business Online</p>
                                                     <div class="On8"></div>
                                                     <div class="proff_img">
-                                                        <img class="Prof-image" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/1902.i039.011.P.m004.c30.cloud%20services%20isometric%20icons-13(1).jpg" alt="" style="max-width: 100%; max-height: 100%;">
+                                                        <img class="Prof-image" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Cloudshii.jpg" alt="" style="max-width: 100%; max-height: 100%;">
                                                     </div>
                                                 </div>
-                                                <div class="Child_2" style="display: flex; flex-direction: column;">
+                                                <div class="Child_2 C_2_3">
                                                     
-                                                    <div class="child_b" style="width: 100%; height: 80%;">
-                                                        <img src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Wavy_Bus-20_Single-12(1).jpg" alt="" style="max-width: 100%; max-height: 100%;">
+                                                    <div class="child_b C_b_3">
+                                                        <img class="sec_proff_imge" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Servershii.jpg" alt="" style="max-width: 100%; max-height: 100%;">
                                                     </div>
-                                                    <div class="child_a" style="width: 100%; height: 20%;">
-                                                        <p style="font-family: sans-serif; font-size: 13px; font-weight: 100; width: 85%; text-align: center;">
+                                                    <div class="child_a C_a_3">
+                                                        <p class="P_C_3">
                                                             Empower your business with robust database solutions and APIs designed
                                                             for scalability and performance. 
                                                         </p>
@@ -5099,33 +4529,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         <div class="Right_section">
                         
-                            <form action="">
-
+                            <form class="myForm">
                                 <div class="row">
-
                                     <div class="Name_Email">
-                                            <div class="Name">
-                                                <h2 class="heading_text7a">Name</h2>
-                                                <input type="text" placeholder="Your name">
-                                            </div>
-                                            <div class="Email">
-                                                <h2 class="heading_text7a">Email</h2>
-                                                <input type="text" placeholder="Email adress">
-                                            </div>
+                                        <div class="Name">
+                                            <h2 class="heading_text7a">Name</h2>
+                                            <!-- Add name attribute for the name input field -->
+                                            <input type="text" class="name" name="name" placeholder="Your name" required>
+                                        </div>
+                                        <div class="Email">
+                                            <h2 class="heading_text7a">Email</h2>
+                                            <!-- Add name attribute for the email input field -->
+                                            <input type="email" class="email" name="email" placeholder="Email address" required>
+                                        </div>
                                     </div>
-                                    
                                     <div class="Message">
                                         <h2 class="heading_text7a">Message</h2>
-                                        <input class="text_area" type="text" placeholder="Message">
+                                        <!-- Add name attribute for the message input field -->
+                                        <input class="text_area message" type="text" name="message" placeholder="Message" required>
                                     </div>
-
                                     <div class="Send">
-                                        <button class="button_7">Send<i class="icon2 fa fa-paper-plane" style="margin-left: 12px;"></i></button>
+                                        <button type="submit" class="button_7">Send<i class="icon2 fa fa-paper-plane" style="margin-left: 12px;"></i></button>
                                     </div>
-
-
                                 </div>
                             </form>
+                            
+                            
 
                         </div>
                     </div>
@@ -5161,5 +4590,800 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
         
 </body>
+
+<!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
+<script>
+
+    // THE FORM SUBMISSION
+    document.querySelector('.myForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    try {
+        // Fetch form data
+        const formData = new FormData(this);
+
+        // Ensure that the FormData object contains fields with the expected keys
+        formData.set('name', formData.get('name')); // Set 'name' key
+        formData.set('email', formData.get('email')); // Set 'email' key
+        formData.set('message', formData.get('message')); // Set 'message' key
+
+        // Send form data to the server
+        const response = await fetch('https://shocking-cute-sight.glitch.me/submit', {
+            method: 'POST',
+            body: formData
+        });
+
+        // Check if the response is OK
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // Get the text from the response
+        const data = await response.text();
+        console.log(data); // Log the response from the server
+
+        // Display success message
+        alert('Form submitted successfully!');
+        // You can redirect the user to a thank you page or do any other action here
+    } catch (error) {
+        console.error('There was an error with the fetch operation:', error);
+        alert('There was an error submitting the form. Please try again later.');
+    }
+});
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // AUTOSLIDE OF THE SERVICES CARDS IN PART6 (didnt work)
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const lower_part = document.querySelector('.lower_part');
+      const part6 = document.querySelector('.Part6');
+      const child1 = document.querySelector('.Child_1');
+      const child2 = document.querySelector('.Child_2');
+      
+      part6.addEventListener('scroll', function() {
+        const child1Rect = child1.getBoundingClientRect();
+        const child2Rect = child2.getBoundingClientRect();
+        const lowerPartRect = lower_part.getBoundingClientRect();
+        
+        if (child1Rect.right < lowerPartRect.left) {
+          lower_part.scrollBy({
+            left: child1Rect.width,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // HAMBURGER MENU SETTINGS
+    
+    // When the window loads, execute this function
+    window.onload = function () {
+        window.addEventListener('scroll', function (e) {
+            if (window.pageYOffset > 100) {
+                document.querySelector("header").classList.add('is-scrolling');
+            } else {
+                document.querySelector("header").classList.remove('is-scrolling');
+            }
+        });
+    
+        const menu_btn = document.querySelector('.hamburger');
+        const mobile_menu = document.querySelector('.mobile-nav');
+        const everything_is_here = document.querySelector('body');
+    
+        const ml_1_link = document.querySelector('.Ml_1'); // Selecting the hyperlink with class name Ml_2
+        const ml_2_link = document.querySelector('.Ml_2');
+        const ml_3_link = document.querySelector('.Ml_3');
+        const ml_4_link = document.querySelector('.Ml_4');
+    
+        menu_btn.addEventListener('click', function () {
+            toggleMobileMenu();
+        });
+    
+        // Function to toggle mobile menu and other effects
+        function toggleMobileMenu() {
+            menu_btn.classList.toggle('is-active');
+            mobile_menu.classList.toggle('is-active');
+    
+            // Toggle fixed position for Everything_is_here div
+            everything_is_here.classList.toggle('fixed');
+            
+            // Define center_img_elements here to capture the elements after the page loads
+            const center_img_elements = document.querySelectorAll('.Two_Parts, .Part2');
+            
+            // Apply blur effect to center_img elements after click event
+            center_img_elements.forEach(function(element) {
+                element.classList.toggle('blur');
+            });
+        }
+    
+    
+        // Event listener for clicking on Ml_1 hyperlink
+        ml_1_link.addEventListener('click', function (event) {
+            // Prevent the default action of the hyperlink
+            event.preventDefault();
+            
+            // Toggle mobile menu and other effects
+            toggleMobileMenu();
+    
+        });
+    
+    
+        // Event listener for clicking on Ml_2 hyperlink
+        ml_2_link.addEventListener('click', function (event) {
+            // Prevent the default action of the hyperlink
+            event.preventDefault();
+            
+            // Toggle mobile menu and other effects
+            toggleMobileMenu();
+    
+            // Scroll to page section with class name Part3
+            const part3Section = document.querySelector('.Part3');
+            part3Section.scrollIntoView({ behavior: 'smooth' });
+        });
+    
+    
+        // Event listener for clicking on Ml_3 hyperlink
+        ml_3_link.addEventListener('click', function (event) {
+            // Prevent the default action of the hyperlink
+            event.preventDefault();
+            
+            // Toggle mobile menu and other effects
+            toggleMobileMenu();
+    
+            // Scroll to SERVICES page section 
+            const part6Section = document.querySelector('.Part6');
+            part6Section.scrollIntoView({ behavior: 'smooth' });
+        });
+    
+    
+        // Event listener for clicking on Ml_3 hyperlink
+        ml_4_link.addEventListener('click', function (event) {
+            // Prevent the default action of the hyperlink
+            event.preventDefault();
+            
+            // Toggle mobile menu and other effects
+            toggleMobileMenu();
+    
+            // Scroll to SERVICES page section 
+            const part7Section = document.querySelector('.Starting_Part7');
+            part7Section.scrollIntoView({ behavior: 'smooth' });
+        });
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //THIS IS THE SLIDER ON THE SERVICES SECTION (PART 6)
+    
+    
+    const initSlider2 = () => {
+        const cardsList = document.querySelector(".left-part .cards-library");
+        const slideButtons = document.querySelectorAll(".left-part .slide-button");
+        const scrollbar = document.querySelector(".main-card .right-part");
+        const thumb = scrollbar.querySelector(".scrollbar");
+        const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
+    
+        // Handle scrollbar thumb drag
+        thumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = thumb.offsetLeft;
+            const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
+    
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+    
+                thumb.style.left = `${boundedPosition}px`;
+                cardsList.scrollLeft = scrollPosition;
+            }
+    
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+    
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+    
+        // Slide cards on button click
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = cardsList.clientWidth * direction;
+                cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+    
+        // Show or hide slide buttons based on scroll position
+        const handleSlideButtons = () => {
+            slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
+            slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+        }
+    
+        // Update scrollbar thumb position based on cards scroll
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = cardsList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
+            thumb.style.left = `${thumbPosition}px`;
+        }
+    
+        // Call functions when cards list scrolls
+        cardsList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    }
+    
+    window.addEventListener("resize", initSlider2);
+    window.addEventListener("load", initSlider2);
+    
+    
+    
+    
+    
+    
+    
+    
+    //THIS IS THE SLIDER ON THE SKILLS SECTION (PART 5)
+    
+    const initSlider = () => {
+        const imageList = document.querySelector(".Left_part5a .Cards_library");
+        const slideButtons = document.querySelectorAll(".Left_part5a .Slide_Button");
+        const sliderScrollbar = document.querySelector(".Main_card5 .Right_part5a");
+        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar_og");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+    
+        // Handle scrollbar thumb drag
+        scrollbarThumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = scrollbarThumb.offsetLeft;
+            const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
+    
+            // Update thumb position on mouse move
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+    
+                // Ensure the scrollbar thumb stays within bounds
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+    
+                scrollbarThumb.style.left = `${boundedPosition}px`;
+                imageList.scrollLeft = scrollPosition;
+            }
+    
+            // Remove event listeners on mouse up
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+    
+            // Add event listeners for drag interaction
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+    
+        // Slide images according to the slide button clicks
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+    
+        // Show or hide slide buttons based on scroll position
+        const handleSlideButtons = () => {
+            slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
+            slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+        }
+    
+        // Update scrollbar thumb position based on image scroll
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = imageList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+            scrollbarThumb.style.left = `${thumbPosition}px`;
+        }
+    
+        // Call these two functions when image list scrolls
+        imageList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    
+        
+    }
+    
+    window.addEventListener("resize", initSlider);
+    window.addEventListener("load", initSlider);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK PROJECTS IS CLICKED
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var buttons = document.querySelectorAll(".link2");
+    
+    
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                
+                // Get the element with class name "Part3"
+                var targetSection = document.querySelector(".Part3");
+    
+                // Check if the target section exists
+                if (targetSection) {
+                    // Calculate the distance to scroll
+                    var scrollToY = targetSection.offsetTop;
+    
+                    // Smooth scroll to the element
+                    window.scrollTo({
+                        top: scrollToY,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    
+    
+    // THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK SERVICES IS CLICKED
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var buttons = document.querySelectorAll(".link3");
+    
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                
+                // Get the element with class name "Part6"
+                var targetSection = document.querySelector(".Part6");
+    
+                // Check if the target section exists
+                if (targetSection) {
+                    // Calculate the distance to scroll
+                    var scrollToY = targetSection.offsetTop;
+    
+                    // Smooth scroll to the element
+                    window.scrollTo({
+                        top: scrollToY,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    
+    
+    
+    // THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK CONTACT IS CLICKED
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var buttons = document.querySelectorAll(".link4");
+    
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                
+                // Get the element with class name "Part7"
+                var targetSection = document.querySelector(".Part7");
+    
+                // Check if the target section exists
+                if (targetSection) {
+                    // Calculate the distance to scroll
+                    var scrollToY = targetSection.offsetTop;
+    
+                    // Smooth scroll to the element
+                    window.scrollTo({
+                        top: scrollToY,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    
+    
+    
+    
+    // THIS HELPS THAT WHEN I SCROLL, I SEE THE SCROLL TOOL THAT ENABLES ME BACK AT THE TOP OF THE PAGE
+    
+    window.addEventListener('scroll', function() {
+        var returnToTop = document.getElementById('returnToTop');
+        var hisha = document.querySelector('.navigation_links');
+        var flacko = document.querySelector('.Everything_is_here');
+        var centerImg = document.querySelector('.center_img');
+    
+        var hishaRect = hisha.getBoundingClientRect();
+        var flackoRect = flacko.getBoundingClientRect();
+        var centerImgRect = centerImg.getBoundingClientRect();
+    
+        // If Flacko is in view and center_img is not in view, show the returnToTop button, otherwise hide it
+        if ((flackoRect.top <= window.innerHeight && flackoRect.bottom >= 0) && 
+            !(centerImgRect.top <= window.innerHeight && centerImgRect.bottom >= 0)) {
+          returnToTop.style.display = 'block';
+          setTimeout(function() {
+            returnToTop.style.opacity = 1;
+          }, 1000);
+        } else {
+          returnToTop.style.opacity = 0;
+          setTimeout(function() {
+            returnToTop.style.display = 'none';
+          }, 3);
+        }
+    });
+    
+    
+    
+    
+    
+    
+    
+      // WHEN THE BUTTON IS CLICKED, WE GO BACK UP TO THE TOP PAGE
+    
+      document.addEventListener("DOMContentLoaded", function() {
+        var returnToTop = document.getElementById('returnToTop');
+        returnToTop.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+    
+            // Get the element with class name "Flacko"
+            var targetSection = document.querySelector("body");
+    
+            // Check if the target section exists
+            if (targetSection) {
+                // Calculate the distance to scroll
+                var scrollToY = targetSection.offsetTop;
+    
+                // Smooth scroll to the element
+                window.scrollTo({
+                    top: scrollToY,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    
+    
+    
+    
+        // HEADING (h1, h2) TRANSITIONS  
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        const headings = document.querySelectorAll('.heading');
+        headings.forEach((heading, index) => {
+            setTimeout(() => {
+                heading.classList.add('show-heading');
+            }, index * 1300); // Adjust the delay here (multiplied by index)
+        });
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // THE PARAGRAPH TRANSITIONS (but from left to right)
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the paragraph element
+        var paragraph = document.getElementById("animated-paragraph");
+        
+        // Get the text content of the paragraph
+        var text = paragraph.textContent;
+        
+        // Clear the paragraph content
+        paragraph.textContent = "";
+        
+        // Iterate through each character of the text
+        for (var i = 0; i < text.length; i++) {
+            // Create a span element for each character
+            var span = document.createElement("span");
+            span.textContent = text[i];
+            
+            // Set the animation delay for each span element
+            span.style.animationDelay = (i * 0.1) + "s"; // Adjust the delay as needed
+            
+            // Append the span element to the paragraph
+            paragraph.appendChild(span);
+        }
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        let lazyImages = document.querySelectorAll('.back');
+    
+        let options = {
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+    
+        let observer = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    let img = entry.target;
+                    img.src = img.dataset.src;
+                    observer.unobserve(img);
+                }
+            });
+        }, options);
+    
+        lazyImages.forEach(function(img) {
+            observer.observe(img);
+        });
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // THE SOCIAL MEDIA SMOOTH TRANSITIONS
+    
+    window.addEventListener('load', function() {
+        // Select the wrapper element
+        const wrapper = document.querySelector('.wrapper');
+        // Initially set opacity to 0 and visibility to hidden
+        wrapper.style.opacity = '0';
+        wrapper.style.visibility = 'hidden';
+        // Show the wrapper after a delay 
+        setTimeout(function() {
+            // Change opacity from 0 to 1 gradually over 1 second
+            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+            wrapper.style.opacity = '1';
+            wrapper.style.visibility = 'visible'; // Make the content visible
+        }, 3000);
+    });
+    
+    
+    
+    
+    
+    
+    // SMOOTH TRANSITION FOR THE BUTTON
+    
+    window.addEventListener('load', function() {
+        // Select the wrapper element
+        const wrapper = document.querySelector('.coffee-button');
+        // Initially set opacity to 0 and visibility to hidden
+        wrapper.style.opacity = '0';
+        wrapper.style.visibility = 'hidden';
+        // Show the wrapper after a delay 
+        setTimeout(function() {
+            // Change opacity from 0 to 1 gradually over 1 second
+            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+            wrapper.style.opacity = '1';
+            wrapper.style.visibility = 'visible'; // Make the content visible
+        }, 3500);
+    });
+    
+    
+    
+    
+    // SMOOTH TRANSITION FOR THE RIGHT ME PHOTO
+    
+    window.addEventListener('load', function() {
+        // Select the wrapper element
+        const wrapper = document.querySelector('.image-container img');
+        // Initially set opacity to 0 and visibility to hidden
+        wrapper.style.opacity = '0';
+        wrapper.style.visibility = 'hidden';
+        // Show the wrapper after a delay 
+        setTimeout(function() {
+            // Change opacity from 0 to 1 gradually over 1 second
+            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+            wrapper.style.opacity = '1';
+            wrapper.style.visibility = 'visible'; // Make the content visible
+        }, 3500);
+    });
+    
+    
+     
+    // SMOOTH TRANSITION FOR THE NAVIGATION LINKS
+    
+    window.addEventListener('load', function() {
+        // Select the wrapper element
+        const wrapper = document.querySelector('.desk_links');
+        // Initially set opacity to 0 and visibility to hidden
+        wrapper.style.opacity = '0';
+        wrapper.style.visibility = 'hidden';
+        // Show the wrapper after a delay 
+        setTimeout(function() {
+            // Change opacity from 0 to 1 gradually over 1 second
+            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+            wrapper.style.opacity = '1';
+            wrapper.style.visibility = 'visible'; // Make the content visible
+        }, 2000);
+    });
+    
+    
+    
+    
+    // SMOOTH TRANSITION FOR THE MIDDLE TRANSPARENT PAGE
+    
+    window.addEventListener('load', function() {
+        // Select the wrapper element
+        const wrapper = document.querySelector('.center_img');
+        // Initially set opacity to 0 and visibility to hidden
+        wrapper.style.opacity = '0';
+        wrapper.style.visibility = 'hidden';
+        // Show the wrapper after a delay 
+        setTimeout(function() {
+            // Change opacity from 0 to 1 gradually over 1 second
+            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+            wrapper.style.opacity = '1';
+            wrapper.style.visibility = 'visible'; // Make the content visible
+        }, 1000);
+    });
+    
+    
+    
+    
+    
+    // SMOOTH TRANSITION FOR THE BACK IMAGE
+    
+    window.addEventListener('load', function() {
+        // Select the wrapper element
+        const wrapper = document.querySelector('.back_img');
+        // Initially set opacity to 0 and visibility to hidden
+        wrapper.style.opacity = '0';
+        wrapper.style.visibility = 'hidden';
+        // Show the wrapper after a delay 
+        setTimeout(function() {
+            // Change opacity from 0 to 1 gradually over 1 second
+            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
+            wrapper.style.opacity = '1';
+            wrapper.style.visibility = 'visible'; // Make the content visible
+        }, 200);
+    });
+    
+    
+    
+    // DOWNLOADING THE CV
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var downloadButton = document.getElementById('downloadButton');
+        downloadButton.addEventListener('click', function() {
+            // Notify the user before downloading
+            var CV = confirm("Are you sure you want to download this CV ?");
+            
+            // If the user confirms, proceed with downloading
+            if (CV) {
+                // Fetch the file content
+                fetch('https://i.imgur.com/it7BCwG.png')
+                    .then(response => response.blob())
+                    .then(blob => {
+                        // Create a Blob URL for the file content
+                        var url = URL.createObjectURL(blob);
+                        
+                        // Create an anchor element
+                        var link = document.createElement('a');
+                        link.setAttribute('href', url);
+                        link.setAttribute('download', 'CV_Remy.jpg');
+                        link.style.display = 'none';
+                        document.body.appendChild(link);
+                        
+                        // Simulate a click on the anchor element
+                        link.click();
+                        
+                        // Clean up by revoking the Blob URL
+                        URL.revokeObjectURL(url);
+    
+                        // Disable the download button after the download is complete
+                        downloadButton.disabled = true;
+    
+                        // Change the text of the button
+                        downloadButton.textContent = "Downloaded successfully!";
+                        
+                        // Add the completed class to the button
+                        downloadButton.classList.add('completed');
+                        
+                        // Increase the width of .coffee_button
+                        var coffeeButton = document.querySelector('.coffee-button');
+                        coffeeButton.style.width = '180px';
+                        
+                        var buymecoffee = document.querySelector('.Buy_me_coffee');
+                        buymecoffee.style.paddingLeft = '13%';
+                    })
+                    .catch(error => {
+                        console.error('Error occurred while downloading:', error);
+                    });
+            }
+        });
+    });
+    
+    
+    </script>
+    <!--------------------------------------MY JS ENDS RIGHT HERE !!!!--------------------------------------->
+    
 </html>
 
