@@ -4529,30 +4529,7 @@ input:focus
 
                         <div class="Right_section">
                         
-                            <form class="myForm">
-                                <div class="row">
-                                    <div class="Name_Email">
-                                        <div class="Name">
-                                            <h2 class="heading_text7a">Name</h2>
-                                            <!-- Add name attribute for the name input field -->
-                                            <input type="text" class="name" name="name" placeholder="Your name" required>
-                                        </div>
-                                        <div class="Email">
-                                            <h2 class="heading_text7a">Email</h2>
-                                            <!-- Add name attribute for the email input field -->
-                                            <input type="email" class="email" name="email" placeholder="Email address" required>
-                                        </div>
-                                    </div>
-                                    <div class="Message">
-                                        <h2 class="heading_text7a">Message</h2>
-                                        <!-- Add name attribute for the message input field -->
-                                        <input class="text_area message" type="text" name="message" placeholder="Message" required>
-                                    </div>
-                                    <div class="Send">
-                                        <button type="submit" class="button_7">Send<i class="icon2 fa fa-paper-plane" style="margin-left: 12px;"></i></button>
-                                    </div>
-                                </div>
-                            </form>
+
                             
                             
 
@@ -4602,13 +4579,16 @@ input:focus
         // Fetch form data
         const formData = new FormData(this);
 
+
+
+
         // Ensure that the FormData object contains fields with the expected keys
         formData.set('name', formData.get('name')); // Set 'name' key
         formData.set('email', formData.get('email')); // Set 'email' key
         formData.set('message', formData.get('message')); // Set 'message' key
 
         // Send form data to the server
-        const response = await fetch('https://shocking-cute-sight.glitch.me/submit', {
+        const response = await fetch('http://127.0.0.1:5500/submit', {
             method: 'POST',
             body: formData
         });
@@ -4630,7 +4610,6 @@ input:focus
         alert('There was an error submitting the form. Please try again later.');
     }
 });
-
     
     
     

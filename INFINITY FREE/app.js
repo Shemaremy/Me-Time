@@ -13,12 +13,30 @@
  3) npm install dotenv
 
 
-*/
+ 4) npm install @sendgrid/mail
 
+
+ 5) npm install multer
+
+
+ 6) npm install express-validator
+
+
+ 7) npm install cookie-parser
+
+
+ 8) npm install express-session
+
+*/
 
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const sgMail = require('@sendgrid/mail');
+const multer = require('multer');
+const { body, validationResult } = require('express-validator');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -29,6 +47,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Enable CORS
 app.use(cors());
+
+// Set SendGrid API key
+sgMail.setApiKey('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');
 
 // Define route handler for the root URL ("/")
 app.get('/', (req, res) => {
@@ -41,14 +62,27 @@ app.post('/submit', (req, res) => {
     const email = req.body.email;
     const message = req.body.message;
 
-    // Do something with the submitted data (e.g., send it via email, save it to a database)
-    console.log('Received form submission:');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    // Send email with form data
+    const msg = {
+        to: 'shemaremy2003@gmail.com', // Change this to the recipient's email address
+        from: 'remyshema20@gmail.com', // Use the email provided in the form submission
+        subject: 'New Form Submission',
+        html: `
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Message:</strong> ${message}</p>
+        `
+    };
 
-    // Send a response back to the client
-    res.send('Form submitted successfully!');
+    sgMail.send(msg)
+        .then(() => {
+            console.log('Email sent successfully');
+            res.send('Form submitted successfully and email sent!'+ name);
+        })
+        .catch((error) => {
+            console.error('Error sending email:', error);
+            res.status(500).send('Error sending email');
+        });
 });
 
 // Start the server
