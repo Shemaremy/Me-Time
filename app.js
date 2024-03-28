@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Load SendGrid API key from environment variables
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
