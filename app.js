@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set SendGrid API key from environment variable
-sgMail.setApiKey(process.env.SENDGRID_API_KEY || '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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
 // Define route handler for the root URL ("/")
 app.get('/', (req, res) => {
