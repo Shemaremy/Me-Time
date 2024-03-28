@@ -17,10 +17,10 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
 
 // Define route handler for the root URL ("/")
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello World!'); 
 });
-
-// Form validation middleware
+  
+// Form validation middleware  
 const validateForm = [
   body('name').trim().notEmpty().withMessage('Name is required'),
   body('email').trim().isEmail().withMessage('Invalid email'),
