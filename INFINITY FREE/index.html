@@ -5890,10 +5890,52 @@ input:focus        /*WHILE INPUTING*/
     
  
     
-
-    // DOWNLOADING THE ESSENTIAL FILES ON THE CERTIFICATIONS SECTION
-
     
+
+    // DOWNLOADING THE ESSENTIAL DOCUMENTS IN CERTIFICATIONS SECTION 
+    
+   document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the button with id 'Essentials'
+    var downloadButton_1 = document.getElementById('Essentials');
+    downloadButton_1.addEventListener('click', function() {
+        // Notify the user before downloading
+        var CV_1 = confirm("You are about to Download the Essential files. Click Ok to proceed");
+
+        // If the user confirms, proceed with downloading
+        if (CV_1) {
+            // Fetch the file content
+            fetch('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Files%20Remy.zip')
+                .then(response_1 => response_1.blob())
+                .then(blob_1 => {
+                    // Create a Blob URL for the file content
+                    var url_1 = URL.createObjectURL(blob_1);
+
+                    // Create an anchor element
+                    var link_1 = document.createElement('a');
+                    link_1.setAttribute('href', url_1);
+                    link_1.setAttribute('download', 'Essential Files Remy');
+                    link_1.style.display = 'none';
+                    document.body.appendChild(link_1);
+
+                    // Simulate a click on the anchor element
+                    link_1.click();
+
+                    // Clean up by revoking the Blob URL
+                    URL.revokeObjectURL(url_1);
+
+                    // Disable the download button after the download is complete
+                    downloadButton_1.disabled = true;
+
+                })
+                .catch(error_1 => {
+                    console.error('Error occurred while downloading:', error_1);
+                });
+        }
+    });
+});
+
+           
+          
 
     </script>
     <!--------------------------------------MY JS ENDS RIGHT HERE !!!!--------------------------------------->
