@@ -67,7 +67,7 @@
 body
 {
     position: relative;
-    height: 795vh;
+    height: 650vh;
     background-color: aliceblue;
     overflow: hidden;
     display: flex;
@@ -85,6 +85,7 @@ body
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -104,7 +105,7 @@ body
     border-style: solid;
     border-width: 0px;
     border-color: black;
-    border-radius: 5px;
+    border-radius: 0px;
     position: relative;
     background-color: rgba(240, 248, 255, 0.212);
     overflow: hidden;
@@ -113,11 +114,11 @@ body
     margin: 0 auto;
     align-items: center;
     justify-content: center;
-    width: 95%;
-    height: 790vh;
-    box-shadow:  0 0 13px rgba(0, 0, 0, 0.432);
-    margin-bottom: 20px;
-    margin-top: 10px;
+    width: 100%;
+    height: 650vh;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow-x: hidden;
 
 
     @media (max-width: 767px)     /* Mobile devices */
@@ -157,6 +158,11 @@ body
     opacity: 0;
     transition: opacity 0.1s ease;
     border: none;
+
+    @media (max-width: 767px)
+    {
+        display: none;
+    }
     
 }
 
@@ -165,6 +171,11 @@ body
     font-size: 30px;
     color: rgba(32, 32, 32, 0.603);
     transition: color 0.1s ease;
+
+    @media (max-width: 767px)
+    {
+        display: none;
+    }
 }
 
 .back_top:hover
@@ -176,8 +187,8 @@ body
 
 .Divisor
 {
-    margin-top: 2%;
-    margin-bottom: 4%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     width: 40%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -239,6 +250,7 @@ body
     transform: translateX(-50%);
     animation-duration: 5000s;
     background-color:  #4caa2f2d;
+    display: none;
 }
 
   
@@ -300,6 +312,7 @@ body
   }
 
   .triangle3 {
+    display: none;
     position: absolute;
     bottom: 99%;
     left: 97%;
@@ -361,6 +374,7 @@ body
 
   .green-line1 
   {
+    display: none;
     width: 40px; /* Length of the line */
     height: 1px; /* Thickness of the line */
     background-color: rgba(0, 128, 0, 0.247);
@@ -378,6 +392,7 @@ body
 
   .green-line2 
   {
+    display: none;
     width: 40px; /* Length of the line */
     height: 1px; /* Thickness of the line */
     background-color: rgba(0, 128, 0, 0.24);
@@ -456,7 +471,7 @@ body
 .center_img
 {
     width: 100%; /* Adjust the width as needed */
-    height: 14%;
+    height: 17%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(138, 138, 138, 0.199);
     margin-bottom: 5px;
@@ -464,7 +479,7 @@ body
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 0px;
-        height: 14%;
+        height: 15%;
     }
 }
 
@@ -497,7 +512,7 @@ body
 		padding-right: 32px;
         height: 70px;
         display: flex;
-        background-color: rgb(170, 170, 170);
+        background-color: rgb(197, 197, 197);
         overflow-x: hidden;
     }
 }
@@ -640,7 +655,7 @@ header
     margin: 0 10px;
     padding: 0.5% 1%;
     font-family: 'Orbitron', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     position: relative;
 
     @media (max-width: 767px)     /* Mobile devices */
@@ -704,7 +719,7 @@ header
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 60px;
     }
 }
 
@@ -724,13 +739,21 @@ header
     margin-left: 5%;
     overflow: hidden;
 
+    @media (min-width: 768px) and (max-width: 1212px)
+    {
+        margin-left: 0;
+        width: 60%;
+        padding-right: 0;
+    }
+
     @media (max-width: 767px)     /* Mobile devices */
     {
         height: 100%;
         width: 100%;
         margin-left: 0;
         padding-right: 0;
-        margin-top: 13%;
+        margin-top: 80%;
+        margin-bottom: 0;
         display: flex;
         flex-direction: column;
         margin: 0 auto;
@@ -746,6 +769,14 @@ header
     margin-left: 6.8%;
     color: #000000d3;
 
+
+    @media (min-width: 768px) and (max-width: 1212px)   /* Tablets and small laptops */
+    {
+        margin-left: 0;
+        width: 100%;
+        padding-left: 13%;
+    }
+
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-left: 0;
@@ -760,6 +791,13 @@ header
     }
 }
 
+@media (min-width: 768px) and (max-width: 1212px)
+{
+    .heading
+    {
+        width: 80%;
+    }
+}
 
 .First_headings h2
 {
@@ -767,6 +805,11 @@ header
     font-family: Arial, sans-serif;
     font-weight: 500;
     font-size: 50px;
+
+    @media (min-width: 768px) and (max-width: 1212px)
+    {
+        font-size: 45px;
+    }
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -780,9 +823,20 @@ header
     margin-bottom: 2%;   
     margin-top: 1%; /* Adjust the value as needed */
     font-family: 'Orbitron', sans-serif;
-    font-size: 60px;    
-    background-color: rgba(255, 0, 0, 0);
+    font-size: 60px;
     width: 100%;
+
+    @media (min-width: 795px) and (max-width: 1212px)
+    {
+        font-size: 55px;
+        width: 90%;
+    }
+
+    @media (min-width: 768px) and (max-width: 794px)
+    {
+        font-size: 54px;
+    }
+
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -829,9 +883,10 @@ header
 .small_paragraph
 {
     font-family: 'Caveat', cursive;
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 100;
     margin-bottom: 2%;
-    background-color: rgba(255, 255, 0, 0);
+    color: #000000c4;
     width: 80%;
     margin-left: 5%;
 
@@ -896,7 +951,8 @@ header
 
 .coffee-button 
 {
-    font-weight: 550;
+    font-weight: 100;
+    font-size: 11px;
     color:rgba(0, 0, 0, 0.808);
     border-radius: 20px; /* Rounded corners */
     padding: 13px; /* Padding for button */
@@ -904,20 +960,21 @@ header
     border-style: solid;
     border-width: 1px;
     cursor: pointer; /* Show pointer cursor on hover */
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.295);
     background-color: rgba(0, 184, 0, 0.062);
     border-color: rgba(0, 184, 0, 0.74);
-
     transition: background-color 0.7s ease;
+    width: 100%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
         background-color: rgba(0, 184, 0, 0.116);
         border-color: rgba(0, 184, 0, 0.74);
         border-radius: 30px;
-        padding: 20px;
+        padding: 15px;
         font-weight: 400;
+        font-size: 10px;
         width: 40%;
+        box-shadow: none;
     }
         
 }
@@ -929,19 +986,26 @@ header
 
 .coffee-button:active /* When clicked man */
 {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 3); /* Add box shadow on click */
+    @media (max-width: 767px)
+    {
+        background-color: rgba(0, 184, 0, 0.308);
+    }
+
+    box-shadow: 0 0 1px rgba(0, 0, 0, 3); /* Add box shadow on click */
    
 }
 
 #downloadButton.completed 
 {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 184, 0, 0.068);
+    border-color: rgba(0, 116, 52, 0.74);
+    margin-right: 45%;
     cursor: not-allowed;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        background-color: rgba(0, 184, 0, 0);
-        border-color: rgba(0, 126, 184, 0.74);
+        background-color: rgba(0, 184, 0, 0.068);
+        border-color: rgba(0, 116, 52, 0.74);
         border-radius: 30px;
         padding: 12px;
         font-weight: 400;
@@ -958,6 +1022,37 @@ header
     color: rgba(0, 34, 0, 0.678);
 }
 
+.Hire_me_and_Github
+{
+    display: none;
+    
+    @media (max-width: 767px)
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        height: 30px; 
+        margin-top: 20%;
+        margin-left: 7%;
+    }
+}
+
+.Hire_me_p, .Github_ico
+{
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.Github_ico, .fab
+{
+    font-size: 16px;
+}
+
+
+
 
 .social_media
 {
@@ -967,7 +1062,7 @@ header
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 2%;
+  padding-left: 3%;
   padding-top: 5%;
 
   @media (max-width: 767px)     /* Mobile devices */
@@ -1005,17 +1100,23 @@ header
 }
 
 
-.fab
+.ico_1 
 {
-    font-size: 16px;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.863);
+    text-align: center;
+    margin: 0 auto;
+    padding: 4px;
+    margin-bottom: 0;
 }
 
-.fab:hover
+.ico_1:hover
 {
     color: rgba(0, 0, 0, 0.863);
-    box-shadow:  0 0 50px rgb(0, 253, 63);
+    box-shadow:  0 0 40px rgb(0, 253, 63);
 }
+
+
 
 
 
@@ -1035,6 +1136,13 @@ header
     border-color: rgba(240, 248, 255, 0);
     margin-right: 2%;
 
+    @media (min-width: 768px) and (max-width: 1212px)
+    {
+        width: 40%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     @media (max-width: 767px)     /* Mobile devices */
     {
         display: none;
@@ -1044,14 +1152,14 @@ header
 
 .My_photo
 {
-    height: 80%;
+    height: 70%;
     width: 70%;
     background-color: rgba(127, 255, 212, 0);
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
     border-color: rgba(240, 248, 255, 0);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.13);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.13);
 }
 
 
@@ -1104,22 +1212,32 @@ header
 
 .Part2
 {
-    width: 98%;
+    width: 95%;
     height: 10%;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.274);
     position: relative;
-    background-color: rgba(0, 139, 252, 0);
+    background-color: rgba(88, 114, 136, 0.075);
     margin-bottom: 0px;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #00000000;
+
 
     @media (max-width: 767px)     /* Mobile devices */
     {
         height: 7%;
+        box-shadow: none;
+        border-radius: 1px;
+        width: 100%;
     }
 }
 .Two_Parts2
 {
     display: flex;
     flex-direction: row;
+    margin-bottom: 0;
+    margin-top: 4%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -1133,7 +1251,7 @@ header
 .Left_part2
 {
     overflow: hidden;
-    height: 70vh;
+    height: 40vh;
     width: 40%;
     display: flex;
     justify-content: center;
@@ -1141,20 +1259,22 @@ header
     flex-direction: column;
     margin: 0 auto;
     background-color: rgba(43, 255, 0, 0);
-    margin-top: 0;
-
+    margin-top: 4%;
+    padding-left: 9%;
+    
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 40%;
         height: 30vh;
-        margin-left: 3%;
+        margin-left: 0;
+        padding-left: 4%;
     }
 }
 
 .About_Photo
 {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     background-color: rgb(189, 189, 189);
     border-style: solid;
     border-width: 1px;
@@ -1172,7 +1292,7 @@ header
 
 .Download_cv
 {
-    margin-top: 10%;
+    margin-top: 5%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -1180,37 +1300,46 @@ header
     }
 }
 
-.Download_cv2
+.Download_cv2a
 {
     padding: 9px;
     border-style: solid;
     border-radius: 20px;
     border-width: 1px;
-    border-color: white;
-    background-color: rgba(0, 185, 0, 0.425);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.37);
-    width: 130px;
-    height: 40px;
-    font-size: 13px;
-
+    border-color: rgb(64, 255, 47);
+    background-color: rgba(102, 255, 0, 0.075);
+    width: 90px;
+    padding: 3px;
+    font-size: 9px;
+    font-weight: 100;
+    cursor: pointer;
+    width: 70px;
 }
+
+.Download_cv2a:hover
+{
+    background-color: rgba(102, 255, 0, 0.281);
+}
+
+
 
 .Right_part2
 {
     overflow: hidden;
-    height: 70vh;
+    height: 50vh;
     width: 60%;
-    background-color: rgba(251, 255, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 7%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
         font-size: 30px;
         height: 230px;
         width: 60%;
+        padding-right: 0;
     }
 }
 
@@ -1223,10 +1352,10 @@ header
 
 .About_me_header
 {
-    font-size: 30px;
-    margin-bottom: 2%;
+    font-size: 20px;
+    margin-bottom: 3%;
     margin-top: 0%;
-    margin-right: 350px;
+    margin-right: 300px;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -1241,20 +1370,20 @@ header
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70%;
+    height: 95%;
     width: 80%;
     border-style: solid;
     border-width: 1px;
     border-radius: 30px 0px 30px 0px;
-    border-color: rgba(56, 56, 56, 0.993);
+    border-color: rgba(56, 56, 56, 0);
     margin-bottom: 20px;
     background-color: rgba(224, 224, 224, 0);  
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.342); 
+    box-shadow:  0 0 5px rgba(0, 0, 0, 0.342); 
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 90%;
-        height: 70%;
+        width: 95%;
+        height: 80%;
         border-radius: 0;
         margin-top: 0px;
         box-shadow: none;
@@ -1263,6 +1392,7 @@ header
         border-right: none;
         border: none;
         margin-right: 0;
+        margin-top: 5%;
         padding-right: 0;
         padding-top: 0;
     }
@@ -1273,16 +1403,21 @@ header
 
 .About_me_par
 {
-    background-color: rgba(255, 0, 0, 0);
     width: 85%;
     height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 90%;
-        margin-top: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 50%;
         padding-top: 0;
-        padding-bottom: 5%;
+        padding-bottom: 0;
     }
 }
 
@@ -1292,11 +1427,14 @@ header
     font-weight: 400;
     font-style: normal;
     color: rgba(0, 0, 0, 0.849);
-    font-size: 15px;
+    font-size: 12px;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        font-size: 13px;
+        font-size: 10px;
+        width: 80%;
+        height: 100%;
+        margin-top: 0;
     }
 }
 
@@ -1351,13 +1489,14 @@ header
     border-style: solid;
     border-width: 1px;
     border-radius: 0px;
-    border-color: rgba(0, 128, 0, 0);
+    border-color: rgb(255, 255, 255);
     
     margin-top: 0%;
 
     @media only screen and (max-width: 767px) 
     {
         height: 16%;
+        background-color: rgba(215, 223, 230, 0.507);
     }
 }
 
@@ -1366,28 +1505,33 @@ header
 {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    margin-bottom: 0;
 
     @media only screen and (max-width: 767px) 
-{
-      margin-top: 13%;
-}
+    {
+        margin-top: 0%;
+    }
 }
 
 .Left_part3
 {
-    width: 80%;
-    height: 22vh;
-    background-color: rgba(76, 10, 138, 0);
+    width: 95%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @media only screen and (max-width: 767px) 
-{
+   {
     margin-bottom: 0;
     padding-bottom: 0;
+    width: 100%;
     height: 110px;
-}
+   }
 
 }
 
@@ -1406,7 +1550,6 @@ header
 {
     font-size: 40px;
     margin-bottom: 0;
-    margin-top: 6%;
 }
 
 .My_proj_Paragraph
@@ -1427,159 +1570,258 @@ header
 
 .Right_part3
 {
-    width: 100%;
-    height: 90vh;
-    margin-top: 0;
-    background-color: rgba(0, 0, 255, 0);
-}
-
-.Third
-{
-    height: 78vh;
-    width: 85%;
-
-    background-color: none;
-    border-radius: 1px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    margin: 0;
-    padding: 0;
-    margin: auto;
-    margin-top: 13px;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-    background-color: rgba(223, 232, 255, 0.089);
-    box-shadow:  0px 0px 5px rgba(0, 0, 0, 0.438);
-
-    overflow-y: auto;
-    scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
-
-    
-    border-left: none;
-    border-right: none;
-
-    overflow: hidden;
-    overflow-y: scroll;
-
-
- @media only screen and (max-width: 767px)
-{
-        margin: 0 auto 13px auto; /* Changed margin to shorthand format */
-        justify-content: flex-start; /* Changed justify-content to flex-start */
-        flex-wrap: nowrap; /* Prevent wrapping of items */
-        background-color: rgba(233, 239, 255, 0.089);
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
-        overflow-x: auto; /* Changed overflow-y to overflow-x for horizontal scrolling */
-        scrollbar-width: thin; /* For Firefox */
-        scrollbar-color: rgba(0, 156, 117, 0) rgba(0, 0, 0, 0);
-        border-left: none;
-        border-right: none;
-        box-shadow: none;
-        border-radius: 1px;
-        border-color: rgba(0, 0, 0, 0);
-        margin-top: 0;
-        width: 99.5%;
-        height: 50vh;
-        border-width: 1px;
-        overflow-y: hidden; 
-
-}
-
-}
-
-
-
-/* For WebKit (Chrome, Safari) */
-.Third::-webkit-scrollbar {
-    width: 5px; /* Width of the scrollbar */
-    height: 2px;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-/* Track */
-.Third::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0); /* Color of the track */
-}
-
-/* Handle */
-.Third::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0); /* Color of the handle */
-}
-
-
-
-.all3 {
-    position: relative;
+    width: 95%;
+    height: 70vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    
-    padding: 5px;
+    margin: 0 auto;
 
-    @media only screen and (max-width: 767px)
+    @media (max-width: 767px)
     {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
         margin-left: 0;
+        width: 99%;
     }
+    
 }
 
-.one, .two, .three, .four, .five, .six 
-{
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.692);
-    height: 250px;
-    width: 48%;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+.main-card-3 {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 95%; 
-        height: 330px;  
+        width: 100%;
+        height: 100%;
+        
+    }
+
+}
+
+.left-part-3 {
+    position: relative;
+    width: 80%;
+
+    @media (max-width: 767px)
+    {
+        width: 100%;
+        border-radius: 1px;
+    }
+
+}
+
+.slide-button-3 {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #00000049;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.chev-icon-3 {
+    font-size: 15px;
+}
+
+.slide-button-3:hover {
+    background: #404040;
+}
+
+#prev-slide-3 {
+    left: -105px;
+    display: none;
+}
+
+#next-slide-3 {
+    right: -105px;
+}
+
+.cards-library-3 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 0px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-left: 20px;
+    width: 100%;
+    box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #ffffff;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        background-color: rgba(109, 128, 0, 0.151);
+        height: 60vh;
+        overflow-y: hidden;
+        margin-right: 0;
+        display: grid;
+        align-items: center;
+        margin: 0 auto;
+        background-color: rgba(102, 102, 102, 0.096);
+        border-radius: 1px;
+        width: 100%;
+    }
+}
+
+.cards-library-3::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
+.right-part-3 {
+    height: 0px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.scrollbar-container-3 {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+
+    @media (max-width: 767px)
+    {
+        display: none;
+    }
+}
+
+.scrollbar-container-3:hover {
+    height: 4px;
+}
+
+.scrollbar-3 {
+    position: absolute;
+    background: #000000;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+
+.scrollbar-3:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.scrollbar-3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.card-3 {
+    height: 380px; 
+    width: 550px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+    @media only screen and (max-width: 767px) 
+    {
+        width: 405px;
+        height: 380px;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+
+}
+
+.card-content-3 {
+    height: 80%;
+    width: 100%;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.233);
+    border-width: 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.144);
+    transition: background-color 1s ease;
+    cursor: pointer;
+    margin-right: 4%;
+    margin-left: 4%;
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 95%;
         border-style: solid;
         border-width: 1px;
-        border-color: rgba(255, 255, 255, 0.692);
-        min-width: 48%; /* Changed width to min-width to allow flexibility */
-        margin-top: 10px;
-        margin-bottom: 5px;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.233);
-        flex-shrink: 0; /* Prevent cards from shrinking */
-        margin-right: 40px; /* Add margin between cards */
-        margin-left: 0;
+        border-color: rgba(0, 0, 0, 0.507);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.418);
+        border-radius: 10px;
+        background-color: rgba(138, 138, 138, 0.199);
+        box-shadow: none;
+        
     }
-    
+
 }
 
 
-.one:first-child,
-.two:first-child,
-.three:first-child,
-.four:first-child,
-.five:first-child,
-.six:first-child {
 
-    @media (max-width: 767px)     /* Mobile devices */
-    {
-        margin-left: 10px; /* Add margin to the left of the first card */
-    }
+.card-content-3:hover {
+    transition: 2s ease;
+    background-color: #54ff1125;
 }
 
-.proj_imgs
-{
-    display: none;
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slide-button-3 {
+        display: none !important;
+    }
+
+    .cards-library-3 {
+        gap: 0px;
+        margin-bottom: 15px;
+        padding: 0;
+        scroll-snap-type: x mandatory;
+        padding-left: 0;
+    }
+
+
+    .scrollbar-3 {
+        width: 20%;
+    }
 }
 
 
@@ -1636,16 +1878,16 @@ header
 
 .Part4
 {
-    width: 98%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     height: 17%;
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.288);
-    background-color: rgb(226, 234, 241);
+    background-color: rgb(196, 207, 216);
     margin-top: 0%;
     margin-bottom: 0%;
     border-style: solid;
     border-width: 1px;
-    border-radius: 10px;
-    border-color: rgba(0, 128, 0, 0.192);
+    border-color: rgba(0, 128, 0, 0);
+    box-shadow: none;
 
     
     @media (max-width: 767px)     /* Mobile devices */
@@ -1659,6 +1901,18 @@ header
     }
 
 
+}
+
+
+.Two_Parts4
+{
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 767px) 
+{
+      margin-top: 4%;
+}
 }
 
 .Left_part4
@@ -1676,20 +1930,8 @@ header
     {
         width: 100%;
         margin-top: 0;
-        
     }
 
-}
-
-.Two_Parts4
-{
-    display: flex;
-    flex-direction: column;
-
-    @media only screen and (max-width: 767px) 
-{
-      margin-top: 4%;
-}
 }
 
 .Certifications_header, .Certifications_par
@@ -1714,7 +1956,7 @@ header
 
 .Certifications_par
 {
-    font-size: 13px;
+    font-size: 11px;
     font-family: "Laila", serif;
     font-weight: 300;
     font-style: normal;
@@ -1736,22 +1978,31 @@ header
 .Right_part4
 {
     width: 100%;
-    height: 97vh;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        height: 50vh;
+        height: 58vh;
+        background-color: rgba(192, 192, 192, 0.493);
     }
 }
 
 .Mobile_Divisor2
 {
-    width: 30%;
-    height: 1px;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: rgba(29, 102, 0, 0.445);
-    margin-left: 34%;
+    display: none;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 30%;
+        height: 1px;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: rgba(29, 102, 0, 0.445);
+        margin-left: 34%;
+    }
 }
 
 
@@ -1784,43 +2035,31 @@ header
 
 .certificates_library
 {
-    
-    width: 100%;
-    height: 100px;
-    background-color: none;
-    border-radius: 5px;
+    height: 56vh;
+    width: 80%;
+    border-radius: 1px;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
-    border-left: none;
-    border-right: none;
+
     margin: 0;
     padding: 0;
     margin: auto;
     margin-top: 30px;
     justify-content: space-between; 
     flex-wrap: wrap;
-    background-color: rgba(223, 232, 255, 0.089);
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.438);
    
-    overflow-y: auto;
-    height: 80vh;
-    width: 85%;
+    overflow-y: hidden;
     scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1);
-    
-    background: linear-gradient(45deg, #ff63472a, #4169e133, #32cd3200, #ff8c002a);
+   
     background-size: 400% 400%;
-    animation: gradientShift2 2s ease infinite alternate;
-    background: none;
-    box-shadow: none;
-    background-color: rgba(0, 126, 236, 0);
+
 
     
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-top: 0px;
-        width: 85%;
+        width: 100%;
         height: 58vh;
         border-radius: 1px;
         border-color: rgba(0, 0, 0, 0.377);
@@ -1830,6 +2069,13 @@ header
         border-top: none;
         scrollbar-width: thin; /* For Firefox */
         scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.1);
+        margin-left: 10%;
+        box-shadow: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        
     }
 
   }
@@ -1864,7 +2110,8 @@ header
         padding: 5px;
         overflow-x: auto;
         flex-wrap: nowrap;
-        margin-right: 10px;
+        margin-right: 5%;
+        margin-left: 0;
     }
 
 
@@ -1875,23 +2122,30 @@ header
     border-style: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.479);
-    height: 349px;
+    border-radius: 5px;
+    height: 339px;
     width: 32%;
     margin-top: 10px;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.233);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.233);
     padding-left: 0px;
     left: 0;
     display: flex;
     flex-direction: column;
     transition: background-color 0.5s;
     transition: all 0.3s ease-in-out;
-    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.486);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.349), rgba(0, 0, 255, 0));
+
 
     
     @media (max-width: 767px)     /* Mobile devices */
     {
-        width: 85%; 
-        height: 350px;  
+        width: 70%; 
+        height: 300px;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
         border-style: solid;
         border-width: 1px;
         border-color: rgba(158, 158, 158, 0.692);
@@ -1900,12 +2154,11 @@ header
         padding: 2%;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.233);
         flex-shrink: 0; /* Prevent cards from shrinking */
-        margin-right: 40px; /* Add margin between cards */
-        margin-left: 10px;
         padding-top: 0;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(220, 238, 255, 0.76);
+        margin-left: 10%;
+
+        background-color: rgba(218, 218, 218, 0.493);
+        border-radius: 7px;
     }
 
 }
@@ -1915,10 +2168,15 @@ header
     opacity: 0.5;
 }
 
+.four1, .five1, .six1
+{
+    display: none;
+}
+
 .one1:hover, .two1:hover
 {
     cursor: pointer;
-    transform: translateY(-15px);
+    transform: translateY(-7px);
 
 }
 
@@ -1932,9 +2190,9 @@ header
 .docs
 {
     height: 100%;
-    width: 97%;
+    width: 95%;
     border-style: solid;
-    border-color: rgb(0, 131, 22);
+    border-color: rgba(0, 131, 22, 0);
     border-width: 0.3px;
     border-radius: 3px;
     background-color: none;
@@ -1948,7 +2206,7 @@ header
     
     @media (max-width: 767px)     /* Mobile devices */
     {
-        border-radius: 1px;
+        border-radius: 5px;
         width: 100%;
         height: 100%;
         border-color: rgba(245, 222, 179, 0);
@@ -1968,6 +2226,10 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-bottom: 0;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0, 128, 0, 0);
+        border-radius: 5px;
     }
 
 }
@@ -1987,6 +2249,8 @@ header
    
     flex-direction: column;
     padding: 4%;
+    padding-left: 5%;
+    padding-right: 5%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -2014,40 +2278,47 @@ header
 .inner_cert_par
 {
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   margin-top: 0px;
+  color: rgba(0, 0, 0, 0.623);
 
   @media (max-width: 767px)     /* Mobile devices */
     {
-        font-size: 12px;
+        font-size: 11px;
         margin-bottom: 0;
         width: 100%;
+        color: rgba(0, 0, 0, 0.678);
+        font-family: sans-serif;
     }
 }
 
 .D_Button
 {
-    background-color: rgba(47, 113, 255, 0.13);
+    background-color: rgba(54, 255, 47, 0.082);
     border-style: solid;
     border-color: green;
-    border-radius: 10px;
+    border-radius: 13px;
     border-width: 0.5px;
-    padding: 7px;
+    padding: 4px;
     margin-top: 0px;
     width: 80px;
     cursor: pointer;
     position: relative;
+    font-size: 9px;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
         padding: 5px;
-        font-size: 9px;
+        font-size: 7px;
+        background-color: rgba(0, 128, 0, 0.055);
+        margin-left: 10px;
+        color: rgba(0, 0, 0, 0.74);
     }
 }
 
 .D_Button:hover
 {
-    background-color: rgba(47, 113, 255, 0.329);
+    background-color: rgba(54, 255, 47, 0.329);
     border-style: solid;
     border-color: green;
     border-radius: 10px;
@@ -2107,20 +2378,17 @@ header
 
 .Part5
 {
-    width: 98%; /* Adjust the width as needed */
-    height: 12%;
+    width: 100%; /* Adjust the width as needed */
+    height: 14%;
     margin-top: 0%;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.342);
-    background: linear-gradient(to bottom right, rgba(48, 119, 190, 0.103), rgba(48, 119, 190, 0));
-    border-radius: 30px 0px 30px 0px;
-
+    background-color: #0000003a;
     
     @media (max-width: 767px)     /* Mobile devices */
     {
         box-shadow: none;
         border-radius: 5px;
         width: 100%;
-        height: 15%;
+        height: 14%;
     }
 
 }
@@ -2132,6 +2400,7 @@ header
     border-style: solid;
     border-color: rgba(0, 0, 0, 0);
     border-width: 1px;
+    height: 100%;
 
     
     @media (max-width: 767px)     /* Mobile devices */
@@ -2161,7 +2430,7 @@ header
 
 }
 
-.Skills_Header, .Why_choose_me, .Skills_Par
+.Skills_Header, .Skills_Par
 {
     font-family: sans-serif;
     font-weight: 100;
@@ -2173,25 +2442,25 @@ header
 {
     font-size: 40px;
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 100;
 }
 
 .Skills_Par
 {
-    font-size: 13px;
+    font-size: 11px;
     font-family: "Laila", serif;
     font-weight: 400;
     font-style: normal;
     width: 50%;
     text-align: center;
-    margin-top: 2%;
+    margin-top: 1%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        font-size: 11px;
+        font-size: 9px;
         font-family: sans-serif;
         margin-bottom: 0;
-        margin-top: 5%;
+        margin-top: 2%;
         width: 90%;
     }
 }
@@ -2200,20 +2469,20 @@ header
 
 .Right_part5
 {
-    width: 90%;
+    width: 100%;
     height: 60vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
     margin: 0 auto;
-    justify-content: space-around;
     overflow: hidden;
+    background-color: #ffffff17;
 
     
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-top: 0;
+        overflow-y: hidden;
+        background-color: #ffffff46;
     }
 
 }
@@ -2226,10 +2495,13 @@ header
 {
     max-width: 1200px;
     width: 95%;
+    height: 50vh;
+    margin-top: 0;
     
     @media (max-width: 767px)     /* Mobile devices */
     {
         margin-top: 0;
+        height: 50vh;
     }
 
 }
@@ -2237,6 +2509,11 @@ header
 .Left_part5a 
 {
     position: relative;
+
+    @media (max-width: 767px)
+    {
+        height: 45vh;
+    }
 }
 
 .Slide_Button 
@@ -2285,17 +2562,21 @@ header
 .Left_part5a .Cards_library {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    gap: 18px;
+    gap: 0;
     font-size: 0;
     list-style: none;
-    margin-bottom: 30px;
     overflow-x: auto;
     scrollbar-width: none;
+    width: 80%;
+    height: 40vh;
+    margin: 0 auto;
 
     
     @media (max-width: 767px)     /* Mobile devices */
     {
         padding-left: 20px;
+        height: 45vh;
+        overflow-y: hidden;
     }
 
 }
@@ -2323,7 +2604,7 @@ header
 .Right_part5a .Scrollbar_container {
     background: #ccc;
     width: 100%;
-    height: 2px;
+    height: 0px;
     display: flex;
     align-items: center;
     border-radius: 4px;
@@ -2339,7 +2620,7 @@ header
     background: #000;
     top: 0;
     bottom: 0;
-    width: 50%;
+    width: 10%;
     height: 100%;
     cursor: grab;
     border-radius: inherit;
@@ -2363,45 +2644,51 @@ header
 .Card5
 {
     background-color: rgba(0, 0, 255, 0); 
-    height: 350px; 
-    width: 300px; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
+    padding: 0;
 }
 
 .Card5_a
 {
     height: 80%;
     width: 90%;
-    background-color: #7fff4400;
     border-style: solid;
-    border-color: rgba(0, 0, 0, 0.233);
+    border-color: rgba(0, 0, 0, 0);
     border-width: 1px;
+    border-radius: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
     transition: background-color 1s ease;
     cursor: pointer;
+    padding: 0;
+    margin-right: 0;
+
+    @media (min-width: 1024px) and (max-width: 5000px)   /* Tablets and small laptops */
+    {
+        height: 90%;
+        margin-top: 0;
+        margin-bottom: 15%;
+    }
 }
 
 .Card5_a:hover
 {
     transition: 2s ease;
-    background-color: #54ff1125;
 }
 
 
 .Card5_a_i
 {
-    height: 130px;
-    width: 130px;
+    height: 100px;
+    width: 100px;
     background-color: #00000000;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.164);
-    border-width: 7px;
+    border-width: 4px;
     border-radius: 50%;
     margin-top: 12px;
     margin-bottom: 7px;
@@ -2410,6 +2697,15 @@ header
     justify-content: center;
     align-items: center;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0.144);
+    padding: 6%;
+
+    @media (max-width: 767px)
+    {
+        border-width: 4px;
+        padding: 5%;
+        margin-bottom: 0;
+    }
+    
 }
 
 
@@ -2458,8 +2754,8 @@ header
 
 .one_g 
 {
-    border-color: rgba(221, 206, 0, 0.774);
-    background-color: rgba(221, 206, 0, 0.123);
+    border-color: #54a1bb;
+    background-color:  #84c5db41;;
 }
 
 
@@ -2480,7 +2776,7 @@ header
 .percentage_text5    /*-- ICONS --*/
 {
     font-family: sans-serif;
-    font-size: 50px;
+    font-size: 25px;
     margin-top: 2%;
     margin-bottom: 0;
     font-family: "Montserrat", sans-serif;
@@ -2493,41 +2789,63 @@ header
     background-color: rgba(0, 0, 255, 0);
     width: 80%;
     height: 90px;
-    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+
+    @media (max-width: 767px)
+    {
+        width: 90%;
+    }
 }
 
 .paragraph_5
 {
-    font-size: 11px;
+    font-size: 9px;
     font-family: sans-serif;
     text-align: center;
+    margin-top: 0;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        font-size: 9px;
+        margin-bottom: 0;
+        margin-top: 3%;
+    }
 }
 
 .See_more5
 {
     border-style: solid;
-    background-color: rgba(172, 255, 47, 0.082);
     border-width: 1px;
-    border-radius: 5px;
-    border-color: rgba(92, 138, 23, 0.295);
+    border-radius: 10px;
+    border-color: rgba(9, 110, 0, 0.26);
+    background-color: rgba(102, 255, 0, 0.075);
     padding: 3px;
     cursor: pointer;
     width: 90px;
-    transition: transform 0.3s ease;
+
+    @media (max-width: 767px)
+    {
+        margin-top: 5%;
+    }
 }
 
 .See_more5:hover
 {
-    transform: scaleX(1.10);
-    border-color: rgb(92, 138, 23);
-    background-color: rgba(47, 50, 255, 0.192);
+    background-color: rgba(102, 255, 0, 0.281);
     padding: 3px;
     cursor: pointer;
+    background-color: rgba(72, 180, 0, 0.301);
 
+}
+
+.See_more5 i
+{
+    color: rgba(0, 0, 0, 0.788);
+    font-size: 10px;
 }
 
 
@@ -2612,14 +2930,14 @@ header
 
 .Part6
 {
-    width: 98%; /* Adjust the width as needed */
-    height: 13%;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.253);
-    background-color: rgba(0, 0, 0, 0.021);
+    width: 100%; /* Adjust the width as needed */
+    height: 14%;
     margin-top: 0%;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    background-color: rgba(209, 226, 215, 0.575);
 
     @media only screen and (max-width: 767px) 
     {
@@ -2637,59 +2955,91 @@ header
 {
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        margin-top: 15%;
+        margin-top: 0%;
     }
 
 }
 
 .Left_part6
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 30vh;
-    background-color: rgb(255, 0, 234);
+    height: 20vh;
 
     @media only screen and (max-width: 767px) 
-{
+    {
+      height: 25vh;
+      width: 90%;
+      margin: 0 auto;
       margin-bottom: 0;
-      background-color: blue;
-}
+    }
 
 }
 
-.Services_header,.What_I_do, .Services_par
+.Services_header, .Services_par
 {
     font-family: sans-serif;
     font-weight: 100;
 }
 
-.Services_par
+
+.Services_header_container
 {
-    display: none;
+    width: 100%;
+    overflow: hidden;
 }
+
 
 .Services_header
 {
-    font-size: 30px;
-    font-weight: 600;
-    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 8%;
+    margin: 0 auto;
 }
 
-.What_I_do
+.Services_par
 {
-    font-size: 55px;
-    margin-top: 0;
-    margin-bottom: 0;
-    letter-spacing: 5px;
-    font-weight: 600;
+    font-size: 11px;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
 
-    @media only screen and (max-width: 767px) 
-{
-      font-weight: 100;
-      margin-bottom: 10%;
-}
+    font-family: "Laila", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-family: sans-serif;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    @media only screen and (max-width: 767px)
+    {
+        font-size: 11px;
+        font-family: sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        width: 100%;
+        text-align: center;
+        word-wrap: break-word;
+
+        font-family: "Laila", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        font-family: sans-serif;
+    }
 }
 
 .Right_part6
@@ -2698,8 +3048,8 @@ header
     height: 68vh;
     background-color: rgba(0, 17, 255, 0);
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: 0 auto;
 
     @media only screen and (max-width: 767px) 
     {
@@ -2723,6 +3073,10 @@ header
 .main-card {
     max-width: 1200px;
     width: 70%;
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 10%;
+    margin: 0 auto;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -2765,7 +3119,7 @@ header
 }
 
 #prev-slide {
-    left: -25px;
+    left: -45px;
     display: none;
 }
 
@@ -2779,11 +3133,14 @@ header
     gap: 0px;
     font-size: 0;
     list-style: none;
-    margin-bottom: 0px;
+    margin-bottom: 40%;
     overflow-x: auto;
     scrollbar-width: none;
     padding-left: 20px;
     margin-right: 20px;
+    padding-top: 0;
+    height: 60vh;
+    height: 100%;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -2856,11 +3213,13 @@ header
 }
 
 .card {
-    height: 450px; 
-    width: 800px; 
+    height: 400px; 
+    width: 750px; 
     display: flex; 
     justify-content: center; 
-    align-items: center; 
+    align-items: center;
+    height: 100%;
+    margin-left: 10%;
 
     @media only screen and (max-width: 767px) 
     {
@@ -2888,6 +3247,14 @@ header
     box-shadow:  0 0 10px rgba(0, 0, 0, 0.144);
     transition: background-color 1s ease;
     cursor: pointer;
+    border-radius: 15px;
+    margin-left: 3%;
+
+    @media (min-width: 768px) and (max-width: 1024px)   /* Tablets and small laptops */
+    {
+        width: 70%;
+        margin-left: 0;
+    }
     
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -2898,6 +3265,7 @@ header
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.418);
         border-radius: 20px 0px 0px 0px;
         background-color: rgba(138, 138, 138, 0.199);
+        box-shadow: none;
         
     }
 
@@ -2916,10 +3284,7 @@ header
     }
 
 
-.card-content:hover {
-    transition: 2s ease;
-    background-color: #54ff1125;
-}
+
 
 
 /* Styles for mobile and tablets */
@@ -3049,7 +3414,7 @@ header
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    scrollbar-width: thin; 
+    scrollbar-width: none; 
     scrollbar-color: rgb(0, 156, 117) rgba(0, 0, 0, 0);
     overflow-x: auto;
     overflow-y: hidden;
@@ -3079,6 +3444,25 @@ header
     margin: 0 auto;
 }
 
+.c_1_a
+{
+    @media (min-width: 1024px) and (max-width: 5000px)    /* Mobile devices */
+    {
+        background-color: rgba(121, 95, 95, 0.13);
+    }
+}
+
+
+.c_1_c
+{
+    @media (min-width: 1024px) and (max-width: 5000px)    /* Mobile devices */
+    {
+        background-color: rgba(121, 95, 95, 0.13);
+    }
+}
+
+
+
 .Child_2
 {
     display: flex;
@@ -3090,14 +3474,30 @@ header
 
 
 
+
+
 .proff_img
 {
+    border-style: solid;
+    border-width: 0px;
     width: 100%;
-    height: 30vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    background-color: rgba(255, 0, 0, 0);
+
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-color: rgba(255, 255, 255, 0);
+    }
 }
 .Prof-image
 {
@@ -3206,6 +3606,12 @@ header
 {
     display: flex; 
     flex-direction: column;
+
+    @media (min-width: 1024px) and (max-width: 5000px)    /* Mobile devices */
+    {
+        background-color: rgba(121, 95, 95, 0.13);
+    }
+    
 }
 
 .C_b_3
@@ -3229,6 +3635,18 @@ header
     text-align: center;
     margin-top: 0;
     margin-bottom: 20px;
+}
+
+
+
+
+.z
+{
+
+    @media (min-width: 1024px) and (max-width: 5000px)    /* Mobile devices */
+    {
+        background-color: rgba(190, 146, 146, 0.178);
+    }
 }
 
 
@@ -3285,11 +3703,12 @@ header
 
 .Part7
 {
-    width: 98%; /* Adjust the width as needed */
-    height: 17%;
+    width: 100%; /* Adjust the width as needed */
+    height: 15%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(251, 255, 0, 0);
     margin-top: 0%;
+    background-color: rgba(11, 14, 12, 0.815);
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3323,6 +3742,7 @@ header
 {
     font-family: sans-serif;
     font-weight: 100;
+    color: aliceblue;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3365,9 +3785,11 @@ header
     background-color: rgb(217, 225, 231);
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.459);
+    border-color: rgba(255, 255, 255, 0.322);
     border-radius: 0px;
+    background-color: rgba(11, 14, 12, 0.315);
+    border-radius: 30px 0px 30px 0px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3375,6 +3797,7 @@ header
         height: 59vh;
         box-shadow: none;
         background-color: rgba(10, 12, 0, 0.445);
+        border-radius: 1px;
     }
 }
 
@@ -3413,9 +3836,9 @@ header
 
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 309;
+    font-weight: 100;
     font-style: normal;
-    color: #000000d3;
+    color: #ffffffd3;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3450,13 +3873,13 @@ header
 
 .p1
 {
-    font-family: Arial, sans-serif;
-    font-weight: 400;
+    font-family: sans-serif;
+    font-weight: 100;
     font-size: 15px;
     letter-spacing: 1.3px;
     margin-left: 10px;
     margin-top: 0px;
-    color: #0000009d;
+    color: #ffffff67;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3467,8 +3890,8 @@ header
 .p2
 {
     margin-bottom: 0px;
-    font-size: 12px;
-    color: #000000b9;
+    font-size: 10px;
+    color: #adadadb9;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3479,8 +3902,8 @@ header
 .p3
 {
     margin-top: 0px;
-    font-size: 13px;
-    color: #000000b9;
+    font-size: 11px;
+    color: #adadadb9;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3540,6 +3963,7 @@ header
     font-family: Arial, sans-serif;
     font-weight: 400;
     font-size: 15px;
+    color: rgba(240, 248, 255, 0.89);
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3556,8 +3980,15 @@ header
 .Name input::placeholder, .Email input::placeholder 
 {
     color: rgba(0, 0, 0, 0.596);
-    
+    color: rgba(175, 175, 175, 0.363);
+    font-size: 12px;
 }
+
+.Name::placeholder:focus, 
+.Email::placeholder:focus {
+  background-color: yellow;
+}
+
 
 @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3575,11 +4006,12 @@ header
     border-color: rgb(6, 168, 0);
     border-width: 1px;
     border-radius: 5px;
-    width: 80px;
+    width: 120px;
     padding: 9px;
     cursor: pointer;
-    font-size: 14px;
-
+    font-size: 11px;
+    background-color: rgba(51, 153, 68, 0.089);
+    color: rgb(175, 175, 175);
     transition: transform 0.3s ease;
 
     @media (max-width: 767px)     /* Mobile devices */
@@ -3589,15 +4021,16 @@ header
         width: 100px;
         padding: 6px;
         color: rgb(175, 175, 175);
-        background-color: rgba(90, 90, 90, 0.144);
         border-color: rgb(212, 255, 210);
+        background-color: rgba(24, 209, 0, 0.055);
+        
     }
 }
 
 .button_7:hover
 {
     border-color: rgb(0, 255, 98);
-    transform: scaleX(1.10);
+    background-color: rgba(108, 197, 97, 0.212);
 
 }
 
@@ -3608,13 +4041,15 @@ input
     border-top: none;
     border-left: none;
     border-right: none;
-    border-color: rgb(4, 122, 0);
+    border-color: rgb(96, 165, 94);
     background-color: rgba(255, 255, 255, 0);
     border-width: 1px;
     padding: 10px;
     font-size: 15px;
-    width: 60%;
-    transition: width 0.3s ease;
+    width: 90%;
+    transition: width 0.5s ease;
+    color: rgba(255, 255, 255, 0.514);
+    font-size: 13px;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3633,11 +4068,11 @@ input
 
 input:hover
 {   
-    border-color: rgb(7, 209, 0);
-    width: 90%;
+    border-color: rgb(5, 160, 0);
+    width: 85%;
 }
 
-input:focus
+input:focus        /*WHILE INPUTING*/
 {
     outline: none;
     border-style: solid;
@@ -3648,9 +4083,10 @@ input:focus
     background-color: rgba(255, 255, 255, 0);
     border-width: 1px;
     padding: 10px;
-    font-size: 15px;
+    font-size: 13px;
     width: 90%;
     transition: padding 0.3s ease;
+    color: rgba(255, 255, 255, 0.685);
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3666,9 +4102,11 @@ input:focus
 }
 
 
-.text_area
+.text_area    /*WORDS IN TEXTAREA AFTER INPUTING*/
 {
-    width: 80%;
+    width: 95%;
+    color: rgba(255, 255, 255, 0.685);
+    font-size: 12px;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3678,7 +4116,7 @@ input:focus
 
 .text_area:hover
 {
-    width: 85%;
+    width: 90%;
 }
 
 
@@ -3717,10 +4155,11 @@ input:focus
 
 .Part8
 {
-    width: 98%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     height: 1%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     margin-bottom: 0;
+    background-color: rgba(11, 14, 12, 0.815);
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3768,14 +4207,20 @@ input:focus
 
 .Mobile_tel
 {
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 22px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-left: 3%;
-    width: 100%;
+    display: none;
+
+    @media (max-width: 767px) 
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 22px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-left: 3%;
+        width: 100%;
+    }
+    
 }
 .Mob_p
 {
@@ -3792,8 +4237,9 @@ input:focus
 {
     font-weight: 100;
     font-family: sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 25px;
+    color: rgba(240, 248, 255, 0.63);
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -3820,14 +4266,25 @@ input:focus
     align-items: center;
     margin: 0 auto;
     margin-bottom: 35px;
+ 
 
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 30%;
         margin-bottom: 0;
         margin-top: 3%;
+        
     }
 }
+
+@media (min-width: 1025px), (min-width: 768px) and (max-width: 1024px) 
+    {
+        .Right_part8
+        {
+            display: none;
+        }
+    }
+
 
 .Right_part8, a
 {
@@ -3930,6 +4387,7 @@ input:focus
 
 
 <body>
+    <div class="triangle2"></div>
     
     <div class="Everything_is_here">
         <div class="circle circle1"></div>
@@ -3941,12 +4399,14 @@ input:focus
         <div class="green-line1"></div>
         <div class="green-line2"></div>
         <div class="triangle1"></div>
-        <div class="triangle2"></div>
+
         <div class="triangle2a"></div>
         <div class="triangle3"></div>
         <div class="circle right_angle1"></div>
 
         <div class="circle_a return_to_top" id="returnToTop"><a class="top" href="#"><i class="back_top fa fa-arrow-circle-up"></i></a></i></div>
+        
+        
         <div class="center_img">      
             
             <div class="navigation_links">
@@ -3996,25 +4456,36 @@ input:focus
                     <div class="Buy_me_coffee">
                         <button class="coffee-button"  id="downloadButton">Download my cv</button>
                     </div>
+
+                    <div class="Hire_me_and_Github">
+                        <p class="Github_ico">
+                            <a href="https://github.com/Shemaremy"> 
+                                <i class="fab fa-github" style="font-size: 17px; color: rgba(0, 0, 0, 0.432);"></i>
+                                <p style="font-family: sans-serif; font-size: 8px; margin-left: 0; color: #00000056;">My Github</p>
+                            </a>
+                        </p>
+                        
+                        
+                    </div>
             
             
             
                     <div class="social_media">
                         <ul class="all_icons">
                             <p class="icon Linkedin">                            
-                                <a href="www.youtube.com"><span><i class="fab fa-linkedin" style="margin-left: 3px;"></i></span></a>
+                                <a href="www.youtube.com"><span><i class="ico_1 fab fa-linkedin"></i></span></a>
                             </p>
                     
                             <p class="icon Twitter">                            
-                                <a href="www.youtube.com"><span><i class="fab fa-twitter" style="margin-left: 2px;"></i></span></a>
+                                <a href="www.youtube.com"><span><i class="ico_1 fab fa-twitter"></i></span></a>
                             </p>
                     
                             <p class="icon Instagram">                            
-                                <a href="www.youtube.com"><span><i class="fab fa-instagram" style="margin-left: 3px;"></i></span></a>
+                                <a href="www.youtube.com"><span><i class="ico_1 fab fa-instagram"></i></span></a>
                             </p>
                     
                             <p class="icon Behance">
-                                <a href="www.youtube.com"><span><i class="fab fa-behance" style="margin-left: 2px;"></i></span></a>
+                                <a href="www.youtube.com"><span><i class="ico_1 fab fa-behance"></i></span></a>
                             </p>
                         </ul>
                     </div>
@@ -4029,13 +4500,18 @@ input:focus
             </div>
 
         </div>
+        <div class="Divisor" style="background-color: rgba(0, 0, 0, 0.151);"></div>
 
         <div class="Part2">
         <div class="Two_Parts2">
 
                 <div class="Left_part2">
                     <div class="About_Photo"></div>
-                    <div class="Download_cv"><button class="Download_cv2">Download cv</button></div>
+                    <div class="Download_cv">
+                        <a href="https://github.com/Shemaremy" style="margin-left: 11%;">
+                            <button class="Download_cv2a"><i class="fab fa-github" style="font-size: 10px; color: rgba(0, 0, 0, 0.623);"></i></button>
+                        </a>
+                    </div>
                 </div>
                 <div class="Right_part2">
                     <h2 class="About_me_header">Meet Remy</h2>
@@ -4055,8 +4531,8 @@ input:focus
                             </p>
                             <p class="The_par">
                                 This webpage consists of everything you would need to know more about my 
-                                achievements and projects I've done, and feel free to provide a feedback. 
-                                <i>I would like to hear from you!</i>
+                                achievements and projects that I've done, and feel free to give me a feedback. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i style="color: rgb(110, 112, 0);">I would like to hear from you!</i>
                             </p>
                         </div>
                     </div>
@@ -4064,7 +4540,7 @@ input:focus
 
         </div>
         </div>
-        <div class="Divisor"></div>
+        <div class="Divisor" style="background-color: rgba(0, 0, 0, 0.151);"></div>
         <div class="Mobile_Divisor"></div>
 
         <div class="Part3">
@@ -4074,48 +4550,50 @@ input:focus
                     <p class="My_proj_Paragraph">Below, find my projects that I’ve been working on</p>
                 </div>
                 <div class="Right_part3">
-                    <div class="Third">
-                        <div class="circle circle5"></div>
-                        
-                        <div class="all3">
-        
-                            <div class="one">1
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" style="width: 50px;">                                
+
+                    <div class="main-card-3">
+                        <div class="left-part-3">
+            
+                            <button id="prev-slide-3" class="slide-button-3"><i class="chev-icon-3 fa fa-angle-left" aria-hidden="true"></i></button>
+                            <ul class="cards-library-3">
+            
+                                <div class="card-3">
+                                    <div class="card-content-3"></div>
+                                </div>
+            
+            
+                                <div class="card-3">
+                                    <div class="card-content-3 C_C_2-3">
+            
+                                    </div>
+                                </div>
+            
+            
+                                <div class="card-3">
+                                    <div class="card-content-3 C_C_3-3"></div>
+                                </div>
+            
+            
+                            </ul>
+                            <button id="next-slide-3" class="slide-button-3"><i class="chev-icon-3 fa fa-angle-right" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="right-part-3">
+                            <div class="scrollbar-container-3">
+                                <div class="scrollbar-3"></div>
                             </div>
-        
-                            <div class="two">2
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">                   
-                            </div>
-        
-                            <div class="three">3
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
-                            </div>
-                            
-                            <div class="four">4
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">    
-                            </div>
-        
-                            <div class="five">5
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
-                            </div>
-        
-                            <div class="six">6
-                                <img class="proj_imgs" src="file:///C:/Users/User/Pictures/ME%20LIB/b.jpg" alt="one" width="50px">
-                            </div>
-                        
                         </div>
                     </div>
+
                 </div>
 
             </div>
         </div>
-        <div class="Divisor"></div>
 
         <div class="Part4">
             <div class="Two_Parts4">
                 <div class="Left_part4">
                     <h2 class="Certifications_header">Certifications</h2>
-                    <p class="Certifications_par">This is my certifications library where you'll find certificates and other essential documents like Diplomas, English assessment results,...</p>
+                    <p class="Certifications_par">This is my certifications library where you'll find all my certificates and other essential documents like Diplomas, English assessment results, and others. And please, feel free to download them by clicking download button below.</p>
                 </div>
                 <div class="Mobile_Divisor2"></div>
                 <div class="Right_part4">
@@ -4141,7 +4619,7 @@ input:focus
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Alx SE Certificate</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
+                                        <p class="inner_cert_par">This is my ALX SE Certificate earned through completing various diverse tasks and assessments over six months. Download it to learn more</p>
                                         <button class="D_Button">Download</button>
                                     </div>
                                     
@@ -4156,8 +4634,7 @@ input:focus
                                     </div>
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Udemy Certificate</h4>
-                                        <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button">Download</button>
+                                        <p class="inner_cert_par">NOT YET ACQUIRED</p>
                                     </div>
                                 
                                 </div>
@@ -4217,15 +4694,16 @@ input:focus
 
             </div>
         </div>
-        <div class="Divisor"></div>
-
-        
+               
         <div class="Part6">
             <div class="Two_Parts6">
-                <div class="Left_part5">
+                <div class="Left_part6">
                     <h2 class="Services_header">Services</h2>
-                    <h3 class="What_I_do">What I do</h3>
-                    <p class="Services_par">hudsjnwuwsnwisiwdiwmismiws</p>
+                    <div class="Services_header_container">
+                        <p class="Services_par">
+                            Discover our comprehensive services, including web design and development, mobile app development and building database systems, tailored to elevate your business to new heights.    
+                        </p>
+                    </div>
                 </div>
                 <div class="Right_part6">
                     <div class="main-card">
@@ -4247,7 +4725,7 @@ input:focus
                                             </div>
                                             <div class="On7"></div>
                                             <div class="lower_part">
-                                                <div class="Child_1">
+                                                <div class="Child_1 c_1_a">
                                                     <p class="Profession_Tittle">Boost Your Business Online</p>
                                                     
                                                     <div class="proff_img">
@@ -4264,7 +4742,7 @@ input:focus
                                                             <li class="Reasons">Increase visibility and brand recognition.</li>
                                                         </ul>
                                                     </div>
-                                                    <div class="child_b">
+                                                    <div class="child_b z">
                                                         <img class="sec_proff_imge" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(2).jpg" alt="" style="max-width: 100%; max-height: 100%;">
                                                     </div>
                                                 </div>
@@ -4288,12 +4766,7 @@ input:focus
                                                 </div>
                                             </div>
                                             <div class="lower_part L_P_2">
-                                                <div class="Child_1">
-                                                    
-                                                    <div class="proff_img">
-                                                        <img class="Prof-image P_i_2" src="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/downloaded_image0.%20(3).jpg" alt="">
-                                                    </div>
-                                                </div>
+
                                                 <div class="Child_2 c_6">
                                                     
                                                     <div class="child_b c_b6">
@@ -4328,7 +4801,7 @@ input:focus
                                             </div>
                                             <div class="On7"></div>
                                             <div class="lower_part">
-                                                <div class="Child_1">
+                                                <div class="Child_1 c_1_c">
                                                     <p class="Profession_Tittle">Boost Your Business Online</p>
                                                     <div class="On8"></div>
                                                     <div class="proff_img">
@@ -4375,7 +4848,7 @@ input:focus
             <div class="Two_Parts5">
                 <div class="Left_part5">
                     <h2 class="Skills_Header">Skills</h2>
-                    <p class="Skills_Par">Below, find skills that I acquire, and I have rated them in percentage based to what I know and projects done on each :</p>
+                    <p class="Skills_Par">Below, find skills that I acquire. Most of these skills involve various programming languages, and you will be able to rate me on each skill based on tasks done on each. Feel free to explore those tasks to my github by clicking the button below.</p>
                 </div>
 
                 <div class="Right_part5">
@@ -4387,8 +4860,8 @@ input:focus
                                 <div class="Card5">
                                     <div class="Card5_a">
                                         <div class="Card5_a_i one_a">
-                                            <h3 class="lang_heading_text5" style="font-size: 20px;">HTML & CSS</h3>
-                                            <h2 class="percentage_text5" style="color: rgba(180, 48, 0, 0.411); font-size: 40px;">
+                                            <h3 class="lang_heading_text5" style="font-size: 17px;">HTML & CSS</h3>
+                                            <h2 class="percentage_text5" style="color: rgba(180, 48, 0, 0.411); font-size: 25px;">
                                                 <i class="devicon-html5-plain colored"></i>
                                                 <i class="devicon-css3-plain colored"></i>
                                             </h2>                                            
@@ -4408,7 +4881,7 @@ input:focus
                                             </h2>
                                         </div>
                                         <div class="Text_below5">
-                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <p class="paragraph_5">Built few projects with Python using frameworks like flask in my websites. Click below to visit my Github and explore them</p>
                                             <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
@@ -4422,7 +4895,7 @@ input:focus
                                             </h2>
                                         </div>
                                         <div class="Text_below5">
-                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <p class="paragraph_5">MySql is my favourite in building several projects involving large amounts of data and accounts creation. Click below to visit my Github and explore them</p>
                                             <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
@@ -4436,7 +4909,7 @@ input:focus
                                             </h2>
                                         </div>
                                         <div class="Text_below5">
-                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <p class="paragraph_5">I've learned the basics of C++ in my early age as a beginner, and more about the OOP to know more about the logic. Click below to visit my Github and explore them</p>
                                             <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
@@ -4450,7 +4923,7 @@ input:focus
                                             </h2>
                                         </div>
                                         <div class="Text_below5">
-                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <p class="paragraph_5">C# is my favourite when it comes to desktop apps and mobile apps. Not yet a pro, but I built few projects with it. Click below to visit my Github and explore them</p>
                                             <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
@@ -4458,13 +4931,13 @@ input:focus
                                 <div class="Card5">
                                     <div class="Card5_a">
                                         <div class="Card5_a_i one_f">
-                                            <h3 class="lang_heading_text5">JAVA</h3>
+                                            <h3 class="lang_heading_text5">Swift</h3>
                                             <h2 class="percentage_text5" style="color: rgba(211, 14, 0, 0.699);">
-                                                <i class="devicon-java-plain colored"></i>
+                                                <i class="devicon-swift-plain colored"></i>
                                               </h2>
                                         </div>
                                         <div class="Text_below5">
-                                            <p class="paragraph_5">Built several projects with HTML and CSS including online markets, tourism websites, and so on. Click below to visit my Github and explore them</p>
+                                            <p class="paragraph_5">Swift is my favourite too when it comes to iOS apps because of it's high performance and flexibility for iOS devices. Click below to visit my Github and explore them</p>
                                             <button class="See_more5"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
@@ -4472,9 +4945,9 @@ input:focus
                                 <div class="Card5">
                                     <div class="Card5_a">
                                         <div class="Card5_a_i one_g">
-                                            <h3 class="lang_heading_text5">JAVASCRIPT</h3>
+                                            <h3 class="lang_heading_text5">React js</h3>
                                             <h2 class="percentage_text5" style="color: rgba(221, 206, 0, 0.774);">
-                                                <i class="devicon-javascript-plain colored"></i>
+                                                <i class="devicon-react-original colored" style="color: #4090aa;;"></i>
                                               </h2>
                                         </div>
                                         <div class="Text_below5">
@@ -4498,18 +4971,15 @@ input:focus
 
             </div>
         </div>
-        <div class="Divisor"></div>
 
         
         <div class="Starting_Part7"></div>
-        <div class="Divisor"></div>
         <div class="Mobile_Divisor"></div>
 
         <div class="Part7">
             <div class="Two_Parts7">
                 <div class="Left_part7">
                     <h3 class="Get_in_touch">Get in touch</h3>
-                    <p class="Contact_par">Ask me anything or just say hi</p>
                 </div>
 
                 <div class="Right_part7">
@@ -4529,7 +4999,7 @@ input:focus
 
                         <div class="Right_section">
                         
-                            <form class="myForm" action="https://friendly-fast-citrine.glitch.me/submit" method="POST">
+                            <form class="myForm" action="https://half-tundra-burn.glitch.me/submit" method="POST">
                                 <div class="row">
                                     <div class="Name_Email">
                                         <div class="Name">
@@ -4597,40 +5067,15 @@ input:focus
     // THE FORM SUBMISSION  
 
 
-    document.querySelector('.myForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Prevent the default form submission
 
-    try {
-        // Fetch form data
-        const formData = new FormData(this);
 
-        // Send form data to the server
-        const response = await fetch('https://friendly-fast-citrine.glitch.me/submit', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Content-Type': 'multipart/form-data' // Set the content type to form data
-            }
-        });
 
-        // Check if the response is OK
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
 
-        // Get the text from the response
-        const data = await response.text();
-        console.log(data); // Log the response from the server
 
-        // Display success message
-        alert('Form submitted successfully!');
-        // You can redirect the user to a thank you page or do any other action here
-    } catch (error) {
-        console.error('There was an error with the fetch operation:', error);
-        alert('There was an error submitting the form. Please try again later.');
-    }
-});
-  
+
+
+
+
     
     
     
@@ -4776,8 +5221,74 @@ input:focus
     
     
     
+    //THIS IS THE SLIDER ON THE PROJECTS SECTION (PART 3)
     
+
+    const initSlider3 = () => {
+        const cardsList = document.querySelector(".left-part-3 .cards-library-3");
+        const slideButtons = document.querySelectorAll(".left-part-3 .slide-button-3");
+        const scrollbar = document.querySelector(".main-card-3 .right-part-3");
+        const thumb = scrollbar.querySelector(".scrollbar-3");
+        const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
+
+        
     
+        // Handle scrollbar thumb drag
+        thumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = thumb.offsetLeft;
+            const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
+    
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+    
+                thumb.style.left = `${boundedPosition}px`;
+                cardsList.scrollLeft = scrollPosition;
+            }
+    
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+    
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+    
+        // Slide cards on button click
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide-3" ? -1 : 1;
+                const scrollAmount = direction * (cardsList.clientWidth / 2.8);
+                cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            });
+        });
+    
+        // Show or hide slide buttons based on scroll position
+        const handleSlideButtons = () => {
+            slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
+            slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+        }
+    
+        // Update scrollbar thumb position based on cards scroll
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = cardsList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
+            thumb.style.left = `${thumbPosition}px`;
+        }
+    
+        // Call functions when cards list scrolls
+        cardsList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    }
+    
+    window.addEventListener("resize", initSlider3);
+    window.addEventListener("load", initSlider3);
     
     
     
@@ -4837,7 +5348,7 @@ input:focus
         slideButtons.forEach(button => {
             button.addEventListener("click", () => {
                 const direction = button.id === "prev-slide" ? -1 : 1;
-                const scrollAmount = cardsList.clientWidth * direction;
+                const scrollAmount = direction * (cardsList.clientWidth / 1.1);
                 cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
         });
@@ -4915,7 +5426,7 @@ input:focus
         slideButtons.forEach(button => {
             button.addEventListener("click", () => {
                 const direction = button.id === "prev-slide" ? -1 : 1;
-                const scrollAmount = imageList.clientWidth * direction;
+                const scrollAmount = direction * (imageList.clientWidth / 1);
                 imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
         });

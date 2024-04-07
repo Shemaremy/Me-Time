@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .Right_part6-3
+{
+    width: 100%;
+    height: 68vh;
+    background-color: rgba(0, 17, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: 767px) 
+    {
+      margin-top: 0;
+      padding: 0;
+      height: 60vh;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
+}
+
+
+
+/*-------------------000000000000000000000000000000000000000000000000000000000000000000--------------------------*/
+
+.main-card-3 {
+    max-width: 1200px;
+    width: 70%;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        width: 100%;
+        height: 100%;
+        
+    }
+
+}
+
+.left-part-3 {
+    position: relative;
+}
+
+.slide-button-3 {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 30px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #00000049;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.chev-icon-3 {
+    font-size: 15px;
+}
+
+.slide-button-3:hover {
+    background: #404040;
+}
+
+#prev-slide-3 {
+    left: -25px;
+    display: none;
+}
+
+#next-slide-3 {
+    right: -25px;
+}
+
+.cards-library-3 {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 0px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-left: 20px;
+    margin-right: 20px;
+
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        background-color: rgba(109, 128, 0, 0.151);
+        height: 60vh;
+        overflow-y: hidden;
+        margin-right: 0;
+        display: grid;
+        align-items: center;
+        margin: 0 auto;
+        background-color: rgba(102, 102, 102, 0.096);
+    }
+}
+
+.cards-library-3::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.right-part-3 {
+    height: 0px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.scrollbar-container-3 {
+    background: #ccc;
+    width: 80%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    display: none;
+}
+
+.scrollbar-container-3:hover {
+    height: 4px;
+}
+
+.scrollbar-3 {
+    position: absolute;
+    background: #000000;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+    display: none;
+}
+
+.scrollbar-3:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+.scrollbar-3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+.card-3 {
+    height: 450px; 
+    width: 800px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+    @media only screen and (max-width: 767px) 
+    {
+        width: 385px;
+        height: 380px;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+
+}
+
+.card-content-3 {
+    height: 80%;
+    width: 90%;
+    background-color: #7fff4400;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.233);
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.144);
+    transition: background-color 1s ease;
+    cursor: pointer;
+    
+    @media (max-width: 767px)     /* Mobile devices */
+    {
+        height: 95%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(0, 0, 0, 0.507);
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.418);
+        border-radius: 20px 0px 0px 0px;
+        background-color: rgba(138, 138, 138, 0.199);
+        box-shadow: none;
+        
+    }
+
+}
+
+@media (max-width: 767px)     /* Mobile devices */
+    {
+        .C_C_2-3
+        {
+            border-radius: 20px 20px 0px 0px;
+        }  
+        .C_C_3-3
+        {
+            border-radius: 0px 20px 0px 0px;
+        }  
+    }
+
+
+.card-content-3:hover {
+    transition: 2s ease;
+    background-color: #54ff1125;
+}
+
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+    .slide-button-3 {
+        display: none !important;
+    }
+
+    .cards-library-3 {
+        gap: 0px;
+        margin-bottom: 15px;
+        padding: 0;
+        scroll-snap-type: x mandatory;
+        padding-left: 0;
+    }
+
+
+    .scrollbar-3 {
+        width: 20%;
+    }
+}
+
+
+
+</style>
+
+<body>
+    <div class="Right_part6-3">
+
+
+
+
+
+
+
+
+
+        
+        <div class="main-card-3">
+            <div class="left-part-3">
+
+                <button id="prev-slide-3" class="slide-button-3"><i class="chev-icon-3 fa fa-angle-left" aria-hidden="true"></i></button>
+                <ul class="cards-library-3">
+
+                    <div class="card-3">
+                        <div class="card-content-3"></div>
+                    </div>
+
+
+                    <div class="card-3">
+                        <div class="card-content-3 C_C_2-3">
+
+                        </div>
+                    </div>
+
+
+                    <div class="card-3">
+                        <div class="card-content-3 C_C_3-3"></div>
+                    </div>
+
+
+                </ul>
+                <button id="next-slide-3" class="slide-button-3"><i class="chev-icon-3 fa fa-angle-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="right-part-3">
+                <div class="scrollbar-container-3">
+                    <div class="scrollbar-3"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+
+<script>
+    const initSlider3 = () => {
+        const cardsList = document.querySelector(".left-part-3 .cards-library-3");
+        const slideButtons = document.querySelectorAll(".left-part-3 .slide-button-3");
+        const scrollbar = document.querySelector(".main-card-3 .right-part-3");
+        const thumb = scrollbar.querySelector(".scrollbar-3");
+        const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
+
+        
+        // Handle scrollbar thumb drag
+        thumb.addEventListener("mousedown", (e) => {
+            const startX = e.clientX;
+            const thumbPosition = thumb.offsetLeft;
+            const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
+
+            const handleMouseMove = (e) => {
+                const deltaX = e.clientX - startX;
+                const newThumbPosition = thumbPosition + deltaX;
+                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+                thumb.style.left = `${boundedPosition}px`;
+                cardsList.scrollLeft = scrollPosition;
+            }
+
+            const handleMouseUp = () => {
+                document.removeEventListener("mousemove", handleMouseMove);
+                document.removeEventListener("mouseup", handleMouseUp);
+            }
+
+            document.addEventListener("mousemove", handleMouseMove);
+            document.addEventListener("mouseup", handleMouseUp);
+        });
+
+        // Slide cards on button click
+        slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide-3" ? -1 : 1;
+            const scrollAmount = direction * (cardsList.clientWidth / 2); // Adjust this value for slower or faster scrolling
+            const newScrollLeft = cardsList.scrollLeft + scrollAmount * direction;
+            if (newScrollLeft >= 0 && newScrollLeft <= maxScrollLeft) {
+                cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+            }
+        });
+    });
+
+        // Show or hide slide buttons based on scroll position
+        const handleSlideButtons = () => {
+            slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
+            slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+        }
+
+        // Update scrollbar thumb position based on cards scroll
+        const updateScrollThumbPosition = () => {
+            const scrollPosition = cardsList.scrollLeft;
+            const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
+            thumb.style.left = `${thumbPosition}px`;
+        }
+
+        // Call functions when cards list scrolls
+        cardsList.addEventListener("scroll", () => {
+            updateScrollThumbPosition();
+            handleSlideButtons();
+        });
+    }
+
+    window.addEventListener("resize", initSlider3);
+    window.addEventListener("load", initSlider3);
+</script>
+
+
+</html>
