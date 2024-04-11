@@ -8,7 +8,6 @@
     <title>Me-Time Website</title>
     
     <link rel="icon" href="https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Me%20Logo%207.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -211,6 +210,26 @@ body
         background-color: rgba(0, 0, 0, 0.5);
     }
 }
+
+
+
+
+.loader {
+    border: 2px solid #f3f3f3; /* Light grey */
+    border-top: 2px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    animation: spin 2s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 
 .circle {
@@ -536,12 +555,16 @@ body
 	content: '';
 	display: block;
 	width: 100%;
-	height: 5px;
+	height: 1px;
 	background-color: #FFF;
 	margin: 6px 0px;
 	transition: 0.4s;
     z-index: 999;
     overflow-x: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00000000;
+    border-radius: 5px;
 }
 
 
@@ -550,7 +573,7 @@ body
 }
 
 .hamburger.is-active:after {
-	transform: rotate(45deg) translate(-9px, -8px);
+	transform: rotate(45deg) translate(-6px, -5px);
 }
 
 .hamburger.is-active .bar {
@@ -655,7 +678,7 @@ header
     margin: 0 10px;
     padding: 0.5% 1%;
     font-family: 'Orbitron', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     position: relative;
 
     @media (max-width: 767px)     /* Mobile devices */
@@ -671,9 +694,9 @@ header
 .desk_links a.active::after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 7px;
     bottom: -5px;
-    width: 100%;
+    width: 80%;
     height: 2px;
     background-color: rgb(6, 168, 0); /* Active link glowing line color */
     transform: scaleX(1);
@@ -719,7 +742,7 @@ header
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        margin-top: 60px;
+        margin-top: 80px;
     }
 }
 
@@ -844,7 +867,7 @@ header
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        font-size: 50px;
+        font-size: 52px;
         width: 80%;
         margin: 0 auto;
         margin-top: 0;
@@ -1033,8 +1056,8 @@ header
         justify-content: center;
         align-items: center;
         width: 100%; 
-        height: 30px; 
-        margin-top: 20%;
+        height: 50px; 
+        margin-top: 17%;
         margin-left: 7%;
     }
 }
@@ -1438,6 +1461,17 @@ header
     }
 }
 
+
+.last
+{
+    width: 100%;
+
+    @media (max-width: 767px)
+    {
+        width: 80%;
+    }
+}
+
 /*-------------------------ENDING PART 2 -------------------------------------------------------------------*/
 
 
@@ -1667,6 +1701,7 @@ header
     border-radius: 10px;
     border-width: 1px;
     border-color: #ffffff;
+    
 
     @media (max-width: 767px)     /* Mobile devices */
     {
@@ -1986,7 +2021,7 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         height: 58vh;
-        background-color: rgba(192, 192, 192, 0.493);
+        background-color: rgba(192, 192, 192, 0.199);
     }
 }
 
@@ -2067,8 +2102,8 @@ header
         overflow-y: hidden;
         border-bottom: none;
         border-top: none;
-        scrollbar-width: thin; /* For Firefox */
-        scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0.1);
+        scrollbar-width: 1px; /* For Firefox */
+        scrollbar-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
         margin-left: 10%;
         box-shadow: none;
         display: flex;
@@ -2148,17 +2183,22 @@ header
         margin: 0 auto;
         border-style: solid;
         border-width: 1px;
-        border-color: rgba(158, 158, 158, 0.692);
+        border-color: rgba(111, 143, 90, 0.692);
         min-width: 48%; /* Changed width to min-width to allow flexibility */
         margin-top: 0;
         padding: 2%;
-        box-shadow: 0 0 3px rgba(0, 0, 0, 0.233);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
         flex-shrink: 0; /* Prevent cards from shrinking */
         padding-top: 0;
         margin-left: 10%;
 
         background-color: rgba(218, 218, 218, 0.493);
         border-radius: 7px;
+        background-color: rgba(128, 128, 128, 0.192);
+        background-color: rgba(219, 219, 219, 0.13);
+
+        border-color: rgba(0, 75, 0, 0.39);
+        border-width: 1px;
     }
 
 }
@@ -2228,7 +2268,7 @@ header
         margin-bottom: 0;
         border-style: solid;
         border-width: 1px;
-        border-color: rgba(0, 128, 0, 0);
+        border-color: rgba(0, 0, 0, 0.226);
         border-radius: 5px;
     }
 
@@ -2313,6 +2353,8 @@ header
         background-color: rgba(0, 128, 0, 0.055);
         margin-left: 10px;
         color: rgba(0, 0, 0, 0.74);
+        border-color: rgb(0, 70, 0);
+        border-width: 0.5px;
     }
 }
 
@@ -2328,6 +2370,11 @@ header
     width: 80px;
     position: relative;
     z-index: 999;
+
+    @media (max-width: 767px)
+    {
+        background-color: rgba(54, 255, 47, 0.185);
+    }
 
 }
 
@@ -2457,10 +2504,11 @@ header
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        font-size: 9px;
+        font-size: 8px;
         font-family: sans-serif;
         margin-bottom: 0;
-        margin-top: 2%;
+        margin-top: 1%;
+        margin-bottom: 2%;
         width: 90%;
     }
 }
@@ -2482,7 +2530,9 @@ header
     {
         margin-top: 0;
         overflow-y: hidden;
-        background-color: #ffffff46;
+        height: 55vh;
+        background-color: rgba(255, 255, 255, 0.178);
+
     }
 
 }
@@ -4382,7 +4432,7 @@ input:focus        /*WHILE INPUTING*/
 
 
 
-</head>
+
 
 
 
@@ -4454,7 +4504,7 @@ input:focus        /*WHILE INPUTING*/
                     
                 
                     <div class="Buy_me_coffee">
-                        <button class="coffee-button"  id="downloadButton">Download my cv</button>
+                        <button class="coffee-button" id="downloadButton" onclick="startLoading()">Download my cv</button>
                     </div>
 
                     <div class="Hire_me_and_Github">
@@ -4521,18 +4571,19 @@ input:focus        /*WHILE INPUTING*/
                                 Greetings, I'm Remy SHEMA, a passionate software engineer based in Rwanda.
                             </p>
                             <p class="The_par">
-                                As an independent thinker and self-directed innovator, I'm continually propelled
-                                to innovate without boundaries, constantly striving for improvement. With 
-                                a relentless pursuit of excellence, I thrive on pushing the limits of what's 
-                                possible.
-                                Despite my current employment status, my drive for innovation remains unwavering. 
-                                With a hunger for creative solutions, I actively seek opportunities to showcase
-                                my skills and contribute to meaningful projects
+                                As a full-stack engineer with a deep focus on front-end development, my passion drives 
+                                me to constantly push beyond boundaries. Doing projects to showcase my skills and try to innovate.
+                                Since I am still taking Software Engineering course 
+                                at ALX, I am much more of a self-taught and hungry for some experience through seeking internships 
+                                and job opportunities to further enhance my skills.
                             </p>
                             <p class="The_par">
-                                This webpage consists of everything you would need to know more about my 
-                                achievements and projects that I've done, and feel free to give me a feedback. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <i style="color: rgb(110, 112, 0);">I would like to hear from you!</i>
+                                This website consists of everything you would need to know more about my 
+                                achievements and projects that I've done, and feel free to give me a feedback about what you think about my first website, advice, or some 
+                                business inquiries.
+                            </p>
+                            <p class="The_par last" style="color: rgb(110, 112, 0); margin-top: 0;">
+                                I would like to hear from you!
                             </p>
                         </div>
                     </div>
@@ -4558,19 +4609,29 @@ input:focus        /*WHILE INPUTING*/
                             <ul class="cards-library-3">
             
                                 <div class="card-3">
-                                    <div class="card-content-3"></div>
+                                    <div class="card-content-3 rimwe">1</div>
+                                </div>
+
+                                <div class="card-3">
+                                    <div class="card-content-3 kabiri">2</div>
+                                </div>
+
+                                <div class="card-3">
+                                    <div class="card-content-3 gatatu">3</div>
+                                </div>
+
+                                <div class="card-3">
+                                    <div class="card-content-3 kane">4</div>
                                 </div>
             
             
                                 <div class="card-3">
-                                    <div class="card-content-3 C_C_2-3">
-            
-                                    </div>
+                                    <div class="card-content-3 gatanu">5</div>
                                 </div>
             
             
                                 <div class="card-3">
-                                    <div class="card-content-3 C_C_3-3"></div>
+                                    <div class="card-content-3 gatandatu">6</div>
                                 </div>
             
             
@@ -4608,7 +4669,7 @@ input:focus        /*WHILE INPUTING*/
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Essential Docs</h4>
                                         <p class="inner_cert_par">This is a zipped file containing all my essential documents including CV, Resume, Diploma and Digital Assessments results</p>
-                                        <button class="D_Button" id="Essentials">Download</button>
+                                        <button class="D_Button" id="Essentials" onclick="startLoadingthree()">Download</button>
                                     </div>
         
                                 </div>
@@ -4620,7 +4681,7 @@ input:focus        /*WHILE INPUTING*/
                                     <div class="cert_words">
                                         <h4 class="Name_of_certificate">Alx SE Certificate</h4>
                                         <p class="inner_cert_par">This is my ALX SE Certificate earned through completing various diverse tasks and assessments over six months. Download it to learn more</p>
-                                        <button class="D_Button">Download</button>
+                                        <button class="D_Button">Not yet..</button>
                                     </div>
                                     
                                 </div>
@@ -4974,7 +5035,7 @@ input:focus        /*WHILE INPUTING*/
 
         
         <div class="Starting_Part7"></div>
-        <div class="Mobile_Divisor"></div>
+        <div class="Mobile_Divisor" style="margin-bottom: 2%;"></div>
 
         <div class="Part7">
             <div class="Two_Parts7">
@@ -5019,9 +5080,9 @@ input:focus        /*WHILE INPUTING*/
                                         <input class="text_area message" type="text" name="message" placeholder="Message" required>
                                     </div>
                                     <div class="Send">
-                                        <button type="submit" class="button_7">Send<i class="icon2 fa fa-paper-plane" style="margin-left: 12px;"></i></button>
+                                        <button type="submit" class="button_7" onclick="startLoadingtwo()">Send<i class="icon2 fa fa-paper-plane" style="margin-left: 12px;"></i></button>
                                     </div>
-                                </div>
+                                </div> 
                             </form>
                             
                             
@@ -5064,49 +5125,6 @@ input:focus        /*WHILE INPUTING*/
 <!--------------------------------------MY JS STARTS RIGHT HERE !!!!--------------------------------------->
 <script>
 
-    // THE FORM SUBMISSION  
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    // AUTOSLIDE OF THE SERVICES CARDS IN PART6 (didnt work)
-    
-    document.addEventListener('DOMContentLoaded', function() {
-      const lower_part = document.querySelector('.lower_part');
-      const part6 = document.querySelector('.Part6');
-      const child1 = document.querySelector('.Child_1');
-      const child2 = document.querySelector('.Child_2');
-      
-      part6.addEventListener('scroll', function() {
-        const child1Rect = child1.getBoundingClientRect();
-        const child2Rect = child2.getBoundingClientRect();
-        const lowerPartRect = lower_part.getBoundingClientRect();
-        
-        if (child1Rect.right < lowerPartRect.left) {
-          lower_part.scrollBy({
-            left: child1Rect.width,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-    
-    
-    
-    
-    
     
     
     
@@ -5217,6 +5235,8 @@ input:focus        /*WHILE INPUTING*/
     
     
     
+
+
     
     
     
@@ -5225,71 +5245,88 @@ input:focus        /*WHILE INPUTING*/
     
 
     const initSlider3 = () => {
-        const cardsList = document.querySelector(".left-part-3 .cards-library-3");
-        const slideButtons = document.querySelectorAll(".left-part-3 .slide-button-3");
-        const scrollbar = document.querySelector(".main-card-3 .right-part-3");
-        const thumb = scrollbar.querySelector(".scrollbar-3");
-        const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
+    const cardsList = document.querySelector(".left-part-3 .cards-library-3");
+    const slideButtons = document.querySelectorAll(".left-part-3 .slide-button-3");
+    const scrollbar = document.querySelector(".main-card-3 .right-part-3");
+    const thumb = scrollbar.querySelector(".scrollbar-3");
+    const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
 
-        
-    
-        // Handle scrollbar thumb drag
-        thumb.addEventListener("mousedown", (e) => {
-            const startX = e.clientX;
-            const thumbPosition = thumb.offsetLeft;
-            const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
-    
-            const handleMouseMove = (e) => {
-                const deltaX = e.clientX - startX;
-                const newThumbPosition = thumbPosition + deltaX;
-                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-    
-                thumb.style.left = `${boundedPosition}px`;
-                cardsList.scrollLeft = scrollPosition;
-            }
-    
-            const handleMouseUp = () => {
-                document.removeEventListener("mousemove", handleMouseMove);
-                document.removeEventListener("mouseup", handleMouseUp);
-            }
-    
-            document.addEventListener("mousemove", handleMouseMove);
-            document.addEventListener("mouseup", handleMouseUp);
-        });
-    
-        // Slide cards on button click
-        slideButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const direction = button.id === "prev-slide-3" ? -1 : 1;
-                const scrollAmount = direction * (cardsList.clientWidth / 2.8);
-                cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            });
-        });
-    
-        // Show or hide slide buttons based on scroll position
-        const handleSlideButtons = () => {
-            slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
-            slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    let scrollId; // Used to store setInterval ID for auto-scrolling
+    const interval = 5000; // Interval for auto-scrolling
+
+    // Handle scrollbar thumb drag
+    thumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = thumb.offsetLeft;
+        const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
+
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+            thumb.style.left = `${boundedPosition}px`;
+            cardsList.scrollLeft = scrollPosition;
         }
-    
-        // Update scrollbar thumb position based on cards scroll
-        const updateScrollThumbPosition = () => {
-            const scrollPosition = cardsList.scrollLeft;
-            const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
-            thumb.style.left = `${thumbPosition}px`;
+
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
         }
-    
-        // Call functions when cards list scrolls
-        cardsList.addEventListener("scroll", () => {
-            updateScrollThumbPosition();
-            handleSlideButtons();
+
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide cards on button click
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide-3" ? -1 : 1;
+            const scrollAmount = direction * (cardsList.clientWidth / 2.8);
+            cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
         });
+    });
+
+    // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
-    
-    window.addEventListener("resize", initSlider3);
-    window.addEventListener("load", initSlider3);
-    
+
+    // Update scrollbar thumb position based on cards scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = cardsList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
+        thumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call functions when cards list scrolls
+    cardsList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+
+    // Function to start automatic scrolling
+
+
+
+
+    // Pause automatic scrolling when mouse enters the cards list area
+    cardsList.addEventListener("mouseenter", () => {
+        clearInterval(scrollId);
+    });
+
+    // Resume automatic scrolling when mouse leaves the cards list area
+    cardsList.addEventListener("mouseleave", startScroll);
+
+    // Start automatic scrolling when the page loads
+    startScroll();
+}
+
+window.addEventListener("resize", initSlider3);
+window.addEventListener("load", initSlider3);
+ 
     
     
     
@@ -5313,72 +5350,105 @@ input:focus        /*WHILE INPUTING*/
     
     
     const initSlider2 = () => {
-        const cardsList = document.querySelector(".left-part .cards-library");
-        const slideButtons = document.querySelectorAll(".left-part .slide-button");
-        const scrollbar = document.querySelector(".main-card .right-part");
-        const thumb = scrollbar.querySelector(".scrollbar");
-        const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
-    
-        // Handle scrollbar thumb drag
-        thumb.addEventListener("mousedown", (e) => {
-            const startX = e.clientX;
-            const thumbPosition = thumb.offsetLeft;
-            const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
-    
-            const handleMouseMove = (e) => {
-                const deltaX = e.clientX - startX;
-                const newThumbPosition = thumbPosition + deltaX;
-                const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-                const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-    
-                thumb.style.left = `${boundedPosition}px`;
-                cardsList.scrollLeft = scrollPosition;
-            }
-    
-            const handleMouseUp = () => {
-                document.removeEventListener("mousemove", handleMouseMove);
-                document.removeEventListener("mouseup", handleMouseUp);
-            }
-    
-            document.addEventListener("mousemove", handleMouseMove);
-            document.addEventListener("mouseup", handleMouseUp);
-        });
-    
-        // Slide cards on button click
-        slideButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const direction = button.id === "prev-slide" ? -1 : 1;
-                const scrollAmount = direction * (cardsList.clientWidth / 1.1);
-                cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-            });
-        });
-    
-        // Show or hide slide buttons based on scroll position
-        const handleSlideButtons = () => {
-            slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
-            slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
+    const cardsList = document.querySelector(".left-part .cards-library");
+    const slideButtons = document.querySelectorAll(".left-part .slide-button");
+    const scrollbar = document.querySelector(".main-card .right-part");
+    const thumb = scrollbar.querySelector(".scrollbar");
+    const maxScrollLeft = cardsList.scrollWidth - cardsList.clientWidth;
+
+    let scrollId; // Used to store setInterval ID for auto-scrolling
+    let interval; // Interval for auto-scrolling
+
+
+    // Function to set the interval based on screen width
+    const setIntervalByScreenWidth = () => {
+        if (window.innerWidth <= 767) {
+            interval = 6000; // Set interval to 5000 milliseconds for small screens
+        } else {
+            interval = 4000; // Set interval to 3000 milliseconds for larger screens
         }
-    
-        // Update scrollbar thumb position based on cards scroll
-        const updateScrollThumbPosition = () => {
-            const scrollPosition = cardsList.scrollLeft;
-            const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
-            thumb.style.left = `${thumbPosition}px`;
+    };
+
+    // Set initial interval based on screen width
+    setIntervalByScreenWidth();
+
+
+
+
+
+
+    // Handle scrollbar thumb drag
+    thumb.addEventListener("mousedown", (e) => {
+        const startX = e.clientX;
+        const thumbPosition = thumb.offsetLeft;
+        const maxThumbPosition = scrollbar.getBoundingClientRect().width - thumb.offsetWidth;
+
+        const handleMouseMove = (e) => {
+            const deltaX = e.clientX - startX;
+            const newThumbPosition = thumbPosition + deltaX;
+            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
+            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
+
+            thumb.style.left = `${boundedPosition}px`;
+            cardsList.scrollLeft = scrollPosition;
         }
-    
-        // Call functions when cards list scrolls
-        cardsList.addEventListener("scroll", () => {
-            updateScrollThumbPosition();
-            handleSlideButtons();
+
+        const handleMouseUp = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseup", handleMouseUp);
+        }
+
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mouseup", handleMouseUp);
+    });
+
+    // Slide cards on button click
+    slideButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const direction = button.id === "prev-slide" ? -1 : 1;
+            const scrollAmount = direction * (cardsList.clientWidth / 1.1);
+            cardsList.scrollBy({ left: scrollAmount, behavior: "smooth" });
         });
+    });
+
+    // Show or hide slide buttons based on scroll position
+    const handleSlideButtons = () => {
+        slideButtons[0].style.display = cardsList.scrollLeft <= 0 ? "none" : "flex";
+        slideButtons[1].style.display = cardsList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
+
+    // Update scrollbar thumb position based on cards scroll
+    const updateScrollThumbPosition = () => {
+        const scrollPosition = cardsList.scrollLeft;
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (scrollbar.clientWidth - thumb.offsetWidth);
+        thumb.style.left = `${thumbPosition}px`;
+    }
+
+    // Call functions when cards list scrolls
+    cardsList.addEventListener("scroll", () => {
+        updateScrollThumbPosition();
+        handleSlideButtons();
+    });
+
+    // Function to start automatic scrolling
+
+}
+
+window.addEventListener("resize", initSlider2);
+window.addEventListener("load", initSlider2);
+  
     
-    window.addEventListener("resize", initSlider2);
-    window.addEventListener("load", initSlider2);
+
+
+
+
+
+
+
     
     
-    
-    
+
+
     
     
     
@@ -5497,6 +5567,12 @@ input:focus        /*WHILE INPUTING*/
     });
     
     
+
+
+
+
+
+
     // THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK SERVICES IS CLICKED
     
     document.addEventListener("DOMContentLoaded", function() {
@@ -5525,6 +5601,10 @@ input:focus        /*WHILE INPUTING*/
     });
     
     
+
+
+
+
     
     // THE AUTOSCROLL TO PROJECTS SECTION WHEN NAV LINK CONTACT IS CLICKED
     
@@ -5586,6 +5666,7 @@ input:focus        /*WHILE INPUTING*/
     
     
     
+
     
     
     
@@ -5675,34 +5756,6 @@ input:focus        /*WHILE INPUTING*/
     
     
     
-    // IMPLEMENTING THE LAZY METHOD FOR FAST WEB RESPONDING
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        let lazyImages = document.querySelectorAll('.back');
-    
-        let options = {
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-    
-        let observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    let img = entry.target;
-                    img.src = img.dataset.src;
-                    observer.unobserve(img);
-                }
-            });
-        }, options);
-    
-        lazyImages.forEach(function(img) {
-            observer.observe(img);
-        });
-    });
-    
-    
-    
-    
     
     
     
@@ -5735,6 +5788,12 @@ input:focus        /*WHILE INPUTING*/
     
     
     
+
+
+
+
+
+
     
     // SMOOTH TRANSITION FOR THE BUTTON
     
@@ -5755,6 +5814,9 @@ input:focus        /*WHILE INPUTING*/
     
     
     
+
+
+
     
     // SMOOTH TRANSITION FOR THE RIGHT ME PHOTO
     
@@ -5774,6 +5836,9 @@ input:focus        /*WHILE INPUTING*/
     });
     
     
+
+
+
      
     // SMOOTH TRANSITION FOR THE NAVIGATION LINKS
     
@@ -5795,6 +5860,9 @@ input:focus        /*WHILE INPUTING*/
     
     
     
+
+
+
     // SMOOTH TRANSITION FOR THE MIDDLE TRANSPARENT PAGE
     
     window.addEventListener('load', function() {
@@ -5813,26 +5881,11 @@ input:focus        /*WHILE INPUTING*/
     });
     
     
+
     
     
     
-    // SMOOTH TRANSITION FOR THE BACK IMAGE
-    
-    window.addEventListener('load', function() {
-        // Select the wrapper element
-        const wrapper = document.querySelector('.back_img');
-        // Initially set opacity to 0 and visibility to hidden
-        wrapper.style.opacity = '0';
-        wrapper.style.visibility = 'hidden';
-        // Show the wrapper after a delay 
-        setTimeout(function() {
-            // Change opacity from 0 to 1 gradually over 1 second
-            wrapper.style.transition = 'opacity 1s ease, visibility 1s';
-            wrapper.style.opacity = '1';
-            wrapper.style.visibility = 'visible'; // Make the content visible
-        }, 200);
-    });
-    
+
     
     
     // DOWNLOADING THE CV
@@ -5845,8 +5898,13 @@ input:focus        /*WHILE INPUTING*/
             
             // If the user confirms, proceed with downloading
             if (CV) {
+
+                downloadButton.innerHTML = " ";
+                startLoading(); // Start loading animation
+
+
                 // Fetch the file content
-                fetch('https://i.imgur.com/it7BCwG.png')
+                fetch('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/CV_Remy.zip')
                     .then(response => response.blob())
                     .then(blob => {
                         // Create a Blob URL for the file content
@@ -5855,7 +5913,7 @@ input:focus        /*WHILE INPUTING*/
                         // Create an anchor element
                         var link = document.createElement('a');
                         link.setAttribute('href', url);
-                        link.setAttribute('download', 'CV_Remy.jpg');
+                        link.setAttribute('download', 'CV_Remy');
                         link.style.display = 'none';
                         document.body.appendChild(link);
                         
@@ -5880,12 +5938,25 @@ input:focus        /*WHILE INPUTING*/
                         
                         var buymecoffee = document.querySelector('.Buy_me_coffee');
                         buymecoffee.style.paddingLeft = '13%';
+
+                            // Stop loading animation
+                        coffeeButton.style.padding ='13px';
+                        downloadButton.innerHTML = "Success !";
                     })
                     .catch(error => {
                         console.error('Error occurred while downloading:', error);
                     });
             }
         });
+
+                function startLoading() {
+                var loaderSpan = document.createElement('span');
+                var reducepadding = document.querySelector('.coffee-button ');
+                reducepadding.style.padding = '8px';
+                loaderSpan.classList.add('loader');
+                downloadButton.appendChild(loaderSpan);
+                downloadButton.disabled = true;
+            }
     });
     
  
@@ -5903,6 +5974,9 @@ input:focus        /*WHILE INPUTING*/
 
         // If the user confirms, proceed with downloading
         if (CV_1) {
+
+            downloadButton_1.innerHTML = " ";
+            startLoadingthree();
             // Fetch the file content
             fetch('https://raw.githubusercontent.com/Shemaremy/Me-Time/main/IMAGES/Files%20Remy.zip')
                 .then(response_1 => response_1.blob())
@@ -5932,11 +6006,54 @@ input:focus        /*WHILE INPUTING*/
                 });
         }
     });
+
+
+    function startLoadingthree() {
+        var button = document.getElementById("Essentials");
+        button.innerHTML = '<span class="loader"></span>Loading...';
+        button.disabled = true;
+        button.innerHTML = "Success !";
+  }
 });
 
-           
-          
 
+
+
+
+
+      // THIS IS FOR THE LOADER WHEN SENDING AN EMAIL MESSAGE
+
+      function startLoadingtwo() {
+    // Check if input fields are empty
+    var nameInput = document.querySelector(".name").value.trim();
+    var emailInput = document.querySelector(".email").value.trim();
+    var messageInput = document.querySelector(".message").value.trim();
+
+    if (nameInput !== "" && emailInput !== "" && messageInput !== "") {
+        
+            var button = document.querySelector(".button_7");
+            button.style.padding = '6px';
+            button.innerHTML = '<span class="loader"></span>';
+            
+            var reducesize = document.querySelector(".loader");
+            reducesize.style.height = '9px';
+            reducesize.style.width = '9px';
+            reducesize.style.opacity = '0.8';
+            
+            setTimeout(function(){
+                button.innerHTML = "Success";
+            }, 35000);
+        
+    } else {
+        // If input fields are empty, do nothing or show an error message
+        alert("Please fill in all required fields.");
+        // You can display an error message or handle it as per your UI requirement
+    }
+}
+
+
+
+    
     </script>
     <!--------------------------------------MY JS ENDS RIGHT HERE !!!!--------------------------------------->
     
