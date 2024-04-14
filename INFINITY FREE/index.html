@@ -56,6 +56,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Tilt+Neon&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
           
@@ -90,6 +92,7 @@ body
     {
         height: 550vh;
         padding-bottom: 0;
+        margin-bottom: 0;
         overflow-x: hidden;
     }
        
@@ -129,9 +132,10 @@ body
         padding-bottom: 0;
         border-radius: 1px;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
         margin: 0 auto;
-        justify-content: flex-start;
         box-shadow:  0 0 5px rgba(0, 0, 0, 0);
         padding-bottom: 0;
         overflow-x: hidden;
@@ -194,20 +198,28 @@ body
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        display: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 0px;
     }
 }
 
 .Mobile_Divisor
 {
+    width: 40%;
+    height: 1px;
+    margin-bottom: 1%; 
+    margin-top: 1%; 
+    background-color: rgba(0, 0, 0, 0.158);
+    
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        margin-top: 2%;
-        margin-bottom: 4%;
         width: 40%;
         height: 1px;
-        background-color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 1%; 
+        margin-top: 1%; 
+        background-color: rgba(0, 0, 0, 0.096);
     }
 }
 
@@ -493,12 +505,14 @@ body
     height: 17%;
     box-shadow:  0 0 30px rgba(0, 0, 0, 0);
     background-color: rgba(138, 138, 138, 0.199);
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 
     @media (max-width: 767px)     /* Mobile devices */
     {
         border-radius: 0px;
         height: 15%;
+        background-color: rgba(138, 138, 138, 0.199);
+        margin-bottom: 0;
     }
 }
 
@@ -530,9 +544,12 @@ body
 		padding-left: 32px;
 		padding-right: 32px;
         height: 70px;
+        width: 100%;
         display: flex;
         background-color: rgb(197, 197, 197);
         overflow-x: hidden;
+        display: flex;
+        flex-direction: row;
     }
 }
 
@@ -555,7 +572,7 @@ body
 	content: '';
 	display: block;
 	width: 100%;
-	height: 1px;
+	height: 2px;
 	background-color: #FFF;
 	margin: 6px 0px;
 	transition: 0.4s;
@@ -573,7 +590,7 @@ body
 }
 
 .hamburger.is-active:after {
-	transform: rotate(45deg) translate(-6px, -5px);
+	transform: rotate(45deg) translate(-8px, -6px);
 }
 
 .hamburger.is-active .bar {
@@ -592,6 +609,34 @@ body
     z-index: 999; /* Adjust this value according to your layout */
 }
 
+
+.Mobile_Logo_container
+{
+    width: 150px; 
+    height: 70px; 
+    margin-left: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.Portfolio_word
+{
+    font-size: 27px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.801);
+    font-family: "Tilt Neon", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "XROT" 0,
+        "YROT" 0;
+}
 
 
 .mobile-nav {
@@ -742,7 +787,7 @@ header
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        margin-top: 80px;
+        margin-top: 90px;
     }
 }
 
@@ -1237,10 +1282,11 @@ header
 {
     width: 95%;
     height: 10%;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.274);
+    box-shadow:  0 0 5px rgba(0, 0, 0, 0.274);
     position: relative;
     background-color: rgba(88, 114, 136, 0.075);
     margin-bottom: 0px;
+    margin-top: 0px;
     border-style: solid;
     border-radius: 5px;
     border-width: 1px;
@@ -1253,6 +1299,8 @@ header
         box-shadow: none;
         border-radius: 1px;
         width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 .Two_Parts2
@@ -1530,7 +1578,10 @@ header
     @media only screen and (max-width: 767px) 
     {
         height: 16%;
+        border-width: 0px;
+        border-color: rgba(255, 255, 255, 0);
         background-color: rgba(215, 223, 230, 0.507);
+        margin-bottom: 0;
     }
 }
 
@@ -1561,10 +1612,10 @@ header
 
     @media only screen and (max-width: 767px) 
    {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    width: 100%;
-    height: 110px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        width: 100%;
+        height: 160px;
    }
 
 }
@@ -1575,9 +1626,9 @@ header
     font-weight: 100;
 
     @media only screen and (max-width: 767px) 
-{
-      margin-bottom: 0;
-}
+    {
+        margin-top: 10%;
+    }
 }
 
 .My_proj_header
@@ -1594,10 +1645,11 @@ header
     font-style: normal;
 
     @media only screen and (max-width: 767px) 
-{
-      margin-bottom: 0;
-      margin-top: 0;
-}
+    {
+        margin-bottom: 0;
+        margin-top: 3%;
+        
+    }
 
 
 }
@@ -1615,6 +1667,7 @@ header
     {
         margin-left: 0;
         width: 99%;
+        height: 65vh;
     }
     
 }
@@ -1705,16 +1758,16 @@ header
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        background-color: rgba(109, 128, 0, 0.151);
         height: 60vh;
         overflow-y: hidden;
         margin-right: 0;
         display: grid;
         align-items: center;
         margin: 0 auto;
-        background-color: rgba(102, 102, 102, 0.096);
         border-radius: 1px;
-        width: 100%;
+        border-width: 0px;
+        box-shadow: none;
+        width: 98%;
     }
 }
 
@@ -1794,6 +1847,8 @@ header
         margin-left: 0;
         padding-left: 0;
         padding-top: 0;
+        padding-bottom: 10%;
+        margin-bottom: 15%;
     }
 
 
@@ -1946,7 +2001,7 @@ header
 
     @media only screen and (max-width: 767px) 
 {
-      margin-top: 4%;
+      margin-top: 0;
 }
 }
 
@@ -1964,7 +2019,10 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
+        height: 20vh;
         margin-top: 0;
+        background-color: rgba(78, 78, 78, 0.103);
+        padding-top: 5%;
     }
 
 }
@@ -1992,7 +2050,7 @@ header
 .Certifications_par
 {
     font-size: 11px;
-    font-family: "Laila", serif;
+    font-family: serif;
     font-weight: 300;
     font-style: normal;
     text-align: center;
@@ -2001,10 +2059,11 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         background-color: rgba(255, 0, 0, 0);
-        width: 85%;
+        width: 90%;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 9px;
+        font-size: 8px;
+        color: rgb(0, 0, 0);
         font-family: sans-serif;
     }
 
@@ -2020,7 +2079,7 @@ header
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        height: 58vh;
+        height: 60vh;
         background-color: rgba(192, 192, 192, 0.199);
     }
 }
@@ -2110,6 +2169,7 @@ header
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        margin-bottom: 5%;
         
     }
 
@@ -2147,6 +2207,7 @@ header
         flex-wrap: nowrap;
         margin-right: 5%;
         margin-left: 0;
+        margin-bottom: 8%;
     }
 
 
@@ -2187,7 +2248,7 @@ header
         min-width: 48%; /* Changed width to min-width to allow flexibility */
         margin-top: 0;
         padding: 2%;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+        box-shadow: 0 0 7px rgba(0, 83, 4, 0.233);
         flex-shrink: 0; /* Prevent cards from shrinking */
         padding-top: 0;
         margin-left: 10%;
@@ -2217,6 +2278,11 @@ header
 {
     cursor: pointer;
     transform: translateY(-7px);
+
+    @media (max-width: 767px) 
+    {
+        transform: none;
+    }
 
 }
 
@@ -2428,14 +2494,15 @@ header
     width: 100%; /* Adjust the width as needed */
     height: 14%;
     margin-top: 0%;
+    margin-bottom: 0;
     background-color: #0000003a;
     
     @media (max-width: 767px)     /* Mobile devices */
     {
         box-shadow: none;
-        border-radius: 5px;
+        border-radius: 0px;
         width: 100%;
-        height: 14%;
+        height: 13%;
     }
 
 }
@@ -2698,6 +2765,7 @@ header
     justify-content: center; 
     align-items: center; 
     padding: 0;
+    
 }
 
 .Card5_a
@@ -2722,6 +2790,11 @@ header
         height: 90%;
         margin-top: 0;
         margin-bottom: 15%;
+    }
+
+    @media (max-width: 767px) 
+    {
+        margin-bottom: 25%;
     }
 }
 
@@ -3076,7 +3149,7 @@ header
 
     @media only screen and (max-width: 767px)
     {
-        font-size: 11px;
+        font-size: 9px;
         font-family: sans-serif;
         font-weight: 300;
         font-style: normal;
@@ -3105,7 +3178,7 @@ header
     {
       margin-top: 0;
       padding: 0;
-      height: 60vh;
+      height: 68vh;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -3139,6 +3212,7 @@ header
 
 .left-part {
     position: relative;
+    height: 100%;
 }
 
 .slide-button {
@@ -3195,7 +3269,7 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         background-color: rgba(109, 128, 0, 0.151);
-        height: 60vh;
+        height: 68vh;
         overflow-y: hidden;
         margin-right: 0;
         display: grid;
@@ -3765,6 +3839,7 @@ header
        background-color: rgba(11, 14, 12, 0.815);
        height: 15%;
        width: 100%;
+       margin-bottom: 0px;
     }
 }
 
@@ -3774,6 +3849,12 @@ header
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    @media (max-width: 767px)
+    {
+        margin-bottom: 0;
+        height: 100%;
+    }
 
 }
 
@@ -3844,10 +3925,12 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
-        height: 59vh;
+        height: 60vh;
         box-shadow: none;
         background-color: rgba(10, 12, 0, 0.445);
         border-radius: 1px;
+        border-bottom: none;
+        margin-bottom: 0;
     }
 }
 
@@ -3863,7 +3946,7 @@ header
     @media only screen and (max-width: 767px) 
     {
         flex-direction: column;
-        margin-top: 0;
+        margin-top: 5%;
     }
 }
 
@@ -3987,7 +4070,7 @@ header
     @media (max-width: 767px)     /* Mobile devices */
     {
         flex-direction: column;
-        margin-bottom: 14%;
+        margin-bottom: 18%;
     }
 }
 
@@ -4072,7 +4155,7 @@ header
         padding: 6px;
         color: rgb(175, 175, 175);
         border-color: rgb(212, 255, 210);
-        background-color: rgba(24, 209, 0, 0.055);
+        background-color: rgba(132, 206, 122, 0.164);
         
     }
 }
@@ -4214,8 +4297,9 @@ input:focus        /*WHILE INPUTING*/
     @media (max-width: 767px)     /* Mobile devices */
     {
         width: 100%;
-        height: 3%;
+        height: 2%;
         background-color: rgba(11, 14, 12, 0.815);
+        margin-top: 0px;
     }
 }
 
@@ -4232,7 +4316,7 @@ input:focus        /*WHILE INPUTING*/
         margin-top: 0;
         margin-bottom: 10px;
         height: 30px;
-        margin-top: 3%;
+        margin-top: 0;
     }
 }
 
@@ -4293,16 +4377,16 @@ input:focus        /*WHILE INPUTING*/
 
     @media (max-width: 767px)     /* Mobile devices */
     {
-        margin-top: 55px;
+        margin-top: 35px;
         width: 100%;
         color: rgba(240, 248, 255, 0.63);
        
-        font-size: 12px;
+        font-size: 10px;
         font-family: "Laila", serif;
         font-weight: 100;
         font-style: normal;
         background-color: rgba(255, 255, 0, 0);
-        margin-left: 75%;
+        padding-left: 87%;
     }
 }
 
@@ -4465,6 +4549,11 @@ input:focus        /*WHILE INPUTING*/
                         <button class="hamburger">
                             <div class="bar"></div>
                         </button>
+                        <div class="Mobile_Logo_container">
+                            <div class="Portfolio_word_container">
+                                <h1 class="Portfolio_word">Portfolio</h1>
+                            </div>
+                        </div>
                     </div>
                 </header>
             
@@ -4550,7 +4639,8 @@ input:focus        /*WHILE INPUTING*/
             </div>
 
         </div>
-        <div class="Divisor" style="background-color: rgba(0, 0, 0, 0.151);"></div>
+        <div class="Mobile_Divisor"></div>
+        
 
         <div class="Part2">
         <div class="Two_Parts2">
@@ -4591,7 +4681,7 @@ input:focus        /*WHILE INPUTING*/
 
         </div>
         </div>
-        <div class="Divisor" style="background-color: rgba(0, 0, 0, 0.151);"></div>
+
         <div class="Mobile_Divisor"></div>
 
         <div class="Part3">
@@ -5035,8 +5125,7 @@ input:focus        /*WHILE INPUTING*/
 
         
         <div class="Starting_Part7"></div>
-        <div class="Mobile_Divisor" style="margin-bottom: 2%;"></div>
-
+    
         <div class="Part7">
             <div class="Two_Parts7">
                 <div class="Left_part7">
@@ -5098,25 +5187,26 @@ input:focus        /*WHILE INPUTING*/
 
 
 
-    </div>
+    
 
-    <div class="Part8">
-        <div class="Two_Parts8">
-            <div class="Left_part8">
-                <div class="Mobile_tel">
-                    <p class="Mob_p" style="margin-bottom: 0;"><i class="icon2 fa fa-phone" aria-hidden="true" style="color: rgba(240, 248, 255, 0.534); font-size: 9px;"></i> &nbsp; +250 783 674 289</p>
-                    <p class="Mob_p" style="margin-top: 0;"><i class="icon2 fas fa-envelope" style="color: rgba(240, 248, 255, 0.514); font-size: 9px;"></i> &nbsp; remyshema20@gmail.com</p>
+        <div class="Part8">
+            <div class="Two_Parts8">
+                <div class="Left_part8">
+                    <div class="Mobile_tel">
+                        <p class="Mob_p" style="margin-bottom: 0;"><i class="icon2 fa fa-phone" aria-hidden="true" style="color: rgba(240, 248, 255, 0.534); font-size: 9px;"></i> &nbsp; +250 783 674 289</p>
+                        <p class="Mob_p" style="margin-top: 0;"><i class="icon2 fas fa-envelope" style="color: rgba(240, 248, 255, 0.514); font-size: 9px;"></i> &nbsp; remyshema20@gmail.com</p>
+                    </div>
+                    <p class="Copyright">Copyright © 2024. All Rights Reserved</p>
+                    
                 </div>
-                <p class="Copyright">Copyright © 2024. All Rights Reserved</p>
-                
-            </div>
-            <div class="Right_part8">
-            <a href="#"><i class="ml fab fa-linkedin" style="margin-left: 3px; color: rgba(255, 247, 231, 0.514);"></i></a>
-            <a href="#"><i class="ml fab fa-twitter" style="margin-left: 2px; color: rgba(255, 247, 231, 0.514);"></i></a>
-            <a href="#"><i class="ml fab fa-instagram" style="margin-left: 0px; color: rgba(255, 247, 231, 0.514);"></i></a>
-            <a href="#"><i class="ml fab fa-behance" style="margin-left: 2px; color: rgba(255, 247, 231, 0.514);"></i></a>
-            </div>
+                <div class="Right_part8">
+                <a href="#"><i class="ml fab fa-linkedin" style="margin-left: 3px; color: rgba(255, 247, 231, 0.514);"></i></a>
+                <a href="#"><i class="ml fab fa-twitter" style="margin-left: 2px; color: rgba(255, 247, 231, 0.514);"></i></a>
+                <a href="#"><i class="ml fab fa-instagram" style="margin-left: 0px; color: rgba(255, 247, 231, 0.514);"></i></a>
+                <a href="#"><i class="ml fab fa-behance" style="margin-left: 2px; color: rgba(255, 247, 231, 0.514);"></i></a>
+                </div>
 
+            </div>
         </div>
     </div>
         
