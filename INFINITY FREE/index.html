@@ -5398,21 +5398,7 @@ input:focus        /*WHILE INPUTING*/
         handleSlideButtons();
     });
 
-    // Function to start automatic scrolling
 
-
-
-
-    // Pause automatic scrolling when mouse enters the cards list area
-    cardsList.addEventListener("mouseenter", () => {
-        clearInterval(scrollId);
-    });
-
-    // Resume automatic scrolling when mouse leaves the cards list area
-    cardsList.addEventListener("mouseleave", startScroll);
-
-    // Start automatic scrolling when the page loads
-    startScroll();
 }
 
 window.addEventListener("resize", initSlider3);
@@ -5862,7 +5848,7 @@ window.addEventListener("load", initSlider2);
     
     window.addEventListener('load', function() {
         // Select the wrapper element
-        const wrapper = document.querySelector('.wrapper');
+        const wrapper = document.querySelector('.all_icons');
         // Initially set opacity to 0 and visibility to hidden
         wrapper.style.opacity = '0';
         wrapper.style.visibility = 'hidden';
@@ -5913,7 +5899,7 @@ window.addEventListener("load", initSlider2);
     
     window.addEventListener('load', function() {
         // Select the wrapper element
-        const wrapper = document.querySelector('.image-container img');
+        const wrapper = document.querySelector('.My_photo');
         // Initially set opacity to 0 and visibility to hidden
         wrapper.style.opacity = '0';
         wrapper.style.visibility = 'hidden';
